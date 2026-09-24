@@ -2,6 +2,10 @@
 // Usage: node pixel-diff.mjs [--page home,product|all] [--vp mobile,tablet,desktop|all]
 //        [--lang en|nl|fr] [--build http://localhost:3000] [--threshold 0] [--self]
 // --self compares the design with itself (tool self-test, must report 0 diff).
+// Progressive mode:  --until "<text>"  compares only from the top of the page down to the
+//   first element with that visible text (use while a page is built section by section).
+// Component mode:    --design-loc "<locator>" --build-loc "<locator>"  compares one element
+//   (Playwright locators, e.g. "header", "text=Book a call", "xpath=//footer").
 import fs from 'node:fs';
 import path from 'node:path';
 import {
@@ -21,13 +25,17 @@ import {
   outPath,
   OUT_DIR,
   designFixes,
+  cropTop,
+  findTextY,
 } from './lib.mjs';
+import { PNG } from 'pngjs';
 
 const args = parseArgs();
 const pages = loadPages();
 const pageKeys = select(Object.keys(pages), args.page);
 const vps = select(Object.keys(VIEWPORTS), args.vp);
 const lang = args.lang;
+const component = Boolean(args['design-loc'] && args['build-loc']);
 
 const server = await serveDesign();
 const browser = await launch();
@@ -54,9 +62,21 @@ try {
       while (attempts <= retries) {
         attempts++;
         const d = await openPage(browser, dUrl, { viewport, lang, isDesign: true, pageKey: key });
-        const dPng = await shot(d.page, outPath(...dir, 'design.png'));
+        let dPng = component
+          ? PNG.sync.read(
+              await d.page
+                .locator(args['design-loc'])
+                .first()
+                .screenshot({ path: outPath(...dir, 'design.png'), animations: 'disabled' }),
+            )
+          : await shot(d.page, outPath(...dir, 'design.png'));
         marks = await landmarks(d.page);
+        const cutY = args.until ? await findTextY(d.page, args.until) : null;
         await d.ctx.close();
+        if (args.until && cutY === null) {
+          loadError = `--until text not found in the design: ${JSON.stringify(args.until)}`;
+          break;
+        }
 
         let b;
         try {
@@ -71,12 +91,32 @@ try {
           loadError = `Build page failed to load: ${bUrl} (${e.message.split('\n')[0]})`;
           break;
         }
-        const bPng = await shot(b.page, outPath(...dir, 'build.png'));
+        let bPng;
+        try {
+          bPng = component
+            ? PNG.sync.read(
+                await b.page
+                  .locator(args['build-loc'])
+                  .first()
+                  .screenshot({ path: outPath(...dir, 'build.png'), animations: 'disabled', timeout: 5000 }),
+              )
+            : await shot(b.page, outPath(...dir, 'build.png'));
+        } catch (e) {
+          loadError = `Build element not found: ${args['build-loc']} (${e.message.split('\n')[0]})`;
+          await b.ctx.close();
+          break;
+        }
         pageErrors = b.errors;
         await b.ctx.close();
 
+        if (cutY !== null) {
+          // Progressive mode: only the part of the page that is already built is compared.
+          dPng = cropTop(dPng, cutY);
+          bPng = cropTop(bPng, cutY);
+        }
         cmp = comparePngs(dPng, bPng, outPath(...dir, 'diff.png'));
-        // Pixel-perfect: no clustered differences, same page size. --threshold allows a % of stray pixels.
+        cmp.mode = component ? 'component' : cutY !== null ? `until y=${cutY}` : 'full page';
+        // Pixel-perfect: no clustered differences, same size. --threshold allows a % of stray pixels.
         cmp.pass =
           cmp.bands.length === 0 &&
           cmp.diffPct <= args.threshold + 0.0005 &&
@@ -124,7 +164,7 @@ for (const r of results) {
       ? ''
       : `  (reproduced on all ${r.attempts} captures)`;
   console.log(
-    `${r.pass ? 'PASS' : 'FAIL'} ${r.page} ${r.vp} ${r.lang}  diff ${r.diffPct}%${note}  height design ${r.heightA}px vs build ${r.heightB}px  width ${r.widthA} vs ${r.widthB}`,
+    `${r.pass ? 'PASS' : 'FAIL'} ${r.page} ${r.vp} ${r.lang} [${r.mode}]  diff ${r.diffPct}%${note}  height design ${r.heightA}px vs build ${r.heightB}px  width ${r.widthA} vs ${r.widthB}`,
   );
   for (const bd of r.bands.slice(0, 12))
     console.log(`   diff band y ${bd.y0}-${bd.y1} x ${bd.x0}-${bd.x1}  in "${bd.section}"`);

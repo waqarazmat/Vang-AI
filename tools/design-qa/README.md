@@ -9,6 +9,13 @@ node pixel-diff.mjs  --page home --vp all --lang en --build http://localhost:300
 node states.mjs      --page home
 node style-diff.mjs  --page all --vp desktop
 node palette-audit.mjs
+node overflow.mjs     --page all                # no sideways scroll at 8 widths
+node run-all.mjs      --page home               # every check, one summary table
+
+# while a page is built section by section: compare only down to a section
+node pixel-diff.mjs --page home --until "/ How it works"
+# one component on its own
+node pixel-diff.mjs --page home --design-loc footer --build-loc footer
 ```
 
 | Tool                | Checks                                                                                                                    |

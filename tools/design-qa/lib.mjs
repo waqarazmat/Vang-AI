@@ -40,7 +40,9 @@ export function parseArgs(argv = process.argv.slice(2)) {
   for (let i = 0; i < argv.length; i++) {
     const k = argv[i];
     if (k === '--self') a.self = true;
-    else if (k.startsWith('--')) a[k.slice(2)] = argv[++i];
+    // Git Bash on Windows rewrites arguments starting with / into paths; undo that.
+    else if (k.startsWith('--'))
+      a[k.slice(2)] = String(argv[++i]).replace(/^[A-Za-z]:\/Program Files\/Git(\/.*)$/, '$1');
   }
   a.threshold = Number(a.threshold);
   return a;
@@ -119,7 +121,8 @@ function installColorNormalizer() {
     return Math.round(255 * (c <= 0.0031308 ? 12.92 * c : 1.055 * Math.pow(c, 1 / 2.4) - 0.055));
   };
   const alpha = (a) => (a === undefined ? 1 : +(+a).toFixed(3));
-  const rgba = (r, g, b, a) => `rgba(${r}, ${g}, ${b}, ${alpha(a)})`.replace(/, 1\)$/, ')').replace(/^rgba\((\d+, \d+, \d+)\)$/, 'rgb($1)');
+  const rgba = (r, g, b, a) =>
+    `rgba(${r}, ${g}, ${b}, ${alpha(a)})`.replace(/, 1\)$/, ')').replace(/^rgba\((\d+, \d+, \d+)\)$/, 'rgb($1)');
   window.__qaNormColor = (s) =>
     typeof s !== 'string'
       ? s
@@ -290,6 +293,35 @@ export async function landmarks(page) {
     });
     return out.sort((a, b) => a.y - b.y);
   });
+}
+
+// Keeps the top `h` pixels of a screenshot (shorter images are kept whole, so a
+// build that is too short still shows up as a height difference).
+export function cropTop(png, h) {
+  const height = Math.min(h, png.height);
+  const out = new PNG({ width: png.width, height });
+  PNG.bitblt(png, out, 0, 0, png.width, height, 0, 0);
+  return out;
+}
+
+// Document y of the first visible element whose own text equals `text` ("re:" = regex).
+export async function findTextY(page, text) {
+  return page.evaluate((t) => {
+    const re = t.startsWith('re:') ? new RegExp(t.slice(3)) : null;
+    const norm = (s) => s.replace(/\s+/g, ' ').trim();
+    for (const el of document.querySelectorAll('body *')) {
+      const own = norm(
+        [...el.childNodes]
+          .filter((n) => n.nodeType === 3)
+          .map((n) => n.data)
+          .join(' '),
+      );
+      if (!own || !(re ? re.test(own) : own === norm(t))) continue;
+      const r = el.getBoundingClientRect();
+      if (r.width && r.height) return Math.floor(r.top + scrollY);
+    }
+    return null;
+  }, text);
 }
 
 export function nameBand(marks, y) {
