@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>body{margin:0;background:#F3EDE4;}a{color:#854F0B;}a:hover{color:#D85A30;}</style>
+</helmet>
+<div style="min-height:100vh;padding:44px 32px;box-sizing:border-box;font-family:Georgia,serif;display:flex;flex-direction:column;align-items:center;gap:32px">
+  <svg width="0" height="0" style="position:absolute" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <clipPath id="cl"><path d="M50 30 C40 70 45 130 75 175 L120 195 C100 175 88 155 90 140 L108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z"></path></clipPath>
+      <clipPath id="cr"><path d="M190 30 C200 70 195 130 165 175 L120 195 C140 175 152 155 150 140 L132 135 C140 125 150 115 155 100 C165 75 180 50 190 30 Z"></path></clipPath>
+      <g id="hl">
+        <path d="M50 30 C40 70 45 130 75 175 L120 195 C100 175 88 155 90 140 L98 152 L105 158 C102 149 104 141 108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z" fill="#D85A30"></path>
+        <g clip-path="url(#cl)" fill="none" stroke="#2B2118" stroke-width="1.15" stroke-linecap="round" opacity="0.5">
+          <path d="M50.5 33 C45.5 58 46.5 92 56 118"></path>
+          <path d="M52.5 34 C49.5 60 54 94 63.5 121"></path>
+          <path d="M55 37 C54 65 62 97 71 124"></path>
+        </g>
+      </g>
+      <g id="hr">
+        <path d="M190 30 C200 70 195 130 165 175 L120 195 C140 175 152 155 150 140 L142 152 L135 158 C138 149 136 141 132 135 C140 125 150 115 155 100 C165 75 180 50 190 30 Z" fill="#854F0B"></path>
+        <g clip-path="url(#cr)" fill="none" stroke="#2B2118" stroke-width="1.15" stroke-linecap="round" opacity="0.5">
+          <path d="M189.5 33 C194.5 58 193.5 92 184 118"></path>
+          <path d="M187.5 34 C190.5 60 186 94 176.5 121"></path>
+          <path d="M185 37 C186 65 178 97 169 124"></path>
+        </g>
+      </g>
+    </defs>
+  </svg>
+
+  <div style="display:flex;flex-wrap:wrap;gap:24px;justify-content:center;width:100%;max-width:1100px">
+    <div id="T1" style="flex:1 1 0;min-width:0;max-width:360px;display:flex;flex-direction:column;align-items:center;gap:12px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g transform="rotate(4 120 195)"><use href="#hl"></use></g>
+        <g transform="rotate(-4 120 195)"><use href="#hr"></use></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">T1 — 4° pivot</div>
+    </div>
+    <div id="T2" style="flex:1 1 0;min-width:0;max-width:360px;display:flex;flex-direction:column;align-items:center;gap:12px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g transform="rotate(7.5 120 195)"><use href="#hl"></use></g>
+        <g transform="rotate(-7.5 120 195)"><use href="#hr"></use></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">T2 — 7.5° pivot</div>
+    </div>
+    <div id="T3" style="flex:1 1 0;min-width:0;max-width:360px;display:flex;flex-direction:column;align-items:center;gap:12px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g transform="rotate(5.5 120 232)"><use href="#hl"></use></g>
+        <g transform="rotate(-5.5 120 232)"><use href="#hr"></use></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">T3 — 5.5° from low pivot</div>
+    </div>
+    
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1100,&quot;height&quot;:520}}"></script>
+</body>
+</html>

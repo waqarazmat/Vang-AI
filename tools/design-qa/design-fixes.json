@@ -1,0 +1,65 @@
+{
+  "_note": "Corrections for bugs in the Claude Design files, applied to the DESIGN side before comparing, so the build must implement them. Every entry needs a reason and the user's approval. Keep this list minimal: anything not listed here must match the design exactly. 'js' may tag elements with classes (the design has no class names) or rewrite an inline value into a pure-CSS equivalent the build can use; 'css' does the styling.",
+  "fixes": [
+    {
+      "id": "home-body-font",
+      "pages": ["home"],
+      "css": "body{font-family:Archivo,Helvetica,sans-serif}",
+      "reason": "A stray closing </div> in 'VangAI Home.dc.html' (after the 'The good news?' block) closes the Archivo font wrapper early, so 69 body texts below it fall back to Times New Roman. All other pages and the brand guide use Archivo for body text.",
+      "build": "Body text uses Archivo everywhere.",
+      "approved": "2026-09-25 by the user"
+    },
+    {
+      "id": "mobile-heading-scale",
+      "pages": ["product", "privacy", "cookies", "terms", "data-privacy"],
+      "css": ".vp-prod h2{font-size:min(58px,11.5vw)!important} .qa-legal h1{font-size:min(62px,11.5vw)!important}",
+      "js": "(()=>{ if(document.querySelector('.vp-prod'))return; document.body.classList.add('qa-legal'); })()",
+      "reason": "On a 390px phone, single long words in large headings are wider than the screen ('VangMessage' at 58px on Product, 'conversations' at 62px on Data & privacy), so the page scrolls sideways. Headings scale to 11.5vw below about 540px wide. Wider screens keep the design size exactly. Applied to all three product headings and all four legal-page titles so matching headings stay the same size.",
+      "build": "Product channel h2: font-size min(58px, 11.5vw). Legal page h1: font-size min(62px, 11.5vw).",
+      "approved": "2026-09-25 by the user"
+    },
+    {
+      "id": "mobile-quote-card",
+      "pages": ["home", "pricing"],
+      "css": "@media (max-width:480px){ .qa-quote-outer{padding:24px!important;grid-template-columns:minmax(0,1fr)!important} .qa-quote-inner{grid-template-columns:minmax(0,1fr)!important} }",
+      "js": "(()=>{ document.querySelectorAll('div').forEach(d=>{ const s=d.getAttribute('style')||''; if(!/minmax\\(300px/.test(s)||!/rgb\\(43, 33, 24\\)/.test(s))return; d.classList.add('qa-quote-outer'); [...d.children].forEach(c=>{ if(/minmax\\(0px, 1fr\\) minmax\\(0px, 1fr\\)/.test(c.getAttribute('style')||'')) c.classList.add('qa-quote-inner'); }); }); })()",
+      "reason": "The dark 'No website yet? We build those too.' card requires at least 300px per column and places the 191px 'Request a quote' button in a 117px column, so on a 390px phone the button sticks out 41px and the page scrolls sideways.",
+      "build": "At max-width 480px: the card uses 24px padding and one column, and its inner price box stacks the preview above the price and button.",
+      "approved": "2026-09-25 by the user"
+    },
+    {
+      "id": "small-phone-min-widths",
+      "pages": ["*"],
+      "js": "(()=>{ document.querySelectorAll('[style]').forEach(el=>{ const g=el.style.gridTemplateColumns; if(/auto-(fit|fill)/.test(g)&&/minmax\\(\\d/.test(g)) el.style.gridTemplateColumns=g.replace(/minmax\\((\\d+(?:\\.\\d+)?px),/g,'minmax(min($1, 100%),'); }); document.querySelectorAll('div').forEach(d=>{ if((d.getAttribute('style')||'').replace(/\\s/g,'')==='width:100%;display:flex;justify-content:center;') d.classList.add('qa-demo-wrap'); }); })()",
+      "css": ".qa-demo-wrap > div{max-width:100%}",
+      "reason": "On 360 to 375px phones every page scrolls sideways (376 to 380px wide) because auto-fit grids have fixed minimum columns: the closing call-to-action band (minmax(280px) plus 56px padding) on every page, the booking and message cards on Contact (minmax(340px)), and the 340px hero demo wrapper on Home. minmax(min(Npx, 100%), 1fr) is identical wherever the design already fits (390px and wider) and lets the column shrink on smaller phones.",
+      "build": "All auto-fit grids use minmax(min(Npx, 100%), 1fr). The hero demo container has max-width: 100%.",
+      "approved": "2026-09-25 by the user"
+    },
+    {
+      "id": "small-phone-headings-and-demo-cards",
+      "pages": ["home", "about", "product"],
+      "js": "(()=>{ const h=document.querySelector('h1'); if(!h)return; const fs=getComputedStyle(h).fontSize; if(fs==='76px') h.classList.add('qa-h1-hero'); else if(document.title.startsWith('About')||/We build the front desk/.test(h.textContent)) h.classList.add('qa-h1-about'); })()",
+      "css": ".qa-h1-hero{font-size:min(76px,19.5vw)!important} .qa-h1-about{font-size:min(62px,16.4vw)!important} @media (max-width:620px){ .vp-demo{min-width:0!important;max-width:100%!important} .vp-demo > *{max-width:100%!important} .vp-side{box-sizing:border-box!important;min-width:0!important} }",
+      "reason": "Below 390px, single long words overflow the screen: 'customer' in the Home hero title (76px) and a word in the About title (62px). The Product demo side cards are 372px wide on a 360px phone (width 100% of a 340px row plus 16px padding, content-box), inside a 280px column. The heading limits are chosen so the design size is unchanged at 390px and wider (76/19.5vw = 390px, 62/16.4vw = 378px).",
+      "build": "Home hero h1: font-size min(76px, 19.5vw). About h1: font-size min(62px, 16.4vw). Product demo (max-width 620px): the demo column and its children are max-width 100%, and the side card uses box-sizing border-box.",
+      "approved": "2026-09-25 by the user"
+    },
+    {
+      "id": "small-text-contrast",
+      "pages": ["*"],
+      "js": "(()=>{ const P=c=>{const m=(c||'').match(/[\\d.]+/g);return m?m.map(Number):null}; const L=([r,g,b])=>{const f=v=>{v/=255;return v<=0.03928?v/12.92:((v+0.055)/1.055)**2.4};return .2126*f(r)+.7152*f(g)+.0722*f(b)}; const bl=(f,b)=>{const a=f[3]??1;return [0,1,2].map(i=>f[i]*a+b[i]*(1-a))}; const bgOf=el=>{const ls=[];for(let p=el;p;p=p.parentElement){const c=P(getComputedStyle(p).backgroundColor);if(c&&(c[3]??1)>0){ls.push(c);if((c[3]??1)>=1)break}}let b=[255,255,255];for(let i=ls.length-1;i>=0;i--)b=bl(ls[i],b);return b}; const CR=(a,b)=>{const x=L(a),y=L(b);return (Math.max(x,y)+.05)/(Math.min(x,y)+.05)}; document.querySelectorAll('body *').forEach(el=>{ if(el instanceof SVGElement||el.closest('[aria-hidden=\"true\"]'))return; if(el.matches('[role=button][tabindex=\"-1\"]')||(el.matches('[role=button]')&&getComputedStyle(el).cursor==='default'))return; const own=[...el.childNodes].filter(n=>n.nodeType===3).map(n=>n.data).join('').trim(); if(own.length<2)return; const cs=getComputedStyle(el); const size=parseFloat(cs.fontSize), w=parseInt(cs.fontWeight,10); if(size>=24||(size>=18.66&&w>=700))return; const fg=P(cs.color); if(!fg)return; const bg=bgOf(el); if(CR(bl(fg,bg),bg)>=4.5)return; if(bg.map(Math.round).join(',')==='216,90,48')return; const key=fg.slice(0,3).join(','), a=fg[3]??1, dark=L(bg)<0.2; let nc=null; if(key==='216,90,48') nc=dark?'#E8763F':'#A83D1B'; else if(key==='232,118,63') nc='#EC8150'; else if(key==='184,68,31') nc='#A83D1B'; else if(a<1){ let na=a; while(na<1&&CR(bl([...fg.slice(0,3),na],bg),bg)<4.5) na=Math.min(1,+(na+0.05).toFixed(2)); nc=`rgba(${fg.slice(0,3).join(', ')}, ${na})`; } if(nc) el.style.setProperty('color',nc,'important'); }); })()",
+      "reason": "The design has small-text colour pairs below the WCAG AA 4.5:1 minimum (for example 11px coral labels on cream at 3.37:1, step numbers at 4.39:1, faded 9.5px labels at 3.05:1, and demo timestamps at 2.8:1). Each is changed as little as possible: opaque coral text moves to a deeper or lighter coral, and translucent text gets its opacity raised in 0.05 steps until it passes. Not changed: large text, decorative aria-hidden text, single symbols (icons only need 3:1), disabled controls (WCAG exempt), and text on coral backgrounds (separate decision).",
+      "build": "Tokens: coral-text #A83D1B (small coral or deep-coral text on light backgrounds), coral-text-on-dark #E8763F (small coral text on dark backgrounds), step numbers #EC8150. Translucent text minimum opacities: dark on cream 0.65, cream on the phone screen 0.5, WhatsApp timestamps 0.65, WhatsApp 'online' 0.95. Exact values: run palette-audit with --self and read the design side.",
+      "approved": "2026-09-25 by the user"
+    }
+  ],
+  "accepted": [
+    {
+      "id": "text-on-coral",
+      "background": "rgb(216, 90, 48)",
+      "reason": "White and cream text on the brand coral #D85A30 (buttons, active tabs, coral chat bubbles, badges, coral call-to-action bands) stays exactly as designed: 3.87:1 white, 3.37:1 cream. The brand guide approves white on coral, and the user chose to keep the design's buttons.",
+      "approved": "2026-09-25 by the user"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "_note": "route uses {lang}. Update routes if localized slugs are chosen (e.g. /nl/prijzen). 'states' are scripted interactions matched by visible text (first visible match unless nth is given, 0-based; 're:' prefix = regex), so they run the same on design and build.",
+  "home": {
+    "design": "VangAI Home.dc.html",
+    "route": "/{lang}",
+    "states": [
+      {
+        "name": "nav-product-dropdown",
+        "vp": ["desktop"],
+        "steps": [
+          {
+            "hover": "re:^Product"
+          }
+        ]
+      },
+      {
+        "name": "demo-tab-message",
+        "steps": [
+          {
+            "click": "VangMessage"
+          }
+        ]
+      },
+      {
+        "name": "demo-tab-chat",
+        "steps": [
+          {
+            "click": "VangChat"
+          }
+        ]
+      },
+      {
+        "name": "included-reveal-all",
+        "steps": [
+          {
+            "click": "Reveal all"
+          }
+        ]
+      },
+      {
+        "name": "faq-first-open",
+        "steps": [
+          {
+            "click": "Is this a chatbot with a script?"
+          }
+        ]
+      },
+      {
+        "name": "faq-show-more",
+        "steps": [
+          {
+            "click": "Show more questions"
+          }
+        ]
+      },
+      {
+        "name": "whatsapp-demo-answer",
+        "steps": [
+          {
+            "click": "VangMessage"
+          },
+          {
+            "click": "What does a basic service cost?"
+          },
+          {
+            "wait": 1600
+          }
+        ]
+      },
+      {
+        "name": "webchat-demo-answer",
+        "steps": [
+          {
+            "click": "VangChat"
+          },
+          {
+            "click": "What does a basic service cost?"
+          },
+          {
+            "wait": 1600
+          }
+        ]
+      }
+    ]
+  },
+  "product": {
+    "design": "VangAI Product.dc.html",
+    "route": "/{lang}/product",
+    "states": [
+      {
+        "name": "faq-first-open",
+        "steps": [
+          {
+            "click": "What does it sound like?"
+          }
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "design": "VangAI Pricing.dc.html",
+    "route": "/{lang}/pricing",
+    "states": [
+      {
+        "name": "faq-first-open",
+        "steps": [
+          {
+            "click": "Why do you show a \"from\" price?"
+          }
+        ]
+      }
+    ]
+  },
+  "about": {
+    "design": "VangAI About.dc.html",
+    "route": "/{lang}/about",
+    "states": []
+  },
+  "contact": {
+    "design": "VangAI Contact.dc.html",
+    "route": "/{lang}/contact",
+    "states": []
+  },
+  "privacy": {
+    "design": "VangAI Privacy.dc.html",
+    "route": "/{lang}/privacy",
+    "states": []
+  },
+  "cookies": {
+    "design": "VangAI Cookies.dc.html",
+    "route": "/{lang}/cookies",
+    "states": []
+  },
+  "terms": {
+    "design": "VangAI Terms.dc.html",
+    "route": "/{lang}/terms",
+    "states": []
+  },
+  "data-privacy": {
+    "design": "VangAI Data and Privacy.dc.html",
+    "route": "/{lang}/data-privacy",
+    "states": []
+  }
+}

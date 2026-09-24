@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>body{margin:0;background:#F3EDE4;}a{color:#854F0B;}a:hover{color:#D85A30;}</style>
+</helmet>
+<div style="min-height:100vh;padding:44px 32px;box-sizing:border-box;font-family:Georgia,serif;display:flex;flex-direction:column;align-items:center;gap:32px">
+  <svg width="0" height="0" style="position:absolute" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <clipPath id="cl"><path d="M50 30 C40 70 45 130 75 175 L120 195 C100 175 88 155 90 140 L108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z"></path></clipPath>
+      <clipPath id="halfL"><rect x="0" y="0" width="120" height="240"></rect></clipPath>
+      <g id="linesL" fill="none" stroke="#2B2118" stroke-width="1.15" stroke-linecap="round" opacity="0.5">
+        <path d="M50.5 33 C45.5 58 46.5 92 56 118"></path>
+        <path d="M52.5 34 C49.5 60 54 94 63.5 121"></path>
+        <path d="M55 37 C54 65 62 97 71 124"></path>
+      </g>
+      <g id="handL">
+        <path d="M50 30 C40 70 45 130 75 175 L120 195 C100 175 88 155 90 140 L98 152 L105 158 C102 149 104 141 108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z" fill="#D85A30"></path>
+        <g clip-path="url(#cl)"><use href="#linesL"></use></g>
+      </g>
+      <g id="handR">
+        <path d="M50 30 C40 70 45 130 75 175 L120 195 C100 175 88 155 90 140 L98 152 L105 158 C102 149 104 141 108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z" fill="#854F0B"></path>
+        <g clip-path="url(#cl)"><use href="#linesL"></use></g>
+      </g>
+      <path id="gapOrange" fill="#D85A30" d="M120 195 C100 175 88 155 90 140 L98 152 L105 158 C102 149 104 141 108 135 L120 135 Z"></path>
+      <path id="gapBrown" fill="#854F0B" d="M120 195 C100 175 88 155 90 140 L98 152 L105 158 C102 149 104 141 108 135 L120 135 Z"></path>
+    </defs>
+  </svg>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;width:100%;max-width:1160px">
+
+    <div id="T1" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g transform="rotate(4 120 195)"><use href="#handL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(4 120 195)"><use href="#handR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">T1 — reference (cream gap)</div>
+    </div>
+
+    <div id="G1" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g clip-path="url(#halfL)"><g transform="rotate(4 120 195)"><use href="#gapOrange"></use></g></g>
+        <g transform="translate(240,0) scale(-1,1)"><g clip-path="url(#halfL)"><g transform="rotate(4 120 195)"><use href="#gapBrown"></use></g></g></g>
+        <g transform="rotate(4 120 195)"><use href="#handL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(4 120 195)"><use href="#handR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">G1 — gap matches each hand</div>
+    </div>
+
+    <div id="G2" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g clip-path="url(#halfL)"><g transform="rotate(4 120 195)"><use href="#gapBrown"></use></g></g>
+        <g transform="translate(240,0) scale(-1,1)"><g clip-path="url(#halfL)"><g transform="rotate(4 120 195)"><use href="#gapOrange"></use></g></g></g>
+        <g transform="rotate(4 120 195)"><use href="#handL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(4 120 195)"><use href="#handR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">G2 — gap inverted (brown left, orange right)</div>
+    </div>
+
+    <div id="G3" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g clip-path="url(#halfL)"><g transform="rotate(4 120 195)"><use href="#gapBrown"></use></g></g>
+        <g transform="translate(240,0) scale(-1,1)"><g clip-path="url(#halfL)"><g transform="rotate(4 120 195)"><use href="#gapBrown"></use></g></g></g>
+        <g transform="rotate(4 120 195)"><use href="#handL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(4 120 195)"><use href="#handR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">G3 — gap solid brown</div>
+    </div>
+
+    <div id="G4" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g clip-path="url(#halfL)"><g transform="rotate(4 120 195)"><use href="#gapOrange"></use></g></g>
+        <g transform="translate(240,0) scale(-1,1)"><g clip-path="url(#halfL)"><g transform="rotate(4 120 195)"><use href="#gapOrange"></use></g></g></g>
+        <g transform="rotate(4 120 195)"><use href="#handL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(4 120 195)"><use href="#handR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">G4 — gap solid orange</div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1160,&quot;height&quot;:720}}"></script>
+</body>
+</html>

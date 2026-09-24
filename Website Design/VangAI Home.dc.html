@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-fr="VangAI | Ne manquez plus jamais un client" data-nl="VangAI | Mis nooit meer een klant">VangAI | Never miss a customer again</title>
+<meta name="description" content="One assistant that answers your phone, WhatsApp and website chat, in Dutch, French and English. Set up and run for you, from €50 a month." data-fr="Un seul assistant pour votre téléphone, WhatsApp et le chat de votre site. Il répond en néerlandais, français et anglais, prend les rendez-vous et nous l’installons pour vous. Basés à Hasselt." data-nl="Eén assistent die je telefoon, WhatsApp en websitechat beantwoordt, in het Nederlands, Frans en Engels. Wij zetten het op en houden het draaiende, vanaf €50 per maand.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VangAI">
+<meta property="og:title" content="VangAI | Never miss a customer again" data-fr="VangAI | Ne manquez plus jamais un client" data-nl="VangAI | Mis nooit meer een klant">
+<meta property="og:description" content="One assistant that answers your phone, WhatsApp and website chat, in Dutch, French and English. Set up and run for you, from €50 a month." data-fr="Un seul assistant pour votre téléphone, WhatsApp et le chat de votre site. Il répond en néerlandais, français et anglais, prend les rendez-vous et nous l’installons pour vous. Basés à Hasselt." data-nl="Eén assistent die je telefoon, WhatsApp en websitechat beantwoordt, in het Nederlands, Frans en Engels. Wij zetten het op en houden het draaiende, vanaf €50 per maand.">
+<meta property="og:image" content="./assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="./assets/favicon.png">
+<link rel="apple-touch-icon" href="./assets/favicon.png">
+<script src="./support.js"></script>
+<script src="./i18n-nl.js"></script>
+<script src="./i18n-fr.js"></script>
+<script src="./site.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+@keyframes vg-out { 0%{opacity:0;transform:translate(-50%,-50%) scale(.55)} 22%{opacity:1} 100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1)} }
+@keyframes vg-in { 0%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1)} 28%{opacity:1} 100%{opacity:0;transform:translate(-50%,-50%) scale(.45)} }
+@keyframes vg-pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.04)} }
+@keyframes vg-flow { from{background-position:0 0} to{background-position:40px 0} }
+.vg-flow{animation:vg-flow 2.6s linear infinite}
+.vg-card{transition:transform 260ms ease,border-color 200ms ease}
+.vg-card .vg-fx{opacity:0;transition:opacity 220ms ease}
+.vg-card:not(.vg-hub):hover{transform:scale(1.07);z-index:3}
+.vg-card:not(.vg-hub):hover .vg-fx{opacity:1}
+.vg-card:not(.vg-hub) .vg-fx span{animation-duration:1100ms !important}
+.vg-hub .vg-fx{opacity:.55}
+.vg-hub .vg-fx span{animation-duration:3600ms !important}
+.vg-hub:hover .vg-fx{opacity:1}
+.vg-hub:hover .vg-fx span{animation-duration:620ms !important}
+.vg-hub:hover{animation:vg-pulse 900ms ease-in-out infinite}
+.vg-hub:hover ~ .vg-arr .vg-flow, .vg-memgrid:has(.vg-hub:hover) .vg-flow{animation-duration:500ms}
+@media (max-width: 1060px){ .vg-steps{flex-direction:column} .vg-steps > div{flex:1 1 auto !important;flex-direction:column;align-items:stretch} .vg-step-arrow{width:100% !important;padding:2px 0} .vg-step-arrow-in{transform:rotate(90deg)} }
+@media (max-width: 640px){ .vg-inc{grid-template-columns:minmax(0,1fr) !important} }
+@media (max-width: 760px){ .vg-memgrid{grid-template-columns:minmax(0,1fr) !important} .vg-arr{transform:rotate(90deg);height:44px !important;width:84px;justify-self:center} }
+@media (prefers-reduced-motion: reduce){ .vg-card .vg-fx span, .vg-flow, .vg-hub:hover{animation:none !important} .vg-card .vg-fx{opacity:0 !important} }
+</style>
+<style>
+body{margin:0;background:#FAEEDA;}
+a{color:#2B2118;text-decoration:none;}
+a:hover{color:#D85A30;}
+::selection{background:#D85A30;color:#FAEEDA;}
+[data-ft-card]:hover [data-ft-go]{transform:translateX(4px);}
+[data-paused="1"],[data-paused="1"] *{animation-play-state:paused !important;}
+@media (prefers-reduced-motion: reduce){*{animation-duration:1ms !important;animation-iteration-count:1 !important;transition-duration:1ms !important;}}
+</style>
+</helmet>
+<div style="font-family:Archivo,Helvetica,sans-serif;color:#2B2118;background:#FAEEDA;min-height:100vh">
+
+  <div style="position:sticky;top:0;z-index:40;background:rgba(250,238,218,0.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(43,33,24,0.12)">
+    <div style="max-width:1200px;margin:0 auto;padding:12px 32px;display:flex;align-items:center;gap:12px 28px;flex-wrap:wrap">
+      <a href="./VangAI Home.dc.html" aria-label="VangAI home" style="flex:none;display:flex;align-items:center;gap:11px;margin-right:auto">
+        <div style="width:34px;height:34px;flex:none"><dc-import name="Mark" uid="hmnav" radius="{{ 0 }}" bg="transparent" hint-size="34px,34px"></dc-import></div>
+        <div style="font-size:21px;font-weight:800;letter-spacing:-0.03em">VangAI</div>
+      </a>
+      <div style="display:flex;align-items:center;gap:10px 26px;flex-wrap:wrap;font-family:Archivo,sans-serif">
+        <div onMouseEnter="{{ navEnter }}" onMouseLeave="{{ navLeave }}" style="position:relative;padding:6px 0">
+          <a href="./VangAI Product.dc.html" style="display:flex;align-items:center;gap:6px;font-size:16px;font-weight:600;color:#2B2118;transition:color 180ms ease" style-hover="color:#D85A30">Product <span aria-hidden="true" style="font-size:11px">▾</span></a>
+          <div style="position:absolute;top:100%;left:50%;transform:translateX(-50%);display:{{ ddDisplay }};flex-direction:column;gap:2px;background:#FAEEDA;border:1px solid rgba(43,33,24,0.16);border-radius:16px;padding:10px;min-width:210px;box-shadow:0 14px 34px rgba(43,33,24,0.14);z-index:50">
+            <a href="./VangAI Product.dc.html#voice" style="padding:10px 14px;border-radius:10px;font-size:15px;font-weight:500;text-align:center" style-hover="background:#FFF6E6;color:#D85A30">VangVoice</a>
+            <a href="./VangAI Product.dc.html#whatsapp" style="padding:10px 14px;border-radius:10px;font-size:15px;font-weight:500;text-align:center" style-hover="background:#FFF6E6;color:#D85A30">VangMessage</a>
+            <a href="./VangAI Product.dc.html#chat" style="padding:10px 14px;border-radius:10px;font-size:15px;font-weight:500;text-align:center" style-hover="background:#FFF6E6;color:#D85A30">VangChat</a>
+          </div>
+        </div>
+        <a href="./VangAI Pricing.dc.html" style="font-size:16px;font-weight:600;color:#2B2118;transition:color 180ms ease" style-hover="color:#D85A30">Pricing</a>
+        <a href="./VangAI About.dc.html" style="font-size:16px;font-weight:600;color:#2B2118;transition:color 180ms ease" style-hover="color:#D85A30">About us</a>
+        <div role="group" aria-label="Language" style="display:flex;align-items:center;gap:2px;border:1px solid rgba(43,33,24,0.22);border-radius:99px;padding:3px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.08em">
+          <a href="#nl" data-set-lang="nl" style="padding:6px 10px;border-radius:99px;color:rgba(43,33,24,0.7)">NL</a>
+          <a href="#fr" data-set-lang="fr" style="padding:6px 10px;border-radius:99px;color:rgba(43,33,24,0.7)">FR</a>
+          <a href="#en" data-set-lang="en" style="padding:6px 10px;border-radius:99px;color:rgba(43,33,24,0.7)">EN</a>
+        </div>
+        <a href="./VangAI Contact.dc.html" style="flex:none;background:#D85A30;color:#FFFFFF;font-size:15px;font-weight:600;padding:11px 20px;border-radius:99px;white-space:nowrap;display:inline-flex;align-items:center;gap:8px;transition:background 180ms ease" style-hover="background:#2B2118;color:#FFFFFF">Book a call <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="top" style="max-width:1200px;margin:0 auto;padding:72px 40px 96px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:48px 56px;align-items:center">
+    <div style="min-width:0">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ The front desk for small businesses</div>
+      <h1 style="font-family:Archivo,Helvetica,sans-serif;font-size:76px;line-height:0.94;font-weight:800;letter-spacing:-0.042em;margin:22px 0 0;max-width:14ch;text-wrap:balance">Never miss a customer again.</h1>
+      <p style="font-size:20px;line-height:1.6;color:rgba(43,33,24,0.8);max-width:50ch;margin:24px 0 0;text-wrap:pretty">The best customer service across every channel. Phone, WhatsApp and your website, answered by one assistant that is set up and managed for you, in Dutch, French and English.</p>
+      <div style="display:flex;flex-direction:column;gap:16px;align-items:flex-start;margin-top:32px">
+        <a href="./VangAI Contact.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:#D85A30;color:#FFFFFF;border:1px solid #D85A30;padding:16px 28px" style-hover="background:#2B2118;border-color:#2B2118;color:#FFFFFF">Book a call <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+        <a href="tel:[demo number]" data-todo="[demo number]" style="font-size:16px;font-weight:700;color:#854F0B;border-bottom:1px solid rgba(133,79,11,0.4);padding-bottom:2px;transition:color 180ms ease" style-hover="color:#D85A30">Or call our AI at [demo number] and hear it yourself</a>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(43,33,24,0.65);margin-top:4px">GDPR compliant · Based in Hasselt · Set up and managed for you</div>
+      </div>
+    </div>
+    <div ref="{{ heroRef }}" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:14px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#854F0B;text-align:center">Live demo · press play, tap, type</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center">
+        <div onClick="{{ setTab0 }}" role="button" tabindex="0" style="background:{{ tabBg0 }};color:{{ tabFg0 }};border:1px solid {{ tabBd0 }};border-radius:99px;padding:10px 18px;font-size:14px;font-weight:700;cursor:pointer;transition:background 180ms ease,color 180ms ease,border-color 180ms ease" style-hover="border-color:#D85A30">VangVoice</div>
+        <div onClick="{{ setTab1 }}" role="button" tabindex="0" style="background:{{ tabBg1 }};color:{{ tabFg1 }};border:1px solid {{ tabBd1 }};border-radius:99px;padding:10px 18px;font-size:14px;font-weight:700;cursor:pointer;transition:background 180ms ease,color 180ms ease,border-color 180ms ease" style-hover="border-color:#D85A30">VangMessage</div>
+        <div onClick="{{ setTab2 }}" role="button" tabindex="0" style="background:{{ tabBg2 }};color:{{ tabFg2 }};border:1px solid {{ tabBd2 }};border-radius:99px;padding:10px 18px;font-size:14px;font-weight:700;cursor:pointer;transition:background 180ms ease,color 180ms ease,border-color 180ms ease" style-hover="border-color:#D85A30">VangChat</div>
+      </div>
+      <div onPointerDown="{{ demoAct }}" onKeyDown="{{ demoAct }}" onWheel="{{ demoAct }}" onFocus="{{ demoAct }}" style="width:100%;display:flex;justify-content:center">
+        <div style="display:{{ demoD0 }}"><dc-import name="VangCall" hint-size="340px,700px"></dc-import></div>
+        <div style="display:{{ demoD1 }}"><dc-import name="VangWhatsApp" hint-size="340px,700px"></dc-import></div>
+        <div style="display:{{ demoD2 }}"><dc-import name="VangWebChat" hint-size="340px,700px"></dc-import></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#FFFFFF;border-top:1px solid rgba(43,33,24,0.1);border-bottom:1px solid rgba(43,33,24,0.1)">
+    <div style="max-width:1200px;margin:0 auto;padding:96px 40px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ The problem</div>
+      <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:54px;font-weight:800;letter-spacing:-0.035em;line-height:1.05;margin:18px 0 0;max-width:24ch;text-wrap:balance">You are losing customers you never even see.</h2>
+      <p style="font-size:18px;line-height:1.7;color:rgba(43,33,24,0.8);max-width:62ch;margin:18px 0 0;text-wrap:pretty">A missed call during a job. A WhatsApp that sits unread for four hours. A visitor who leaves because nobody answered the chat. None of it arrives as a complaint. It arrives as a customer who booked somewhere else.</p>
+      <div style="margin-top:40px">
+        <dc-import name="VangLost C" hint-size="100%,580px"></dc-import>
+      </div>
+      </div>
+      <div style="margin:120px auto 8px;max-width:760px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px">
+        <div style="width:48px;height:4px;border-radius:99px;background:#D85A30"></div>
+        <p style="font-family:Archivo,Helvetica,sans-serif;font-size:44px;line-height:1.08;font-weight:800;letter-spacing:-0.035em;color:#2B2118;margin:0;text-wrap:balance">The good news? Every one of those missed customers was <span style="color:#D85A30">avoidable</span>.</p>
+        <p style="font-size:19px;line-height:1.6;color:rgba(43,33,24,0.78);margin:0;max-width:48ch;text-wrap:pretty">On a short call we show you what that looks like for your business.</p>
+      </div>
+    </div>
+  </div>
+
+  <div ref="{{ stepsRef }}" style="background:#2B2118;color:#FAEEDA">
+    <div style="max-width:1200px;margin:0 auto;padding:88px 40px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ How it works</div>
+      <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:54px;font-weight:800;letter-spacing:-0.035em;line-height:1.05;margin:18px 0 0;max-width:24ch;text-wrap:balance;color:#FAEEDA">We set it up. We run it. You get your time back.</h2>
+      <p style="font-size:18px;line-height:1.7;color:rgba(250,238,218,0.85);max-width:64ch;margin:18px 0 0;text-wrap:pretty">You do not write a script, configure anything or manage it day to day. VangChat is usually live within a few working days. VangMessage and VangVoice usually take one to two weeks, because WhatsApp and phone numbers need approval and forwarding.</p>
+      <div class="vg-steps" style="display:flex;flex-wrap:wrap;gap:16px;align-items:stretch;margin-top:40px">
+        <div onMouseEnter="{{ stepE0 }}" onClick="{{ stepE0 }}" style="flex:1 1 220px;min-width:0;display:flex;align-items:stretch;gap:8px;opacity:{{ stepO0 }};transform:{{ stepT0 }};pointer-events:{{ stepPE0 }};transition:opacity 1100ms cubic-bezier(.22,.61,.36,1),transform 1100ms cubic-bezier(.22,.61,.36,1)">
+          <div style="flex:1;min-width:0;background:rgba(250,238,218,0.07);border:1px solid rgba(250,238,218,0.16);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.1em;color:#E8763F">01</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,238,218,0.6);display:{{ stepHint0 }}">Hover for the next step</div>
+            </div>
+            <div style="font-family:Archivo,Helvetica,sans-serif;font-size:20px;font-weight:800;letter-spacing:-0.026em;line-height:1.2;color:#FAEEDA;text-wrap:balance">A short call about your business</div>
+            <div style="font-size:15.5px;line-height:1.6;color:rgba(250,238,218,0.82);text-wrap:pretty">We get to know your services, prices, opening hours and the way you talk to customers.</div>
+          </div>
+          <div class="vg-step-arrow" aria-hidden="true" style="flex:none;display:flex;align-items:center;justify-content:center;width:24px">
+            <div class="vg-step-arrow-in" style="display:flex;align-items:center"><div style="width:12px;height:3px;border-radius:99px;background:#D85A30"></div><div style="width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:10px solid #D85A30"></div></div>
+          </div>
+        </div>
+        <div onMouseEnter="{{ stepE1 }}" onClick="{{ stepE1 }}" style="flex:1 1 220px;min-width:0;display:flex;align-items:stretch;gap:8px;opacity:{{ stepO1 }};transform:{{ stepT1 }};pointer-events:{{ stepPE1 }};transition:opacity 1100ms cubic-bezier(.22,.61,.36,1),transform 1100ms cubic-bezier(.22,.61,.36,1)">
+          <div style="flex:1;min-width:0;background:rgba(250,238,218,0.07);border:1px solid rgba(250,238,218,0.16);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.1em;color:#E8763F">02</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,238,218,0.6);display:{{ stepHint1 }}">Hover for the next step</div>
+            </div>
+            <div style="font-family:Archivo,Helvetica,sans-serif;font-size:20px;font-weight:800;letter-spacing:-0.026em;line-height:1.2;color:#FAEEDA;text-wrap:balance">We build it around your business</div>
+            <div style="font-size:15.5px;line-height:1.6;color:rgba(250,238,218,0.82);text-wrap:pretty">We build your assistant on that, and connect it to your calendar and channels.</div>
+          </div>
+          <div class="vg-step-arrow" aria-hidden="true" style="flex:none;display:flex;align-items:center;justify-content:center;width:24px">
+            <div class="vg-step-arrow-in" style="display:flex;align-items:center"><div style="width:12px;height:3px;border-radius:99px;background:#D85A30"></div><div style="width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:10px solid #D85A30"></div></div>
+          </div>
+        </div>
+        <div onMouseEnter="{{ stepE2 }}" onClick="{{ stepE2 }}" style="flex:1 1 220px;min-width:0;display:flex;align-items:stretch;gap:8px;opacity:{{ stepO2 }};transform:{{ stepT2 }};pointer-events:{{ stepPE2 }};transition:opacity 1100ms cubic-bezier(.22,.61,.36,1),transform 1100ms cubic-bezier(.22,.61,.36,1)">
+          <div style="flex:1;min-width:0;background:rgba(250,238,218,0.07);border:1px solid rgba(250,238,218,0.16);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.1em;color:#E8763F">03</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,238,218,0.6);display:{{ stepHint2 }}">Hover for the next step</div>
+            </div>
+            <div style="font-family:Archivo,Helvetica,sans-serif;font-size:20px;font-weight:800;letter-spacing:-0.026em;line-height:1.2;color:#FAEEDA;text-wrap:balance">We test it with you</div>
+            <div style="font-size:15.5px;line-height:1.6;color:rgba(250,238,218,0.82);text-wrap:pretty">You call it, message it and try to break it. We adjust until it sounds like your business.</div>
+          </div>
+          <div class="vg-step-arrow" aria-hidden="true" style="flex:none;display:flex;align-items:center;justify-content:center;width:24px">
+            <div class="vg-step-arrow-in" style="display:flex;align-items:center"><div style="width:12px;height:3px;border-radius:99px;background:#D85A30"></div><div style="width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:10px solid #D85A30"></div></div>
+          </div>
+        </div>
+        <div onMouseEnter="{{ stepE3 }}" onClick="{{ stepE3 }}" style="flex:1 1 220px;min-width:0;display:flex;align-items:stretch;gap:8px;opacity:{{ stepO3 }};transform:{{ stepT3 }};pointer-events:{{ stepPE3 }};transition:opacity 1100ms cubic-bezier(.22,.61,.36,1),transform 1100ms cubic-bezier(.22,.61,.36,1)">
+          <div style="flex:1;min-width:0;background:rgba(250,238,218,0.07);border:1px solid rgba(250,238,218,0.16);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.1em;color:#E8763F">04</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,238,218,0.6);display:{{ stepHint3 }}">Hover for the next step</div>
+            </div>
+            <div style="font-family:Archivo,Helvetica,sans-serif;font-size:20px;font-weight:800;letter-spacing:-0.026em;line-height:1.2;color:#FAEEDA;text-wrap:balance">It goes live and we keep it running</div>
+            <div style="font-size:15.5px;line-height:1.6;color:rgba(250,238,218,0.82);text-wrap:pretty">We make your updates every week, send you a report every month and are there when you need us.</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div data-anim="1" style="max-width:1200px;margin:0 auto;padding:88px 40px">
+    <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:40px;font-weight:800;letter-spacing:-0.032em;line-height:1.1;margin:0;max-width:22ch;text-wrap:balance">One memory, no repeating yourself.</h2>
+    <p style="font-size:18px;line-height:1.7;color:rgba(43,33,24,0.78);max-width:60ch;margin:16px 0 0;text-wrap:pretty">A customer who called yesterday and messages on WhatsApp today does not have to explain who they are again. VangAI recognises the conversation, across every channel.</p>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#854F0B;margin-top:14px">Hover a box to see it work</div>
+    <div class="vg-memgrid" style="display:grid;grid-template-columns:minmax(100px,1fr) minmax(56px,84px) minmax(100px,1fr) minmax(56px,84px) minmax(100px,1fr);gap:16px;align-items:center;margin-top:44px">
+      <div style="min-width:0;display:flex;flex-direction:column;gap:10px">
+        <div class="vg-card" style="position:relative;min-width:0;background:#FAEEDA;border:1px solid rgba(43,33,24,0.2);border-radius:16px;padding:15px 18px;text-align:center;transition:border-color 200ms ease" style-hover="border-color:#D85A30">
+          <div class="vg-fx" style="position:absolute;left:0;right:0;top:0;bottom:0;pointer-events:none">
+            <span style="position:absolute;left:50%;top:50%;--dx:-46px;--dy:-26px;animation:vg-out 950ms ease-out 0ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><path d="M6.5 3.5h3l1.5 4-2 1.5a10 10 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5z"/><path d="M17 2.5c1.6.6 2.9 1.9 3.5 3.5M15.5 5.5c.9.4 1.6 1.1 2 2"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:46px;--dy:-30px;animation:vg-out 950ms ease-out 400ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><path d="M6.5 3.5h3l1.5 4-2 1.5a10 10 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5z"/><path d="M17 2.5c1.6.6 2.9 1.9 3.5 3.5M15.5 5.5c.9.4 1.6 1.1 2 2"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:-52px;--dy:22px;animation:vg-out 950ms ease-out 800ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><path d="M6.5 3.5h3l1.5 4-2 1.5a10 10 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5z"/><path d="M17 2.5c1.6.6 2.9 1.9 3.5 3.5M15.5 5.5c.9.4 1.6 1.1 2 2"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:50px;--dy:26px;animation:vg-out 950ms ease-out 1200ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><path d="M6.5 3.5h3l1.5 4-2 1.5a10 10 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5z"/><path d="M17 2.5c1.6.6 2.9 1.9 3.5 3.5M15.5 5.5c.9.4 1.6 1.1 2 2"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:-10px;--dy:-46px;animation:vg-out 950ms ease-out 1600ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><path d="M6.5 3.5h3l1.5 4-2 1.5a10 10 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5z"/><path d="M17 2.5c1.6.6 2.9 1.9 3.5 3.5M15.5 5.5c.9.4 1.6 1.1 2 2"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:16px;--dy:44px;animation:vg-out 950ms ease-out 2000ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><path d="M6.5 3.5h3l1.5 4-2 1.5a10 10 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5z"/><path d="M17 2.5c1.6.6 2.9 1.9 3.5 3.5M15.5 5.5c.9.4 1.6 1.1 2 2"/></svg></span>
+          </div>
+          <div style="position:relative;font-family:Archivo,Helvetica,sans-serif;font-size:15.5px;font-weight:700">Phone</div>
+          <div style="position:relative;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(43,33,24,0.5);margin-top:4px">Customer calls</div>
+        </div>
+        <div class="vg-card" style="position:relative;min-width:0;background:#FAEEDA;border:1px solid rgba(43,33,24,0.2);border-radius:16px;padding:15px 18px;text-align:center;transition:border-color 200ms ease" style-hover="border-color:#D85A30">
+          <div class="vg-fx" style="position:absolute;left:0;right:0;top:0;bottom:0;pointer-events:none">
+            <span style="position:absolute;left:50%;top:50%;--dx:-46px;--dy:-26px;animation:vg-out 950ms ease-out 0ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="17" height="17" fill="#25D366"><path d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 1.9a7.8 7.8 0 1 1-4 14.5l-.4-.2-2.8.7.8-2.7-.2-.4A7.8 7.8 0 0 1 12 4.1z"/><path d="M9.3 7.6c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.5.7 2.9.6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1 0-.1-.2-.2-.5-.3l-1.5-.7c-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.5-.6c.1-.2.2-.3.1-.5l-.6-1.5z"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:46px;--dy:-30px;animation:vg-out 950ms ease-out 400ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="17" height="17" fill="#25D366"><path d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 1.9a7.8 7.8 0 1 1-4 14.5l-.4-.2-2.8.7.8-2.7-.2-.4A7.8 7.8 0 0 1 12 4.1z"/><path d="M9.3 7.6c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.5.7 2.9.6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1 0-.1-.2-.2-.5-.3l-1.5-.7c-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.5-.6c.1-.2.2-.3.1-.5l-.6-1.5z"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:-52px;--dy:22px;animation:vg-out 950ms ease-out 800ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="17" height="17" fill="#25D366"><path d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 1.9a7.8 7.8 0 1 1-4 14.5l-.4-.2-2.8.7.8-2.7-.2-.4A7.8 7.8 0 0 1 12 4.1z"/><path d="M9.3 7.6c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.5.7 2.9.6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1 0-.1-.2-.2-.5-.3l-1.5-.7c-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.5-.6c.1-.2.2-.3.1-.5l-.6-1.5z"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:50px;--dy:26px;animation:vg-out 950ms ease-out 1200ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="17" height="17" fill="#25D366"><path d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 1.9a7.8 7.8 0 1 1-4 14.5l-.4-.2-2.8.7.8-2.7-.2-.4A7.8 7.8 0 0 1 12 4.1z"/><path d="M9.3 7.6c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.5.7 2.9.6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1 0-.1-.2-.2-.5-.3l-1.5-.7c-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.5-.6c.1-.2.2-.3.1-.5l-.6-1.5z"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:-10px;--dy:-46px;animation:vg-out 950ms ease-out 1600ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="17" height="17" fill="#25D366"><path d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 1.9a7.8 7.8 0 1 1-4 14.5l-.4-.2-2.8.7.8-2.7-.2-.4A7.8 7.8 0 0 1 12 4.1z"/><path d="M9.3 7.6c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.5.7 2.9.6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1 0-.1-.2-.2-.5-.3l-1.5-.7c-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.5-.6c.1-.2.2-.3.1-.5l-.6-1.5z"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:16px;--dy:44px;animation:vg-out 950ms ease-out 2000ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="17" height="17" fill="#25D366"><path d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 1.9a7.8 7.8 0 1 1-4 14.5l-.4-.2-2.8.7.8-2.7-.2-.4A7.8 7.8 0 0 1 12 4.1z"/><path d="M9.3 7.6c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.5.7 2.9.6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1 0-.1-.2-.2-.5-.3l-1.5-.7c-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.5-.6c.1-.2.2-.3.1-.5l-.6-1.5z"/></svg></span>
+          </div>
+          <div style="position:relative;font-family:Archivo,Helvetica,sans-serif;font-size:15.5px;font-weight:700">WhatsApp</div>
+          <div style="position:relative;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(43,33,24,0.5);margin-top:4px">Customer messages</div>
+        </div>
+        <div class="vg-card" style="position:relative;min-width:0;background:#FAEEDA;border:1px solid rgba(43,33,24,0.2);border-radius:16px;padding:15px 18px;text-align:center;transition:border-color 200ms ease" style-hover="border-color:#D85A30">
+          <div class="vg-fx" style="position:absolute;left:0;right:0;top:0;bottom:0;pointer-events:none">
+            <span style="position:absolute;left:50%;top:50%;--dx:-46px;--dy:-26px;animation:vg-out 950ms ease-out 0ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="4" width="18" height="15" rx="2.5"/><path d="M3 9h18M6.5 6.5h.01M9 6.5h.01"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:46px;--dy:-30px;animation:vg-out 950ms ease-out 400ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="4" width="18" height="15" rx="2.5"/><path d="M3 9h18M6.5 6.5h.01M9 6.5h.01"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:-52px;--dy:22px;animation:vg-out 950ms ease-out 800ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="4" width="18" height="15" rx="2.5"/><path d="M3 9h18M6.5 6.5h.01M9 6.5h.01"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:50px;--dy:26px;animation:vg-out 950ms ease-out 1200ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="4" width="18" height="15" rx="2.5"/><path d="M3 9h18M6.5 6.5h.01M9 6.5h.01"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:-10px;--dy:-46px;animation:vg-out 950ms ease-out 1600ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="4" width="18" height="15" rx="2.5"/><path d="M3 9h18M6.5 6.5h.01M9 6.5h.01"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:16px;--dy:44px;animation:vg-out 950ms ease-out 2000ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="4" width="18" height="15" rx="2.5"/><path d="M3 9h18M6.5 6.5h.01M9 6.5h.01"/></svg></span>
+          </div>
+          <div style="position:relative;font-family:Archivo,Helvetica,sans-serif;font-size:15.5px;font-weight:700">Web chat</div>
+          <div style="position:relative;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(43,33,24,0.5);margin-top:4px">Visitor asks</div>
+        </div>
+      </div>
+      <div class="vg-arr" style="display:flex;align-items:center;justify-content:center;min-width:0;height:56px">
+          <div class="vg-flow" style="flex:1;min-width:0;height:5px;border-radius:99px;background:repeating-linear-gradient(90deg,rgba(216,90,48,0.35) 0 10px,#D85A30 10px 20px);background-size:40px 5px"></div>
+          <div style="flex:none;width:0;height:0;border-top:13px solid transparent;border-bottom:13px solid transparent;border-left:20px solid #D85A30"></div>
+        </div>
+      <div class="vg-card vg-hub" style="position:relative;min-width:0;background:#2B2118;color:#FAEEDA;border-radius:22px;padding:30px 22px;text-align:center">
+        <div class="vg-fx" style="position:absolute;left:0;right:0;top:0;bottom:0;pointer-events:none">
+            <span style="position:absolute;left:50%;top:50%;--dx:-62px;--dy:-40px;animation:vg-in 950ms ease-out 0ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><path d="M6.5 3.5h3l1.5 4-2 1.5a10 10 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5z"/><path d="M17 2.5c1.6.6 2.9 1.9 3.5 3.5M15.5 5.5c.9.4 1.6 1.1 2 2"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:64px;--dy:-36px;animation:vg-in 950ms ease-out 300ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="17" height="17" fill="#25D366"><path d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 1.9a7.8 7.8 0 1 1-4 14.5l-.4-.2-2.8.7.8-2.7-.2-.4A7.8 7.8 0 0 1 12 4.1z"/><path d="M9.3 7.6c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.5.7 2.9.6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1 0-.1-.2-.2-.5-.3l-1.5-.7c-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.5-.6c.1-.2.2-.3.1-.5l-.6-1.5z"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:-58px;--dy:42px;animation:vg-in 950ms ease-out 600ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="4" width="18" height="15" rx="2.5"/><path d="M3 9h18M6.5 6.5h.01M9 6.5h.01"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:60px;--dy:44px;animation:vg-in 950ms ease-out 900ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><path d="M6.5 3.5h3l1.5 4-2 1.5a10 10 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5z"/><path d="M17 2.5c1.6.6 2.9 1.9 3.5 3.5M15.5 5.5c.9.4 1.6 1.1 2 2"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:0px;--dy:-58px;animation:vg-in 950ms ease-out 1200ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="17" height="17" fill="#25D366"><path d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 1.9a7.8 7.8 0 1 1-4 14.5l-.4-.2-2.8.7.8-2.7-.2-.4A7.8 7.8 0 0 1 12 4.1z"/><path d="M9.3 7.6c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.5.7 2.9.6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1 0-.1-.2-.2-.5-.3l-1.5-.7c-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.5-.6c.1-.2.2-.3.1-.5l-.6-1.5z"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:0px;--dy:60px;animation:vg-in 950ms ease-out 1500ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="4" width="18" height="15" rx="2.5"/><path d="M3 9h18M6.5 6.5h.01M9 6.5h.01"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:-72px;--dy:6px;animation:vg-in 950ms ease-out 1800ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><path d="M6.5 3.5h3l1.5 4-2 1.5a10 10 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5z"/><path d="M17 2.5c1.6.6 2.9 1.9 3.5 3.5M15.5 5.5c.9.4 1.6 1.1 2 2"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:70px;--dy:10px;animation:vg-in 950ms ease-out 2100ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="17" height="17" fill="#25D366"><path d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 1.9a7.8 7.8 0 1 1-4 14.5l-.4-.2-2.8.7.8-2.7-.2-.4A7.8 7.8 0 0 1 12 4.1z"/><path d="M9.3 7.6c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.5.7 2.9.6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1 0-.1-.2-.2-.5-.3l-1.5-.7c-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.5-.6c.1-.2.2-.3.1-.5l-.6-1.5z"/></svg></span>
+          </div>
+        <div style="position:relative;width:50px;height:50px;margin:0 auto 12px"><dc-import name="Mark" uid="hmDia" tone="cream" radius="{{ 0 }}" bg="transparent" hint-size="50px,50px"></dc-import></div>
+        <div style="position:relative;font-size:20px;font-weight:800;letter-spacing:-0.028em;color:#FAEEDA">VangAI</div>
+        <div style="position:relative;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.1em;color:rgba(250,238,218,0.6);margin-top:6px">ONE MEMORY</div>
+      </div>
+      <div class="vg-arr" style="display:flex;align-items:center;justify-content:center;min-width:0;height:56px">
+          <div class="vg-flow" style="flex:1;min-width:0;height:5px;border-radius:99px;background:repeating-linear-gradient(90deg,rgba(216,90,48,0.35) 0 10px,#D85A30 10px 20px);background-size:40px 5px"></div>
+          <div style="flex:none;width:0;height:0;border-top:13px solid transparent;border-bottom:13px solid transparent;border-left:20px solid #D85A30"></div>
+        </div>
+      <div style="min-width:0;display:flex;flex-direction:column;gap:10px">
+        <div class="vg-card" style="position:relative;min-width:0;background:#FAEEDA;border:1px solid rgba(43,33,24,0.2);border-radius:16px;padding:15px 18px;text-align:center;transition:border-color 200ms ease" style-hover="border-color:#D85A30">
+          <div class="vg-fx" style="position:absolute;left:0;right:0;top:0;bottom:0;pointer-events:none">
+            <span style="position:absolute;left:50%;top:50%;--dx:-46px;--dy:-26px;animation:vg-out 950ms ease-out 0ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3.5v3M16 3.5v3M9.5 14.5l2 2 3.5-4"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:46px;--dy:-30px;animation:vg-out 950ms ease-out 400ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.6" stroke-linecap="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:-52px;--dy:22px;animation:vg-out 950ms ease-out 800ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3.5v3M16 3.5v3M9.5 14.5l2 2 3.5-4"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:50px;--dy:26px;animation:vg-out 950ms ease-out 1200ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.6" stroke-linecap="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:-10px;--dy:-46px;animation:vg-out 950ms ease-out 1600ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3.5v3M16 3.5v3M9.5 14.5l2 2 3.5-4"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:16px;--dy:44px;animation:vg-out 950ms ease-out 2000ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.6" stroke-linecap="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>
+          </div>
+          <div style="position:relative;font-family:Archivo,Helvetica,sans-serif;font-size:15.5px;font-weight:700">Your calendar</div>
+          <div style="position:relative;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(43,33,24,0.5);margin-top:4px">Appointment booked</div>
+        </div>
+        <div class="vg-card" style="position:relative;min-width:0;background:#FAEEDA;border:1px solid rgba(43,33,24,0.2);border-radius:16px;padding:15px 18px;text-align:center;transition:border-color 200ms ease" style-hover="border-color:#D85A30">
+          <div class="vg-fx" style="position:absolute;left:0;right:0;top:0;bottom:0;pointer-events:none">
+            <span style="position:absolute;left:50%;top:50%;--dx:-46px;--dy:-26px;animation:vg-out 950ms ease-out 0ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.8 7l8.2 6 8.2-6"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:46px;--dy:-30px;animation:vg-out 950ms ease-out 400ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.8 7l8.2 6 8.2-6"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:-52px;--dy:22px;animation:vg-out 950ms ease-out 800ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.8 7l8.2 6 8.2-6"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:50px;--dy:26px;animation:vg-out 950ms ease-out 1200ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.8 7l8.2 6 8.2-6"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:-10px;--dy:-46px;animation:vg-out 950ms ease-out 1600ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.8 7l8.2 6 8.2-6"/></svg></span>
+            <span style="position:absolute;left:50%;top:50%;--dx:16px;--dy:44px;animation:vg-out 950ms ease-out 2000ms infinite;opacity:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D85A30" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.8 7l8.2 6 8.2-6"/></svg></span>
+          </div>
+          <div style="position:relative;font-family:Archivo,Helvetica,sans-serif;font-size:15.5px;font-weight:700">Your inbox</div>
+          <div style="position:relative;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(43,33,24,0.5);margin-top:4px">Summary received</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div style="background:#F3E4CC;border-top:1px solid rgba(43,33,24,0.12);border-bottom:1px solid rgba(43,33,24,0.12)">
+    <div style="max-width:1200px;margin:0 auto;padding:80px 40px">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:18px 30px;flex-wrap:wrap">
+        <div style="min-width:0">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ What is included</div>
+          <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:40px;font-weight:800;letter-spacing:-0.035em;line-height:1.05;margin:18px 0 0;max-width:26ch;text-wrap:balance">What is included, because we care about the details too</h2>
+          <p style="font-size:17px;line-height:1.6;color:rgba(43,33,24,0.78);margin:12px 0 0;max-width:46ch;text-wrap:pretty">Move the magnifier over the cards to see what you get.</p>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#B8441F">{{ discCount }}</div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <div onClick="{{ revealAll }}" role="button" tabindex="0" style="border:1px solid {{ revealBd }};background:{{ revealBg }};color:{{ revealFg }};font-size:15px;font-weight:600;padding:11px 20px;border-radius:99px;cursor:pointer;transition:border-color 180ms ease,background 180ms ease,color 180ms ease" style-hover="border-color:#D85A30">Reveal all</div>
+            <div onClick="{{ hideAll }}" role="button" tabindex="0" style="border:1px solid {{ hideBd }};background:{{ hideBg }};color:{{ hideFg }};font-size:15px;font-weight:600;padding:11px 20px;border-radius:99px;cursor:pointer;transition:border-color 180ms ease,background 180ms ease,color 180ms ease" style-hover="border-color:#D85A30">Hide</div>
+          </div>
+        </div>
+      </div>
+      <div ref="{{ discRef }}" onMouseMove="{{ discMove }}" onMouseLeave="{{ discLeave }}" style="position:relative;margin-top:30px;cursor:{{ discCursor }}">
+        <div ref="{{ glassRef }}" aria-hidden="true" style="position:absolute;left:0;top:0;width:0;height:0;pointer-events:none;opacity:0;transition:opacity 180ms ease;z-index:6">
+          <div style="position:absolute;left:0;top:0;width:0;height:0;transform:rotate(-45deg)">
+            <div style="position:absolute;left:-9px;top:80px;width:18px;height:12px;border-radius:3px;background:#8A3417"></div>
+            <div style="position:absolute;left:-11px;top:90px;width:22px;height:60px;border-radius:11px;background:#B8441F;box-shadow:0 8px 18px rgba(43,33,24,0.2)"></div>
+          </div>
+          <div style="position:absolute;left:-82px;top:-82px;width:164px;height:164px;box-sizing:border-box;border-radius:50%;border:7px solid #D85A30;background:radial-gradient(circle at 34% 28%,rgba(255,255,255,0.5),rgba(255,255,255,0.1) 58%,rgba(255,255,255,0.02));box-shadow:0 0 0 3px rgba(43,33,24,0.1),0 16px 36px rgba(43,33,24,0.22)"></div>
+        </div>
+        <div class="vg-inc" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px">
+          <sc-for list="{{ items }}" as="it" hint-placeholder-count="9">
+            <div onMouseEnter="{{ it.enter }}" onMouseLeave="{{ it.leave }}" style="position:relative;min-height:160px;border-radius:20px;padding:22px;background:{{ it.bg }};border:1px solid {{ it.bd }};overflow:hidden;transition:background 300ms ease,border-color 300ms ease">
+              <div style="display:{{ it.hiddenD }};flex-direction:column;gap:11px;filter:blur(3px);opacity:0.5">
+                <div style="width:34px;height:34px;border-radius:50%;background:#2B2118;opacity:0.22"></div>
+                <div style="height:13px;border-radius:99px;background:#2B2118;opacity:0.2;width:64%"></div>
+                <div style="height:10px;border-radius:99px;background:#2B2118;opacity:0.14"></div>
+                <div style="height:10px;border-radius:99px;background:#2B2118;opacity:0.14;width:80%"></div>
+              </div>
+              <div style="display:{{ it.shownD }};flex-direction:column;gap:9px">
+                <div style="width:30px;height:30px;border-radius:50%;background:#D85A30;display:flex;align-items:center;justify-content:center;flex:none"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg></div>
+                <div style="font-family:Archivo,Helvetica,sans-serif;font-size:18.5px;font-weight:800;letter-spacing:-0.022em;line-height:1.2;text-wrap:balance">{{ it.label }}</div>
+                <div style="font-size:15.5px;line-height:1.55;color:rgba(43,33,24,0.8);text-wrap:pretty">{{ it.detail }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="height:88px"></div>
+  <div style="max-width:1200px;margin:0 auto;padding:0 40px 88px">
+    <div style="background:#2B2118;color:#FAEEDA;border-radius:24px;padding:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px 40px;align-items:center">
+      <div style="min-width:0">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ Extra service</div>
+        <div style="font-family:Archivo,Helvetica,sans-serif;font-size:30px;font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-top:14px;color:#FAEEDA">No website yet? We build those too.</div>
+        <p style="font-size:16.5px;line-height:1.65;color:rgba(250,238,218,0.85);margin:12px 0 0;max-width:52ch;text-wrap:pretty">Most owners know they need a proper website. They just do not have the time. We build one around your business, in your style, with your assistant already on it.</p>
+      </div>
+      <div style="min-width:0;background:rgba(250,238,218,0.08);border:1px solid rgba(250,238,218,0.16);border-radius:20px;padding:22px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center">
+        <div aria-hidden="true" style="min-width:0;background:#FAEEDA;border-radius:12px;overflow:hidden;box-shadow:0 10px 24px rgba(0,0,0,0.25)">
+          <div style="display:flex;gap:4px;padding:7px 9px;background:#F3E4CC"><span style="width:6px;height:6px;border-radius:50%;background:#D85A30"></span><span style="width:6px;height:6px;border-radius:50%;background:#E8A33D"></span><span style="width:6px;height:6px;border-radius:50%;background:#B8AE9E"></span></div>
+          <div style="padding:12px;display:flex;flex-direction:column;gap:7px">
+            <div style="height:8px;width:40%;border-radius:99px;background:#2B2118;opacity:0.7"></div>
+            <div style="height:36px;border-radius:8px;background:#D85A30;opacity:0.85"></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px"><div style="height:22px;border-radius:6px;background:#2B2118;opacity:0.14"></div><div style="height:22px;border-radius:6px;background:#2B2118;opacity:0.14"></div><div style="height:22px;border-radius:6px;background:#2B2118;opacity:0.14"></div></div>
+            <div style="align-self:flex-end;width:20px;height:20px;border-radius:50%;background:#D85A30"></div>
+          </div>
+        </div>
+        <div style="min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:12px">
+          <div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,238,218,0.72)">From</span><span style="font-family:Archivo,Helvetica,sans-serif;font-size:32px;font-weight:800;letter-spacing:-0.035em;line-height:1;color:#E8763F">€500</span></div>
+          <a href="./VangAI Contact.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:#D85A30;color:#FFFFFF;border:1px solid #D85A30" style-hover="background:#FAEEDA;border-color:#FAEEDA;color:#2B2118">Request a quote <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+          <div style="font-size:14px;line-height:1.5;color:rgba(250,238,218,0.75)">Bigger builds quoted on the call.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1200px;margin:0 auto;padding:0 40px 96px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px 56px;align-items:center">
+      <div style="min-width:0">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ Pricing</div>
+        <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:64px;font-weight:800;letter-spacing:-0.042em;line-height:1;margin:22px 0 0">From €50 a month.</h2>
+        <p style="font-size:19px;line-height:1.65;color:rgba(43,33,24,0.8);max-width:46ch;margin:20px 0 0;text-wrap:pretty">Everything set up, managed and included. We work out the right fit on a short call.</p>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#854F0B;margin-top:12px">Prices excl. VAT.</div>
+        <div style="margin-top:26px"><a href="./VangAI Pricing.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:#D85A30;color:#FFFFFF;border:1px solid #D85A30" style-hover="background:#2B2118;border-color:#2B2118;color:#FFFFFF">See pricing <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a></div>
+      </div>
+      <div style="min-width:0;display:flex;justify-content:center">
+        <div style="width:100%;max-width:400px;background:#FFFFFF;border:1px solid rgba(43,33,24,0.16);border-radius:22px;padding:30px;box-shadow:0 18px 40px rgba(43,33,24,0.08)">
+          <div style="display:flex;align-items:center;gap:10px;padding-bottom:18px;border-bottom:1px solid rgba(43,33,24,0.12)">
+            <div style="width:28px;height:28px;flex:none"><dc-import name="Mark" uid="hmRep" radius="{{ 0 }}" bg="transparent" hint-size="28px,28px"></dc-import></div>
+            <div style="font-size:15px;font-weight:700">VangAI</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:#D85A30;font-weight:500;margin-left:auto">Monthly summary</div>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#854F0B;margin-top:18px">August</div>
+          <div style="display:flex;flex-direction:column;margin-top:10px">
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:15px 0;border-bottom:1px solid rgba(43,33,24,0.1)">
+              <span style="font-size:15px;color:rgba(43,33,24,0.75)">Bookings made</span>
+              <span style="font-size:30px;font-weight:800;letter-spacing:-0.035em;color:#D85A30">34</span>
+            </div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:15px 0;border-bottom:1px solid rgba(43,33,24,0.1)">
+              <span style="font-size:15px;color:rgba(43,33,24,0.75)">Calls and messages handled</span>
+              <span style="font-size:30px;font-weight:800;letter-spacing:-0.035em;color:#D85A30">118</span>
+            </div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:15px 0;border-bottom:1px solid rgba(43,33,24,0.1)">
+              <span style="font-size:15px;color:rgba(43,33,24,0.75)">Estimated time saved</span>
+              <span style="font-size:30px;font-weight:800;letter-spacing:-0.035em;color:#D85A30">9 hrs</span>
+            </div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:15px 0">
+              <span style="font-size:15px;color:rgba(43,33,24,0.75)">Value of bookings taken</span>
+              <span style="font-size:30px;font-weight:800;letter-spacing:-0.035em;color:#D85A30">€1,870</span>
+            </div>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.1em;color:rgba(43,33,24,0.62);margin-top:14px">EXAMPLE FIGURES</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#FFF6E6;border-top:1px solid rgba(43,33,24,0.12);border-bottom:1px solid rgba(43,33,24,0.12)">
+    <div style="max-width:1200px;margin:0 auto;padding:72px 40px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ Why VangAI</div>
+      <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:36px;font-weight:800;letter-spacing:-0.035em;line-height:1.05;margin:18px 0 0;max-width:24ch;text-wrap:balance">Why businesses choose VangAI</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:30px">
+        <div style="min-width:0;background:#FAEEDA;border:1px solid rgba(43,33,24,0.12);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:14px">
+          <div style="width:46px;height:46px;flex:none;border-radius:14px;background:#D85A30;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.6"/></svg></div>
+          <div><div style="font-family:Archivo,Helvetica,sans-serif;font-size:19px;font-weight:800;letter-spacing:-0.022em;line-height:1.2">Based in Belgium.</div><div style="font-size:15.5px;line-height:1.55;color:rgba(43,33,24,0.8);margin-top:6px;text-wrap:pretty">A local team you can reach, not a platform abroad.</div></div>
+        </div>
+        <div style="min-width:0;background:#FAEEDA;border:1px solid rgba(43,33,24,0.12);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:14px">
+          <div style="width:46px;height:46px;flex:none;border-radius:14px;background:#D85A30;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h9v7H8l-4 3z"/><path d="M13 9h7v7l-3-2h-4z"/></svg></div>
+          <div><div style="font-family:Archivo,Helvetica,sans-serif;font-size:19px;font-weight:800;letter-spacing:-0.022em;line-height:1.2">Three languages.</div><div style="font-size:15.5px;line-height:1.55;color:rgba(43,33,24,0.8);margin-top:6px;text-wrap:pretty">Dutch, French and English, from day one.</div></div>
+        </div>
+        <div style="min-width:0;background:#FAEEDA;border:1px solid rgba(43,33,24,0.12);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:14px">
+          <div style="width:46px;height:46px;flex:none;border-radius:14px;background:#D85A30;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9.5 2.5h5"/></svg></div>
+          <div><div style="font-family:Archivo,Helvetica,sans-serif;font-size:19px;font-weight:800;letter-spacing:-0.022em;line-height:1.2">Live in days, not months.</div><div style="font-size:15.5px;line-height:1.55;color:rgba(43,33,24,0.8);margin-top:6px;text-wrap:pretty">We do the setup, you keep working.</div></div>
+        </div>
+        <div style="min-width:0;background:#FAEEDA;border:1px solid rgba(43,33,24,0.12);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:14px">
+          <div style="width:46px;height:46px;flex:none;border-radius:14px;background:#D85A30;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14.5 3v4.5H19M9 13l2 2 4-4"/></svg></div>
+          <div><div style="font-family:Archivo,Helvetica,sans-serif;font-size:19px;font-weight:800;letter-spacing:-0.022em;line-height:1.2">Fair terms.</div><div style="font-size:15.5px;line-height:1.55;color:rgba(43,33,24,0.8);margin-top:6px;text-wrap:pretty">A 3-month minimum, then cancel monthly.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#2B2118;color:#FAEEDA">
+    <div style="max-width:1200px;margin:0 auto;padding:88px 40px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ FAQ</div>
+      <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:40px;font-weight:800;letter-spacing:-0.035em;line-height:1.05;margin:18px 0 0;max-width:22ch;text-wrap:balance;color:#FAEEDA">Questions we get a lot</h2>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-top:30px;max-width:880px">
+        <div style="background:rgba(250,238,218,0.06);border:1px solid rgba(250,238,218,0.14);border-radius:18px;overflow:hidden">
+          <div onClick="{{ faqT0 }}" role="button" tabindex="0" aria-expanded="{{ faqX0 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 22px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:18.5px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty;color:#FAEEDA">Is this a chatbot with a script?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign0 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR0 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 22px 16px;font-size:17px;line-height:1.7;color:rgba(250,238,218,0.82);max-width:64ch;text-wrap:pretty">No. It holds a real conversation, understands follow-up questions and answers the way your business would. No "press 1 for opening hours".</div></div></div>
+        </div>
+        <div style="background:rgba(250,238,218,0.06);border:1px solid rgba(250,238,218,0.14);border-radius:18px;overflow:hidden">
+          <div onClick="{{ faqT1 }}" role="button" tabindex="0" aria-expanded="{{ faqX1 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 22px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:18.5px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty;color:#FAEEDA">Does it tell people it is an AI?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign1 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR1 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 22px 16px;font-size:17px;line-height:1.7;color:rgba(250,238,218,0.82);max-width:64ch;text-wrap:pretty">Yes, in the first sentence. The law requires it, and we think it is simply honest. Then it gets on with helping.</div></div></div>
+        </div>
+        <div style="background:rgba(250,238,218,0.06);border:1px solid rgba(250,238,218,0.14);border-radius:18px;overflow:hidden">
+          <div onClick="{{ faqT2 }}" role="button" tabindex="0" aria-expanded="{{ faqX2 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 22px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:18.5px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty;color:#FAEEDA">What if it does not know the answer?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign2 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR2 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 22px 16px;font-size:17px;line-height:1.7;color:rgba(250,238,218,0.82);max-width:64ch;text-wrap:pretty">It says so and passes the question to you with the customer’s name and number, so you can call back. It never makes things up.</div></div></div>
+        </div>
+        <div style="background:rgba(250,238,218,0.06);border:1px solid rgba(250,238,218,0.14);border-radius:18px;overflow:hidden">
+          <div onClick="{{ faqT3 }}" role="button" tabindex="0" aria-expanded="{{ faqX3 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 22px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:18.5px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty;color:#FAEEDA">How long before it is live?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign3 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR3 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 22px 16px;font-size:17px;line-height:1.7;color:rgba(250,238,218,0.82);max-width:64ch;text-wrap:pretty">VangChat is usually live within a few working days. VangMessage and VangVoice take one to two weeks, because WhatsApp and phone forwarding need to be approved and set up.</div></div></div>
+        </div>
+        <div style="background:rgba(250,238,218,0.06);border:1px solid rgba(250,238,218,0.14);border-radius:18px;overflow:hidden">
+          <div onClick="{{ faqT4 }}" role="button" tabindex="0" aria-expanded="{{ faqX4 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 22px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:18.5px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty;color:#FAEEDA">Does it work in French and English too?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign4 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR4 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 22px 16px;font-size:17px;line-height:1.7;color:rgba(250,238,218,0.82);max-width:64ch;text-wrap:pretty">Yes. Dutch, French and English are standard, and it switches to the language the customer speaks.</div></div></div>
+        </div>
+        <div style="display:grid;grid-template-rows:{{ moreR }};transition:grid-template-rows 520ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="display:flex;flex-direction:column;gap:6px">
+        <div style="background:rgba(250,238,218,0.06);border:1px solid rgba(250,238,218,0.14);border-radius:18px;overflow:hidden">
+          <div onClick="{{ faqT5 }}" role="button" tabindex="0" aria-expanded="{{ faqX5 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 22px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:18.5px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty;color:#FAEEDA">Do I keep my current phone number?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign5 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR5 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 22px 16px;font-size:17px;line-height:1.7;color:rgba(250,238,218,0.82);max-width:64ch;text-wrap:pretty">Yes. Calls you do not pick up are forwarded to your assistant. Nothing changes for your customers.</div></div></div>
+        </div>
+        <div style="background:rgba(250,238,218,0.06);border:1px solid rgba(250,238,218,0.14);border-radius:18px;overflow:hidden">
+          <div onClick="{{ faqT6 }}" role="button" tabindex="0" aria-expanded="{{ faqX6 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 22px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:18.5px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty;color:#FAEEDA">Do I need to be good with technology?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign6 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR6 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 22px 16px;font-size:17px;line-height:1.7;color:rgba(250,238,218,0.82);max-width:64ch;text-wrap:pretty">No. We set everything up and keep it running. If you can send us a WhatsApp, you can work with us.</div></div></div>
+        </div>
+        <div style="background:rgba(250,238,218,0.06);border:1px solid rgba(250,238,218,0.14);border-radius:18px;overflow:hidden">
+          <div onClick="{{ faqT7 }}" role="button" tabindex="0" aria-expanded="{{ faqX7 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 22px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:18.5px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty;color:#FAEEDA">Can I change what it says later?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign7 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR7 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 22px 16px;font-size:17px;line-height:1.7;color:rgba(250,238,218,0.82);max-width:64ch;text-wrap:pretty">Yes. Send us your changes, like new prices, holiday hours or a new service, and we update it for you every week.</div></div></div>
+        </div>
+        <div style="background:rgba(250,238,218,0.06);border:1px solid rgba(250,238,218,0.14);border-radius:18px;overflow:hidden">
+          <div onClick="{{ faqT8 }}" role="button" tabindex="0" aria-expanded="{{ faqX8 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 22px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:18.5px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty;color:#FAEEDA">What happens to the conversations?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign8 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR8 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 22px 16px;font-size:17px;line-height:1.7;color:rgba(250,238,218,0.82);max-width:64ch;text-wrap:pretty">Everything is handled under GDPR. Your customer data belongs to you and is never used to train other systems. Full explanation on <a href="./VangAI Data and Privacy.dc.html" style="color:#E8763F;font-weight:600">Data &amp; privacy</a>.</div></div></div>
+        </div>
+        <div style="background:rgba(250,238,218,0.06);border:1px solid rgba(250,238,218,0.14);border-radius:18px;overflow:hidden">
+          <div onClick="{{ faqT9 }}" role="button" tabindex="0" aria-expanded="{{ faqX9 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 22px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:18.5px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty;color:#FAEEDA">What does it cost?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign9 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR9 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 22px 16px;font-size:17px;line-height:1.7;color:rgba(250,238,218,0.82);max-width:64ch;text-wrap:pretty">From €50 a month for one channel, excl. VAT. The exact price depends on your business, and we give you a fixed price on a short call. <a href="./VangAI Pricing.dc.html" style="color:#E8763F;font-weight:600">See pricing</a>.</div></div></div>
+        </div>
+        </div></div></div>
+        <div style="margin-top:10px"><div onClick="{{ moreT }}" role="button" tabindex="0" aria-expanded="{{ moreX }}" style="font-size:15px;font-weight:600;padding:12px 24px;border-radius:99px;display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid rgba(250,238,218,0.5);color:#FAEEDA;transition:background 180ms ease,color 180ms ease" style-hover="background:#FAEEDA;color:#2B2118">{{ moreLabel }} <span aria-hidden="true" style="display:inline-block;transform:{{ moreRot }};transition:transform 300ms ease">↓</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1200px;margin:0 auto;padding:88px 40px 104px">
+    <div style="background:#2B2118;border-radius:28px;padding:64px 56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px 40px;align-items:center">
+      <div style="min-width:0;display:flex;flex-direction:column;align-items:flex-start">
+        <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:48px;font-weight:800;letter-spacing:-0.04em;line-height:1.02;margin:0;color:#FAEEDA;max-width:20ch;text-wrap:balance">Never miss another customer.</h2>
+        <p style="font-size:18px;line-height:1.6;color:#FAEEDA;max-width:44ch;margin:18px 0 30px;text-wrap:pretty">A short call, no sales pitch. We will tell you honestly if it is not a fit.</p>
+        <a href="./VangAI Contact.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:#D85A30;color:#FFFFFF;border:1px solid #D85A30" style-hover="background:#FAEEDA;border-color:#FAEEDA;color:#2B2118">Book a call <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+      </div>
+      <div style="min-width:0;display:flex;justify-content:center">
+        <div style="width:180px;height:180px"><dc-import name="Mark" uid="hmcta" tone="cream" radius="{{ 0 }}" bg="transparent" hint-size="180px,180px"></dc-import></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1200px;margin:0 auto;padding:8px 40px 40px">
+    <footer style="background:#2B2118;color:#FAEEDA;border-radius:24px;overflow:hidden">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;background:rgba(250,238,218,0.12);border-bottom:1px solid rgba(250,238,218,0.12)">
+        <a href="./VangAI Product.dc.html#voice" data-ft-card="1" style="min-width:0;display:flex;flex-direction:column;gap:10px;padding:32px;background:#2B2118;color:#FAEEDA;transition:background 250ms ease" style-hover="background:#352A20;color:#FAEEDA">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="flex:none;width:40px;height:40px;border-radius:12px;background:rgba(216,90,48,0.18);color:#E8763F;display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></span>
+            <span style="font-size:24px;font-weight:800;letter-spacing:-0.03em;line-height:1.1;color:#FAEEDA">VangVoice</span>
+          </div>
+          <span style="font-size:15px;line-height:1.5;color:#CDBBA2;text-wrap:pretty">Your phone, answered every time.</span>
+          <span data-ft-go="1" style="display:inline-flex;align-items:center;gap:8px;margin-top:4px;font-size:14.5px;font-weight:700;color:#E8763F;transition:transform 250ms ease">See product <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></span>
+        </a>
+        <a href="./VangAI Product.dc.html#whatsapp" data-ft-card="1" style="min-width:0;display:flex;flex-direction:column;gap:10px;padding:32px;background:#2B2118;color:#FAEEDA;transition:background 250ms ease" style-hover="background:#352A20;color:#FAEEDA">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="flex:none;width:40px;height:40px;border-radius:12px;background:rgba(216,90,48,0.18);color:#E8763F;display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></span>
+            <span style="font-size:24px;font-weight:800;letter-spacing:-0.03em;line-height:1.1;color:#FAEEDA">VangMessage</span>
+          </div>
+          <span style="font-size:15px;line-height:1.5;color:#CDBBA2;text-wrap:pretty">WhatsApp replies within seconds.</span>
+          <span data-ft-go="1" style="display:inline-flex;align-items:center;gap:8px;margin-top:4px;font-size:14.5px;font-weight:700;color:#E8763F;transition:transform 250ms ease">See product <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></span>
+        </a>
+        <a href="./VangAI Product.dc.html#chat" data-ft-card="1" style="min-width:0;display:flex;flex-direction:column;gap:10px;padding:32px;background:#2B2118;color:#FAEEDA;transition:background 250ms ease" style-hover="background:#352A20;color:#FAEEDA">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="flex:none;width:40px;height:40px;border-radius:12px;background:rgba(216,90,48,0.18);color:#E8763F;display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M4 4h16c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H8l-4 4V6c0-1.1.9-2 2-2zm3 6v2h2v-2H7zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2z"/></svg></span>
+            <span style="font-size:24px;font-weight:800;letter-spacing:-0.03em;line-height:1.1;color:#FAEEDA">VangChat</span>
+          </div>
+          <span style="font-size:15px;line-height:1.5;color:#CDBBA2;text-wrap:pretty">Answers on your website, 24/7.</span>
+          <span data-ft-go="1" style="display:inline-flex;align-items:center;gap:8px;margin-top:4px;font-size:14.5px;font-weight:700;color:#E8763F;transition:transform 250ms ease">See product <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></span>
+        </a>
+      </div>
+      <div style="position:relative;overflow:hidden">
+        <div aria-hidden="true" data-no-i18n="1" style="position:absolute;left:24px;bottom:0.02em;display:flex;align-items:baseline;font-family:Archivo,Helvetica,sans-serif;font-size:clamp(96px,17vw,210px);font-weight:800;letter-spacing:-0.05em;line-height:0.78;color:#33281F;white-space:nowrap;pointer-events:none;user-select:none">VangAI<span style="display:inline-block;flex:none;width:0.15em;height:0.15em;border-radius:50%;background:#D85A30;margin-left:0.05em;opacity:0.55"></span></div>
+        <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:20px 32px;flex-wrap:wrap;padding:30px 32px">
+          <a href="./VangAI Home.dc.html" aria-label="VangAI home" style="display:flex;align-items:center;gap:11px;color:#FAEEDA" style-hover="color:#FAEEDA">
+            <div style="width:34px;height:34px;flex:none"><dc-import name="Mark" uid="hmft" radius="{{ 0 }}" bg="transparent" hint-size="34px,34px"></dc-import></div>
+            <div style="font-size:21px;font-weight:800;letter-spacing:-0.03em">VangAI</div>
+          </a>
+          <div style="display:flex;align-items:center;gap:10px 28px;flex-wrap:wrap">
+            <a href="./VangAI Pricing.dc.html" style="font-size:16px;font-weight:500;color:rgba(250,238,218,0.88)" style-hover="color:#E8763F">Pricing</a>
+            <a href="./VangAI About.dc.html" style="font-size:16px;font-weight:500;color:rgba(250,238,218,0.88)" style-hover="color:#E8763F">About us</a>
+            <a href="./VangAI Contact.dc.html" style="font-size:16px;font-weight:500;color:rgba(250,238,218,0.88)" style-hover="color:#E8763F">Contact</a>
+            <a href="mailto:[email address]" data-todo="[email address]" style="font-size:16px;font-weight:600;color:#E8763F" style-hover="color:#FAEEDA">[email address]</a>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+            <div role="group" aria-label="Language" style="display:flex;align-items:center;gap:2px;border:1px solid rgba(250,238,218,0.28);border-radius:99px;padding:3px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.08em">
+              <a href="#nl" data-set-lang="nl" data-lang-dark="1" style="padding:6px 10px;border-radius:99px;color:rgba(250,238,218,0.7)">NL</a>
+              <a href="#fr" data-set-lang="fr" data-lang-dark="1" style="padding:6px 10px;border-radius:99px;color:rgba(250,238,218,0.7)">FR</a>
+              <a href="#en" data-set-lang="en" data-lang-dark="1" style="padding:6px 10px;border-radius:99px;color:rgba(250,238,218,0.7)">EN</a>
+            </div>
+            <a href="./VangAI Contact.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:#D85A30;color:#FFFFFF;border:1px solid #D85A30" style-hover="background:#FAEEDA;border-color:#FAEEDA;color:#2B2118">Book a call <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+          </div>
+        </div>
+        <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;padding:16px 32px 20px;border-top:1px solid rgba(250,238,218,0.12);font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(250,238,218,0.62)">
+          <span>© 2026 VangAI, Hasselt, Belgium, [company number]</span>
+          <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
+            <a href="./VangAI Privacy.dc.html" style="color:rgba(250,238,218,0.62)" style-hover="color:#FAEEDA">Privacy</a>
+            <a href="./VangAI Cookies.dc.html" style="color:rgba(250,238,218,0.62)" style-hover="color:#FAEEDA">Cookies</a>
+            <a href="./VangAI Terms.dc.html" style="color:rgba(250,238,218,0.62)" style-hover="color:#FAEEDA">Terms</a>
+            <a href="./VangAI Data and Privacy.dc.html" style="color:rgba(250,238,218,0.62)" style-hover="color:#FAEEDA">Data &amp; privacy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = Object.assign({ nav: false, faq: {} }, { tab: 0, steps: 1, seen: {}, hover: -1, all: false, more: false });
+  componentDidMount() {
+    const mq = q => window.matchMedia && window.matchMedia(q).matches;
+    this._reduce = mq('(prefers-reduced-motion: reduce)');
+    if (mq('(max-width: 1060px)') || this._reduce) this.setState({ steps: 4 });
+    if (mq('(hover: none)')) this.setState({ all: true });
+    this._touched = false;
+    this._rot = setInterval(() => {
+      if (this._touched || this._reduce || document.hidden || !this._hero) return;
+      const r = this._hero.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > (window.innerHeight || 800)) return;
+      this.setState(s => ({ tab: (s.tab + 1) % 3 }));
+    }, 5000);
+    this._stepsT = setInterval(() => {
+      const el = this._stepsEl;
+      if (this.state.steps >= 4) { clearInterval(this._stepsT); return; }
+      if (!el) return;
+      const r = el.getBoundingClientRect(), h = window.innerHeight || 800;
+      if (r.top < h * 0.8 && r.bottom > h * 0.2 && !this._auto) this.armSteps();
+    }, 400);
+  }
+  armSteps() {
+    clearTimeout(this._auto);
+    this._auto = setTimeout(() => { if (this.state.steps < 4) this.setState({ steps: 4 }); }, 4000);
+  }
+  componentWillUnmount() { clearInterval(this._rot); clearInterval(this._stepsT); clearTimeout(this._auto); }
+  items() {
+    return [["Set up by us","We build, test and launch it. You never touch a setting."],["Sounds like you","Your tone, your prices, your way of talking to customers."],["Three languages","Dutch, French and English, it answers in the language the customer uses."],["Your calendar, connected","Bookings land straight in the calendar you already use."],["Email summary after every conversation","Who called, what they wanted and what they booked, straight to your inbox."],["A report every month","Bookings made, questions handled and time saved, in plain numbers."],["Weekly updates","New prices, holidays, a new service: tell us and we change it."],["A person when it matters","Anything it cannot handle goes straight to you, with the details."],["Privacy built in","GDPR-compliant from the start, and your customer data stays yours."]];
+  }
+  renderVals() {
+    const v = {
+      ddDisplay: this.state.nav ? 'flex' : 'none',
+      navEnter: () => this.setState({ nav: true }),
+      navLeave: () => this.setState({ nav: false })
+    };
+    for (let i = 0; i < 40; i++) {
+      const open = !!this.state.faq[i];
+      v['faqR' + i] = open ? '1fr' : '0fr';
+      v['faqSign' + i] = open ? '–' : '+';
+      v['faqX' + i] = open ? 'true' : 'false';
+      v['faqT' + i] = () => this.setState(s => ({ faq: Object.assign({}, s.faq, { [i]: !s.faq[i] }) }));
+    }
+    v.moreR = this.state.more ? '1fr' : '0fr';
+    v.moreX = this.state.more ? 'true' : 'false';
+    v.moreRot = this.state.more ? 'rotate(180deg)' : 'none';
+    v.moreLabel = this.state.more ? 'Show fewer questions' : 'Show more questions';
+    v.moreT = () => this.setState(s => ({ more: !s.more }));
+    v.heroRef = el => { this._hero = el; };
+    v.demoAct = () => { this._touched = true; };
+    for (let i = 0; i < 3; i++) {
+      const on = this.state.tab === i;
+      v['demoD' + i] = on ? 'block' : 'none';
+      v['tabBg' + i] = on ? '#D85A30' : 'transparent';
+      v['tabFg' + i] = on ? '#FFFFFF' : 'rgba(43,33,24,0.75)';
+      v['tabBd' + i] = on ? '#D85A30' : 'rgba(43,33,24,0.25)';
+      v['setTab' + i] = () => { this._touched = true; this.setState({ tab: i }); };
+    }
+    for (let i = 0; i < 4; i++) {
+      const shown = this.state.steps > i;
+      v['stepO' + i] = shown ? 1 : 0;
+      v['stepT' + i] = shown ? 'translateX(0)' : 'translateX(-48px)';
+      v['stepHint' + i] = (shown && this.state.steps === i + 1 && i < 3) ? 'block' : 'none';
+      v['stepPE' + i] = shown ? 'auto' : 'none';
+      v['stepE' + i] = () => { this.armSteps(); if (this.state.steps === i + 1 && i < 3) this.setState({ steps: i + 2 }); };
+    }
+    v.stepsRef = el => { this._stepsEl = el; };
+    const list = this.items(), all = this.state.all;
+    const seenCount = all ? list.length : Object.keys(this.state.seen).length;
+    v.items = list.map((it, i) => {
+      const on = all || this.state.hover === i;
+      return {
+        label: it[0], detail: it[1],
+        hiddenD: on ? 'none' : 'flex', shownD: on ? 'flex' : 'none',
+        bg: on ? '#FAEEDA' : 'rgba(43,33,24,0.05)',
+        bd: on ? 'rgba(43,33,24,0.18)' : 'rgba(43,33,24,0.12)',
+        enter: () => this.setState(s => ({ hover: i, seen: Object.assign({}, s.seen, { [i]: true }) })),
+        leave: () => this.setState(s => (s.hover === i ? { hover: -1 } : null))
+      };
+    });
+    v.discCursor = all ? 'default' : 'none';
+    v.discCount = seenCount + ' of ' + list.length + ' found';
+    v.revealBd = all ? '#D85A30' : 'rgba(43,33,24,0.25)';
+    v.revealBg = all ? '#D85A30' : 'transparent';
+    v.revealFg = all ? '#FFFFFF' : '#2B2118';
+    v.hideBd = all ? 'rgba(43,33,24,0.25)' : '#2B2118';
+    v.hideBg = all ? 'transparent' : '#2B2118';
+    v.hideFg = all ? '#2B2118' : '#FAEEDA';
+    v.revealAll = () => { if (this._glass) this._glass.style.opacity = 0; this.setState({ all: true, hover: -1 }); };
+    v.hideAll = () => this.setState({ all: false, hover: -1 });
+    v.discRef = el => { this._disc = el; };
+    v.glassRef = el => { this._glass = el; };
+    v.discMove = e => {
+      if (!this._disc || !this._glass || this.state.all) return;
+      const r = this._disc.getBoundingClientRect();
+      this._glass.style.transform = 'translate(' + (e.clientX - r.left) + 'px,' + (e.clientY - r.top) + 'px)';
+      this._glass.style.opacity = '1';
+    };
+    v.discLeave = () => { if (this._glass) this._glass.style.opacity = '0'; this.setState({ hover: -1 }); };
+    return v;
+  }
+}
+</script>
+</body>
+</html>

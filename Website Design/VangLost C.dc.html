@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="./lost-engine.js"></script>
+<style>
+@keyframes vlc-pulse { 0%{transform:scale(.4);opacity:.85} 100%{transform:scale(1.7);opacity:0} }
+@keyframes vlc-pop {
+  0%{opacity:0;transform:translateY(0) scale(.45)}
+  16%{opacity:1;transform:translateY(-16px) scale(1)}
+  64%{opacity:1;transform:translateY(-32px) scale(1)}
+  88%,100%{opacity:0;transform:translateY(-40px) scale(.9)}
+}
+.vlc-pop1{animation:vlc-pop 3s ease-out 0s infinite}
+.vlc-pop2{animation:vlc-pop 3s ease-out 1s infinite}
+.vlc-pop3{animation:vlc-pop 3s ease-out 2s infinite}
+[data-paused="1"] *{animation-play-state:paused !important}
+@media (prefers-reduced-motion: reduce){ .vlc-scene *{animation:none !important} }
+</style>
+</helmet>
+<div ref="{{ rootRef }}" class="vlc-scene" style="width:100%;max-width:100%;overflow:hidden;display:flex;flex-direction:column;gap:14px;font-family:Archivo,Helvetica,sans-serif">
+  <div style="display:flex;justify-content:flex-end">
+    <div style="display:inline-flex;align-items:center;gap:10px;border:1px solid {{ tickBd }};background:{{ tickBg }};border-radius:99px;padding:8px 16px;transition:background 400ms ease,border-color 400ms ease">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:{{ tickLabel }};transition:color 400ms ease">{{ tickText }}</span>
+      <span style="font-size:19px;font-weight:800;letter-spacing:-0.02em;color:{{ tickNum }};transition:color 400ms ease;font-variant-numeric:tabular-nums">{{ tickCount }}</span>
+    </div>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:18px;align-items:stretch;justify-content:center">
+    <svg viewBox="0 0 600 400" style="flex:1 1 380px;min-width:0;width:100%;max-width:700px;height:auto" role="img" aria-label="Joe the mechanic works on a car while calls come in to his garage">
+      <defs><filter id="vlcGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter></defs>
+      <rect x="0" y="0" width="600" height="400" rx="24" fill="#F3E4CC"/>
+      <rect x="0" y="358" width="600" height="42" fill="#D85A30"/>
+      <path d="M0 382h600" stroke="#B8441F" stroke-width="2" opacity="0.5"/>
+      <text x="40" y="66" fill="#2B2118" font-family="Archivo, Helvetica, sans-serif" font-size="34" font-weight="800" letter-spacing="11">GARAGE</text>
+      <path d="M40 82h214" stroke="#D85A30" stroke-width="4" stroke-linecap="round"/>
+      <rect x="40" y="310" width="100" height="9" rx="4.5" fill="#2B2118"/>
+      <rect x="52" y="319" width="9" height="39" rx="4.5" fill="#2B2118"/><rect x="119" y="319" width="9" height="39" rx="4.5" fill="#2B2118"/>
+      <g data-vl="aiph" opacity="0" style="transform-origin:88px 296px"><circle cx="88" cy="296" r="30" fill="#D85A30" opacity="0.6" filter="url(#vlcGlow)"/></g>
+      <g data-vl="ring" opacity="0" fill="none" stroke="#D85A30" stroke-linecap="round">
+        <circle cx="88" cy="290" r="22" stroke-width="3" style="transform-origin:88px 290px;animation:vlc-pulse 1800ms ease-out infinite"/>
+        <circle cx="88" cy="290" r="22" stroke-width="3" style="transform-origin:88px 290px;animation:vlc-pulse 1800ms ease-out 600ms infinite"/>
+        <path d="M128 280q8 10 0 20M138 272q14 18 0 36M48 280q-8 10 0 20M38 272q-14 18 0 36" stroke-width="3.2"/>
+      </g>
+      <g data-vl="airing" opacity="0"><circle cx="88" cy="296" r="22" fill="none" stroke="#D85A30" stroke-width="2.4" style="transform-origin:88px 296px;animation:vlc-pulse 2000ms ease-out infinite"/></g>
+      <path data-vl="cord" d="M112 303c8 4 4-8 10-6c6 2 2-10 8-8c5 2 4-8 8-9" fill="none" stroke="#2B2118" stroke-width="2.6" stroke-linecap="round" opacity="0"></path>
+      <path d="M66 294 C56 296 52 300 58 302 C64 304 50 306 56 309 C62 312 50 314 56 316 C60 318 62 314 66 310" fill="none" stroke="#2B2118" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M64 310 L68 292 H108 L112 310 Z" fill="#2B2118"/>
+      <rect x="71" y="288" width="5" height="6" rx="1.5" fill="#2B2118"/><rect x="100" y="288" width="5" height="6" rx="1.5" fill="#2B2118"/>
+      <circle cx="88" cy="301" r="6.2" fill="#F3E4CC"/><circle cx="88" cy="301" r="2" fill="#2B2118"/>
+      <g data-vl="aimk" opacity="0"><circle cx="88" cy="301" r="8" fill="#D85A30"/><image href="./assets/mark-cream.png" x="81.5" y="295.5" width="13" height="11" preserveAspectRatio="xMidYMid meet"></image></g>
+      <g data-vl="hset" style="transform-origin:88px 290px"><path d="M61 290.5C61 284.5 66.5 282.5 72 283.8C80.5 278.6 95.5 278.6 104 283.8C109.5 282.5 115 284.5 115 290.5C115 296 110.5 297.5 106 296.6C102.8 296 100.8 293.6 100 291.2C94 286.8 82 286.8 76 291.2C75.2 293.6 73.2 296 70 296.6C65.5 297.5 61 296 61 290.5Z" fill="#2B2118"/></g>
+      <g data-vl="pops" opacity="0">
+        <g class="vlc-pop1" style="transform-origin:88px 250px"><rect x="72" y="236" width="32" height="27" rx="8" fill="#2B2118"/><path d="M76 249h24" stroke="#D85A30" stroke-width="2"/><path d="M81 255l3.5 3.5 7-7.5" fill="none" stroke="#D85A30" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+        <g class="vlc-pop2" style="transform-origin:132px 250px"><circle cx="132" cy="250" r="14" fill="#D85A30"/><path d="M125 250l5 5 9-10" fill="none" stroke="#F3E4CC" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+        <g class="vlc-pop3" style="transform-origin:44px 250px"><rect x="28" y="236" width="32" height="27" rx="8" fill="#2B2118"/><path d="M32 249h24" stroke="#D85A30" stroke-width="2"/><path d="M37 255l3.5 3.5 7-7.5" fill="none" stroke="#D85A30" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+      </g>
+      <g>
+        <path d="M168 342 V318 A20 20 0 0 1 188 298 H210 L232 267 A12 12 0 0 1 242 262 H314 A12 12 0 0 1 324 267 L346 298 H394 A20 20 0 0 1 414 318 V342 Z" fill="#6B5D4F"/>
+        <path d="M227 292 L243 270 H274 V292 Z" fill="#F3E4CC"/>
+        <path d="M282 270 H313 L329 292 H282 Z" fill="#F3E4CC"/>
+        <circle cx="228" cy="342" r="22" fill="#120D09" stroke="#F3E4CC" stroke-width="3"/><circle cx="228" cy="342" r="9" fill="#CDBFA8"/><circle cx="228" cy="342" r="3" fill="#6B5D4F"/>
+        <circle cx="376" cy="342" r="22" fill="#120D09" stroke="#F3E4CC" stroke-width="3"/><circle cx="376" cy="342" r="9" fill="#CDBFA8"/><circle cx="376" cy="342" r="3" fill="#6B5D4F"/>
+        <rect data-vl="hood" x="336" y="288" width="88" height="13" rx="6.5" fill="#4A4038" style="transform-origin:338px 294px"/>
+      </g>
+      <g data-vl="cust" style="transform-origin:600px 322px;transform:translateX(44px)">
+        <g data-vl="cLegA" style="transform-origin:594px 318px"><path d="M594 318 L594 358" stroke="#854F0B" stroke-width="10" stroke-linecap="round"/></g>
+        <g data-vl="cLegB" style="transform-origin:606px 318px"><path d="M606 318 L606 358" stroke="#854F0B" stroke-width="10" stroke-linecap="round"/></g>
+        <g data-vl="cArmB" style="transform-origin:606px 290px" opacity="0.45"><path d="M606 290 L596 304 L590 314" fill="none" stroke="#854F0B" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+        <rect x="584" y="272" width="32" height="54" rx="16" fill="#854F0B"/>
+        <circle cx="600" cy="258" r="14.5" fill="#854F0B"/>
+        <g data-vl="cArmA" style="transform-origin:592px 288px"><path d="M592 288 L580 302 L570 310" fill="none" stroke="#854F0B" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></g>
+        <g data-vl="talkC" opacity="0"><rect x="576" y="212" width="48" height="28" rx="13" fill="#854F0B"/><path d="M590 240l3-10h10z" fill="#854F0B"/><circle cx="588" cy="226" r="3" fill="#F3E4CC"/><circle cx="600" cy="226" r="3" fill="#F3E4CC"/><circle cx="612" cy="226" r="3" fill="#F3E4CC"/></g>
+      </g>
+      <g data-vl="mech" style="transform-origin:515px 322px">
+        <g data-vl="mLegA" style="transform-origin:509px 318px"><path d="M509 318 L509 358" stroke="#2B2118" stroke-width="10" stroke-linecap="round"/></g>
+        <g data-vl="mLegB" style="transform-origin:521px 318px"><path d="M521 318 L521 358" stroke="#2B2118" stroke-width="10" stroke-linecap="round"/></g>
+        <g data-vl="mTorso" style="transform-origin:515px 322px">
+          <g data-vl="mArmB" style="transform-origin:521px 294px" opacity="0.45"><path d="M521 294 L508 308 L497 316" fill="none" stroke="#2B2118" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+          <rect x="499" y="276" width="32" height="52" rx="16" fill="#2B2118"/>
+          <g data-vl="mPock"><rect x="525" y="298" width="8" height="14" rx="2" fill="#D85A30"/><rect x="527" y="300" width="4" height="7" rx="1" fill="#F3E4CC"/></g>
+          <g data-vl="mBuzz" opacity="0"><path d="M539 298q4 7 0 14M544 294q7 11 0 22" fill="none" stroke="#D85A30" stroke-width="2.6" stroke-linecap="round"/></g>
+          <g data-vl="mHead" style="transform-origin:515px 282px">
+            <circle cx="515" cy="264" r="14.5" fill="#2B2118"/>
+            <path d="M502 259a13 13 0 0 1 26 0z" fill="#D85A30"/>
+            <path d="M502 259h-12a3 3 0 0 0 0 4.5h12z" fill="#D85A30"/>
+            <g data-vl="mRec" opacity="0"><g transform="translate(518 271) rotate(80) scale(.6) translate(-88 -287)"><path d="M61 290.5C61 284.5 66.5 282.5 72 283.8C80.5 278.6 95.5 278.6 104 283.8C109.5 282.5 115 284.5 115 290.5C115 296 110.5 297.5 106 296.6C102.8 296 100.8 293.6 100 291.2C94 286.8 82 286.8 76 291.2C75.2 293.6 73.2 296 70 296.6C65.5 297.5 61 296 61 290.5Z" fill="#2B2118" stroke="#F3E4CC" stroke-width="2.6"/></g></g>
+            <g data-vl="mMob" opacity="0"><rect x="519" y="253" width="8" height="15" rx="2.2" fill="#D85A30" stroke="#F3E4CC" stroke-width="1.5" transform="rotate(14 523 260)"/></g>
+            <g data-vl="stars" opacity="0" style="transform-origin:515px 240px"><g transform="translate(0 -3)"><path d="M500 240L501.92 244.08L506 246L501.92 247.92L500 252L498.08 247.92L494 246L498.08 244.08Z" fill="#E8A33D"/><path d="M530 239L531.6 242.4L535 244L531.6 245.6L530 249L528.4 245.6L525 244L528.4 242.4Z" fill="#D85A30"/><path d="M515 226.5L516.76 230.24L520.5 232L516.76 233.76L515 237.5L513.24 233.76L509.5 232L513.24 230.24Z" fill="#E8A33D"/></g></g>
+          </g>
+          <g data-vl="mArmA" style="transform-origin:507px 292px"><path d="M507 292 L492 306 L479 314" fill="none" stroke="#2B2118" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+          <g data-vl="talkM" opacity="0"><rect x="491" y="218" width="48" height="28" rx="13" fill="#2B2118"/><path d="M505 246l3-10h10z" fill="#2B2118"/><circle cx="503" cy="232" r="3" fill="#F3E4CC"/><circle cx="515" cy="232" r="3" fill="#F3E4CC"/><circle cx="527" cy="232" r="3" fill="#F3E4CC"/></g>
+        </g>
+      </g>
+    </svg>
+    <div style="flex:1 1 280px;min-width:0;max-width:440px;background:#2B2118;border-radius:24px;padding:22px;display:flex;flex-direction:column;gap:10px;overflow:hidden">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(250,238,218,0.65)">Today at the front desk</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#D85A30">Live</div>
+      </div>
+      <div data-vl="cA" style="opacity:0;display:flex;align-items:center;gap:14px;background:rgba(250,238,218,0.06);border:1px solid rgba(250,238,218,0.16);border-radius:16px;padding:12px 16px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:rgba(250,238,218,0.6);flex:none;width:42px">09:12</div>
+        <div style="flex:1;min-width:0">
+          <div style="font-size:15px;font-weight:700;letter-spacing:-0.015em;color:#FAEEDA;text-wrap:pretty">Brake noise, needs a look</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,238,218,0.55);margin-top:4px">Phone call</div>
+        </div>
+        <div style="position:relative;flex:none;width:96px;height:30px">
+          
+          <div data-vl="okA" style="opacity:0;position:absolute;left:0;top:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;background:#D85A30;color:#FAEEDA;border-radius:99px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase">Booked</div>
+        </div>
+      </div>
+      <div data-vl="cB" style="opacity:0;display:flex;align-items:center;gap:14px;background:rgba(250,238,218,0.06);border:1px solid rgba(250,238,218,0.16);border-radius:16px;padding:12px 16px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:rgba(250,238,218,0.6);flex:none;width:42px">10:04</div>
+        <div style="flex:1;min-width:0">
+          <div style="font-size:15px;font-weight:700;letter-spacing:-0.015em;color:#FAEEDA;text-wrap:pretty">Winter tyres, wants a price</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,238,218,0.55);margin-top:4px">Mobile</div>
+        </div>
+        <div style="position:relative;flex:none;width:96px;height:30px">
+          
+          <div data-vl="okB" style="opacity:0;position:absolute;left:0;top:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;background:#D85A30;color:#FAEEDA;border-radius:99px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase">Booked</div>
+        </div>
+      </div>
+      <div data-vl="cC" style="opacity:0;display:flex;align-items:center;gap:14px;background:rgba(250,238,218,0.06);border:1px solid rgba(250,238,218,0.16);border-radius:16px;padding:12px 16px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:rgba(250,238,218,0.6);flex:none;width:42px">11:30</div>
+        <div style="flex:1;min-width:0">
+          <div style="font-size:15px;font-weight:700;letter-spacing:-0.015em;color:#FAEEDA;text-wrap:pretty">Service due, asking for a slot</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,238,218,0.55);margin-top:4px">Phone call</div>
+        </div>
+        <div style="position:relative;flex:none;width:96px;height:30px">
+          <div data-vl="noC" style="opacity:0;position:absolute;left:0;top:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;border:1px solid rgba(250,238,218,0.35);color:rgba(250,238,218,0.7);border-radius:99px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase">Missed</div>
+          <div data-vl="okC" style="opacity:0;position:absolute;left:0;top:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;background:#D85A30;color:#FAEEDA;border-radius:99px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase">Booked</div>
+        </div>
+      </div>
+      <div data-vl="cD" style="opacity:0;display:flex;align-items:center;gap:14px;background:rgba(250,238,218,0.06);border:1px solid rgba(250,238,218,0.16);border-radius:16px;padding:12px 16px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:rgba(250,238,218,0.6);flex:none;width:42px">13:47</div>
+        <div style="flex:1;min-width:0">
+          <div style="font-size:15px;font-weight:700;letter-spacing:-0.015em;color:#FAEEDA;text-wrap:pretty">Clutch, wants a second opinion</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,238,218,0.55);margin-top:4px">Phone call</div>
+        </div>
+        <div style="position:relative;flex:none;width:96px;height:30px">
+          <div data-vl="noD" style="opacity:0;position:absolute;left:0;top:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;border:1px solid rgba(250,238,218,0.35);color:rgba(250,238,218,0.7);border-radius:99px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase">Missed</div>
+          <div data-vl="okD" style="opacity:0;position:absolute;left:0;top:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;background:#D85A30;color:#FAEEDA;border-radius:99px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase">Booked</div>
+        </div>
+      </div>
+      <div data-vl="cE" style="opacity:0;display:flex;align-items:center;gap:14px;background:rgba(250,238,218,0.06);border:1px solid rgba(250,238,218,0.16);border-radius:16px;padding:12px 16px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:rgba(250,238,218,0.6);flex:none;width:42px">16:20</div>
+        <div style="flex:1;min-width:0">
+          <div style="font-size:15px;font-weight:700;letter-spacing:-0.015em;color:#FAEEDA;text-wrap:pretty">Rattling exhaust, can it be today</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,238,218,0.55);margin-top:4px">Phone call</div>
+        </div>
+        <div style="position:relative;flex:none;width:96px;height:30px">
+          <div data-vl="noE" style="opacity:0;position:absolute;left:0;top:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;border:1px solid rgba(250,238,218,0.35);color:rgba(250,238,218,0.7);border-radius:99px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase">Missed</div>
+          <div data-vl="okE" style="opacity:0;position:absolute;left:0;top:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;background:#D85A30;color:#FAEEDA;border-radius:99px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase">Booked</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="min-height:104px;display:flex;align-items:center;justify-content:center;padding:0 12px">
+    <div data-vl="end" style="background:#2B2118;color:#FAEEDA;border-radius:22px;padding:24px 34px;text-align:center;opacity:0">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#D85A30;margin-bottom:10px">Every call answered</div>
+      <div style="font-size:30px;font-weight:800;letter-spacing:-0.035em;line-height:1.05;text-wrap:balance">Never miss another customer.</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1020,&quot;height&quot;:660},&quot;paceSeconds&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:54,&quot;min&quot;:40,&quot;max&quot;:80,&quot;step&quot;:1,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Animation&quot;}}">
+class Component extends DCLogic {
+  state = { missed: 0, fixed: false };
+  componentDidMount() {
+    var self = this;
+    var go = function () {
+      if (!window.VangLostEngine || !self._root) { self._w = setTimeout(go, 60); return; }
+      self._eng = window.VangLostEngine.start(self._root, {
+        pace: function () { return self.props.paceSeconds; },
+        onState: function (m, f) { if (m !== self.state.missed || f !== self.state.fixed) self.setState({ missed: m, fixed: f }); }
+      });
+    };
+    go();
+  }
+  componentWillUnmount() { clearTimeout(this._w); if (this._eng) this._eng.stop(); }
+  renderVals() {
+    var self = this, fixed = this.state.fixed;
+    return {
+      rootRef: function (el) { self._root = el; },
+      tickText: fixed ? 'Missed customers with VangAI' : 'Missed customers',
+      tickCount: fixed ? '0' : String(this.state.missed),
+      tickBg: fixed ? 'rgba(216,90,48,0.12)' : 'rgba(43,33,24,0.04)',
+      tickBd: fixed ? 'rgba(216,90,48,0.5)' : 'rgba(43,33,24,0.18)',
+      tickLabel: fixed ? '#B8441F' : 'rgba(43,33,24,0.6)',
+      tickNum: fixed ? '#D85A30' : '#2B2118'
+    };
+  }
+}
+</script>
+</body>
+</html>

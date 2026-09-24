@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@keyframes vwa-dot { 0%,60%,100%{transform:translateY(0);opacity:.35} 30%{transform:translateY(-4px);opacity:.9} }
+.vwa-t > span { animation: vwa-dot 1200ms ease-in-out infinite; }
+.vwa-t > span:nth-child(2){ animation-delay:160ms }
+.vwa-t > span:nth-child(3){ animation-delay:320ms }
+@media (prefers-reduced-motion: reduce){ .vwa-t > span { animation:none !important } }
+</style>
+</helmet>
+<div style="font-family:Archivo,Helvetica,sans-serif;width:320px;max-width:100%;background:#2B2118;border-radius:46px;padding:10px;box-shadow:0 26px 64px rgba(43,33,24,0.26)">
+  <div style="position:relative;background:#EFE7DE;border-radius:38px;height:640px;overflow:hidden;display:flex;flex-direction:column">
+
+    <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none" viewBox="0 0 300 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <pattern id="vwaDoodle" width="104" height="104" patternUnits="userSpaceOnUse">
+          <g fill="none" stroke="#2B2118" stroke-opacity="0.05" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="18" cy="20" r="8"/>
+            <path d="M46 12h20v14H56l-6 6v-6h-4z"/>
+            <path d="M88 14l7 9-7 9-7-9z"/>
+            <path d="M12 56c6-9 15-9 21 0"/>
+            <circle cx="58" cy="60" r="6.5"/>
+            <path d="M86 50v16M78 58h16"/>
+            <path d="M14 88h16v11H14z"/>
+            <path d="M52 84l9 15H43z"/>
+            <circle cx="88" cy="92" r="7.5"/>
+          </g>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="#EFE7DE"/>
+      <rect width="100%" height="100%" fill="url(#vwaDoodle)"/>
+    </svg>
+
+    <div style="position:absolute;top:11px;left:50%;transform:translateX(-50%);width:84px;height:23px;border-radius:99px;background:#2B2118;z-index:4"></div>
+
+    <div style="position:relative;z-index:2;background:#008069;color:#FFFFFF">
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 24px 2px">
+        <span style="font-size:12.5px;font-weight:700">9:41</span>
+        <span style="display:flex;align-items:center;gap:5px">
+          <svg viewBox="0 0 20 14" width="17" height="12" fill="#FFFFFF"><rect x="0" y="9" width="3" height="5" rx="1"/><rect x="4.7" y="6.5" width="3" height="7.5" rx="1"/><rect x="9.4" y="3.5" width="3" height="10.5" rx="1"/><rect x="14.1" y="0.5" width="3" height="13.5" rx="1"/></svg>
+          <svg viewBox="0 0 18 14" width="15" height="12" fill="none" stroke="#FFFFFF" stroke-width="1.7" stroke-linecap="round"><path d="M1.2 4.6a11 11 0 0 1 15.6 0"/><path d="M4.1 7.8a7 7 0 0 1 9.8 0"/><path d="M7 11a3 3 0 0 1 4 0"/></svg>
+          <svg viewBox="0 0 26 13" width="22" height="11" fill="none"><rect x="0.7" y="0.7" width="21" height="11.6" rx="3.4" stroke="rgba(255,255,255,0.6)" stroke-width="1.3"/><rect x="2.6" y="2.6" width="15" height="7.8" rx="2" fill="#FFFFFF"/><path d="M23.4 4.4v4.2a2.6 2.6 0 0 0 0-4.2z" fill="rgba(255,255,255,0.6)"/></svg>
+        </span>
+      </div>
+      <div style="display:flex;align-items:center;gap:11px;padding:8px 14px 11px">
+        <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M19 12H5"/><path d="M11 6 5 12l6 6"/></svg>
+        <div style="width:36px;height:36px;border-radius:50%;background:#FAEEDA;flex:none;display:flex;align-items:center;justify-content:center;overflow:hidden">
+          <div style="width:24px;height:24px"><dc-import name="Mark" uid="vwaAv" radius="{{ 0 }}" bg="transparent" hint-size="24px,24px"></dc-import></div>
+        </div>
+        <div style="min-width:0;flex:1">
+          <div style="font-size:15.5px;font-weight:600;letter-spacing:-0.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ businessName }}</div>
+          <div style="font-size:11.5px;color:rgba(255,255,255,0.8);margin-top:1px">online</div>
+        </div>
+        <svg viewBox="0 0 24 24" width="19" height="19" fill="#FFFFFF" style="flex:none;opacity:.9"><path d="M6.6 3.2h2.9l1.5 3.9-2 1.5a10 10 0 0 0 6 6l1.5-2 3.9 1.5v2.9a2 2 0 0 1-2.2 2A16.2 16.2 0 0 1 4.6 5.4a2 2 0 0 1 2-2.2z"/></svg>
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="#FFFFFF" style="flex:none;opacity:.9"><circle cx="12" cy="4.5" r="1.9"/><circle cx="12" cy="12" r="1.9"/><circle cx="12" cy="19.5" r="1.9"/></svg>
+      </div>
+    </div>
+
+    <div ref="{{ listRef }}" style="position:relative;z-index:2;flex:1;min-height:0;overflow-y:auto;padding:14px 12px 6px;display:flex;flex-direction:column;gap:7px">
+      <div style="align-self:center;background:rgba(225,245,254,0.92);color:#3A6A78;font-size:10.5px;padding:5px 12px;border-radius:8px;text-align:center;line-height:1.4;max-width:80%;margin-bottom:4px">Messages are answered by an AI assistant</div>
+      <sc-for list="{{ msgs }}" as="m" hint-placeholder-count="3">
+        <div style="display:flex;justify-content:{{ m.just }}">
+          <div style="max-width:80%;background:{{ m.bg }};border-radius:{{ m.radius }};padding:7px 9px 5px 10px;box-shadow:0 1px 1px rgba(11,20,26,0.13);position:relative">
+            <div style="font-size:14px;line-height:1.38;color:#111B21;text-wrap:pretty;white-space:pre-wrap">{{ m.text }}</div>
+            <div style="display:flex;align-items:center;justify-content:flex-end;gap:3px;margin-top:2px">
+              <span style="font-size:10px;color:rgba(17,27,33,0.45)">{{ m.time }}</span>
+              <sc-if value="{{ m.mine }}" hint-placeholder-val="{{ true }}">
+                <svg viewBox="0 0 18 12" width="16" height="11" fill="none" stroke="#53BDEB" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M1 6.4 3.9 9.6 9.3 2.5"/><path d="M7.6 9.3 8.7 10.5 15.8 2.2"/></svg>
+              </sc-if>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+      <sc-if value="{{ typing }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;justify-content:flex-start">
+          <div class="vwa-t" style="background:#FFFFFF;border-radius:8px 8px 8px 2px;padding:11px 13px;display:flex;align-items:center;gap:4px;box-shadow:0 1px 1px rgba(11,20,26,0.13)">
+            <span style="width:6px;height:6px;border-radius:50%;background:#667781;display:block"></span>
+            <span style="width:6px;height:6px;border-radius:50%;background:#667781;display:block"></span>
+            <span style="width:6px;height:6px;border-radius:50%;background:#667781;display:block"></span>
+          </div>
+        </div>
+      </sc-if>
+      <sc-if value="{{ done }}" hint-placeholder-val="{{ false }}">
+        <div style="align-self:center;width:94%;background:#FAEEDA;border:1px solid rgba(43,33,24,0.18);border-radius:14px;padding:14px;margin-top:6px;text-align:center">
+          <div style="font-size:13px;line-height:1.5;color:#2B2118;text-wrap:pretty">That is the demo. The real assistant answers your customers like this on WhatsApp, day and night.</div>
+          <a href="{{ bookHref }}" style="display:inline-flex;align-items:center;gap:7px;background:#D85A30;color:#FAEEDA;font-size:13px;font-weight:600;padding:10px 18px;border-radius:99px;margin-top:11px;transition:background 180ms ease" style-hover="background:#2B2118;color:#FAEEDA">Book a call <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+        </div>
+      </sc-if>
+    </div>
+
+    <div style="position:relative;z-index:3;padding:0 10px 8px;display:{{ chipsD }};gap:6px;flex-wrap:wrap;justify-content:flex-end">
+      <sc-for list="{{ chips }}" as="c" hint-placeholder-count="3">
+        <div onClick="{{ c.tap }}" role="button" style="background:rgba(255,255,255,0.96);border:1px solid #00A884;color:#00755E;font-size:12px;font-weight:600;padding:8px 13px;border-radius:99px;cursor:pointer;box-shadow:0 1px 2px rgba(11,20,26,0.12);transition:background 160ms ease" style-hover="background:#D9FDD3">{{ c.label }}</div>
+      </sc-for>
+    </div>
+
+    <div style="position:relative;z-index:3;background:#F0F2F5;padding:8px 9px 12px;display:flex;align-items:flex-end;gap:7px">
+      <div style="flex:1;min-width:0;background:#FFFFFF;border-radius:22px;display:flex;align-items:center;gap:8px;padding:8px 12px">
+        <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#54656F" stroke-width="1.8" style="flex:none"><circle cx="12" cy="12" r="9"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/><path d="M8.5 14.5a4.5 4.5 0 0 0 7 0" stroke-linecap="round"/></svg>
+        <input value="{{ draft }}" onChange="{{ onDraft }}" onKeyDown="{{ onKey }}" placeholder="Message" style="flex:1;min-width:0;border:0;outline:none;background:transparent;font-family:Archivo,Helvetica,sans-serif;font-size:14px;color:#111B21;padding:2px 0"/>
+        <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#54656F" stroke-width="1.8" stroke-linecap="round" style="flex:none"><path d="M18.5 11.5 12 18a4.6 4.6 0 0 1-6.5-6.5l7-7a3.1 3.1 0 0 1 4.4 4.4l-7 7a1.6 1.6 0 0 1-2.2-2.2l6.4-6.4"/></svg>
+      </div>
+      <div onClick="{{ send }}" role="button" style="width:42px;height:42px;flex:none;border-radius:50%;background:#00A884;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background 160ms ease" style-hover="background:#00755E">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="#FFFFFF"><path d="M3.2 20.5 21.5 12 3.2 3.5l.1 6.6L15 12 3.3 13.9z"/></svg>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:360,&quot;height&quot;:700},&quot;businessName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Garage Vanhees&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;bookHref&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;./VangAI Contact.dc.html&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = {
+    msgs: [
+      { text: 'Hi, are you open tomorrow?', mine: true, time: '19:41' },
+      { text: 'Yes, we are open tomorrow 8:00 to 18:00. Anything I can help you with?', mine: false, time: '19:41' }
+    ],
+    typing: false, asked: 0, draft: '', done: false
+  };
+
+  qa() {
+    return [
+      { label: 'What does a basic service cost?', q: 'What does a basic service cost?', a: 'A basic service is \u20AC89, oil and filter included. If we find anything else we call you first, so nothing lands on the invoice as a surprise.' },
+      { label: 'How fast can someone come by?', q: 'How fast can someone come by?', a: 'We normally have a slot within two working days. If you have broken down, tell me where you are and I will try to get you in today.' },
+      { label: 'Can I book for this week?', q: 'Can I book for this week?', a: 'Yes. Thursday at 15:00 or Friday at 11:00 are free. Which one shall I put your name on?' }
+    ];
+  }
+
+  componentDidUpdate() {
+    if (this._list) this._list.scrollTop = this._list.scrollHeight;
+  }
+  componentWillUnmount() { if (this._to) clearTimeout(this._to); }
+
+  now() {
+    var d = new Date(), h = d.getHours(), m = d.getMinutes();
+    return h + ':' + (m < 10 ? '0' + m : m);
+  }
+
+  push(text, mine) {
+    var t = this.now();
+    this.setState(function (s) { return { msgs: s.msgs.concat([{ text: text, mine: mine, time: t }]) }; });
+  }
+
+  ask(q, a) {
+    if (this.state.typing) return;
+    var self = this;
+    this.push(q, true);
+    this.setState(function (s) { return { typing: true, asked: s.asked + 1, draft: '' }; });
+    this._to = setTimeout(function () {
+      self.setState({ typing: false });
+      self.push(a, false);
+      self.setState(function (s) { return { done: s.asked >= 3 }; });
+    }, 1000);
+  }
+
+  sendDraft() {
+    var v = (this.state.draft || '').trim();
+    if (!v) return;
+    var hit = null, list = this.qa();
+    for (var i = 0; i < list.length; i++) {
+      if (v.toLowerCase() === list[i].q.toLowerCase()) hit = list[i];
+    }
+    this.ask(v, hit ? hit.a : 'In this demo I only answer the three suggested questions. The live assistant is trained on your business and answers whatever your customers ask.');
+  }
+
+  renderVals() {
+    var self = this;
+    var used = this.state.asked;
+    var chips = this.qa().slice(used).map(function (item) {
+      return { label: item.label, tap: function () { self.ask(item.q, item.a); } };
+    });
+    return {
+      businessName: this.props.businessName || 'Garage Vanhees',
+      bookHref: this.props.bookHref || './VangAI Contact.dc.html',
+      msgs: this.state.msgs.map(function (m) {
+        return {
+          text: m.text, time: m.time, mine: m.mine,
+          just: m.mine ? 'flex-end' : 'flex-start',
+          bg: m.mine ? '#D9FDD3' : '#FFFFFF',
+          radius: m.mine ? '8px 8px 2px 8px' : '8px 8px 8px 2px'
+        };
+      }),
+      typing: this.state.typing,
+      done: this.state.done,
+      chips: chips,
+      chipsD: (chips.length && !this.state.done) ? 'flex' : 'none',
+      draft: this.state.draft,
+      onDraft: function (e) { self.setState({ draft: e.target.value }); },
+      onKey: function (e) { if (e.key === 'Enter') { e.preventDefault(); self.sendDraft(); } },
+      send: function () { self.sendDraft(); },
+      listRef: function (el) { self._list = el; }
+    };
+  }
+}
+</script>
+</body>
+</html>

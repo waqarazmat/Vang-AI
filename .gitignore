@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# env example is committed
+!.env.example
+
+# design QA output
+/tools/design-qa/out/
+/tools/design-qa/node_modules/
+
+# playwright
+/test-results/
+/playwright-report/
+/playwright/.cache/

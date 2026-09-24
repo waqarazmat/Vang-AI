@@ -1,26 +1,88 @@
-@import "tailwindcss";
+/*
+ * No Tailwind preflight on purpose: the design renders on plain browser defaults
+ * (content-box sizing, default margins and line-heights). Keeping those defaults is
+ * what makes the build pixel-identical to the design.
+ */
+@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Brand palette (brand guide) */
+  --color-coral: #d85a30;
+  --color-amber: #854f0b;
+  --color-cream: #faeeda;
+  --color-ink: #2b2118;
+  --color-white: #ffffff;
+
+  /* Supporting tints used by the design */
+  --color-coral-deep: #b8441f;
+  --color-coral-light: #e8763f;
+  --color-sand: #f3e4cc;
+  --color-paper: #fff6e6;
+
+  /* Approved contrast corrections (tools/design-qa/design-fixes.json: small-text-contrast) */
+  --color-coral-text: #a83d1b;
+  --color-coral-step: #ec8150;
+
+  --font-sans: var(--font-archivo), Helvetica, sans-serif;
+  --font-mono: var(--font-plex-mono), monospace;
+
+  --ease-design: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* The design's breakpoints are max-width queries; these variants match them exactly. */
+@custom-variant max-1180 (@media (max-width: 1180px));
+@custom-variant max-1100 (@media (max-width: 1100px));
+@custom-variant max-1060 (@media (max-width: 1060px));
+@custom-variant max-900 (@media (max-width: 900px));
+@custom-variant max-820 (@media (max-width: 820px));
+@custom-variant max-760 (@media (max-width: 760px));
+@custom-variant max-640 (@media (max-width: 640px));
+@custom-variant max-620 (@media (max-width: 620px));
+@custom-variant max-480 (@media (max-width: 480px));
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    margin: 0;
+    background: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  a {
+    color: var(--color-ink);
+    text-decoration: none;
+  }
+  a:hover {
+    color: var(--color-coral);
+  }
+  ::selection {
+    background: var(--color-coral);
+    color: var(--color-cream);
+  }
+  /* The design uses <div role="button">; real buttons start from the same blank slate. */
+  button {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    text-align: inherit;
+    cursor: pointer;
+  }
+  /* Off-screen animation pause (set by useInViewPause). */
+  [data-paused='1'],
+  [data-paused='1'] * {
+    animation-play-state: paused !important;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 1ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 1ms !important;
+    }
+  }
 }

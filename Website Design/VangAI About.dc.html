@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-fr="À propos | VangAI" data-nl="Over ons | VangAI">About us | VangAI</title>
+<meta name="description" content="We build the front desk small businesses never had time for. Based in Hasselt, working with businesses across Belgium." data-fr="Nous construisons l’accueil que les petites entreprises n’ont jamais eu le temps d’organiser. Basés à Hasselt, actifs dans toute la Belgique." data-nl="Wij bouwen het onthaal waar kleine zaken nooit tijd voor hadden. Gevestigd in Hasselt, actief in heel België.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VangAI">
+<meta property="og:title" content="About us | VangAI" data-fr="À propos | VangAI" data-nl="Over ons | VangAI">
+<meta property="og:description" content="We build the front desk small businesses never had time for. Based in Hasselt, working with businesses across Belgium." data-fr="Nous construisons l’accueil que les petites entreprises n’ont jamais eu le temps d’organiser. Basés à Hasselt, actifs dans toute la Belgique." data-nl="Wij bouwen het onthaal waar kleine zaken nooit tijd voor hadden. Gevestigd in Hasselt, actief in heel België.">
+<meta property="og:image" content="./assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="./assets/favicon.png">
+<link rel="apple-touch-icon" href="./assets/favicon.png">
+<script src="./support.js"></script>
+<script src="./i18n-nl.js"></script>
+<script src="./i18n-fr.js"></script>
+<script src="./site.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@media (max-width: 1060px){ .vg-steps{flex-direction:column} .vg-steps > div{flex:1 1 auto !important;flex-direction:column;align-items:stretch} .vg-step-arrow{width:100% !important;padding:2px 0} .vg-step-arrow-in{transform:rotate(90deg)} }
+body{margin:0;background:#FAEEDA;}
+a{color:#2B2118;text-decoration:none;}
+a:hover{color:#D85A30;}
+::selection{background:#D85A30;color:#FAEEDA;}
+[data-ft-card]:hover [data-ft-go]{transform:translateX(4px);}
+[data-paused="1"],[data-paused="1"] *{animation-play-state:paused !important;}
+@media (prefers-reduced-motion: reduce){*{animation-duration:1ms !important;animation-iteration-count:1 !important;transition-duration:1ms !important;}}
+</style>
+</helmet>
+<div style="font-family:Archivo,Helvetica,sans-serif;color:#2B2118;background:#FAEEDA;min-height:100vh">
+
+  <div style="position:sticky;top:0;z-index:40;background:rgba(250,238,218,0.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(43,33,24,0.12)">
+    <div style="max-width:1200px;margin:0 auto;padding:12px 32px;display:flex;align-items:center;gap:12px 28px;flex-wrap:wrap">
+      <a href="./VangAI Home.dc.html" aria-label="VangAI home" style="flex:none;display:flex;align-items:center;gap:11px;margin-right:auto">
+        <div style="width:34px;height:34px;flex:none"><dc-import name="Mark" uid="abnav" radius="{{ 0 }}" bg="transparent" hint-size="34px,34px"></dc-import></div>
+        <div style="font-size:21px;font-weight:800;letter-spacing:-0.03em">VangAI</div>
+      </a>
+      <div style="display:flex;align-items:center;gap:10px 26px;flex-wrap:wrap;font-family:Archivo,sans-serif">
+        <div onMouseEnter="{{ navEnter }}" onMouseLeave="{{ navLeave }}" style="position:relative;padding:6px 0">
+          <a href="./VangAI Product.dc.html" style="display:flex;align-items:center;gap:6px;font-size:16px;font-weight:600;color:#2B2118;transition:color 180ms ease" style-hover="color:#D85A30">Product <span aria-hidden="true" style="font-size:11px">▾</span></a>
+          <div style="position:absolute;top:100%;left:50%;transform:translateX(-50%);display:{{ ddDisplay }};flex-direction:column;gap:2px;background:#FAEEDA;border:1px solid rgba(43,33,24,0.16);border-radius:16px;padding:10px;min-width:210px;box-shadow:0 14px 34px rgba(43,33,24,0.14);z-index:50">
+            <a href="./VangAI Product.dc.html#voice" style="padding:10px 14px;border-radius:10px;font-size:15px;font-weight:500;text-align:center" style-hover="background:#FFF6E6;color:#D85A30">VangVoice</a>
+            <a href="./VangAI Product.dc.html#whatsapp" style="padding:10px 14px;border-radius:10px;font-size:15px;font-weight:500;text-align:center" style-hover="background:#FFF6E6;color:#D85A30">VangMessage</a>
+            <a href="./VangAI Product.dc.html#chat" style="padding:10px 14px;border-radius:10px;font-size:15px;font-weight:500;text-align:center" style-hover="background:#FFF6E6;color:#D85A30">VangChat</a>
+          </div>
+        </div>
+        <a href="./VangAI Pricing.dc.html" style="font-size:16px;font-weight:600;color:#2B2118;transition:color 180ms ease" style-hover="color:#D85A30">Pricing</a>
+        <a href="./VangAI About.dc.html" style="font-size:16px;font-weight:600;color:#D85A30;transition:color 180ms ease" style-hover="color:#D85A30">About us</a>
+        <div role="group" aria-label="Language" style="display:flex;align-items:center;gap:2px;border:1px solid rgba(43,33,24,0.22);border-radius:99px;padding:3px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.08em">
+          <a href="#nl" data-set-lang="nl" style="padding:6px 10px;border-radius:99px;color:rgba(43,33,24,0.7)">NL</a>
+          <a href="#fr" data-set-lang="fr" style="padding:6px 10px;border-radius:99px;color:rgba(43,33,24,0.7)">FR</a>
+          <a href="#en" data-set-lang="en" style="padding:6px 10px;border-radius:99px;color:rgba(43,33,24,0.7)">EN</a>
+        </div>
+        <a href="./VangAI Contact.dc.html" style="flex:none;background:#D85A30;color:#FFFFFF;font-size:15px;font-weight:600;padding:11px 20px;border-radius:99px;white-space:nowrap;display:inline-flex;align-items:center;gap:8px;transition:background 180ms ease" style-hover="background:#2B2118;color:#FFFFFF">Book a call <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="top" style="max-width:1200px;margin:0 auto;padding:80px 40px 56px">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ About us</div>
+    <h1 style="font-family:Archivo,Helvetica,sans-serif;font-size:62px;line-height:0.99;font-weight:800;letter-spacing:-0.04em;margin:24px 0 0;max-width:20ch;text-wrap:balance">We build the front desk small businesses never had time for.</h1>
+    <p style="font-size:20px;line-height:1.6;color:rgba(43,33,24,0.78);max-width:54ch;margin:22px 0 0;text-wrap:pretty">Small businesses lose customers every day, not because they do bad work, but because nobody was free to answer. We fix that, without asking the owner to become a tech company.</p>
+  </div>
+
+  <div style="max-width:1200px;margin:0 auto;padding:0 40px 88px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px">
+      <div style="min-width:0;background:#2B2118;color:#FAEEDA;border-radius:26px;padding:40px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ Our mission</div>
+        <p style="font-family:Archivo,Helvetica,sans-serif;font-size:25px;font-weight:700;letter-spacing:-0.022em;line-height:1.35;margin:18px 0 0;color:#FAEEDA;text-wrap:pretty">We build and personally set up one assistant that answers calls, WhatsApp messages and website chats for Belgian businesses, in the languages their customers actually speak, so the owner never has to configure or manage it.</p>
+      </div>
+      <div style="min-width:0;background:#FFF6E6;border:1px solid rgba(43,33,24,0.12);border-radius:26px;padding:40px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#854F0B">/ Our vision</div>
+        <p style="font-family:Archivo,Helvetica,sans-serif;font-size:25px;font-weight:700;letter-spacing:-0.022em;line-height:1.35;margin:18px 0 0;text-wrap:pretty">A Belgium where no small business, whatever its size or technical skill, loses a customer because nobody was available to answer.</p>
+      </div>
+    </div>
+  </div>
+  <div style="background:#F3E4CC;border-top:1px solid rgba(43,33,24,0.12);border-bottom:1px solid rgba(43,33,24,0.12)">
+    <div style="max-width:1200px;margin:0 auto;padding:88px 40px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ What we believe</div>
+      <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:40px;font-weight:800;letter-spacing:-0.035em;line-height:1.05;margin:18px 0 0;max-width:22ch;text-wrap:balance">Five things we will not compromise on</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:34px">
+        <div style="min-width:0;background:#FAEEDA;border:1px solid rgba(43,33,24,0.12);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:10px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#D85A30">01</div>
+          <div style="font-family:Archivo,Helvetica,sans-serif;font-size:19px;font-weight:800;letter-spacing:-0.022em;line-height:1.2;text-wrap:balance">Done for you, always.</div>
+          <div style="font-size:15.5px;line-height:1.55;color:rgba(43,33,24,0.8);text-wrap:pretty">We do the work, not you.</div>
+        </div>
+        <div style="min-width:0;background:#FAEEDA;border:1px solid rgba(43,33,24,0.12);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:10px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#D85A30">02</div>
+          <div style="font-family:Archivo,Helvetica,sans-serif;font-size:19px;font-weight:800;letter-spacing:-0.022em;line-height:1.2;text-wrap:balance">Human first.</div>
+          <div style="font-size:15.5px;line-height:1.55;color:rgba(43,33,24,0.8);text-wrap:pretty">Every answer should sound like it came from someone who cares.</div>
+        </div>
+        <div style="min-width:0;background:#FAEEDA;border:1px solid rgba(43,33,24,0.12);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:10px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#D85A30">03</div>
+          <div style="font-family:Archivo,Helvetica,sans-serif;font-size:19px;font-weight:800;letter-spacing:-0.022em;line-height:1.2;text-wrap:balance">Local and in three languages.</div>
+          <div style="font-size:15.5px;line-height:1.55;color:rgba(43,33,24,0.8);text-wrap:pretty">Dutch, French and English, based in Belgium, not a foreign self-service tool.</div>
+        </div>
+        <div style="min-width:0;background:#FAEEDA;border:1px solid rgba(43,33,24,0.12);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:10px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#D85A30">04</div>
+          <div style="font-family:Archivo,Helvetica,sans-serif;font-size:19px;font-weight:800;letter-spacing:-0.022em;line-height:1.2;text-wrap:balance">Honest over impressive.</div>
+          <div style="font-size:15.5px;line-height:1.55;color:rgba(43,33,24,0.8);text-wrap:pretty">We never promise more than the assistant can do.</div>
+        </div>
+        <div style="min-width:0;background:#FAEEDA;border:1px solid rgba(43,33,24,0.12);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:10px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#D85A30">05</div>
+          <div style="font-family:Archivo,Helvetica,sans-serif;font-size:19px;font-weight:800;letter-spacing:-0.022em;line-height:1.2;text-wrap:balance">Your data is yours.</div>
+          <div style="font-size:15.5px;line-height:1.55;color:rgba(43,33,24,0.8);text-wrap:pretty">GDPR from the start, not added afterwards.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div ref="{{ stepsRef }}" style="background:#2B2118;color:#FAEEDA">
+    <div style="max-width:1200px;margin:0 auto;padding:88px 40px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ How we work</div>
+      <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:40px;font-weight:800;letter-spacing:-0.035em;line-height:1.05;margin:18px 0 0;max-width:22ch;text-wrap:balance;color:#FAEEDA">Four steps, and we do the work</h2>
+      <div class="vg-steps" style="display:flex;flex-wrap:wrap;gap:16px;align-items:stretch;margin-top:40px">
+        <div onMouseEnter="{{ stepE0 }}" onClick="{{ stepE0 }}" style="flex:1 1 220px;min-width:0;display:flex;align-items:stretch;gap:8px;opacity:{{ stepO0 }};transform:{{ stepT0 }};pointer-events:{{ stepPE0 }};transition:opacity 1100ms cubic-bezier(.22,.61,.36,1),transform 1100ms cubic-bezier(.22,.61,.36,1)">
+          <div style="flex:1;min-width:0;background:rgba(250,238,218,0.07);border:1px solid rgba(250,238,218,0.16);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.1em;color:#E8763F">01</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,238,218,0.6);display:{{ stepHint0 }}">Hover for the next step</div>
+            </div>
+            <div style="font-family:Archivo,Helvetica,sans-serif;font-size:20px;font-weight:800;letter-spacing:-0.026em;line-height:1.2;color:#FAEEDA;text-wrap:balance">A short call about your business</div>
+            <div style="font-size:15.5px;line-height:1.6;color:rgba(250,238,218,0.82);text-wrap:pretty">We get to know your services, prices, opening hours and the way you talk to customers.</div>
+          </div>
+          <div class="vg-step-arrow" aria-hidden="true" style="flex:none;display:flex;align-items:center;justify-content:center;width:24px">
+            <div class="vg-step-arrow-in" style="display:flex;align-items:center"><div style="width:12px;height:3px;border-radius:99px;background:#D85A30"></div><div style="width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:10px solid #D85A30"></div></div>
+          </div>
+        </div>
+        <div onMouseEnter="{{ stepE1 }}" onClick="{{ stepE1 }}" style="flex:1 1 220px;min-width:0;display:flex;align-items:stretch;gap:8px;opacity:{{ stepO1 }};transform:{{ stepT1 }};pointer-events:{{ stepPE1 }};transition:opacity 1100ms cubic-bezier(.22,.61,.36,1),transform 1100ms cubic-bezier(.22,.61,.36,1)">
+          <div style="flex:1;min-width:0;background:rgba(250,238,218,0.07);border:1px solid rgba(250,238,218,0.16);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.1em;color:#E8763F">02</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,238,218,0.6);display:{{ stepHint1 }}">Hover for the next step</div>
+            </div>
+            <div style="font-family:Archivo,Helvetica,sans-serif;font-size:20px;font-weight:800;letter-spacing:-0.026em;line-height:1.2;color:#FAEEDA;text-wrap:balance">We build it around your business</div>
+            <div style="font-size:15.5px;line-height:1.6;color:rgba(250,238,218,0.82);text-wrap:pretty">We build your assistant on that, and connect it to your calendar and channels.</div>
+          </div>
+          <div class="vg-step-arrow" aria-hidden="true" style="flex:none;display:flex;align-items:center;justify-content:center;width:24px">
+            <div class="vg-step-arrow-in" style="display:flex;align-items:center"><div style="width:12px;height:3px;border-radius:99px;background:#D85A30"></div><div style="width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:10px solid #D85A30"></div></div>
+          </div>
+        </div>
+        <div onMouseEnter="{{ stepE2 }}" onClick="{{ stepE2 }}" style="flex:1 1 220px;min-width:0;display:flex;align-items:stretch;gap:8px;opacity:{{ stepO2 }};transform:{{ stepT2 }};pointer-events:{{ stepPE2 }};transition:opacity 1100ms cubic-bezier(.22,.61,.36,1),transform 1100ms cubic-bezier(.22,.61,.36,1)">
+          <div style="flex:1;min-width:0;background:rgba(250,238,218,0.07);border:1px solid rgba(250,238,218,0.16);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.1em;color:#E8763F">03</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,238,218,0.6);display:{{ stepHint2 }}">Hover for the next step</div>
+            </div>
+            <div style="font-family:Archivo,Helvetica,sans-serif;font-size:20px;font-weight:800;letter-spacing:-0.026em;line-height:1.2;color:#FAEEDA;text-wrap:balance">We test it with you</div>
+            <div style="font-size:15.5px;line-height:1.6;color:rgba(250,238,218,0.82);text-wrap:pretty">You call it, message it and try to break it. We adjust until it sounds like your business.</div>
+          </div>
+          <div class="vg-step-arrow" aria-hidden="true" style="flex:none;display:flex;align-items:center;justify-content:center;width:24px">
+            <div class="vg-step-arrow-in" style="display:flex;align-items:center"><div style="width:12px;height:3px;border-radius:99px;background:#D85A30"></div><div style="width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:10px solid #D85A30"></div></div>
+          </div>
+        </div>
+        <div onMouseEnter="{{ stepE3 }}" onClick="{{ stepE3 }}" style="flex:1 1 220px;min-width:0;display:flex;align-items:stretch;gap:8px;opacity:{{ stepO3 }};transform:{{ stepT3 }};pointer-events:{{ stepPE3 }};transition:opacity 1100ms cubic-bezier(.22,.61,.36,1),transform 1100ms cubic-bezier(.22,.61,.36,1)">
+          <div style="flex:1;min-width:0;background:rgba(250,238,218,0.07);border:1px solid rgba(250,238,218,0.16);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.1em;color:#E8763F">04</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,238,218,0.6);display:{{ stepHint3 }}">Hover for the next step</div>
+            </div>
+            <div style="font-family:Archivo,Helvetica,sans-serif;font-size:20px;font-weight:800;letter-spacing:-0.026em;line-height:1.2;color:#FAEEDA;text-wrap:balance">It goes live and we keep it running</div>
+            <div style="font-size:15.5px;line-height:1.6;color:rgba(250,238,218,0.82);text-wrap:pretty">We make your updates every week, send you a report every month and are there when you need us.</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:88px 40px 0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px 56px;align-items:center;border-top:1px solid rgba(43,33,24,0.18);border-bottom:1px solid rgba(43,33,24,0.18);padding:48px 0">
+      <div style="min-width:0">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ Contact</div>
+        <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:44px;font-weight:800;letter-spacing:-0.035em;line-height:1.05;margin:18px 0 0;max-width:16ch;text-wrap:balance">Let’s talk</h2>
+      </div>
+      <div style="min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:20px">
+        <p style="font-size:18px;line-height:1.65;color:rgba(43,33,24,0.82);margin:0;max-width:50ch;text-wrap:pretty">Curious what VangAI could do for your business? Book a short call, or send us an email. We reply within one working day.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="./VangAI Contact.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:#D85A30;color:#FFFFFF;border:1px solid #D85A30" style-hover="background:#2B2118;border-color:#2B2118;color:#FFFFFF">Book a call <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+          <a href="mailto:[email address]" data-todo="[email address]" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:transparent;color:#2B2118;border:1px solid rgba(43,33,24,0.35)" style-hover="border-color:#2B2118;background:rgba(43,33,24,0.05);color:#2B2118">[email address] <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+        </div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#854F0B">Based in Hasselt, working with businesses across Belgium.</div>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:88px 40px 104px">
+    <div style="background:#D85A30;border-radius:28px;padding:64px 56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px 40px;align-items:center">
+      <div style="min-width:0;display:flex;flex-direction:column;align-items:flex-start">
+        <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:48px;font-weight:800;letter-spacing:-0.04em;line-height:1.02;margin:0;color:#FAEEDA;max-width:20ch;text-wrap:balance">Wondering if this fits your business?</h2>
+        <p style="font-size:18px;line-height:1.6;color:#FAEEDA;max-width:44ch;margin:18px 0 30px;text-wrap:pretty">A short call, no sales pitch. We will tell you honestly if it is not a fit.</p>
+        <a href="./VangAI Contact.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:#2B2118;color:#FAEEDA;border:1px solid #2B2118" style-hover="background:#FAEEDA;border-color:#FAEEDA;color:#2B2118">Book a call <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+      </div>
+      <div style="min-width:0;display:flex;justify-content:center">
+        <div style="width:180px;height:180px"><dc-import name="Mark" uid="abcta" tone="cream" radius="{{ 0 }}" bg="transparent" hint-size="180px,180px"></dc-import></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1200px;margin:0 auto;padding:8px 40px 40px">
+    <footer style="background:#2B2118;color:#FAEEDA;border-radius:24px;overflow:hidden">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;background:rgba(250,238,218,0.12);border-bottom:1px solid rgba(250,238,218,0.12)">
+        <a href="./VangAI Product.dc.html#voice" data-ft-card="1" style="min-width:0;display:flex;flex-direction:column;gap:10px;padding:32px;background:#2B2118;color:#FAEEDA;transition:background 250ms ease" style-hover="background:#352A20;color:#FAEEDA">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="flex:none;width:40px;height:40px;border-radius:12px;background:rgba(216,90,48,0.18);color:#E8763F;display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></span>
+            <span style="font-size:24px;font-weight:800;letter-spacing:-0.03em;line-height:1.1;color:#FAEEDA">VangVoice</span>
+          </div>
+          <span style="font-size:15px;line-height:1.5;color:#CDBBA2;text-wrap:pretty">Your phone, answered every time.</span>
+          <span data-ft-go="1" style="display:inline-flex;align-items:center;gap:8px;margin-top:4px;font-size:14.5px;font-weight:700;color:#E8763F;transition:transform 250ms ease">See product <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></span>
+        </a>
+        <a href="./VangAI Product.dc.html#whatsapp" data-ft-card="1" style="min-width:0;display:flex;flex-direction:column;gap:10px;padding:32px;background:#2B2118;color:#FAEEDA;transition:background 250ms ease" style-hover="background:#352A20;color:#FAEEDA">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="flex:none;width:40px;height:40px;border-radius:12px;background:rgba(216,90,48,0.18);color:#E8763F;display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></span>
+            <span style="font-size:24px;font-weight:800;letter-spacing:-0.03em;line-height:1.1;color:#FAEEDA">VangMessage</span>
+          </div>
+          <span style="font-size:15px;line-height:1.5;color:#CDBBA2;text-wrap:pretty">WhatsApp replies within seconds.</span>
+          <span data-ft-go="1" style="display:inline-flex;align-items:center;gap:8px;margin-top:4px;font-size:14.5px;font-weight:700;color:#E8763F;transition:transform 250ms ease">See product <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></span>
+        </a>
+        <a href="./VangAI Product.dc.html#chat" data-ft-card="1" style="min-width:0;display:flex;flex-direction:column;gap:10px;padding:32px;background:#2B2118;color:#FAEEDA;transition:background 250ms ease" style-hover="background:#352A20;color:#FAEEDA">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="flex:none;width:40px;height:40px;border-radius:12px;background:rgba(216,90,48,0.18);color:#E8763F;display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M4 4h16c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H8l-4 4V6c0-1.1.9-2 2-2zm3 6v2h2v-2H7zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2z"/></svg></span>
+            <span style="font-size:24px;font-weight:800;letter-spacing:-0.03em;line-height:1.1;color:#FAEEDA">VangChat</span>
+          </div>
+          <span style="font-size:15px;line-height:1.5;color:#CDBBA2;text-wrap:pretty">Answers on your website, 24/7.</span>
+          <span data-ft-go="1" style="display:inline-flex;align-items:center;gap:8px;margin-top:4px;font-size:14.5px;font-weight:700;color:#E8763F;transition:transform 250ms ease">See product <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></span>
+        </a>
+      </div>
+      <div style="position:relative;overflow:hidden">
+        <div aria-hidden="true" data-no-i18n="1" style="position:absolute;left:24px;bottom:0.02em;display:flex;align-items:baseline;font-family:Archivo,Helvetica,sans-serif;font-size:clamp(96px,17vw,210px);font-weight:800;letter-spacing:-0.05em;line-height:0.78;color:#33281F;white-space:nowrap;pointer-events:none;user-select:none">VangAI<span style="display:inline-block;flex:none;width:0.15em;height:0.15em;border-radius:50%;background:#D85A30;margin-left:0.05em;opacity:0.55"></span></div>
+        <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:20px 32px;flex-wrap:wrap;padding:30px 32px">
+          <a href="./VangAI Home.dc.html" aria-label="VangAI home" style="display:flex;align-items:center;gap:11px;color:#FAEEDA" style-hover="color:#FAEEDA">
+            <div style="width:34px;height:34px;flex:none"><dc-import name="Mark" uid="abft" radius="{{ 0 }}" bg="transparent" hint-size="34px,34px"></dc-import></div>
+            <div style="font-size:21px;font-weight:800;letter-spacing:-0.03em">VangAI</div>
+          </a>
+          <div style="display:flex;align-items:center;gap:10px 28px;flex-wrap:wrap">
+            <a href="./VangAI Pricing.dc.html" style="font-size:16px;font-weight:500;color:rgba(250,238,218,0.88)" style-hover="color:#E8763F">Pricing</a>
+            <a href="./VangAI About.dc.html" style="font-size:16px;font-weight:500;color:rgba(250,238,218,0.88)" style-hover="color:#E8763F">About us</a>
+            <a href="./VangAI Contact.dc.html" style="font-size:16px;font-weight:500;color:rgba(250,238,218,0.88)" style-hover="color:#E8763F">Contact</a>
+            <a href="mailto:[email address]" data-todo="[email address]" style="font-size:16px;font-weight:600;color:#E8763F" style-hover="color:#FAEEDA">[email address]</a>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+            <div role="group" aria-label="Language" style="display:flex;align-items:center;gap:2px;border:1px solid rgba(250,238,218,0.28);border-radius:99px;padding:3px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.08em">
+              <a href="#nl" data-set-lang="nl" data-lang-dark="1" style="padding:6px 10px;border-radius:99px;color:rgba(250,238,218,0.7)">NL</a>
+              <a href="#fr" data-set-lang="fr" data-lang-dark="1" style="padding:6px 10px;border-radius:99px;color:rgba(250,238,218,0.7)">FR</a>
+              <a href="#en" data-set-lang="en" data-lang-dark="1" style="padding:6px 10px;border-radius:99px;color:rgba(250,238,218,0.7)">EN</a>
+            </div>
+            <a href="./VangAI Contact.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:#D85A30;color:#FFFFFF;border:1px solid #D85A30" style-hover="background:#FAEEDA;border-color:#FAEEDA;color:#2B2118">Book a call <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+          </div>
+        </div>
+        <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;padding:16px 32px 20px;border-top:1px solid rgba(250,238,218,0.12);font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(250,238,218,0.62)">
+          <span>© 2026 VangAI, Hasselt, Belgium, [company number]</span>
+          <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
+            <a href="./VangAI Privacy.dc.html" style="color:rgba(250,238,218,0.62)" style-hover="color:#FAEEDA">Privacy</a>
+            <a href="./VangAI Cookies.dc.html" style="color:rgba(250,238,218,0.62)" style-hover="color:#FAEEDA">Cookies</a>
+            <a href="./VangAI Terms.dc.html" style="color:rgba(250,238,218,0.62)" style-hover="color:#FAEEDA">Terms</a>
+            <a href="./VangAI Data and Privacy.dc.html" style="color:rgba(250,238,218,0.62)" style-hover="color:#FAEEDA">Data &amp; privacy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = Object.assign({ nav: false, faq: {} }, { steps: 1 });
+  componentDidMount() {
+    const mq = q => window.matchMedia && window.matchMedia(q).matches;
+    if (mq('(max-width: 1060px)') || mq('(prefers-reduced-motion: reduce)')) this.setState({ steps: 4 });
+    this._stepsT = setInterval(() => {
+      const el = this._stepsEl;
+      if (this.state.steps >= 4) { clearInterval(this._stepsT); return; }
+      if (!el) return;
+      const r = el.getBoundingClientRect(), h = window.innerHeight || 800;
+      if (r.top < h * 0.8 && r.bottom > h * 0.2 && !this._auto) this.armSteps();
+    }, 400);
+  }
+  armSteps() {
+    clearTimeout(this._auto);
+    this._auto = setTimeout(() => { if (this.state.steps < 4) this.setState({ steps: 4 }); }, 4000);
+  }
+  componentWillUnmount() { clearInterval(this._stepsT); clearTimeout(this._auto); }
+
+  renderVals() {
+    const v = {
+      ddDisplay: this.state.nav ? 'flex' : 'none',
+      navEnter: () => this.setState({ nav: true }),
+      navLeave: () => this.setState({ nav: false })
+    };
+    for (let i = 0; i < 40; i++) {
+      const open = !!this.state.faq[i];
+      v['faqR' + i] = open ? '1fr' : '0fr';
+      v['faqSign' + i] = open ? '–' : '+';
+      v['faqX' + i] = open ? 'true' : 'false';
+      v['faqT' + i] = () => this.setState(s => ({ faq: Object.assign({}, s.faq, { [i]: !s.faq[i] }) }));
+    }
+    for (let i = 0; i < 4; i++) {
+      const shown = this.state.steps > i;
+      v['stepO' + i] = shown ? 1 : 0;
+      v['stepT' + i] = shown ? 'translateX(0)' : 'translateX(-48px)';
+      v['stepHint' + i] = (shown && this.state.steps === i + 1 && i < 3) ? 'block' : 'none';
+      v['stepPE' + i] = shown ? 'auto' : 'none';
+      v['stepE' + i] = () => { this.armSteps(); if (this.state.steps === i + 1 && i < 3) this.setState({ steps: i + 2 }); };
+    }
+    v.stepsRef = el => { this._stepsEl = el; };
+    return v;
+  }
+}
+</script>
+</body>
+</html>

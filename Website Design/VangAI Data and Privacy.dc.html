@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-fr="Données et vie privée | VangAI" data-nl="Data &amp; privacy | VangAI">Data & privacy | VangAI</title>
+<meta name="description" content="What VangAI stores, why, where and for how long. Your customer data belongs to your business." data-fr="Ce que votre assistant conserve, pourquoi, où, combien de temps, et à qui cela appartient." data-nl="Wat VangAI bewaart, waarom, waar en hoe lang. Je klantgegevens zijn van jouw zaak.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VangAI">
+<meta property="og:title" content="Data &amp; privacy | VangAI" data-fr="Données et vie privée | VangAI" data-nl="Data &amp; privacy | VangAI">
+<meta property="og:description" content="What VangAI stores, why, where and for how long. Your customer data belongs to your business." data-fr="Ce que votre assistant conserve, pourquoi, où, combien de temps, et à qui cela appartient." data-nl="Wat VangAI bewaart, waarom, waar en hoe lang. Je klantgegevens zijn van jouw zaak.">
+<meta property="og:image" content="./assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="./assets/favicon.png">
+<link rel="apple-touch-icon" href="./assets/favicon.png">
+<script src="./support.js"></script>
+<script src="./i18n-nl.js"></script>
+<script src="./i18n-fr.js"></script>
+<script src="./site.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FAEEDA;}
+a{color:#2B2118;text-decoration:none;}
+a:hover{color:#D85A30;}
+::selection{background:#D85A30;color:#FAEEDA;}
+[data-ft-card]:hover [data-ft-go]{transform:translateX(4px);}
+[data-paused="1"],[data-paused="1"] *{animation-play-state:paused !important;}
+@media (prefers-reduced-motion: reduce){*{animation-duration:1ms !important;animation-iteration-count:1 !important;transition-duration:1ms !important;}}
+</style>
+</helmet>
+<div style="font-family:Archivo,Helvetica,sans-serif;color:#2B2118;background:#FAEEDA;min-height:100vh">
+
+  <div style="position:sticky;top:0;z-index:40;background:rgba(250,238,218,0.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(43,33,24,0.12)">
+    <div style="max-width:1200px;margin:0 auto;padding:12px 32px;display:flex;align-items:center;gap:12px 28px;flex-wrap:wrap">
+      <a href="./VangAI Home.dc.html" aria-label="VangAI home" style="flex:none;display:flex;align-items:center;gap:11px;margin-right:auto">
+        <div style="width:34px;height:34px;flex:none"><dc-import name="Mark" uid="dpnav" radius="{{ 0 }}" bg="transparent" hint-size="34px,34px"></dc-import></div>
+        <div style="font-size:21px;font-weight:800;letter-spacing:-0.03em">VangAI</div>
+      </a>
+      <div style="display:flex;align-items:center;gap:10px 26px;flex-wrap:wrap;font-family:Archivo,sans-serif">
+        <div onMouseEnter="{{ navEnter }}" onMouseLeave="{{ navLeave }}" style="position:relative;padding:6px 0">
+          <a href="./VangAI Product.dc.html" style="display:flex;align-items:center;gap:6px;font-size:16px;font-weight:600;color:#2B2118;transition:color 180ms ease" style-hover="color:#D85A30">Product <span aria-hidden="true" style="font-size:11px">▾</span></a>
+          <div style="position:absolute;top:100%;left:50%;transform:translateX(-50%);display:{{ ddDisplay }};flex-direction:column;gap:2px;background:#FAEEDA;border:1px solid rgba(43,33,24,0.16);border-radius:16px;padding:10px;min-width:210px;box-shadow:0 14px 34px rgba(43,33,24,0.14);z-index:50">
+            <a href="./VangAI Product.dc.html#voice" style="padding:10px 14px;border-radius:10px;font-size:15px;font-weight:500;text-align:center" style-hover="background:#FFF6E6;color:#D85A30">VangVoice</a>
+            <a href="./VangAI Product.dc.html#whatsapp" style="padding:10px 14px;border-radius:10px;font-size:15px;font-weight:500;text-align:center" style-hover="background:#FFF6E6;color:#D85A30">VangMessage</a>
+            <a href="./VangAI Product.dc.html#chat" style="padding:10px 14px;border-radius:10px;font-size:15px;font-weight:500;text-align:center" style-hover="background:#FFF6E6;color:#D85A30">VangChat</a>
+          </div>
+        </div>
+        <a href="./VangAI Pricing.dc.html" style="font-size:16px;font-weight:600;color:#2B2118;transition:color 180ms ease" style-hover="color:#D85A30">Pricing</a>
+        <a href="./VangAI About.dc.html" style="font-size:16px;font-weight:600;color:#2B2118;transition:color 180ms ease" style-hover="color:#D85A30">About us</a>
+        <div role="group" aria-label="Language" style="display:flex;align-items:center;gap:2px;border:1px solid rgba(43,33,24,0.22);border-radius:99px;padding:3px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.08em">
+          <a href="#nl" data-set-lang="nl" style="padding:6px 10px;border-radius:99px;color:rgba(43,33,24,0.7)">NL</a>
+          <a href="#fr" data-set-lang="fr" style="padding:6px 10px;border-radius:99px;color:rgba(43,33,24,0.7)">FR</a>
+          <a href="#en" data-set-lang="en" style="padding:6px 10px;border-radius:99px;color:rgba(43,33,24,0.7)">EN</a>
+        </div>
+        <a href="./VangAI Contact.dc.html" style="flex:none;background:#D85A30;color:#FFFFFF;font-size:15px;font-weight:600;padding:11px 20px;border-radius:99px;white-space:nowrap;display:inline-flex;align-items:center;gap:8px;transition:background 180ms ease" style-hover="background:#2B2118;color:#FFFFFF">Book a call <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="top" style="max-width:1200px;margin:0 auto;padding:80px 40px 56px">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ Data &amp; privacy</div>
+    <h1 style="font-family:Archivo,Helvetica,sans-serif;font-size:62px;line-height:0.99;font-weight:800;letter-spacing:-0.04em;margin:24px 0 0;max-width:20ch;text-wrap:balance">What happens to your customer conversations</h1>
+    <p style="font-size:20px;line-height:1.6;color:rgba(43,33,24,0.78);max-width:54ch;margin:22px 0 0;text-wrap:pretty">In plain language: what your assistant stores, why, where, for how long, and who owns it. Short answer: you do.</p>
+    <div style="display:inline-flex;align-items:center;gap:10px;margin-top:26px;border:1px dashed #D85A30;border-radius:99px;padding:8px 16px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#B8441F">Draft, to be reviewed</div>
+  </div>
+
+  <div style="max-width:1200px;margin:0 auto;padding:0 40px 24px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px 56px;border-top:1px solid rgba(43,33,24,0.16);padding:34px 0">
+      <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:26px;font-weight:800;letter-spacing:-0.028em;line-height:1.15;margin:0;max-width:20ch;text-wrap:balance">What we store</h2>
+      <div style="min-width:0;display:flex;flex-direction:column;gap:12px"><p style="font-size:17px;line-height:1.7;color:rgba(43,33,24,0.82);margin:0;max-width:64ch;text-wrap:pretty">The conversations your assistant has with your customers: call recordings or transcripts, WhatsApp and chat messages, and the details customers share, such as their name, phone number and what they need. Plus the bookings it makes in your calendar.</p></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px 56px;border-top:1px solid rgba(43,33,24,0.16);padding:34px 0">
+      <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:26px;font-weight:800;letter-spacing:-0.028em;line-height:1.15;margin:0;max-width:20ch;text-wrap:balance">Why we store it</h2>
+      <div style="min-width:0;display:flex;flex-direction:column;gap:12px"><p style="font-size:17px;line-height:1.7;color:rgba(43,33,24,0.82);margin:0;max-width:64ch;text-wrap:pretty">So your assistant can do its job: book appointments, send you a summary, remember a customer across channels, and pass on questions it cannot answer. We also use it to write your monthly report. Nothing else.</p></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px 56px;border-top:1px solid rgba(43,33,24,0.16);padding:34px 0">
+      <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:26px;font-weight:800;letter-spacing:-0.028em;line-height:1.15;margin:0;max-width:20ch;text-wrap:balance">Where it is stored</h2>
+      <div style="min-width:0;display:flex;flex-direction:column;gap:12px"><p style="font-size:17px;line-height:1.7;color:rgba(43,33,24,0.82);margin:0;max-width:64ch;text-wrap:pretty">On servers inside the European Union. [Hosting provider and location to confirm.]</p></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px 56px;border-top:1px solid rgba(43,33,24,0.16);padding:34px 0">
+      <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:26px;font-weight:800;letter-spacing:-0.028em;line-height:1.15;margin:0;max-width:20ch;text-wrap:balance">How long we keep it</h2>
+      <div style="min-width:0;display:flex;flex-direction:column;gap:12px"><p style="font-size:17px;line-height:1.7;color:rgba(43,33,24,0.82);margin:0;max-width:64ch;text-wrap:pretty">Conversations are kept for [period to confirm], then deleted automatically. Bookings stay in your own calendar for as long as you want them there.</p></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px 56px;border-top:1px solid rgba(43,33,24,0.16);padding:34px 0">
+      <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:26px;font-weight:800;letter-spacing:-0.028em;line-height:1.15;margin:0;max-width:20ch;text-wrap:balance">Who owns it</h2>
+      <div style="min-width:0;display:flex;flex-direction:column;gap:12px"><p style="font-size:17px;line-height:1.7;color:rgba(43,33,24,0.82);margin:0;max-width:64ch;text-wrap:pretty">You do. Your customer data belongs to your business, not to us. It is never sold and never used to train other systems. When you stop working with us, you choose: we send you an export, or we delete everything.</p></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px 56px;border-top:1px solid rgba(43,33,24,0.16);padding:34px 0">
+      <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:26px;font-weight:800;letter-spacing:-0.028em;line-height:1.15;margin:0;max-width:20ch;text-wrap:balance">Telling customers it is an assistant</h2>
+      <div style="min-width:0;display:flex;flex-direction:column;gap:12px"><p style="font-size:17px;line-height:1.7;color:rgba(43,33,24,0.82);margin:0;max-width:64ch;text-wrap:pretty">Your assistant says it is an AI in its first sentence. The law requires it, and we think it is simply honest.</p></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px 56px;border-top:1px solid rgba(43,33,24,0.16);padding:34px 0">
+      <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:26px;font-weight:800;letter-spacing:-0.028em;line-height:1.15;margin:0;max-width:20ch;text-wrap:balance">Processing agreement</h2>
+      <div style="min-width:0;display:flex;flex-direction:column;gap:12px"><p style="font-size:17px;line-height:1.7;color:rgba(43,33,24,0.82);margin:0;max-width:64ch;text-wrap:pretty">We sign a data processing agreement with every client, as GDPR requires. Ask for a copy at <a href="mailto:[email address]" data-todo="[email address]" style="color:#B8441F;font-weight:600">[email address]</a>.</p></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px 56px;border-top:1px solid rgba(43,33,24,0.16);padding:34px 0">
+      <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:26px;font-weight:800;letter-spacing:-0.028em;line-height:1.15;margin:0;max-width:20ch;text-wrap:balance">Third parties involved</h2>
+      <div style="min-width:0;display:flex;flex-direction:column;gap:12px"><p style="font-size:17px;line-height:1.7;color:rgba(43,33,24,0.82);margin:0;max-width:64ch;text-wrap:pretty">We use a small number of carefully chosen providers for telephony, WhatsApp and language processing, all under GDPR agreements. [List to confirm.]</p></div>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:88px 40px 104px">
+    <div style="background:#D85A30;border-radius:28px;padding:64px 56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px 40px;align-items:center">
+      <div style="min-width:0;display:flex;flex-direction:column;align-items:flex-start">
+        <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:48px;font-weight:800;letter-spacing:-0.04em;line-height:1.02;margin:0;color:#FAEEDA;max-width:20ch;text-wrap:balance">Questions about this page?</h2>
+        <p style="font-size:18px;line-height:1.6;color:#FAEEDA;max-width:44ch;margin:18px 0 30px;text-wrap:pretty">Ask us anything. We would rather explain it in plain words than hide behind legal text.</p>
+        <a href="./VangAI Contact.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:#2B2118;color:#FAEEDA;border:1px solid #2B2118" style-hover="background:#FAEEDA;border-color:#FAEEDA;color:#2B2118">Book a call <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+      </div>
+      <div style="min-width:0;display:flex;justify-content:center">
+        <div style="width:180px;height:180px"><dc-import name="Mark" uid="dpcta" tone="cream" radius="{{ 0 }}" bg="transparent" hint-size="180px,180px"></dc-import></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1200px;margin:0 auto;padding:8px 40px 40px">
+    <footer style="background:#2B2118;color:#FAEEDA;border-radius:24px;overflow:hidden">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;background:rgba(250,238,218,0.12);border-bottom:1px solid rgba(250,238,218,0.12)">
+        <a href="./VangAI Product.dc.html#voice" data-ft-card="1" style="min-width:0;display:flex;flex-direction:column;gap:10px;padding:32px;background:#2B2118;color:#FAEEDA;transition:background 250ms ease" style-hover="background:#352A20;color:#FAEEDA">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="flex:none;width:40px;height:40px;border-radius:12px;background:rgba(216,90,48,0.18);color:#E8763F;display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></span>
+            <span style="font-size:24px;font-weight:800;letter-spacing:-0.03em;line-height:1.1;color:#FAEEDA">VangVoice</span>
+          </div>
+          <span style="font-size:15px;line-height:1.5;color:#CDBBA2;text-wrap:pretty">Your phone, answered every time.</span>
+          <span data-ft-go="1" style="display:inline-flex;align-items:center;gap:8px;margin-top:4px;font-size:14.5px;font-weight:700;color:#E8763F;transition:transform 250ms ease">See product <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></span>
+        </a>
+        <a href="./VangAI Product.dc.html#whatsapp" data-ft-card="1" style="min-width:0;display:flex;flex-direction:column;gap:10px;padding:32px;background:#2B2118;color:#FAEEDA;transition:background 250ms ease" style-hover="background:#352A20;color:#FAEEDA">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="flex:none;width:40px;height:40px;border-radius:12px;background:rgba(216,90,48,0.18);color:#E8763F;display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></span>
+            <span style="font-size:24px;font-weight:800;letter-spacing:-0.03em;line-height:1.1;color:#FAEEDA">VangMessage</span>
+          </div>
+          <span style="font-size:15px;line-height:1.5;color:#CDBBA2;text-wrap:pretty">WhatsApp replies within seconds.</span>
+          <span data-ft-go="1" style="display:inline-flex;align-items:center;gap:8px;margin-top:4px;font-size:14.5px;font-weight:700;color:#E8763F;transition:transform 250ms ease">See product <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></span>
+        </a>
+        <a href="./VangAI Product.dc.html#chat" data-ft-card="1" style="min-width:0;display:flex;flex-direction:column;gap:10px;padding:32px;background:#2B2118;color:#FAEEDA;transition:background 250ms ease" style-hover="background:#352A20;color:#FAEEDA">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="flex:none;width:40px;height:40px;border-radius:12px;background:rgba(216,90,48,0.18);color:#E8763F;display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M4 4h16c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H8l-4 4V6c0-1.1.9-2 2-2zm3 6v2h2v-2H7zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2z"/></svg></span>
+            <span style="font-size:24px;font-weight:800;letter-spacing:-0.03em;line-height:1.1;color:#FAEEDA">VangChat</span>
+          </div>
+          <span style="font-size:15px;line-height:1.5;color:#CDBBA2;text-wrap:pretty">Answers on your website, 24/7.</span>
+          <span data-ft-go="1" style="display:inline-flex;align-items:center;gap:8px;margin-top:4px;font-size:14.5px;font-weight:700;color:#E8763F;transition:transform 250ms ease">See product <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></span>
+        </a>
+      </div>
+      <div style="position:relative;overflow:hidden">
+        <div aria-hidden="true" data-no-i18n="1" style="position:absolute;left:24px;bottom:0.02em;display:flex;align-items:baseline;font-family:Archivo,Helvetica,sans-serif;font-size:clamp(96px,17vw,210px);font-weight:800;letter-spacing:-0.05em;line-height:0.78;color:#33281F;white-space:nowrap;pointer-events:none;user-select:none">VangAI<span style="display:inline-block;flex:none;width:0.15em;height:0.15em;border-radius:50%;background:#D85A30;margin-left:0.05em;opacity:0.55"></span></div>
+        <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:20px 32px;flex-wrap:wrap;padding:30px 32px">
+          <a href="./VangAI Home.dc.html" aria-label="VangAI home" style="display:flex;align-items:center;gap:11px;color:#FAEEDA" style-hover="color:#FAEEDA">
+            <div style="width:34px;height:34px;flex:none"><dc-import name="Mark" uid="dpft" radius="{{ 0 }}" bg="transparent" hint-size="34px,34px"></dc-import></div>
+            <div style="font-size:21px;font-weight:800;letter-spacing:-0.03em">VangAI</div>
+          </a>
+          <div style="display:flex;align-items:center;gap:10px 28px;flex-wrap:wrap">
+            <a href="./VangAI Pricing.dc.html" style="font-size:16px;font-weight:500;color:rgba(250,238,218,0.88)" style-hover="color:#E8763F">Pricing</a>
+            <a href="./VangAI About.dc.html" style="font-size:16px;font-weight:500;color:rgba(250,238,218,0.88)" style-hover="color:#E8763F">About us</a>
+            <a href="./VangAI Contact.dc.html" style="font-size:16px;font-weight:500;color:rgba(250,238,218,0.88)" style-hover="color:#E8763F">Contact</a>
+            <a href="mailto:[email address]" data-todo="[email address]" style="font-size:16px;font-weight:600;color:#E8763F" style-hover="color:#FAEEDA">[email address]</a>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+            <div role="group" aria-label="Language" style="display:flex;align-items:center;gap:2px;border:1px solid rgba(250,238,218,0.28);border-radius:99px;padding:3px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.08em">
+              <a href="#nl" data-set-lang="nl" data-lang-dark="1" style="padding:6px 10px;border-radius:99px;color:rgba(250,238,218,0.7)">NL</a>
+              <a href="#fr" data-set-lang="fr" data-lang-dark="1" style="padding:6px 10px;border-radius:99px;color:rgba(250,238,218,0.7)">FR</a>
+              <a href="#en" data-set-lang="en" data-lang-dark="1" style="padding:6px 10px;border-radius:99px;color:rgba(250,238,218,0.7)">EN</a>
+            </div>
+            <a href="./VangAI Contact.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:#D85A30;color:#FFFFFF;border:1px solid #D85A30" style-hover="background:#FAEEDA;border-color:#FAEEDA;color:#2B2118">Book a call <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+          </div>
+        </div>
+        <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;padding:16px 32px 20px;border-top:1px solid rgba(250,238,218,0.12);font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(250,238,218,0.62)">
+          <span>© 2026 VangAI, Hasselt, Belgium, [company number]</span>
+          <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
+            <a href="./VangAI Privacy.dc.html" style="color:rgba(250,238,218,0.62)" style-hover="color:#FAEEDA">Privacy</a>
+            <a href="./VangAI Cookies.dc.html" style="color:rgba(250,238,218,0.62)" style-hover="color:#FAEEDA">Cookies</a>
+            <a href="./VangAI Terms.dc.html" style="color:rgba(250,238,218,0.62)" style-hover="color:#FAEEDA">Terms</a>
+            <a href="./VangAI Data and Privacy.dc.html" style="color:rgba(250,238,218,0.62)" style-hover="color:#FAEEDA">Data &amp; privacy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = Object.assign({ nav: false, faq: {} }, {});
+
+  renderVals() {
+    const v = {
+      ddDisplay: this.state.nav ? 'flex' : 'none',
+      navEnter: () => this.setState({ nav: true }),
+      navLeave: () => this.setState({ nav: false })
+    };
+    for (let i = 0; i < 40; i++) {
+      const open = !!this.state.faq[i];
+      v['faqR' + i] = open ? '1fr' : '0fr';
+      v['faqSign' + i] = open ? '–' : '+';
+      v['faqX' + i] = open ? 'true' : 'false';
+      v['faqT' + i] = () => this.setState(s => ({ faq: Object.assign({}, s.faq, { [i]: !s.faq[i] }) }));
+    }
+    return v;
+  }
+}
+</script>
+</body>
+</html>

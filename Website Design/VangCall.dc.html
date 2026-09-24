@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@keyframes vgc-bar { 0%,100%{transform:scaleY(0.12)} 50%{transform:scaleY(1)} }
+@keyframes vgc-ring { 0%{transform:scale(1);opacity:0.5} 100%{transform:scale(1.6);opacity:0} }
+.vgc-w.on > div { animation: vgc-bar 720ms ease-in-out infinite; }
+.vgc-w.on > div:nth-child(4n+1){ animation-delay:60ms }
+.vgc-w.on > div:nth-child(4n+2){ animation-delay:220ms }
+.vgc-w.on > div:nth-child(4n+3){ animation-delay:140ms }
+.vgc-w.on > div:nth-child(4n){ animation-delay:300ms }
+.vgc-pulse { animation: vgc-ring 1800ms ease-out infinite; }
+@media (prefers-reduced-motion: reduce){ .vgc-w.on > div, .vgc-pulse { animation:none !important } }
+</style>
+</helmet>
+<div style="font-family:Archivo,Helvetica,sans-serif;width:320px;max-width:100%;background:#2B2118;border-radius:46px;padding:10px;box-shadow:0 26px 64px rgba(43,33,24,0.26)">
+  <div style="position:relative;background:#17120D;border-radius:38px;height:640px;overflow:hidden;display:flex;flex-direction:column">
+    <div style="position:absolute;top:11px;left:50%;transform:translateX(-50%);width:84px;height:23px;border-radius:99px;background:#2B2118;z-index:3"></div>
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:15px 24px 0;color:#FAEEDA;position:relative;z-index:2">
+      <span style="font-size:12.5px;font-weight:700;letter-spacing:0.01em">9:41</span>
+      <span style="display:flex;align-items:center;gap:5px">
+        <svg viewBox="0 0 20 14" width="17" height="12" fill="#FAEEDA"><rect x="0" y="9" width="3" height="5" rx="1"/><rect x="4.7" y="6.5" width="3" height="7.5" rx="1"/><rect x="9.4" y="3.5" width="3" height="10.5" rx="1"/><rect x="14.1" y="0.5" width="3" height="13.5" rx="1"/></svg>
+        <svg viewBox="0 0 18 14" width="15" height="12" fill="none" stroke="#FAEEDA" stroke-width="1.7" stroke-linecap="round"><path d="M1.2 4.6a11 11 0 0 1 15.6 0"/><path d="M4.1 7.8a7 7 0 0 1 9.8 0"/><path d="M7 11a3 3 0 0 1 4 0"/></svg>
+        <svg viewBox="0 0 26 13" width="22" height="11" fill="none"><rect x="0.7" y="0.7" width="21" height="11.6" rx="3.4" stroke="rgba(250,238,218,0.55)" stroke-width="1.3"/><rect x="2.6" y="2.6" width="15" height="7.8" rx="2" fill="#FAEEDA"/><path d="M23.4 4.4v4.2a2.6 2.6 0 0 0 0-4.2z" fill="rgba(250,238,218,0.55)"/></svg>
+      </span>
+    </div>
+
+    <div style="position:absolute;inset:44px 0 0;display:{{ idleD }};flex-direction:column;align-items:center;justify-content:center;gap:0;padding:0 26px 30px">
+      <div style="position:relative;width:118px;height:118px;display:flex;align-items:center;justify-content:center">
+        <div class="vgc-pulse" style="position:absolute;inset:0;border-radius:50%;border:2px solid #D85A30"></div>
+        <div style="position:relative;width:104px;height:104px;border-radius:50%;background:#FAEEDA;display:flex;align-items:center;justify-content:center">
+          <div style="width:58px;height:58px"><dc-import name="Mark" uid="vgcIdle" radius="{{ 0 }}" bg="transparent" hint-size="58px,58px"></dc-import></div>
+        </div>
+      </div>
+      <div style="font-size:21px;font-weight:800;letter-spacing:-0.03em;color:#FAEEDA;margin-top:22px">VangAI assistant</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(250,238,218,0.55);margin-top:8px">Ready to take your call</div>
+      <p style="font-size:13.5px;line-height:1.55;color:rgba(250,238,218,0.65);text-align:center;margin:20px 0 0;max-width:30ch;text-wrap:pretty">Press call and talk to it out loud, the way a customer would.</p>
+      <div onClick="{{ startCall }}" role="button" tabIndex="{{ 0 }}" style="margin-top:26px;background:#D85A30;color:#FAEEDA;font-size:15.5px;font-weight:700;padding:15px 30px;border-radius:99px;cursor:pointer;display:inline-flex;align-items:center;gap:10px;transition:background 180ms ease,transform 180ms ease" style-hover="background:#FAEEDA;color:#2B2118;transform:translateY(-2px)">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M6.6 3.2h2.9l1.5 3.9-2 1.5a10 10 0 0 0 6 6l1.5-2 3.9 1.5v2.9a2 2 0 0 1-2.2 2A16.2 16.2 0 0 1 4.6 5.4a2 2 0 0 1 2-2.2z"/></svg>
+        {{ startLabel }}
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(250,238,218,0.4);margin-top:16px;text-align:center;line-height:1.7">Mic used in your browser only · nothing stored</div>
+    </div>
+
+    <div style="position:absolute;inset:44px 0 0;display:{{ liveD }};flex-direction:column;padding:0 22px 26px">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;padding-top:14px">
+        <div style="width:74px;height:74px;border-radius:50%;background:#FAEEDA;display:flex;align-items:center;justify-content:center">
+          <div style="width:42px;height:42px"><dc-import name="Mark" uid="vgcLive" radius="{{ 0 }}" bg="transparent" hint-size="42px,42px"></dc-import></div>
+        </div>
+        <div style="font-size:18px;font-weight:800;letter-spacing:-0.028em;color:#FAEEDA">VangAI assistant</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:0.12em;color:#D85A30">{{ callTime }}</div>
+      </div>
+
+      <div style="margin-top:22px;display:flex;flex-direction:column;gap:12px">
+        <div style="background:rgba(250,238,218,0.07);border:1px solid rgba(250,238,218,0.14);border-radius:18px;padding:14px 16px">
+          <div style="display:flex;align-items:center;gap:8px">
+            <div style="width:7px;height:7px;border-radius:50%;background:{{ youDot }}"></div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:{{ youFg }}">You</div>
+          </div>
+          <div class="{{ youCls }}" ref="{{ youRef }}" style="display:flex;align-items:center;justify-content:space-between;gap:3px;height:42px;margin-top:10px">
+            <sc-for list="{{ bars }}" as="b" hint-placeholder-count="21">
+              <div style="width:4px;height:40px;border-radius:99px;background:#FAEEDA;transform:scaleY(0.1);transform-origin:center;transition:transform 90ms linear"></div>
+            </sc-for>
+          </div>
+        </div>
+        <div style="background:rgba(216,90,48,0.1);border:1px solid rgba(216,90,48,0.32);border-radius:18px;padding:14px 16px">
+          <div style="display:flex;align-items:center;gap:8px">
+            <div style="width:7px;height:7px;border-radius:50%;background:{{ aiDot }}"></div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:{{ aiFg }}">VangAI</div>
+          </div>
+          <div class="{{ aiCls }}" style="display:flex;align-items:center;justify-content:space-between;gap:3px;height:42px;margin-top:10px">
+            <sc-for list="{{ bars }}" as="b" hint-placeholder-count="21">
+              <div style="width:4px;height:40px;border-radius:99px;background:#D85A30;transform:scaleY(0.1);transform-origin:center;transition:transform 90ms linear"></div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:14px;font-size:11.5px;line-height:1.6;color:rgba(250,238,218,0.6);text-align:center;text-wrap:pretty">{{ noteText }}</div>
+
+      <div style="margin-top:auto;display:flex;align-items:center;justify-content:center;gap:26px">
+        <div onClick="{{ toggleMute }}" role="button" style="display:flex;flex-direction:column;align-items:center;gap:7px;cursor:pointer">
+          <div style="width:56px;height:56px;border-radius:50%;background:{{ muteBg }};border:1px solid rgba(250,238,218,0.25);display:flex;align-items:center;justify-content:center;transition:background 180ms ease">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#FAEEDA" stroke-width="2" stroke-linecap="round" style="display:{{ micOnD }}"><rect x="9" y="2.6" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></svg><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#2B2118" stroke-width="2" stroke-linecap="round" style="display:{{ micOffD }}"><rect x="9" y="2.6" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/><path d="M4 3.5 20 20.5" stroke="#FFFFFF" stroke-width="5"/><path d="M4 3.5 20 20.5" stroke="#E8443A" stroke-width="2.6"/></svg>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,238,218,0.6)">{{ muteLabel }}</div>
+        </div>
+        <div onClick="{{ endCall }}" role="button" style="display:flex;flex-direction:column;align-items:center;gap:7px;cursor:pointer">
+          <div style="width:56px;height:56px;border-radius:50%;background:#D93025;display:flex;align-items:center;justify-content:center;transition:background 180ms ease" style-hover="background:#B3251C">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="#FFFFFF" style="transform:rotate(134deg)"><path d="M6.6 3.2h2.9l1.5 3.9-2 1.5a10 10 0 0 0 6 6l1.5-2 3.9 1.5v2.9a2 2 0 0 1-2.2 2A16.2 16.2 0 0 1 4.6 5.4a2 2 0 0 1 2-2.2z"/></svg>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,238,218,0.6)">End call</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:360,&quot;height&quot;:700},&quot;startLabel&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Call the assistant&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { mode: 'idle', kind: 'script', t: 0, muted: false };
+
+  componentWillUnmount() { this.teardown(); }
+
+  teardown() {
+    if (this._tick) { clearInterval(this._tick); this._tick = null; }
+    if (this._raf) { cancelAnimationFrame(this._raf); this._raf = null; }
+    if (this._stream) { this._stream.getTracks().forEach(function (t) { t.stop(); }); this._stream = null; }
+    if (this._ac && this._ac.close) { try { this._ac.close(); } catch (e) {} this._ac = null; }
+    this._an = null;
+    this.flatten();
+  }
+
+  flatten() {
+    if (!this._you) return;
+    var bars = this._you.children;
+    for (var i = 0; i < bars.length; i++) bars[i].style.transform = 'scaleY(0.1)';
+  }
+
+  loop() {
+    var self = this;
+    this._raf = requestAnimationFrame(function () { self.loop(); });
+    if (!this._an || !this._you) return;
+    this._an.getByteFrequencyData(this._data);
+    var bars = this._you.children, n = bars.length;
+    for (var i = 0; i < n; i++) {
+      var idx = Math.floor(i / n * (this._data.length * 0.7));
+      var v = this._data[idx] / 255;
+      var s = Math.max(0.1, Math.min(1, v * 2.1));
+      bars[i].style.transform = 'scaleY(' + s.toFixed(3) + ')';
+    }
+  }
+
+  startTimer() {
+    var self = this;
+    this._tick = setInterval(function () {
+      self.setState(function (s) { return { t: s.t + 1 }; });
+    }, 1000);
+  }
+
+  start() {
+    if (this.state.mode !== 'idle') return;
+    var self = this;
+    var go = function (kind) {
+      self.setState({ mode: 'live', kind: kind, t: 0, muted: false });
+      self.startTimer();
+    };
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
+        self._stream = stream;
+        try {
+          var AC = window.AudioContext || window.webkitAudioContext;
+          self._ac = new AC();
+          var src = self._ac.createMediaStreamSource(stream);
+          var an = self._ac.createAnalyser();
+          an.fftSize = 128; an.smoothingTimeConstant = 0.7;
+          src.connect(an);
+          self._an = an;
+          self._data = new Uint8Array(an.frequencyBinCount);
+          self.loop();
+          go('mic');
+        } catch (e) { go('script'); }
+      }).catch(function () { go('script'); });
+    } else { go('script'); }
+  }
+
+  end() { this.teardown(); this.setState({ mode: 'idle', t: 0, muted: false }); }
+
+  mute() {
+    var next = !this.state.muted;
+    if (this._stream) this._stream.getAudioTracks().forEach(function (t) { t.enabled = !next; });
+    if (next) this.flatten();
+    this.setState({ muted: next });
+  }
+
+  renderVals() {
+    var live = this.state.mode === 'live';
+    var mic = this.state.kind === 'mic';
+    var speaker = live && !mic ? (Math.floor(this.state.t / 3) % 2) : -1;
+    var youOn = (!mic && speaker === 0) || (mic && !this.state.muted && this.state.t > 0);
+    var aiOn = !mic && speaker === 1;
+    var mm = Math.floor(this.state.t / 60), ss = this.state.t % 60;
+    var self = this;
+    var bars = []; for (var i = 0; i < 21; i++) bars.push(i);
+    return {
+      bars: bars,
+      idleD: live ? 'none' : 'flex',
+      liveD: live ? 'flex' : 'none',
+      startLabel: this.props.startLabel || 'Call the assistant',
+      callTime: mm + ':' + (ss < 10 ? '0' + ss : ss),
+      youCls: (!mic && youOn) ? 'vgc-w on' : 'vgc-w',
+      aiCls: aiOn ? 'vgc-w on' : 'vgc-w',
+      youDot: (mic ? !this.state.muted : youOn) ? '#4ED07A' : 'rgba(250,238,218,0.3)',
+      aiDot: aiOn ? '#D85A30' : 'rgba(216,90,48,0.35)',
+      youFg: (mic ? !this.state.muted : youOn) ? '#FAEEDA' : 'rgba(250,238,218,0.5)',
+      aiFg: aiOn ? '#FAEEDA' : 'rgba(250,238,218,0.5)',
+      muteBg: this.state.muted ? 'rgba(250,238,218,0.9)' : 'rgba(250,238,218,0.08)',
+      muteFg: this.state.muted ? '#2B2118' : '#FAEEDA',
+      micOnD: this.state.muted ? 'none' : 'block',
+      micOffD: this.state.muted ? 'block' : 'none',
+      muteLabel: this.state.muted ? 'Unmute' : 'Mute',
+      noteText: mic
+        ? 'Demo mode. Your mic is live and the wave is real, the assistant\u2019s voice switches on once we connect it.'
+        : 'Demo mode. No mic access, so this is a scripted call showing how a conversation flows.',
+      youRef: function (el) { self._you = el; },
+      startCall: function () { self.start(); },
+      endCall: function () { self.end(); },
+      toggleMute: function () { self.mute(); }
+    };
+  }
+}
+
+</script>
+</body>
+</html>

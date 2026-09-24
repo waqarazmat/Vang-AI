@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="./lost-engine.js"></script>
+<style>
+@keyframes vlb-pulse { 0%{transform:scale(.4);opacity:.85} 100%{transform:scale(1.7);opacity:0} }
+@keyframes vlb-pop {
+  0%{opacity:0;transform:translateY(0) scale(.45)}
+  16%{opacity:1;transform:translateY(-16px) scale(1)}
+  64%{opacity:1;transform:translateY(-32px) scale(1)}
+  88%,100%{opacity:0;transform:translateY(-40px) scale(.9)}
+}
+.vlb-pop1{animation:vlb-pop 3s ease-out 0s infinite}
+.vlb-pop2{animation:vlb-pop 3s ease-out 1s infinite}
+.vlb-pop3{animation:vlb-pop 3s ease-out 2s infinite}
+[data-paused="1"] *{animation-play-state:paused !important}
+@media (prefers-reduced-motion: reduce){ .vlb-scene *{animation:none !important} }
+</style>
+</helmet>
+<div ref="{{ rootRef }}" class="vlb-scene" style="width:100%;max-width:100%;overflow:hidden;display:flex;flex-direction:column;gap:14px;font-family:Archivo,Helvetica,sans-serif">
+  <div style="display:flex;justify-content:flex-end">
+    <div style="display:inline-flex;align-items:center;gap:10px;border:1px solid {{ tickBd }};background:{{ tickBg }};border-radius:99px;padding:8px 16px;transition:background 400ms ease,border-color 400ms ease">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:{{ tickLabel }};transition:color 400ms ease">{{ tickText }}</span>
+      <span style="font-size:19px;font-weight:800;letter-spacing:-0.02em;color:{{ tickNum }};transition:color 400ms ease;font-variant-numeric:tabular-nums">{{ tickCount }}</span>
+    </div>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:stretch;justify-content:center">
+    <svg viewBox="0 0 600 400" style="flex:1 1 380px;min-width:0;width:100%;max-width:700px;height:auto" role="img" aria-label="Joe the mechanic works on a car while calls come in to his garage">
+      <defs><filter id="vlbGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter></defs>
+      <rect x="2" y="2" width="596" height="396" rx="22" fill="#231B14"/>
+      <g stroke="#FAEEDA" stroke-width="2" opacity="0.1"><path d="M0 76h600M0 152h600M0 228h600M0 304h600"/><path d="M76 0v400M228 0v400M380 0v400M532 0v400"/></g>
+      <text x="300" y="46" text-anchor="middle" fill="#FAEEDA" font-family="Archivo, Helvetica, sans-serif" font-size="17" font-weight="800" letter-spacing="7" opacity="0.9">GARAGE</text>
+      <path d="M180 56h240" stroke="#E8763F" stroke-width="3" stroke-linecap="round"/>
+      <path d="M26 358h548" stroke="#FAEEDA" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+      <g fill="none" stroke="#FAEEDA" stroke-width="3" stroke-linecap="round" opacity="0.55"><path d="M28 312h122"/><path d="M40 312v46M138 312v46"/></g>
+      <g data-vl="aiph" opacity="0" style="transform-origin:88px 296px"><circle cx="88" cy="296" r="30" fill="#E8763F" opacity="0.5" filter="url(#vlbGlow)"/></g>
+      <g data-vl="ring" opacity="0" fill="none" stroke="#E8763F" stroke-linecap="round">
+        <circle cx="88" cy="290" r="22" stroke-width="2.6" style="transform-origin:88px 290px;animation:vlb-pulse 1800ms ease-out infinite"/>
+        <circle cx="88" cy="290" r="22" stroke-width="2.6" style="transform-origin:88px 290px;animation:vlb-pulse 1800ms ease-out 600ms infinite"/>
+        <path d="M128 280q8 10 0 20M138 272q14 18 0 36M48 280q-8 10 0 20M38 272q-14 18 0 36" stroke-width="2.8"/>
+      </g>
+      <g data-vl="airing" opacity="0"><circle cx="88" cy="296" r="22" fill="none" stroke="#E8763F" stroke-width="2.2" style="transform-origin:88px 296px;animation:vlb-pulse 2000ms ease-out infinite"/></g>
+      <path data-vl="cord" d="M112 303c8 4 4-8 10-6c6 2 2-10 8-8c5 2 4-8 8-9" fill="none" stroke="#FAEEDA" stroke-width="2.2" stroke-linecap="round" opacity="0"></path>
+      <g fill="none" stroke="#FAEEDA" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M64 310 L68 292 H108 L112 310 Z" fill="#231B14"/>
+        <circle cx="88" cy="301" r="5.6"/>
+      </g>
+      <g data-vl="aimk" opacity="0"><circle cx="88" cy="301" r="8" fill="#E8763F"/><image href="./assets/mark-cream.png" x="81.5" y="295.5" width="13" height="11" preserveAspectRatio="xMidYMid meet"></image></g>
+      <g data-vl="hset" style="transform-origin:88px 290px"><path d="M61 290.5C61 284.5 66.5 282.5 72 283.8C80.5 278.6 95.5 278.6 104 283.8C109.5 282.5 115 284.5 115 290.5C115 296 110.5 297.5 106 296.6C102.8 296 100.8 293.6 100 291.2C94 286.8 82 286.8 76 291.2C75.2 293.6 73.2 296 70 296.6C65.5 297.5 61 296 61 290.5Z" fill="#231B14" stroke="#FAEEDA" stroke-width="2.6" stroke-linejoin="round"/></g>
+      <g data-vl="pops" opacity="0" fill="none" stroke="#E8763F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <g class="vlb-pop1" style="transform-origin:88px 252px"><rect x="73" y="238" width="30" height="26" rx="8" fill="#231B14"/><path d="M79 246v-5M97 246v-5M76 251h24M81 256.5l3.5 3.5 7-7.5"/></g>
+        <g class="vlb-pop2" style="transform-origin:132px 252px"><circle cx="132" cy="251" r="13" fill="#231B14"/><path d="M125 251l5 5 9-10" stroke-width="2.8"/></g>
+        <g class="vlb-pop3" style="transform-origin:44px 252px"><rect x="29" y="238" width="30" height="26" rx="8" fill="#231B14"/><path d="M35 246v-5M53 246v-5M32 251h24M37 256.5l3.5 3.5 7-7.5"/></g>
+      </g>
+      <g fill="none" stroke="#FAEEDA" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M170 300 H406 a14 14 0 0 1 0 40 H170 a14 14 0 0 1 0 -40 Z"/>
+        <path d="M214 300 L238 260 H322 L354 300"/><path d="M278 260 v40"/>
+        <circle cx="228" cy="344" r="20" fill="#231B14"/><circle cx="228" cy="344" r="6.5"/>
+        <circle cx="372" cy="344" r="20" fill="#231B14"/><circle cx="372" cy="344" r="6.5"/>
+        <rect data-vl="hood" x="330" y="286" width="76" height="13" rx="6.5" fill="#231B14" style="transform-origin:332px 292px"/>
+      </g>
+      <g data-vl="cust" fill="none" stroke="#E8763F" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" style="transform-origin:600px 322px;transform:translateX(44px)">
+        <g data-vl="cLegA" style="transform-origin:594px 320px"><path d="M594 320 L594 356"/></g>
+        <g data-vl="cLegB" style="transform-origin:606px 320px"><path d="M606 320 L606 356"/></g>
+        <g data-vl="cArmB" style="transform-origin:606px 290px" opacity="0.45"><path d="M606 290 L596 304 L590 314" stroke-width="6"/></g>
+        <path d="M600 276 L600 322" stroke-width="15"/>
+        <circle cx="600" cy="260" r="13" stroke-width="3.4" fill="#231B14"/>
+        <g data-vl="cArmA" style="transform-origin:592px 288px"><path d="M592 288 L580 302 L570 310" stroke-width="6.4"/></g>
+        <g data-vl="talkC" opacity="0" stroke-width="2.6"><rect x="578" y="216" width="44" height="26" rx="12" fill="#231B14"/><path d="M591 242l3-9h9z" fill="#231B14"/><path d="M589 229v0.1M600 229v0.1M611 229v0.1" stroke-width="5"/></g>
+      </g>
+      <g data-vl="mech" fill="none" stroke="#FAEEDA" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" style="transform-origin:515px 322px">
+        <g data-vl="mLegA" style="transform-origin:509px 320px"><path d="M509 320 L509 356"/></g>
+        <g data-vl="mLegB" style="transform-origin:521px 320px"><path d="M521 320 L521 356"/></g>
+        <g data-vl="mTorso" style="transform-origin:515px 322px">
+          <g data-vl="mArmB" style="transform-origin:521px 294px" opacity="0.45"><path d="M521 294 L508 308 L497 316" stroke-width="6"/></g>
+          <path d="M515 278 L515 324" stroke-width="16"/>
+          <g data-vl="mPock"><rect x="523" y="299" width="8" height="14" rx="2" fill="#231B14" stroke="#E8763F" stroke-width="2.4"/></g>
+          <g data-vl="mBuzz" opacity="0"><path d="M537 299q4 7 0 14M542 295q7 11 0 22" stroke="#E8763F" stroke-width="2.4"/></g>
+          <g data-vl="mHead" style="transform-origin:515px 282px">
+            <circle cx="515" cy="266" r="13" stroke-width="3.4" fill="#231B14"/>
+            <path d="M502.5 262a12.5 12.5 0 0 1 25 0 z" fill="#E8763F" stroke="#E8763F" stroke-width="2.4"/>
+            <path d="M503 262h-11" stroke="#E8763F" stroke-width="4"/>
+            <g data-vl="mRec" opacity="0"><g transform="translate(518 271) rotate(80) scale(.6) translate(-88 -287)"><path d="M61 290.5C61 284.5 66.5 282.5 72 283.8C80.5 278.6 95.5 278.6 104 283.8C109.5 282.5 115 284.5 115 290.5C115 296 110.5 297.5 106 296.6C102.8 296 100.8 293.6 100 291.2C94 286.8 82 286.8 76 291.2C75.2 293.6 73.2 296 70 296.6C65.5 297.5 61 296 61 290.5Z" fill="#231B14" stroke="#FAEEDA" stroke-width="3.4"/></g></g>
+            <g data-vl="mMob" opacity="0"><rect x="518" y="256" width="8" height="15" rx="2.2" fill="#231B14" stroke="#E8763F" stroke-width="2.4" transform="rotate(14 522 263)"/></g>
+            <g data-vl="stars" opacity="0" stroke="none" style="transform-origin:515px 242px"><path d="M500 240L501.92 244.08L506 246L501.92 247.92L500 252L498.08 247.92L494 246L498.08 244.08Z" fill="#F2C14E"/><path d="M530 239L531.6 242.4L535 244L531.6 245.6L530 249L528.4 245.6L525 244L528.4 242.4Z" fill="#E8763F"/><path d="M515 226.5L516.76 230.24L520.5 232L516.76 233.76L515 237.5L513.24 233.76L509.5 232L513.24 230.24Z" fill="#F2C14E"/></g>
+          </g>
+          <g data-vl="mArmA" style="transform-origin:507px 292px"><path d="M507 292 L492 306 L479 314" stroke-width="6.4"/></g>
+          <g data-vl="talkM" opacity="0" stroke-width="2.6"><rect x="493" y="222" width="44" height="26" rx="12" fill="#231B14"/><path d="M506 248l3-9h9z" fill="#231B14"/><path d="M504 235v0.1M515 235v0.1M526 235v0.1" stroke-width="5"/></g>
+        </g>
+      </g>
+    </svg>
+    <svg viewBox="0 0 400 470" style="flex:1 1 250px;min-width:0;width:100%;max-width:420px;height:auto" role="img" aria-label="Customers trying to reach the garage by car phone or computer">
+      <rect x="2" y="2" width="396" height="466" rx="22" fill="#231B14"/>
+      <g stroke="#FAEEDA" stroke-width="2" opacity="0.1"><path d="M0 76h400M0 152h400M0 228h400M0 304h400M0 380h400"/><path d="M76 0v470M152 0v470M228 0v470M304 0v470M380 0v470"/></g>
+      <g data-vl="cA" opacity="0"><g transform="translate(0 0)" fill="none" stroke="#C98A5A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M124 56q-7-8 0-16M114 63q-11-14 0-28M104 70q-15-20 0-40" stroke="#E8763F" stroke-width="2.8"/><path d="M152 56 H288 a13 13 0 0 1 0 29 H152 a13 13 0 0 1 0 -29 Z"/><path d="M176 56 L192 32 H244 L262 56"/><path d="M218 32 v24"/><circle cx="180" cy="86" r="12" fill="#231B14"/><circle cx="180" cy="86" r="4"/><circle cx="266" cy="86" r="12" fill="#231B14"/><circle cx="266" cy="86" r="4"/><path d="M205 46v0.1" stroke-width="11"/><path d="M213 40v11" stroke="#E8763F" stroke-width="4"/><g data-vl="okA" opacity="0" stroke="#E8763F"><circle cx="338" cy="46" r="16" fill="#E8763F" fill-opacity="0.18"/><path d="M330 46l6 6 11-12" stroke-width="3.4"/></g></g></g>
+      <g data-vl="cB" opacity="0"><g transform="translate(0 92)" fill="none" stroke="#E0574A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M124 56q-7-8 0-16M114 63q-11-14 0-28M104 70q-15-20 0-40" stroke="#E8763F" stroke-width="2.8"/><path d="M152 56 H288 a13 13 0 0 1 0 29 H152 a13 13 0 0 1 0 -29 Z"/><path d="M176 56 L192 32 H244 L262 56"/><path d="M218 32 v24"/><circle cx="180" cy="86" r="12" fill="#231B14"/><circle cx="180" cy="86" r="4"/><circle cx="266" cy="86" r="12" fill="#231B14"/><circle cx="266" cy="86" r="4"/><path d="M205 46v0.1" stroke-width="11"/><path d="M213 40v11" stroke="#E8763F" stroke-width="4"/><g data-vl="okB" opacity="0" stroke="#E8763F"><circle cx="338" cy="46" r="16" fill="#E8763F" fill-opacity="0.18"/><path d="M330 46l6 6 11-12" stroke-width="3.4"/></g></g></g>
+      <g data-vl="cC" opacity="0"><g transform="translate(0 184)" fill="none" stroke="#9C9086" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M124 56q-7-8 0-16M114 63q-11-14 0-28M104 70q-15-20 0-40" stroke="#E8763F" stroke-width="2.8"/><path d="M152 56 H288 a13 13 0 0 1 0 29 H152 a13 13 0 0 1 0 -29 Z"/><path d="M176 56 L192 32 H244 L262 56"/><path d="M218 32 v24"/><circle cx="180" cy="86" r="12" fill="#231B14"/><circle cx="180" cy="86" r="4"/><circle cx="266" cy="86" r="12" fill="#231B14"/><circle cx="266" cy="86" r="4"/><path d="M205 46v0.1" stroke-width="11"/><path d="M213 40v11" stroke="#E8763F" stroke-width="4"/><g data-vl="noC" opacity="0" stroke="#8C8072"><circle cx="338" cy="46" r="16"/><path d="M332 40l12 12M344 40l-12 12" stroke-width="3.4"/></g><g data-vl="okC" opacity="0" stroke="#E8763F"><circle cx="338" cy="46" r="16" fill="#E8763F" fill-opacity="0.18"/><path d="M330 46l6 6 11-12" stroke-width="3.4"/></g></g></g>
+      <g data-vl="cD" opacity="0"><g transform="translate(0 276)" fill="none" stroke="#FAEEDA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M124 56q-7-8 0-16M114 63q-11-14 0-28M104 70q-15-20 0-40" stroke="#E8763F" stroke-width="2.8"/><path d="M150 86 h140"/><path d="M166 34 h72 v46 h-72 z"/><path d="M178 50h34M178 58h44M178 66h26" stroke="#E8763F"/><circle cx="266" cy="46" r="11"/><path d="M266 60 L266 84" stroke-width="13"/><path d="M278 40v12" stroke="#E8763F" stroke-width="4"/><g data-vl="noD" opacity="0" stroke="#8C8072"><circle cx="338" cy="46" r="16"/><path d="M332 40l12 12M344 40l-12 12" stroke-width="3.4"/></g><g data-vl="okD" opacity="0" stroke="#E8763F"><circle cx="338" cy="46" r="16" fill="#E8763F" fill-opacity="0.18"/><path d="M330 46l6 6 11-12" stroke-width="3.4"/></g></g></g>
+      <g data-vl="cE" opacity="0"><g transform="translate(0 368)" fill="none" stroke="#C98A5A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M124 56q-7-8 0-16M114 63q-11-14 0-28M104 70q-15-20 0-40" stroke="#E8763F" stroke-width="2.8"/><path d="M152 56 H288 a13 13 0 0 1 0 29 H152 a13 13 0 0 1 0 -29 Z"/><path d="M176 56 L192 32 H244 L262 56"/><path d="M218 32 v24"/><circle cx="180" cy="86" r="12" fill="#231B14"/><circle cx="180" cy="86" r="4"/><circle cx="266" cy="86" r="12" fill="#231B14"/><circle cx="266" cy="86" r="4"/><path d="M205 46v0.1" stroke-width="11"/><path d="M213 40v11" stroke="#E8763F" stroke-width="4"/><g data-vl="noE" opacity="0" stroke="#8C8072"><circle cx="338" cy="46" r="16"/><path d="M332 40l12 12M344 40l-12 12" stroke-width="3.4"/></g><g data-vl="okE" opacity="0" stroke="#E8763F"><circle cx="338" cy="46" r="16" fill="#E8763F" fill-opacity="0.18"/><path d="M330 46l6 6 11-12" stroke-width="3.4"/></g></g></g>
+    </svg>
+  </div>
+  <div data-vl="cap" data-no-i18n="1" aria-live="polite" style="min-height:30px;text-align:center;font-size:20px;font-weight:700;letter-spacing:-0.02em;color:#2B2118;text-wrap:balance;padding:0 12px"></div>
+  <div style="min-height:96px;display:flex;align-items:center;justify-content:center;padding:0 12px">
+    <div data-vl="end" style="background:#231B14;border:2px solid #E8763F;color:#FAEEDA;border-radius:22px;padding:22px 34px;text-align:center;opacity:0">
+      <div style="font-size:30px;font-weight:800;letter-spacing:-0.035em;line-height:1.05;text-wrap:balance;color:#E8763F">Never miss another customer.</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1020,&quot;height&quot;:640},&quot;paceSeconds&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:54,&quot;min&quot;:40,&quot;max&quot;:80,&quot;step&quot;:1,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Animation&quot;}}">
+class Component extends DCLogic {
+  state = { missed: 0, fixed: false };
+  componentDidMount() {
+    var self = this;
+    var go = function () {
+      if (!window.VangLostEngine || !self._root) { self._w = setTimeout(go, 60); return; }
+      self._eng = window.VangLostEngine.start(self._root, {
+        pace: function () { return self.props.paceSeconds; },
+        onState: function (m, f) { if (m !== self.state.missed || f !== self.state.fixed) self.setState({ missed: m, fixed: f }); }
+      });
+    };
+    go();
+  }
+  componentWillUnmount() { clearTimeout(this._w); if (this._eng) this._eng.stop(); }
+  renderVals() {
+    var self = this, fixed = this.state.fixed;
+    return {
+      rootRef: function (el) { self._root = el; },
+      tickText: fixed ? 'Missed customers with VangAI' : 'Missed customers',
+      tickCount: fixed ? '0' : String(this.state.missed),
+      tickBg: fixed ? 'rgba(216,90,48,0.12)' : 'rgba(43,33,24,0.04)',
+      tickBd: fixed ? 'rgba(216,90,48,0.5)' : 'rgba(43,33,24,0.18)',
+      tickLabel: fixed ? '#B8441F' : 'rgba(43,33,24,0.6)',
+      tickNum: fixed ? '#D85A30' : '#2B2118'
+    };
+  }
+}
+</script>
+</body>
+</html>

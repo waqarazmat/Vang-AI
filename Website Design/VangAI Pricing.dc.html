@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-fr="Tarifs | VangAI" data-nl="Prijzen | VangAI">Pricing | VangAI</title>
+<meta name="description" content="Simple monthly pricing from €50 a month, excl. VAT. VangChat, VangMessage, VangVoice or the bundle, set up and run for you." data-fr="Des tarifs mensuels simples, à partir de 50 € par mois hors TVA. Aucun frais par appel ou par message. Mise en place et suivi par nos soins." data-nl="Eenvoudige maandprijzen vanaf €50 per maand, excl. btw. VangChat, VangMessage, VangVoice of de bundel, door ons opgezet en beheerd.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VangAI">
+<meta property="og:title" content="Pricing | VangAI" data-fr="Tarifs | VangAI" data-nl="Prijzen | VangAI">
+<meta property="og:description" content="Simple monthly pricing from €50 a month, excl. VAT. VangChat, VangMessage, VangVoice or the bundle, set up and run for you." data-fr="Des tarifs mensuels simples, à partir de 50 € par mois hors TVA. Aucun frais par appel ou par message. Mise en place et suivi par nos soins." data-nl="Eenvoudige maandprijzen vanaf €50 per maand, excl. btw. VangChat, VangMessage, VangVoice of de bundel, door ons opgezet en beheerd.">
+<meta property="og:image" content="./assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="./assets/favicon.png">
+<link rel="apple-touch-icon" href="./assets/favicon.png">
+<script src="./support.js"></script>
+<script src="./i18n-nl.js"></script>
+<script src="./i18n-fr.js"></script>
+<script src="./site.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@media (max-width:1100px){.vp-plans{grid-template-columns:repeat(2,minmax(0,1fr)) !important;row-gap:32px !important}}
+@media (max-width:640px){.vp-plans{grid-template-columns:minmax(0,1fr) !important}}
+body{margin:0;background:#FAEEDA;}
+a{color:#2B2118;text-decoration:none;}
+a:hover{color:#D85A30;}
+::selection{background:#D85A30;color:#FAEEDA;}
+[data-ft-card]:hover [data-ft-go]{transform:translateX(4px);}
+[data-paused="1"],[data-paused="1"] *{animation-play-state:paused !important;}
+@media (prefers-reduced-motion: reduce){*{animation-duration:1ms !important;animation-iteration-count:1 !important;transition-duration:1ms !important;}}
+</style>
+</helmet>
+<div style="font-family:Archivo,Helvetica,sans-serif;color:#2B2118;background:#FAEEDA;min-height:100vh">
+
+  <div style="position:sticky;top:0;z-index:40;background:rgba(250,238,218,0.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(43,33,24,0.12)">
+    <div style="max-width:1200px;margin:0 auto;padding:12px 32px;display:flex;align-items:center;gap:12px 28px;flex-wrap:wrap">
+      <a href="./VangAI Home.dc.html" aria-label="VangAI home" style="flex:none;display:flex;align-items:center;gap:11px;margin-right:auto">
+        <div style="width:34px;height:34px;flex:none"><dc-import name="Mark" uid="prnav" radius="{{ 0 }}" bg="transparent" hint-size="34px,34px"></dc-import></div>
+        <div style="font-size:21px;font-weight:800;letter-spacing:-0.03em">VangAI</div>
+      </a>
+      <div style="display:flex;align-items:center;gap:10px 26px;flex-wrap:wrap;font-family:Archivo,sans-serif">
+        <div onMouseEnter="{{ navEnter }}" onMouseLeave="{{ navLeave }}" style="position:relative;padding:6px 0">
+          <a href="./VangAI Product.dc.html" style="display:flex;align-items:center;gap:6px;font-size:16px;font-weight:600;color:#2B2118;transition:color 180ms ease" style-hover="color:#D85A30">Product <span aria-hidden="true" style="font-size:11px">▾</span></a>
+          <div style="position:absolute;top:100%;left:50%;transform:translateX(-50%);display:{{ ddDisplay }};flex-direction:column;gap:2px;background:#FAEEDA;border:1px solid rgba(43,33,24,0.16);border-radius:16px;padding:10px;min-width:210px;box-shadow:0 14px 34px rgba(43,33,24,0.14);z-index:50">
+            <a href="./VangAI Product.dc.html#voice" style="padding:10px 14px;border-radius:10px;font-size:15px;font-weight:500;text-align:center" style-hover="background:#FFF6E6;color:#D85A30">VangVoice</a>
+            <a href="./VangAI Product.dc.html#whatsapp" style="padding:10px 14px;border-radius:10px;font-size:15px;font-weight:500;text-align:center" style-hover="background:#FFF6E6;color:#D85A30">VangMessage</a>
+            <a href="./VangAI Product.dc.html#chat" style="padding:10px 14px;border-radius:10px;font-size:15px;font-weight:500;text-align:center" style-hover="background:#FFF6E6;color:#D85A30">VangChat</a>
+          </div>
+        </div>
+        <a href="./VangAI Pricing.dc.html" style="font-size:16px;font-weight:600;color:#D85A30;transition:color 180ms ease" style-hover="color:#D85A30">Pricing</a>
+        <a href="./VangAI About.dc.html" style="font-size:16px;font-weight:600;color:#2B2118;transition:color 180ms ease" style-hover="color:#D85A30">About us</a>
+        <div role="group" aria-label="Language" style="display:flex;align-items:center;gap:2px;border:1px solid rgba(43,33,24,0.22);border-radius:99px;padding:3px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.08em">
+          <a href="#nl" data-set-lang="nl" style="padding:6px 10px;border-radius:99px;color:rgba(43,33,24,0.7)">NL</a>
+          <a href="#fr" data-set-lang="fr" style="padding:6px 10px;border-radius:99px;color:rgba(43,33,24,0.7)">FR</a>
+          <a href="#en" data-set-lang="en" style="padding:6px 10px;border-radius:99px;color:rgba(43,33,24,0.7)">EN</a>
+        </div>
+        <a href="./VangAI Contact.dc.html" style="flex:none;background:#D85A30;color:#FFFFFF;font-size:15px;font-weight:600;padding:11px 20px;border-radius:99px;white-space:nowrap;display:inline-flex;align-items:center;gap:8px;transition:background 180ms ease" style-hover="background:#2B2118;color:#FFFFFF">Book a call <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="top" style="max-width:1200px;margin:0 auto;padding:80px 40px 48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px 64px;align-items:end">
+    <div style="min-width:0">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ Pricing</div>
+      <h1 style="font-family:Archivo,Helvetica,sans-serif;font-size:66px;line-height:0.98;font-weight:800;letter-spacing:-0.042em;margin:24px 0 0;max-width:14ch;text-wrap:balance">Simple monthly pricing</h1>
+    </div>
+    <div style="min-width:0">
+      <p style="font-size:18px;line-height:1.7;color:rgba(43,33,24,0.82);margin:0;max-width:56ch;text-wrap:pretty">Every business is different. A garage with ten calls a day needs something different from a clinic with a hundred. That is why we show a starting price. On a short call we look at how your customers reach you, and you get a fixed monthly price. No surprises after that, and no cost per call or per message.</p>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#854F0B;margin-top:16px">All prices excl. VAT. Minimum term 3 months.</div>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:16px 40px 72px">
+    <div style="background:#FFF6E6;border:1px solid rgba(43,33,24,0.12);border-radius:22px;padding:22px 26px 24px;margin-bottom:40px;display:flex;flex-direction:column;gap:16px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#854F0B">Every plan includes</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px 22px">
+        <div style="min-width:0;display:flex;align-items:center;gap:12px">
+          <span style="flex:none;width:38px;height:38px;border-radius:12px;background:rgba(216,90,48,0.12);display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#D85A30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span>
+          <span style="font-size:15px;line-height:1.35;font-weight:600;color:#2B2118;text-wrap:pretty">Bookings straight into your calendar</span>
+        </div>
+        <div style="min-width:0;display:flex;align-items:center;gap:12px">
+          <span style="flex:none;width:38px;height:38px;border-radius:12px;background:rgba(216,90,48,0.12);display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#D85A30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg></span>
+          <span style="font-size:15px;line-height:1.35;font-weight:600;color:#2B2118;text-wrap:pretty">Email summary after every conversation</span>
+        </div>
+        <div style="min-width:0;display:flex;align-items:center;gap:12px">
+          <span style="flex:none;width:38px;height:38px;border-radius:12px;background:rgba(216,90,48,0.12);display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#D85A30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4M4 20h16"/><path d="M8 16v-4M12 16V9M16 16v-6"/></svg></span>
+          <span style="font-size:15px;line-height:1.35;font-weight:600;color:#2B2118;text-wrap:pretty">Monthly report</span>
+        </div>
+        <div style="min-width:0;display:flex;align-items:center;gap:12px">
+          <span style="flex:none;width:38px;height:38px;border-radius:12px;background:rgba(216,90,48,0.12);display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#D85A30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.3-4.9L4 8"/><path d="M4 4v4h4"/><path d="M4 13a8 8 0 0 0 14.3 4.9L20 16"/><path d="M20 20v-4h-4"/></svg></span>
+          <span style="font-size:15px;line-height:1.35;font-weight:600;color:#2B2118;text-wrap:pretty">Weekly updates</span>
+        </div>
+        <div style="min-width:0;display:flex;align-items:center;gap:12px">
+          <span style="flex:none;width:38px;height:38px;border-radius:12px;background:rgba(216,90,48,0.12);display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#D85A30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.2-1.5 2-4 2h-2"/></svg></span>
+          <span style="font-size:15px;line-height:1.35;font-weight:600;color:#2B2118;text-wrap:pretty">Set up by us, support whenever you need it</span>
+        </div>
+      </div>
+    </div>
+    <div class="vp-plans" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;align-items:stretch">
+      <div style="min-width:0;position:relative;background:#FAEEDA;color:#2B2118;border:1px solid rgba(43,33,24,0.18);border-radius:24px;padding:30px 28px;display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:Archivo,Helvetica,sans-serif;font-size:26px;font-weight:800;letter-spacing:-0.03em;line-height:1.1;color:#2B2118">VangChat</div>
+        <div style="display:grid;grid-template-columns:auto 1fr;align-items:baseline;column-gap:8px;row-gap:4px;border-bottom:1px solid rgba(43,33,24,0.15);padding-bottom:22px;margin-bottom:14px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(43,33,24,0.68)">from</span>
+          <span style="font-family:Archivo,Helvetica,sans-serif;font-size:52px;font-weight:800;letter-spacing:-0.045em;line-height:0.95;color:#D85A30">€50</span>
+          <span style="grid-column:2;font-size:14.5px;color:rgba(43,33,24,0.68);white-space:nowrap">per month</span>
+        </div>
+        <div style="display:flex;flex-direction:column">
+          <div style="display:flex;align-items:flex-start;gap:10px;padding:7px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:15px;line-height:1.5;color:rgba(43,33,24,0.86);text-wrap:pretty">AI assistant on your website, answers 24/7</span></div>
+          <div style="display:flex;align-items:flex-start;gap:10px;padding:7px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:15px;line-height:1.5;color:rgba(43,33,24,0.86);text-wrap:pretty">Dutch, French and English</span></div>
+          <div style="display:flex;align-items:flex-start;gap:10px;padding:7px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:15px;line-height:1.5;color:rgba(43,33,24,0.86);text-wrap:pretty">Hands over to you when a person is needed</span></div>
+        </div>
+        <div style="margin-top:auto;padding-top:8px;display:flex"><a href="./VangAI Contact.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:transparent;color:#2B2118;border:1px solid rgba(43,33,24,0.35);width:100%;box-sizing:border-box" style-hover="border-color:#2B2118;background:#2B2118;color:#FAEEDA">Request a quote <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a></div>
+      </div>
+      <div style="min-width:0;position:relative;background:#FAEEDA;color:#2B2118;border:1px solid rgba(43,33,24,0.18);border-radius:24px;padding:30px 28px;display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:Archivo,Helvetica,sans-serif;font-size:26px;font-weight:800;letter-spacing:-0.03em;line-height:1.1;color:#2B2118">VangMessage</div>
+        <div style="display:grid;grid-template-columns:auto 1fr;align-items:baseline;column-gap:8px;row-gap:4px;border-bottom:1px solid rgba(43,33,24,0.15);padding-bottom:22px;margin-bottom:14px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(43,33,24,0.68)">from</span>
+          <span style="font-family:Archivo,Helvetica,sans-serif;font-size:52px;font-weight:800;letter-spacing:-0.045em;line-height:0.95;color:#D85A30">€75</span>
+          <span style="grid-column:2;font-size:14.5px;color:rgba(43,33,24,0.68);white-space:nowrap">per month</span>
+        </div>
+        <div style="display:flex;flex-direction:column">
+          <div style="display:flex;align-items:flex-start;gap:10px;padding:7px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:15px;line-height:1.5;color:rgba(43,33,24,0.86);text-wrap:pretty">AI assistant on your WhatsApp Business number</span></div>
+          <div style="display:flex;align-items:flex-start;gap:10px;padding:7px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:15px;line-height:1.5;color:rgba(43,33,24,0.86);text-wrap:pretty">Replies within seconds, in three languages</span></div>
+          <div style="display:flex;align-items:flex-start;gap:10px;padding:7px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:15px;line-height:1.5;color:rgba(43,33,24,0.86);text-wrap:pretty">WhatsApp button for your website</span></div>
+        </div>
+        <div style="margin-top:auto;padding-top:8px;display:flex"><a href="./VangAI Contact.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:transparent;color:#2B2118;border:1px solid rgba(43,33,24,0.35);width:100%;box-sizing:border-box" style-hover="border-color:#2B2118;background:#2B2118;color:#FAEEDA">Request a quote <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a></div>
+      </div>
+      <div style="min-width:0;position:relative;background:#FAEEDA;color:#2B2118;border:1px solid rgba(43,33,24,0.18);border-radius:24px;padding:30px 28px;display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:Archivo,Helvetica,sans-serif;font-size:26px;font-weight:800;letter-spacing:-0.03em;line-height:1.1;color:#2B2118">VangVoice</div>
+        <div style="display:grid;grid-template-columns:auto 1fr;align-items:baseline;column-gap:8px;row-gap:4px;border-bottom:1px solid rgba(43,33,24,0.15);padding-bottom:22px;margin-bottom:14px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(43,33,24,0.68)">from</span>
+          <span style="font-family:Archivo,Helvetica,sans-serif;font-size:52px;font-weight:800;letter-spacing:-0.045em;line-height:0.95;color:#D85A30">€100</span>
+          <span style="grid-column:2;font-size:14.5px;color:rgba(43,33,24,0.68);white-space:nowrap">per month</span>
+        </div>
+        <div style="display:flex;flex-direction:column">
+          <div style="display:flex;align-items:flex-start;gap:10px;padding:7px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:15px;line-height:1.5;color:rgba(43,33,24,0.86);text-wrap:pretty">Answers your phone, you keep your number</span></div>
+          <div style="display:flex;align-items:flex-start;gap:10px;padding:7px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:15px;line-height:1.5;color:rgba(43,33,24,0.86);text-wrap:pretty">Natural voice in Dutch, French and English</span></div>
+          <div style="display:flex;align-items:flex-start;gap:10px;padding:7px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:15px;line-height:1.5;color:rgba(43,33,24,0.86);text-wrap:pretty">Call button for your website</span></div>
+        </div>
+        <div style="margin-top:auto;padding-top:8px;display:flex"><a href="./VangAI Contact.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:transparent;color:#2B2118;border:1px solid rgba(43,33,24,0.35);width:100%;box-sizing:border-box" style-hover="border-color:#2B2118;background:#2B2118;color:#FAEEDA">Request a quote <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a></div>
+      </div>
+      <div style="min-width:0;position:relative;background:#2B2118;color:#FAEEDA;border:3px solid #D85A30;border-radius:24px;padding:28px 26px;display:flex;flex-direction:column;gap:16px;box-shadow:0 24px 50px rgba(216,90,48,0.28),0 6px 16px rgba(43,33,24,0.12)">
+        <div style="position:absolute;top:-15px;left:24px;background:#D85A30;color:#FFFFFF;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;padding:7px 14px;border-radius:99px">Recommended</div>
+        <div style="font-family:Archivo,Helvetica,sans-serif;font-size:26px;font-weight:800;letter-spacing:-0.03em;line-height:1.1;color:#FAEEDA">The bundle</div>
+        <div style="display:grid;grid-template-columns:auto 1fr;align-items:baseline;column-gap:8px;row-gap:4px;border-bottom:1px solid rgba(250,238,218,0.2);padding-bottom:22px;margin-bottom:14px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(250,238,218,0.72)">from</span>
+          <span style="font-family:Archivo,Helvetica,sans-serif;font-size:52px;font-weight:800;letter-spacing:-0.045em;line-height:0.95;color:#E8763F">€200</span>
+          <span style="grid-column:2;font-size:14.5px;color:rgba(250,238,218,0.72);white-space:nowrap">per month</span>
+        </div>
+        <div style="display:flex;flex-direction:column">
+          <div style="display:flex;align-items:flex-start;gap:10px;padding:7px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#E8763F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:15px;line-height:1.5;color:rgba(250,238,218,0.9);text-wrap:pretty">Everything in VangVoice, VangMessage and VangChat</span></div>
+          <div style="display:flex;align-items:flex-start;gap:10px;padding:7px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#E8763F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:15px;line-height:1.5;color:rgba(250,238,218,0.9);text-wrap:pretty">One memory across all channels</span></div>
+          <div style="display:flex;align-items:flex-start;gap:10px;padding:7px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#E8763F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:15px;line-height:1.5;color:rgba(250,238,218,0.9);text-wrap:pretty">Appointment reminders included (worth €25 per month)</span></div>
+          <div style="display:flex;align-items:flex-start;gap:10px;padding:7px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#E8763F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:15px;line-height:1.5;color:rgba(250,238,218,0.9);text-wrap:pretty">2 updates per week instead of 1</span></div>
+          <div style="display:flex;align-items:flex-start;gap:10px;padding:7px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#E8763F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:15px;line-height:1.5;color:rgba(250,238,218,0.9);text-wrap:pretty">One report for all channels</span></div>
+          <div style="display:flex;align-items:flex-start;gap:10px;padding:7px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#E8763F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:15px;line-height:1.5;color:rgba(250,238,218,0.9);text-wrap:pretty">Priority support</span></div>
+        </div>
+        <div style="font-size:14px;line-height:1.5;color:#FAEEDA;font-weight:600;border-top:1px dashed rgba(250,238,218,0.2);padding-top:12px;text-wrap:pretty">Save €50 a month compared to buying everything separately.</div>
+        <div style="margin-top:auto;padding-top:8px;display:flex"><a href="./VangAI Contact.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:#D85A30;color:#FFFFFF;border:1px solid #D85A30;width:100%;box-sizing:border-box" style-hover="background:#FAEEDA;border-color:#FAEEDA;color:#2B2118">Request a quote <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a></div>
+      </div>
+    </div>
+    <div style="margin-top:20px;background:#FFF6E6;border:1px dashed rgba(216,90,48,0.55);border-radius:18px;padding:18px 24px;display:flex;align-items:center;gap:12px 20px;flex-wrap:wrap">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;background:#D85A30;color:#FFFFFF;border-radius:99px;padding:6px 12px;flex:none">Add-on</span>
+      <span style="font-family:Archivo,Helvetica,sans-serif;font-size:17px;font-weight:800;letter-spacing:-0.02em;flex:none">Appointment reminders.</span>
+      <span style="font-size:15.5px;line-height:1.55;color:rgba(43,33,24,0.82);flex:1 1 320px;min-width:0;text-wrap:pretty">Automatic reminders before every appointment, so fewer customers forget. +€25 per month on any single plan. Included free in the bundle.</span>
+    </div>
+  </div>
+  <div style="background:#2B2118;color:#FAEEDA">
+    <div style="max-width:1200px;margin:0 auto;padding:72px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px 64px;align-items:start">
+      <div style="min-width:0"><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ Always by your side</div><h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:38px;font-weight:800;letter-spacing:-0.035em;line-height:1.05;margin:18px 0 0;max-width:16ch;text-wrap:balance;color:#FAEEDA">We do not disappear after launch</h2></div>
+      <p style="min-width:0;font-size:18px;line-height:1.7;color:rgba(250,238,218,0.86);margin:0;text-wrap:pretty">Your assistant is never finished. We keep it up to date with your weekly changes, fix anything that needs fixing and send you a report every month so you see exactly what it brings in. Questions or problems? You reach a real person who knows your setup.</p>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:80px 40px 72px">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ Setup</div>
+    <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:40px;font-weight:800;letter-spacing:-0.035em;line-height:1.05;margin:18px 0 0;max-width:22ch;text-wrap:balance">Two ways to get started</h2>
+    <p style="font-size:18px;line-height:1.7;color:rgba(43,33,24,0.8);max-width:60ch;margin:18px 0 0;text-wrap:pretty">The setup is a one-off cost, quoted on the call once we know what your business needs.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;align-items:stretch;margin-top:30px">
+      <div style="min-width:0;background:#FFF6E6;border:2px solid #D85A30;border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap"><span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.12em;text-transform:uppercase;color:#854F0B">Option 01</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;background:#D85A30;color:#FFFFFF;border-radius:99px;padding:5px 11px">Recommended</span></div>
+        <div style="font-family:Archivo,Helvetica,sans-serif;font-size:26px;font-weight:800;letter-spacing:-0.032em;line-height:1.12;text-wrap:balance">We build it for you</div>
+        <div style="font-family:Archivo,Helvetica,sans-serif;font-size:24px;font-weight:800;letter-spacing:-0.03em;color:#D85A30;border-bottom:1px solid rgba(43,33,24,0.15);padding-bottom:14px">On quote</div>
+        <p style="font-size:16.5px;line-height:1.65;color:rgba(43,33,24,0.82);margin:0;text-wrap:pretty">We set up everything from start to finish: we learn your business, write the conversations, connect your channels and calendar, test it with you and launch it. You do not lift a finger.</p>
+        <div style="margin-top:auto;padding-top:6px"><a href="./VangAI Contact.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:#D85A30;color:#FFFFFF;border:1px solid #D85A30" style-hover="background:#2B2118;border-color:#2B2118;color:#FFFFFF">Request a quote <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a></div>
+      </div>
+      <div style="min-width:0;background:#FAEEDA;border:1px solid rgba(43,33,24,0.18);border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap"><span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.12em;text-transform:uppercase;color:#854F0B">Option 02</span></div>
+        <div style="font-family:Archivo,Helvetica,sans-serif;font-size:26px;font-weight:800;letter-spacing:-0.032em;line-height:1.12;text-wrap:balance">You build it yourself</div>
+        <div style="font-family:Archivo,Helvetica,sans-serif;font-size:24px;font-weight:800;letter-spacing:-0.03em;color:#D85A30;border-bottom:1px solid rgba(43,33,24,0.15);padding-bottom:14px">On quote</div>
+        <p style="font-size:16.5px;line-height:1.65;color:rgba(43,33,24,0.82);margin:0;text-wrap:pretty">You get the system, our step-by-step guides and a setup call. You do the setup at your own pace, and we are there when you have questions.</p>
+        <div style="margin-top:auto;padding-top:6px"><a href="./VangAI Contact.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:transparent;color:#2B2118;border:1px solid rgba(43,33,24,0.35)" style-hover="border-color:#2B2118;background:#2B2118;color:#FAEEDA">Request a quote <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a></div>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:0 40px 88px">
+    <div style="background:#2B2118;color:#FAEEDA;border-radius:24px;padding:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px 40px;align-items:center">
+      <div style="min-width:0">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ Extra service</div>
+        <div style="font-family:Archivo,Helvetica,sans-serif;font-size:30px;font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-top:14px;color:#FAEEDA">No website yet? We build those too.</div>
+        <p style="font-size:16.5px;line-height:1.65;color:rgba(250,238,218,0.85);margin:12px 0 0;max-width:52ch;text-wrap:pretty">Most owners know they need a proper website. They just do not have the time. We build one around your business, in your style, with your assistant already on it.</p>
+      </div>
+      <div style="min-width:0;background:rgba(250,238,218,0.08);border:1px solid rgba(250,238,218,0.16);border-radius:20px;padding:22px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center">
+        <div aria-hidden="true" style="min-width:0;background:#FAEEDA;border-radius:12px;overflow:hidden;box-shadow:0 10px 24px rgba(0,0,0,0.25)">
+          <div style="display:flex;gap:4px;padding:7px 9px;background:#F3E4CC"><span style="width:6px;height:6px;border-radius:50%;background:#D85A30"></span><span style="width:6px;height:6px;border-radius:50%;background:#E8A33D"></span><span style="width:6px;height:6px;border-radius:50%;background:#B8AE9E"></span></div>
+          <div style="padding:12px;display:flex;flex-direction:column;gap:7px">
+            <div style="height:8px;width:40%;border-radius:99px;background:#2B2118;opacity:0.7"></div>
+            <div style="height:36px;border-radius:8px;background:#D85A30;opacity:0.85"></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px"><div style="height:22px;border-radius:6px;background:#2B2118;opacity:0.14"></div><div style="height:22px;border-radius:6px;background:#2B2118;opacity:0.14"></div><div style="height:22px;border-radius:6px;background:#2B2118;opacity:0.14"></div></div>
+            <div style="align-self:flex-end;width:20px;height:20px;border-radius:50%;background:#D85A30"></div>
+          </div>
+        </div>
+        <div style="min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:12px">
+          <div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,238,218,0.72)">From</span><span style="font-family:Archivo,Helvetica,sans-serif;font-size:32px;font-weight:800;letter-spacing:-0.035em;line-height:1;color:#E8763F">€500</span></div>
+          <a href="./VangAI Contact.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:#D85A30;color:#FFFFFF;border:1px solid #D85A30" style-hover="background:#FAEEDA;border-color:#FAEEDA;color:#2B2118">Request a quote <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+          <div style="font-size:14px;line-height:1.5;color:rgba(250,238,218,0.75)">Bigger builds quoted on the call.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#F3E4CC;border-top:1px solid rgba(43,33,24,0.12);border-bottom:1px solid rgba(43,33,24,0.12)">
+    <div style="max-width:1200px;margin:0 auto;padding:88px 40px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ FAQ</div>
+      <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:40px;font-weight:800;letter-spacing:-0.035em;line-height:1.05;margin:18px 0 0;max-width:22ch;text-wrap:balance">Pricing questions</h2>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-top:30px;max-width:880px">
+        <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.1);border-radius:18px;overflow:hidden">
+          <div onClick="{{ faqT0 }}" role="button" tabindex="0" aria-expanded="{{ faqX0 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 22px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:20px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty">Why do you show a "from" price?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign0 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR0 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 22px 16px;font-size:18px;line-height:1.7;color:rgba(43,33,24,0.8);max-width:64ch;text-wrap:pretty">Because the right setup depends on your business: how many channels, how many calls and messages, which calendar you use. After a short call you get one fixed monthly price.</div></div></div>
+        </div>
+        <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.1);border-radius:18px;overflow:hidden">
+          <div onClick="{{ faqT1 }}" role="button" tabindex="0" aria-expanded="{{ faqX1 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 22px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:20px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty">Are there hidden costs?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign1 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR1 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 22px 16px;font-size:18px;line-height:1.7;color:rgba(43,33,24,0.8);max-width:64ch;text-wrap:pretty">No. You pay the setup (on quote) and the fixed monthly price. No cost per call, per message or per booking.</div></div></div>
+        </div>
+        <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.1);border-radius:18px;overflow:hidden">
+          <div onClick="{{ faqT2 }}" role="button" tabindex="0" aria-expanded="{{ faqX2 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 22px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:20px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty">Can I cancel anytime?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign2 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR2 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 22px 16px;font-size:18px;line-height:1.7;color:rgba(43,33,24,0.8);max-width:64ch;text-wrap:pretty">We work with a minimum term of 3 months. Your customers need a little time to get used to a new way of reaching you, and after three months the numbers show clearly what the assistant brings in. After that you can cancel monthly.</div></div></div>
+        </div>
+        <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.1);border-radius:18px;overflow:hidden">
+          <div onClick="{{ faqT3 }}" role="button" tabindex="0" aria-expanded="{{ faqX3 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 22px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:20px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty">Can I start with one channel and add more later?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign3 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR3 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 22px 16px;font-size:18px;line-height:1.7;color:rgba(43,33,24,0.8);max-width:64ch;text-wrap:pretty">Yes. Many businesses start with one channel and add the others once they see the results. Switching to the bundle is always possible.</div></div></div>
+        </div>
+        <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.1);border-radius:18px;overflow:hidden">
+          <div onClick="{{ faqT4 }}" role="button" tabindex="0" aria-expanded="{{ faqX4 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 22px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:20px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty">What is included in the setup?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign4 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR4 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 22px 16px;font-size:18px;line-height:1.7;color:rgba(43,33,24,0.8);max-width:64ch;text-wrap:pretty">Everything needed to go live: learning your business, writing the conversations, connecting your channels and calendar, testing with you and launching.</div></div></div>
+        </div>
+        <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.1);border-radius:18px;overflow:hidden">
+          <div onClick="{{ faqT5 }}" role="button" tabindex="0" aria-expanded="{{ faqX5 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 22px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:20px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty">What does "an update" mean?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign5 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR5 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 22px 16px;font-size:18px;line-height:1.7;color:rgba(43,33,24,0.8);max-width:64ch;text-wrap:pretty">Any change to what your assistant knows or says: new prices, holiday hours, a new service, a different answer to a question. Send it to us and we make the change.</div></div></div>
+        </div>
+        <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.1);border-radius:18px;overflow:hidden">
+          <div onClick="{{ faqT6 }}" role="button" tabindex="0" aria-expanded="{{ faqX6 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 22px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:20px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty">Can I try it first?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign6 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR6 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 22px 16px;font-size:18px;line-height:1.7;color:rgba(43,33,24,0.8);max-width:64ch;text-wrap:pretty">Yes. On a short call we show you a demo built around your own business, free and without obligation.</div></div></div>
+        </div>
+        <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.1);border-radius:18px;overflow:hidden">
+          <div onClick="{{ faqT7 }}" role="button" tabindex="0" aria-expanded="{{ faqX7 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 22px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:20px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty">Do you send appointment reminders?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign7 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR7 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 22px 16px;font-size:18px;line-height:1.7;color:rgba(43,33,24,0.8);max-width:64ch;text-wrap:pretty">Yes. Your customers get a reminder before their appointment, so fewer people forget. It is an add-on for €25 a month, and included for free in the bundle.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1200px;margin:0 auto;padding:88px 40px 104px">
+    <div style="background:#D85A30;border-radius:28px;padding:64px 56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px 40px;align-items:center">
+      <div style="min-width:0;display:flex;flex-direction:column;align-items:flex-start">
+        <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:48px;font-weight:800;letter-spacing:-0.04em;line-height:1.02;margin:0;color:#FAEEDA;max-width:20ch;text-wrap:balance">Wondering what it would cost for you?</h2>
+        <p style="font-size:18px;line-height:1.6;color:#FAEEDA;max-width:44ch;margin:18px 0 30px;text-wrap:pretty">A short call, no sales pitch. You get a fixed monthly price, and we will tell you honestly if it is not a fit.</p>
+        <a href="./VangAI Contact.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:#2B2118;color:#FAEEDA;border:1px solid #2B2118" style-hover="background:#FAEEDA;border-color:#FAEEDA;color:#2B2118">Book a call <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+      </div>
+      <div style="min-width:0;display:flex;justify-content:center">
+        <div style="width:180px;height:180px"><dc-import name="Mark" uid="prcta" tone="cream" radius="{{ 0 }}" bg="transparent" hint-size="180px,180px"></dc-import></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1200px;margin:0 auto;padding:8px 40px 40px">
+    <footer style="background:#2B2118;color:#FAEEDA;border-radius:24px;overflow:hidden">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;background:rgba(250,238,218,0.12);border-bottom:1px solid rgba(250,238,218,0.12)">
+        <a href="./VangAI Product.dc.html#voice" data-ft-card="1" style="min-width:0;display:flex;flex-direction:column;gap:10px;padding:32px;background:#2B2118;color:#FAEEDA;transition:background 250ms ease" style-hover="background:#352A20;color:#FAEEDA">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="flex:none;width:40px;height:40px;border-radius:12px;background:rgba(216,90,48,0.18);color:#E8763F;display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></span>
+            <span style="font-size:24px;font-weight:800;letter-spacing:-0.03em;line-height:1.1;color:#FAEEDA">VangVoice</span>
+          </div>
+          <span style="font-size:15px;line-height:1.5;color:#CDBBA2;text-wrap:pretty">Your phone, answered every time.</span>
+          <span data-ft-go="1" style="display:inline-flex;align-items:center;gap:8px;margin-top:4px;font-size:14.5px;font-weight:700;color:#E8763F;transition:transform 250ms ease">See product <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></span>
+        </a>
+        <a href="./VangAI Product.dc.html#whatsapp" data-ft-card="1" style="min-width:0;display:flex;flex-direction:column;gap:10px;padding:32px;background:#2B2118;color:#FAEEDA;transition:background 250ms ease" style-hover="background:#352A20;color:#FAEEDA">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="flex:none;width:40px;height:40px;border-radius:12px;background:rgba(216,90,48,0.18);color:#E8763F;display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></span>
+            <span style="font-size:24px;font-weight:800;letter-spacing:-0.03em;line-height:1.1;color:#FAEEDA">VangMessage</span>
+          </div>
+          <span style="font-size:15px;line-height:1.5;color:#CDBBA2;text-wrap:pretty">WhatsApp replies within seconds.</span>
+          <span data-ft-go="1" style="display:inline-flex;align-items:center;gap:8px;margin-top:4px;font-size:14.5px;font-weight:700;color:#E8763F;transition:transform 250ms ease">See product <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></span>
+        </a>
+        <a href="./VangAI Product.dc.html#chat" data-ft-card="1" style="min-width:0;display:flex;flex-direction:column;gap:10px;padding:32px;background:#2B2118;color:#FAEEDA;transition:background 250ms ease" style-hover="background:#352A20;color:#FAEEDA">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="flex:none;width:40px;height:40px;border-radius:12px;background:rgba(216,90,48,0.18);color:#E8763F;display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M4 4h16c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H8l-4 4V6c0-1.1.9-2 2-2zm3 6v2h2v-2H7zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2z"/></svg></span>
+            <span style="font-size:24px;font-weight:800;letter-spacing:-0.03em;line-height:1.1;color:#FAEEDA">VangChat</span>
+          </div>
+          <span style="font-size:15px;line-height:1.5;color:#CDBBA2;text-wrap:pretty">Answers on your website, 24/7.</span>
+          <span data-ft-go="1" style="display:inline-flex;align-items:center;gap:8px;margin-top:4px;font-size:14.5px;font-weight:700;color:#E8763F;transition:transform 250ms ease">See product <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></span>
+        </a>
+      </div>
+      <div style="position:relative;overflow:hidden">
+        <div aria-hidden="true" data-no-i18n="1" style="position:absolute;left:24px;bottom:0.02em;display:flex;align-items:baseline;font-family:Archivo,Helvetica,sans-serif;font-size:clamp(96px,17vw,210px);font-weight:800;letter-spacing:-0.05em;line-height:0.78;color:#33281F;white-space:nowrap;pointer-events:none;user-select:none">VangAI<span style="display:inline-block;flex:none;width:0.15em;height:0.15em;border-radius:50%;background:#D85A30;margin-left:0.05em;opacity:0.55"></span></div>
+        <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:20px 32px;flex-wrap:wrap;padding:30px 32px">
+          <a href="./VangAI Home.dc.html" aria-label="VangAI home" style="display:flex;align-items:center;gap:11px;color:#FAEEDA" style-hover="color:#FAEEDA">
+            <div style="width:34px;height:34px;flex:none"><dc-import name="Mark" uid="prft" radius="{{ 0 }}" bg="transparent" hint-size="34px,34px"></dc-import></div>
+            <div style="font-size:21px;font-weight:800;letter-spacing:-0.03em">VangAI</div>
+          </a>
+          <div style="display:flex;align-items:center;gap:10px 28px;flex-wrap:wrap">
+            <a href="./VangAI Pricing.dc.html" style="font-size:16px;font-weight:500;color:rgba(250,238,218,0.88)" style-hover="color:#E8763F">Pricing</a>
+            <a href="./VangAI About.dc.html" style="font-size:16px;font-weight:500;color:rgba(250,238,218,0.88)" style-hover="color:#E8763F">About us</a>
+            <a href="./VangAI Contact.dc.html" style="font-size:16px;font-weight:500;color:rgba(250,238,218,0.88)" style-hover="color:#E8763F">Contact</a>
+            <a href="mailto:[email address]" data-todo="[email address]" style="font-size:16px;font-weight:600;color:#E8763F" style-hover="color:#FAEEDA">[email address]</a>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+            <div role="group" aria-label="Language" style="display:flex;align-items:center;gap:2px;border:1px solid rgba(250,238,218,0.28);border-radius:99px;padding:3px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.08em">
+              <a href="#nl" data-set-lang="nl" data-lang-dark="1" style="padding:6px 10px;border-radius:99px;color:rgba(250,238,218,0.7)">NL</a>
+              <a href="#fr" data-set-lang="fr" data-lang-dark="1" style="padding:6px 10px;border-radius:99px;color:rgba(250,238,218,0.7)">FR</a>
+              <a href="#en" data-set-lang="en" data-lang-dark="1" style="padding:6px 10px;border-radius:99px;color:rgba(250,238,218,0.7)">EN</a>
+            </div>
+            <a href="./VangAI Contact.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:#D85A30;color:#FFFFFF;border:1px solid #D85A30" style-hover="background:#FAEEDA;border-color:#FAEEDA;color:#2B2118">Book a call <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+          </div>
+        </div>
+        <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;padding:16px 32px 20px;border-top:1px solid rgba(250,238,218,0.12);font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(250,238,218,0.62)">
+          <span>© 2026 VangAI, Hasselt, Belgium, [company number]</span>
+          <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
+            <a href="./VangAI Privacy.dc.html" style="color:rgba(250,238,218,0.62)" style-hover="color:#FAEEDA">Privacy</a>
+            <a href="./VangAI Cookies.dc.html" style="color:rgba(250,238,218,0.62)" style-hover="color:#FAEEDA">Cookies</a>
+            <a href="./VangAI Terms.dc.html" style="color:rgba(250,238,218,0.62)" style-hover="color:#FAEEDA">Terms</a>
+            <a href="./VangAI Data and Privacy.dc.html" style="color:rgba(250,238,218,0.62)" style-hover="color:#FAEEDA">Data &amp; privacy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = Object.assign({ nav: false, faq: {} }, {});
+
+  renderVals() {
+    const v = {
+      ddDisplay: this.state.nav ? 'flex' : 'none',
+      navEnter: () => this.setState({ nav: true }),
+      navLeave: () => this.setState({ nav: false })
+    };
+    for (let i = 0; i < 40; i++) {
+      const open = !!this.state.faq[i];
+      v['faqR' + i] = open ? '1fr' : '0fr';
+      v['faqSign' + i] = open ? '–' : '+';
+      v['faqX' + i] = open ? 'true' : 'false';
+      v['faqT' + i] = () => this.setState(s => ({ faq: Object.assign({}, s.faq, { [i]: !s.faq[i] }) }));
+    }
+    return v;
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>body{margin:0;background:#F3EDE4;}a{color:#854F0B;}a:hover{color:#D85A30;}</style>
+</helmet>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240"><rect width="240" height="240" fill="#FAEEDA"></rect><path d="M78 68 C70 100 74 148 98 182 L120 192 L120 150 Z" fill="#D85A30"></path><path d="M162 68 C170 100 166 148 142 182 L120 192 L120 150 Z" fill="#854F0B"></path></svg></template>
+<div style="min-height:100vh;padding:44px 32px;box-sizing:border-box;font-family:Georgia,serif;display:flex;flex-direction:column;align-items:center;gap:34px">
+  <svg width="0" height="0" style="position:absolute" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <clipPath id="cl"><path d="M50 30 C40 70 45 130 75 175 L120 195 C100 175 88 155 90 140 L108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z"></path></clipPath>
+      <g id="linesL" fill="none" stroke="#2B2118" stroke-width="1.15" stroke-linecap="round" opacity="0.5">
+        <path d="M50.5 33 C45.5 58 46.5 92 56 118"></path>
+        <path d="M52.5 34 C49.5 60 54 94 63.5 121"></path>
+        <path d="M55 37 C54 65 62 97 71 124"></path>
+      </g>
+      <g id="handL">
+        <path d="M50 30 C40 70 45 130 75 175 L120 195 C100 175 88 155 90 140 L98 152 L105 158 C102 149 104 141 108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z" fill="#D85A30"></path>
+        <g clip-path="url(#cl)"><use href="#linesL"></use></g>
+      </g>
+      <g id="handR">
+        <path d="M50 30 C40 70 45 130 75 175 L120 195 C100 175 88 155 90 140 L98 152 L105 158 C102 149 104 141 108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z" fill="#854F0B"></path>
+        <g clip-path="url(#cl)"><use href="#linesL"></use></g>
+      </g>
+      <g id="touchL">
+        <path d="M50 30 C40 70 45 130 75 175 L120 195 C100 175 88 155 90 140 L102 153 L116 160 C110 150 106 142 108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z" fill="#D85A30"></path>
+        <g clip-path="url(#cl)"><use href="#linesL"></use></g>
+      </g>
+      <g id="touchR">
+        <path d="M50 30 C40 70 45 130 75 175 L120 195 C100 175 88 155 90 140 L102 153 L116 160 C110 150 106 142 108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z" fill="#854F0B"></path>
+        <g clip-path="url(#cl)"><use href="#linesL"></use></g>
+      </g>
+      <g id="touchLongL">
+        <path d="M50 30 C40 70 45 130 75 175 L120 195 C100 175 88 155 90 140 L100 151 L121 163 C113 151 106 142 108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z" fill="#D85A30"></path>
+        <g clip-path="url(#cl)"><use href="#linesL"></use></g>
+      </g>
+      <g id="touchLongR">
+        <path d="M50 30 C40 70 45 130 75 175 L120 195 C100 175 88 155 90 140 L100 151 L121 163 C113 151 106 142 108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z" fill="#854F0B"></path>
+        <g clip-path="url(#cl)"><use href="#linesL"></use></g>
+      </g>
+    </defs>
+  </svg>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;width:100%;max-width:1160px">
+    <div id="C1" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <use href="#handL"></use>
+        <g transform="translate(240,0) scale(-1,1)"><use href="#handR"></use></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">C1 — original (0°)</div>
+    </div>
+    <div id="A1" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g transform="rotate(2 120 195)"><use href="#handL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(2 120 195)"><use href="#handR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">A1 — 2°</div>
+    </div>
+    <div id="A2" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g transform="rotate(3 120 195)"><use href="#handL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(3 120 195)"><use href="#handR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">A2 — 3°</div>
+    </div>
+    <div id="T1" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g transform="rotate(4 120 195)"><use href="#handL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(4 120 195)"><use href="#handR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">T1 — 4°</div>
+    </div>
+    <div id="A4" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g transform="rotate(5.5 120 195)"><use href="#handL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(5.5 120 195)"><use href="#handR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">A4 — 5.5°</div>
+    </div>
+    <div id="A5" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g transform="rotate(6.5 120 195)"><use href="#handL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(6.5 120 195)"><use href="#handR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">A5 — 6.5°</div>
+    </div>
+  </div>
+
+  <div style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#854F0B">Thumbs touching — A4 &amp; A5 variants</div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;width:100%;max-width:1160px">
+    <div id="B1" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g transform="rotate(5.5 120 195)"><use href="#touchL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(5.5 120 195)"><use href="#touchR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">B1 — A4 angle, thumbs meet</div>
+    </div>
+    <div id="B2" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g transform="rotate(6.5 120 195)"><use href="#touchL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(6.5 120 195)"><use href="#touchR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">B2 — A5 angle, thumbs meet</div>
+    </div>
+    <div id="B3" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g transform="rotate(5.5 120 195)"><use href="#touchLongL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(5.5 120 195)"><use href="#touchLongR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">B3 — A4 angle, thumbs crossed tips</div>
+    </div>
+    <div id="B4" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g transform="rotate(6.5 120 195)"><use href="#touchLongL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(6.5 120 195)"><use href="#touchLongR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">B4 — A5 angle, thumbs crossed tips</div>
+    </div>
+  </div>
+
+  <div style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#854F0B">Live tweak</div>
+  <div style="width:100%;max-width:380px;display:flex;flex-direction:column;align-items:center;gap:10px">
+    <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+      <rect width="240" height="240" rx="{{ corner }}" fill="#FAEEDA"></rect>
+      <g transform="{{ rotL }}">
+        <path d="{{ handPath }}" fill="#D85A30"></path>
+        <sc-if value="{{ showLines }}" hint-placeholder-val="{{ true }}"><g clip-path="url(#cl)"><use href="#linesL"></use></g></sc-if>
+      </g>
+      <g transform="translate(240,0) scale(-1,1)"><g transform="{{ rotL }}">
+        <path d="{{ handPath }}" fill="#854F0B"></path>
+        <sc-if value="{{ showLines }}" hint-placeholder-val="{{ true }}"><g clip-path="url(#cl)"><use href="#linesL"></use></g></sc-if>
+      </g></g>
+    </svg>
+    <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">Tweakable — angle, thumb, finger lines</div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1160,&quot;height&quot;:1200},&quot;vAngle&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:5.5,&quot;min&quot;:0,&quot;max&quot;:10,&quot;step&quot;:0.5,&quot;unit&quot;:&quot;°&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Mark&quot;},&quot;thumbStyle&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;original&quot;,&quot;touching&quot;,&quot;crossed&quot;],&quot;default&quot;:&quot;touching&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Mark&quot;},&quot;fingerLines&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Mark&quot;},&quot;cornerRadius&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:44,&quot;min&quot;:0,&quot;max&quot;:120,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Mark&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const p = this.props;
+    const ang = p.vAngle ?? 5.5;
+    const thumb = p.thumbStyle ?? "touching";
+    const paths = {
+      original: "M50 30 C40 70 45 130 75 175 L120 195 C100 175 88 155 90 140 L98 152 L105 158 C102 149 104 141 108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z",
+      touching: "M50 30 C40 70 45 130 75 175 L120 195 C100 175 88 155 90 140 L102 153 L116 160 C110 150 106 142 108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z",
+      crossed: "M50 30 C40 70 45 130 75 175 L120 195 C100 175 88 155 90 140 L100 151 L121 163 C113 151 106 142 108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z"
+    };
+    return {
+      rotL: "rotate(" + ang + " 120 195)",
+      handPath: paths[thumb] || paths.touching,
+      showLines: p.fingerLines ?? true,
+      corner: p.cornerRadius ?? 44
+    };
+  }
+}
+</script>
+</body>
+</html>

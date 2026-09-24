@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Nunito:wght@400;600;700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#FAEEDA; }
+  a { color:#D85A30; text-decoration:none; }
+  a:hover { color:#854F0B; }
+</style>
+</helmet>
+
+<div style="background:#FAEEDA;color:#2B2118;font-family:'Nunito',system-ui,sans-serif;min-height:100%">
+
+  <div style="max-width:1080px;margin:0 auto;padding:64px 32px 100px;display:flex;flex-direction:column;gap:80px">
+
+    <div style="display:flex;flex-direction:column;gap:28px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(43,33,24,0.55)">Brand system · v1.0 · 2026</div>
+      <div style="display:flex;align-items:center;gap:22px;flex-wrap:wrap">
+        <div style="width:96px;height:96px;flex:none"><dc-import name="Mark" uid="bg-hero" radius="{{ 0 }}" bg="transparent" hint-size="96px,96px"></dc-import></div>
+        <div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:76px;letter-spacing:-0.035em;line-height:0.95">VangAI</div>
+      </div>
+      <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:26px;line-height:1.3;max-width:22ch;text-wrap:pretty">The done-for-you front desk that never misses a customer.</div>
+      <div style="font-size:17px;line-height:1.65;max-width:58ch;color:rgba(43,33,24,0.78);text-wrap:pretty">One AI system covering phone calls, WhatsApp, and website chat. Fully set up and managed for the client, in Dutch, French, and English. Built for Belgian SMEs.</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:4px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border:1px solid rgba(43,33,24,0.18);border-radius:99px;padding:8px 14px">Warm</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border:1px solid rgba(43,33,24,0.18);border-radius:99px;padding:8px 14px">Direct</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border:1px solid rgba(43,33,24,0.18);border-radius:99px;padding:8px 14px">Honest</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border:1px solid rgba(43,33,24,0.18);border-radius:99px;padding:8px 14px">Confident</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border:1px solid rgba(43,33,24,0.18);border-radius:99px;padding:8px 14px">Human first</div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(43,33,24,0.5)">01 / The mark</div>
+      <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.02em">The mark</div>
+      <div style="background:#FFF6E6;border-radius:32px;padding:72px 40px;display:flex;align-items:center;justify-content:center">
+        <div style="width:300px;height:300px;max-width:100%"><dc-import name="Mark" uid="bg-primary" radius="{{ 0 }}" bg="transparent" hint-size="300px,300px"></dc-import></div>
+      </div>
+      <div style="font-size:17px;line-height:1.65;max-width:62ch;color:rgba(43,33,24,0.8);text-wrap:pretty">Two raised hands forming a V, representing catching every customer. The name Vangst means "the catch" in Dutch.</div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(43,33,24,0.5)">02 / Colorways</div>
+      <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.02em">Colorways</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px">
+
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.12);border-radius:24px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;padding:26%;box-sizing:border-box">
+            <div style="width:100%;height:100%"><dc-import name="Mark" uid="cw1" radius="{{ 0 }}" bg="transparent" hint-size="100%,100%"></dc-import></div>
+          </div>
+          <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:15px">Primary</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(43,33,24,0.6)">On cream #FAEEDA</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="background:#2B2118;border-radius:24px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;padding:26%;box-sizing:border-box">
+            <div style="width:100%;height:100%"><dc-import name="Mark" uid="cw2" tone="cream" radius="{{ 0 }}" bg="transparent" hint-size="100%,100%"></dc-import></div>
+          </div>
+          <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:15px">Inverted</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(43,33,24,0.6)">On dark #2B2118</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="background:#FFFFFF;border:1px solid rgba(43,33,24,0.12);border-radius:24px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;padding:26%;box-sizing:border-box">
+            <div style="width:100%;height:100%"><dc-import name="Mark" uid="cw3" radius="{{ 0 }}" bg="transparent" hint-size="100%,100%"></dc-import></div>
+          </div>
+          <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:15px">On white</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(43,33,24,0.6)">On white #FFFFFF</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.12);border-radius:24px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;padding:26%;box-sizing:border-box">
+            <div style="width:100%;height:100%"><dc-import name="Mark" uid="cw4" tone="orange" radius="{{ 0 }}" bg="transparent" hint-size="100%,100%"></dc-import></div>
+          </div>
+          <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:15px">Single tone</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(43,33,24,0.6)">Stamps, merch, embroidery</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="background:#854F0B;border-radius:24px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;padding:26%;box-sizing:border-box">
+            <div style="width:100%;height:100%"><dc-import name="Mark" uid="cw5" tone="cream" radius="{{ 0 }}" bg="transparent" hint-size="100%,100%"></dc-import></div>
+          </div>
+          <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:15px">On amber</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(43,33,24,0.6)">Light mark on #854F0B</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="background:#D85A30;border-radius:24px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;padding:26%;box-sizing:border-box">
+            <div style="width:100%;height:100%"><dc-import name="Mark" uid="cw6" tone="cream" radius="{{ 0 }}" bg="transparent" hint-size="100%,100%"></dc-import></div>
+          </div>
+          <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:15px">On coral</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(43,33,24,0.6)">Light mark on #D85A30</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(43,33,24,0.5)">03 / Palette</div>
+      <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.02em">Palette</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px">
+
+        <div style="border-radius:24px;overflow:hidden;background:#FFF6E6">
+          <div style="background:#D85A30;height:150px"></div>
+          <div style="padding:20px;display:flex;flex-direction:column;gap:6px">
+            <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:17px">Coral</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:rgba(43,33,24,0.6)">#D85A30</div>
+            <div style="font-size:14px;line-height:1.55;color:rgba(43,33,24,0.75);margin-top:4px">Left hand. Primary accent, buttons, links.</div>
+          </div>
+        </div>
+
+        <div style="border-radius:24px;overflow:hidden;background:#FFF6E6">
+          <div style="background:#854F0B;height:150px"></div>
+          <div style="padding:20px;display:flex;flex-direction:column;gap:6px">
+            <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:17px">Amber</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:rgba(43,33,24,0.6)">#854F0B</div>
+            <div style="font-size:14px;line-height:1.55;color:rgba(43,33,24,0.75);margin-top:4px">Right hand. Secondary accent, depth.</div>
+          </div>
+        </div>
+
+        <div style="border-radius:24px;overflow:hidden;background:#FFF6E6">
+          <div style="background:#FAEEDA;height:150px;border-bottom:1px solid rgba(43,33,24,0.1)"></div>
+          <div style="padding:20px;display:flex;flex-direction:column;gap:6px">
+            <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:17px">Cream</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:rgba(43,33,24,0.6)">#FAEEDA</div>
+            <div style="font-size:14px;line-height:1.55;color:rgba(43,33,24,0.75);margin-top:4px">Backgrounds, field color.</div>
+          </div>
+        </div>
+
+        <div style="border-radius:24px;overflow:hidden;background:#FFF6E6">
+          <div style="background:#2B2118;height:150px"></div>
+          <div style="padding:20px;display:flex;flex-direction:column;gap:6px">
+            <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:17px">Dark neutral</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:rgba(43,33,24,0.6)">#2B2118</div>
+            <div style="font-size:14px;line-height:1.55;color:rgba(43,33,24,0.75);margin-top:4px">Text, headings, dark surfaces.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#854F0B">Proportion</div>
+          <div style="display:flex;height:64px;border-radius:99px;overflow:hidden;border:1px solid rgba(43,33,24,0.12)">
+            <div style="flex:70;background:#FAEEDA"></div>
+            <div style="flex:18;background:#2B2118"></div>
+            <div style="flex:7;background:#D85A30"></div>
+            <div style="flex:5;background:#854F0B"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(43,33,24,0.6)">
+            <span>70 cream</span><span>18 dark</span><span>12 accents</span>
+          </div>
+          <div style="font-size:16px;line-height:1.65;color:rgba(43,33,24,0.8);max-width:36ch;text-wrap:pretty">If a layout feels cold, the fix is almost always more cream, not more coral.</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#854F0B">Approved text pairings</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="background:#FFF6E6;border-radius:99px;padding:16px 26px;display:flex;justify-content:space-between;align-items:center;gap:16px">
+              <span style="font-size:17px;color:#2B2118">Dark on cream</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:rgba(43,33,24,0.55)">13.9:1</span>
+            </div>
+            <div style="background:#2B2118;border-radius:99px;padding:16px 26px;display:flex;justify-content:space-between;align-items:center;gap:16px">
+              <span style="font-size:17px;color:#FAEEDA">Cream on dark</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:rgba(250,238,218,0.55)">13.9:1</span>
+            </div>
+            <div style="background:#FFF6E6;border-radius:99px;padding:16px 26px;display:flex;justify-content:space-between;align-items:center;gap:16px">
+              <span style="font-size:17px;color:#854F0B">Amber on cream</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:rgba(43,33,24,0.55)">6.0:1</span>
+            </div>
+            <div style="background:#D85A30;border-radius:99px;padding:16px 26px;display:flex;justify-content:space-between;align-items:center;gap:16px">
+              <span style="font-size:17px;color:#FFFFFF">White on coral</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:rgba(255,255,255,0.8)">3.9:1, large only</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(43,33,24,0.5)">04 / Typography</div>
+      <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.02em">Typography</div>
+
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="background:#FFF6E6;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:10px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(43,33,24,0.5)">Archivo 800 · headlines</div>
+          <div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(34px,5vw,58px);line-height:1.02;letter-spacing:-0.035em;text-wrap:pretty">Never miss a customer again</div>
+        </div>
+        <div style="background:#FFF6E6;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:10px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(43,33,24,0.5)">Archivo 700 · subheads and section titles</div>
+          <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:26px;letter-spacing:-0.02em">Phone, WhatsApp, and web chat in one place</div>
+        </div>
+        <div style="background:#FFF6E6;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:10px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(43,33,24,0.5)">Nunito 400 · body copy</div>
+          <div style="font-size:17px;line-height:1.7;max-width:62ch;text-wrap:pretty">We set the whole thing up and run it for you. Your customers call, message, or chat, and they get a real answer in Dutch, French, or English. No menus, no waiting, no missed leads. You get a clean summary of every conversation, so nothing falls through.</div>
+        </div>
+        <div style="background:#FFF6E6;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:16px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(43,33,24,0.5)">Nunito 600 · buttons and UI labels</div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+            <div style="background:#D85A30;color:#FAEEDA;font-weight:600;font-size:15px;padding:14px 26px;border-radius:99px">Book a meeting</div>
+            <div style="border:1px solid rgba(43,33,24,0.25);color:#2B2118;font-weight:600;font-size:15px;padding:14px 26px;border-radius:99px">See how it works</div>
+            <div style="font-weight:600;font-size:13px;color:rgba(43,33,24,0.6)">Active conversations</div>
+          </div>
+        </div>
+        <div style="background:#FFF6E6;border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:10px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(43,33,24,0.5)">IBM Plex Mono 400 · technical labels, hex codes, metadata</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:14px;color:rgba(43,33,24,0.85);line-height:1.8">#D85A30 · #854F0B · #FAEEDA · #2B2118<br>STATUS ● OPERATIONAL · LATENCY 42MS · NL / FR / EN</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(43,33,24,0.5)">05 / Icon scale</div>
+      <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.02em">Icon scale</div>
+      <div style="background:#FFF6E6;border-radius:32px;padding:44px 36px;display:flex;align-items:flex-end;gap:40px;flex-wrap:wrap">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
+          <div style="width:128px;height:128px"><dc-import name="Mark" uid="sc1" radius="{{ 0 }}" bg="transparent" hint-size="128px,128px"></dc-import></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(43,33,24,0.6)">128 px</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
+          <div style="width:64px;height:64px"><dc-import name="Mark" uid="sc2" radius="{{ 0 }}" bg="transparent" hint-size="64px,64px"></dc-import></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(43,33,24,0.6)">64 px</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
+          <div style="width:40px;height:40px"><dc-import name="Mark" uid="sc3" radius="{{ 0 }}" bg="transparent" hint-size="40px,40px"></dc-import></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(43,33,24,0.6)">40 px</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
+          <div style="width:24px;height:24px"><dc-import name="Mark" uid="sc4" radius="{{ 0 }}" bg="transparent" hint-size="24px,24px"></dc-import></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(43,33,24,0.6)">24 px favicon</div>
+        </div>
+      </div>
+      <div style="font-size:15px;line-height:1.6;color:rgba(43,33,24,0.72);max-width:62ch;text-wrap:pretty">Below 40 px, drop the internal finger separations and use the solid two-tone silhouette. The V shape has to read first.</div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(43,33,24,0.5)">06 / Lockups</div>
+      <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.02em">Lockups</div>
+
+      <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:17px;color:rgba(43,33,24,0.7)">Horizontal</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px">
+        <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.12);border-radius:24px;padding:44px 28px;display:flex;align-items:center;justify-content:center;gap:16px">
+          <div style="width:54px;height:54px;flex:none"><dc-import name="Mark" uid="lh1" radius="{{ 0 }}" bg="transparent" hint-size="54px,54px"></dc-import></div>
+          <div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:38px;letter-spacing:-0.035em;color:#2B2118">VangAI</div>
+        </div>
+        <div style="background:#2B2118;border-radius:24px;padding:44px 28px;display:flex;align-items:center;justify-content:center;gap:16px">
+          <div style="width:54px;height:54px;flex:none"><dc-import name="Mark" uid="lh2" tone="cream" radius="{{ 0 }}" bg="transparent" hint-size="54px,54px"></dc-import></div>
+          <div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:38px;letter-spacing:-0.035em;color:#FAEEDA">VangAI</div>
+        </div>
+        <div style="background:#FFFFFF;border:1px solid rgba(43,33,24,0.12);border-radius:24px;padding:44px 28px;display:flex;align-items:center;justify-content:center;gap:16px">
+          <div style="width:54px;height:54px;flex:none"><dc-import name="Mark" uid="lh3" radius="{{ 0 }}" bg="transparent" hint-size="54px,54px"></dc-import></div>
+          <div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:38px;letter-spacing:-0.035em;color:#2B2118">VangAI</div>
+        </div>
+        <div style="background:#854F0B;border-radius:24px;padding:44px 28px;display:flex;align-items:center;justify-content:center;gap:16px">
+          <div style="width:54px;height:54px;flex:none"><dc-import name="Mark" uid="lh4" tone="cream" radius="{{ 0 }}" bg="transparent" hint-size="54px,54px"></dc-import></div>
+          <div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:38px;letter-spacing:-0.035em;color:#FFFFFF">VangAI</div>
+        </div>
+        <div style="background:#D85A30;border-radius:24px;padding:44px 28px;display:flex;align-items:center;justify-content:center;gap:16px">
+          <div style="width:54px;height:54px;flex:none"><dc-import name="Mark" uid="lh5" tone="cream" radius="{{ 0 }}" bg="transparent" hint-size="54px,54px"></dc-import></div>
+          <div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:38px;letter-spacing:-0.035em;color:#FFFFFF">VangAI</div>
+        </div>
+      </div>
+
+      <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:17px;color:rgba(43,33,24,0.7);margin-top:8px">Stacked</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px">
+        <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.12);border-radius:24px;padding:44px 28px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px">
+          <div style="width:74px;height:74px"><dc-import name="Mark" uid="ls1" radius="{{ 0 }}" bg="transparent" hint-size="74px,74px"></dc-import></div>
+          <div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:32px;letter-spacing:-0.035em;color:#2B2118">VangAI</div>
+        </div>
+        <div style="background:#2B2118;border-radius:24px;padding:44px 28px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px">
+          <div style="width:74px;height:74px"><dc-import name="Mark" uid="ls2" tone="cream" radius="{{ 0 }}" bg="transparent" hint-size="74px,74px"></dc-import></div>
+          <div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:32px;letter-spacing:-0.035em;color:#FAEEDA">VangAI</div>
+        </div>
+        <div style="background:#FFFFFF;border:1px solid rgba(43,33,24,0.12);border-radius:24px;padding:44px 28px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px">
+          <div style="width:74px;height:74px"><dc-import name="Mark" uid="ls3" radius="{{ 0 }}" bg="transparent" hint-size="74px,74px"></dc-import></div>
+          <div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:32px;letter-spacing:-0.035em;color:#2B2118">VangAI</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(43,33,24,0.5)">07 / Applications</div>
+      <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.02em">Applications</div>
+
+      <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:17px;color:rgba(43,33,24,0.7)">Business card</div>
+      <div style="display:flex;gap:24px;flex-wrap:wrap">
+        <div style="flex:1 1 320px;min-width:0;aspect-ratio:1.75;background:#FAEEDA;border:1px solid rgba(43,33,24,0.12);border-radius:20px;padding:28px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:38px;height:38px;flex:none"><dc-import name="Mark" uid="bc1" radius="{{ 0 }}" bg="transparent" hint-size="38px,38px"></dc-import></div>
+            <div style="font-family:'Archivo',sans-serif;font-weight:800;font-size:24px;letter-spacing:-0.035em">VangAI</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:3px">
+            <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:16px">Waqar Azmat</div>
+            <div style="font-size:13px;color:rgba(43,33,24,0.7)">Founder</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(43,33,24,0.6);margin-top:8px">waqar@vang.ai · +32 470 00 00 00</div>
+          </div>
+        </div>
+        <div style="flex:1 1 320px;min-width:0;aspect-ratio:1.75;background:#2B2118;border-radius:20px;padding:28px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center">
+          <div style="width:58px;height:58px"><dc-import name="Mark" uid="bc2" tone="cream" radius="{{ 0 }}" bg="transparent" hint-size="58px,58px"></dc-import></div>
+          <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:15px;color:#FAEEDA;max-width:24ch;line-height:1.35;text-wrap:pretty">The done-for-you front desk that never misses a customer.</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;color:rgba(250,238,218,0.55)">VANG.AI · HASSELT, BE</div>
+        </div>
+      </div>
+
+      <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:17px;color:rgba(43,33,24,0.7);margin-top:8px">Avatar and app icon</div>
+      <div style="background:#FFF6E6;border-radius:32px;padding:40px;display:flex;gap:36px;flex-wrap:wrap;align-items:center">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:12px">
+          <div style="width:120px;height:120px;border-radius:50%;background:#FAEEDA;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box">
+            <div style="width:100%;height:100%"><dc-import name="Mark" uid="av1" radius="{{ 0 }}" bg="transparent" hint-size="100%,100%"></dc-import></div>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(43,33,24,0.6)">Circular, cream</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:12px">
+          <div style="width:120px;height:120px;border-radius:50%;background:#2B2118;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box">
+            <div style="width:100%;height:100%"><dc-import name="Mark" uid="av2" tone="cream" radius="{{ 0 }}" bg="transparent" hint-size="100%,100%"></dc-import></div>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(43,33,24,0.6)">Circular, dark</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:12px">
+          <div style="width:120px;height:120px;border-radius:28px;background:#FAEEDA;display:flex;align-items:center;justify-content:center;padding:22px;box-sizing:border-box">
+            <div style="width:100%;height:100%"><dc-import name="Mark" uid="av3" radius="{{ 0 }}" bg="transparent" hint-size="100%,100%"></dc-import></div>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(43,33,24,0.6)">Rounded square</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:12px">
+          <div style="width:120px;height:120px;border-radius:28px;background:#2B2118;display:flex;align-items:center;justify-content:center;padding:22px;box-sizing:border-box">
+            <div style="width:100%;height:100%"><dc-import name="Mark" uid="av4" tone="cream" radius="{{ 0 }}" bg="transparent" hint-size="100%,100%"></dc-import></div>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(43,33,24,0.6)">Rounded square, dark</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:12px">
+          <div style="width:120px;height:120px;border-radius:28px;background:#854F0B;display:flex;align-items:center;justify-content:center;padding:22px;box-sizing:border-box">
+            <div style="width:100%;height:100%"><dc-import name="Mark" uid="av5" tone="cream" radius="{{ 0 }}" bg="transparent" hint-size="100%,100%"></dc-import></div>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(43,33,24,0.6)">Rounded square, amber</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:12px">
+          <div style="width:120px;height:120px;border-radius:50%;background:#D85A30;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box">
+            <div style="width:100%;height:100%"><dc-import name="Mark" uid="av6" tone="cream" radius="{{ 0 }}" bg="transparent" hint-size="100%,100%"></dc-import></div>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(43,33,24,0.6)">Circular, coral</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#2B2118;border-radius:32px;padding:48px 40px;display:flex;flex-direction:column;gap:18px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(250,238,218,0.5)">Voice</div>
+      <div style="font-family:'Archivo',sans-serif;font-weight:700;font-size:28px;color:#FAEEDA;letter-spacing:-0.02em;max-width:24ch;text-wrap:pretty">Warm, direct, honest, confident. Human first.</div>
+      <div style="font-size:16px;line-height:1.7;color:rgba(250,238,218,0.78);max-width:60ch;text-wrap:pretty">Write like a person who knows the business. Say what the product does, in plain words. No corporate hedging, no cold tech language, no promises you cannot keep. Sentence case for headings. Commas and periods instead of em dashes.</div>
+    </div>
+
+    <div style="border-top:1px solid rgba(43,33,24,0.15);padding-top:20px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;color:rgba(43,33,24,0.55)">
+      <span>© 2026 VANGAI · HASSELT, BE</span>
+      <span>BRAND SYSTEM V1.0</span>
+    </div>
+
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>

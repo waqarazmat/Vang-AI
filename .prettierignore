@@ -1,0 +1,7 @@
+Website Design/
+.claude/
+tools/design-qa/out/
+messages/design-dictionary.json
+package-lock.json
+skills-lock.json
+.next/

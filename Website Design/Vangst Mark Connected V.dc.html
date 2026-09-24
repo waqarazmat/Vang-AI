@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>body{margin:0;background:#F3EDE4;}a{color:#854F0B;}a:hover{color:#D85A30;}</style>
+</helmet>
+<div style="min-height:100vh;padding:44px 32px;box-sizing:border-box;font-family:Georgia,serif;display:flex;flex-direction:column;align-items:center;gap:30px">
+  <svg width="0" height="0" style="position:absolute" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <clipPath id="cl"><path d="M50 30 C40 70 45 130 75 175 L120 195 C100 175 88 155 90 140 L108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z"></path></clipPath>
+      <clipPath id="halfL"><rect x="0" y="0" width="120" height="240"></rect></clipPath>
+      <g id="linesL" fill="none" stroke="#2B2118" stroke-width="1.15" stroke-linecap="round" opacity="0.5">
+        <path d="M50.5 33 C45.5 58 46.5 92 56 118"></path>
+        <path d="M52.5 34 C49.5 60 54 94 63.5 121"></path>
+        <path d="M55 37 C54 65 62 97 71 124"></path>
+      </g>
+      <g id="handL">
+        <path d="M50 30 C40 70 45 130 75 175 L120 195 C100 175 88 155 90 140 L98 152 L105 158 C102 149 104 141 108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z" fill="#D85A30"></path>
+        <g clip-path="url(#cl)"><use href="#linesL"></use></g>
+      </g>
+      <g id="handR">
+        <path d="M50 30 C40 70 45 130 75 175 L120 195 C100 175 88 155 90 140 L98 152 L105 158 C102 149 104 141 108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z" fill="#854F0B"></path>
+        <g clip-path="url(#cl)"><use href="#linesL"></use></g>
+      </g>
+      <clipPath id="clClean"><path d="M50 30 C40 70 45 130 75 175 L120 195 L120 130 C100 125 90 115 85 100 C75 75 60 50 50 30 Z"></path></clipPath>
+      <g id="cleanL">
+        <path d="M50 30 C40 70 45 130 75 175 L120 195 L120 130 C100 125 90 115 85 100 C75 75 60 50 50 30 Z" fill="#D85A30"></path>
+        <g clip-path="url(#clClean)"><use href="#linesL"></use></g>
+      </g>
+      <g id="cleanR">
+        <path d="M50 30 C40 70 45 130 75 175 L120 195 L120 130 C100 125 90 115 85 100 C75 75 60 50 50 30 Z" fill="#854F0B"></path>
+        <g clip-path="url(#clClean)"><use href="#linesL"></use></g>
+      </g>
+      <clipPath id="clSoft"><path d="M50 30 C40 70 45 130 75 175 L120 195 C115 180 112 160 120 130 C100 125 90 115 85 100 C75 75 60 50 50 30 Z"></path></clipPath>
+      <g id="softL">
+        <path d="M50 30 C40 70 45 130 75 175 L120 195 C115 180 112 160 120 130 C100 125 90 115 85 100 C75 75 60 50 50 30 Z" fill="#D85A30"></path>
+        <g clip-path="url(#clSoft)"><use href="#linesL"></use></g>
+      </g>
+      <g id="softR">
+        <path d="M50 30 C40 70 45 130 75 175 L120 195 C115 180 112 160 120 130 C100 125 90 115 85 100 C75 75 60 50 50 30 Z" fill="#854F0B"></path>
+        <g clip-path="url(#clSoft)"><use href="#linesL"></use></g>
+      </g>
+      <g id="sharpL">
+        <path d="M50 30 C40 70 45 130 75 175 L120 195 L90 140 L102 153 L116 160 C110 150 106 142 108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z" fill="#D85A30"></path>
+        <g clip-path="url(#cl)"><use href="#linesL"></use></g>
+      </g>
+      <g id="sharpR">
+        <path d="M50 30 C40 70 45 130 75 175 L120 195 L90 140 L102 153 L116 160 C110 150 106 142 108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z" fill="#854F0B"></path>
+        <g clip-path="url(#cl)"><use href="#linesL"></use></g>
+      </g>
+    </defs>
+  </svg>
+
+  <div style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#854F0B">Reference</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;width:100%;max-width:1160px">
+    <div id="A4" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g transform="rotate(5.5 120 195)"><use href="#handL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(5.5 120 195)"><use href="#handR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">A4 — reference</div>
+    </div>
+    <div id="S1" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g transform="rotate(5.5 120 195)"><use href="#sharpL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(5.5 120 195)"><use href="#sharpR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">S1 — sharp inner edge</div>
+    </div>
+  </div>
+
+  <div style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#854F0B">Connected V — no thumbs, no gap</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;width:100%;max-width:1160px">
+    <div id="V1" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g transform="rotate(5.5 120 195)"><use href="#cleanL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(5.5 120 195)"><use href="#cleanR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">V1 — straight seam, 5.5°</div>
+    </div>
+    <div id="V2" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g transform="rotate(4 120 195)"><use href="#cleanL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(4 120 195)"><use href="#cleanR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">V2 — straight seam, 4°</div>
+    </div>
+    <div id="V3" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g transform="rotate(5.5 120 195)"><use href="#softL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(5.5 120 195)"><use href="#softR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">V3 — soft seam, 5.5°</div>
+    </div>
+    <div id="V4" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g transform="rotate(7 120 195)"><use href="#cleanL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(7 120 195)"><use href="#cleanR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">V4 — straight seam, 7°</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1160,&quot;height&quot;:900}}"></script>
+</body>
+</html>

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-fr="VangVoice, VangMessage et VangChat | VangAI" data-nl="VangVoice, VangMessage en VangChat | VangAI">VangVoice, VangMessage and VangChat | VangAI</title>
+<meta name="description" content="One assistant for your phone, WhatsApp and website chat. Answers in Dutch, French and English, books appointments and is set up and run for you." data-fr="Un seul assistant pour votre téléphone, WhatsApp et le chat de votre site. Il répond en néerlandais, français et anglais, prend les rendez-vous, et nous l’installons et le gérons pour vous." data-nl="Eén assistent voor je telefoon, WhatsApp en websitechat. Antwoordt in het Nederlands, Frans en Engels, boekt afspraken en wij zetten alles voor je op.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VangAI">
+<meta property="og:title" content="VangVoice, VangMessage and VangChat | VangAI" data-fr="VangVoice, VangMessage et VangChat | VangAI" data-nl="VangVoice, VangMessage en VangChat | VangAI">
+<meta property="og:description" content="One assistant for your phone, WhatsApp and website chat. Answers in Dutch, French and English, books appointments and is set up and run for you." data-fr="Un seul assistant pour votre téléphone, WhatsApp et le chat de votre site. Il répond en néerlandais, français et anglais, prend les rendez-vous, et nous l’installons et le gérons pour vous." data-nl="Eén assistent voor je telefoon, WhatsApp en websitechat. Antwoordt in het Nederlands, Frans en Engels, boekt afspraken en wij zetten alles voor je op.">
+<meta property="og:image" content="./assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="./assets/favicon.png">
+<link rel="apple-touch-icon" href="./assets/favicon.png">
+<script src="./support.js"></script>
+<script src="./i18n-nl.js"></script>
+<script src="./i18n-fr.js"></script>
+<script src="./site.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+@keyframes vp-bar { 0%,100%{transform:scaleY(.28)} 50%{transform:scaleY(1)} }
+.vp-w > div { animation: vp-bar 640ms ease-in-out infinite; transform-origin:center; }
+.vp-w > div:nth-child(4n+1){ animation-delay:80ms } .vp-w > div:nth-child(4n+2){ animation-delay:260ms }
+.vp-w > div:nth-child(4n+3){ animation-delay:170ms } .vp-w > div:nth-child(4n){ animation-delay:340ms }
+@keyframes vp-gateA { 0%,44%{transform:scaleY(1)} 47%,97%{transform:scaleY(.07)} 100%{transform:scaleY(1)} }
+@keyframes vp-gateB { 0%,47%{transform:scaleY(.07)} 50%,95%{transform:scaleY(1)} 98%,100%{transform:scaleY(.07)} }
+.vp-gA { animation: vp-gateA 6s ease-in-out infinite; transform-origin:center; }
+.vp-gB { animation: vp-gateB 6s ease-in-out infinite; transform-origin:center; }
+@keyframes vp-lblA { 0%,44%{opacity:1} 47%,97%{opacity:.32} 100%{opacity:1} }
+@keyframes vp-lblB { 0%,47%{opacity:.32} 50%,95%{opacity:1} 98%,100%{opacity:.32} }
+.vp-lA{animation:vp-lblA 6s ease-in-out infinite}.vp-lB{animation:vp-lblB 6s ease-in-out infinite}
+@keyframes vp-dot {
+  0%,30%{transform:translateX(0);opacity:0} 33%{opacity:1}
+  43%{transform:translateX(120px);opacity:1} 45%,80%{transform:translateX(120px);opacity:0}
+  83%{transform:translateX(120px);opacity:1} 93%{transform:translateX(0);opacity:1}
+  95%,100%{transform:translateX(0);opacity:0}
+}
+.vp-d{animation:vp-dot 6s linear infinite}
+.vp-d:nth-child(2){animation-delay:150ms}.vp-d:nth-child(3){animation-delay:300ms}
+@media (prefers-reduced-motion: reduce){.vp-w > div,.vp-gA,.vp-gB,.vp-d,.vp-lA,.vp-lB{animation:none !important}}
+.vg-tile{transition:transform 200ms ease,border-color 200ms ease,background 200ms ease}
+.vp-prod{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,0.95fr);gap:40px 56px}
+@media (max-width:900px){ .vp-prod{grid-template-columns:minmax(0,1fr)} .vp-phone{order:-1} }
+.vp-faq{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;align-items:start}
+.vg-tile:hover{transform:translateY(-4px)}
+.vg-tile:hover .vg-tile-art{transform:scale(1.06)}
+.vg-tile-art{transition:transform 260ms ease}
+@media (prefers-reduced-motion: reduce){.vg-avA,.vg-avB,.vg-avA > div:first-child,.vg-avB > div:first-child{animation:none !important}.vg-tile:hover{transform:none}.vg-tile:hover .vg-tile-art{transform:none}}
+</style>
+<style>
+.vp-prod{grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr) !important}
+@media (max-width:1180px){ .vp-prod{grid-template-columns:minmax(0,1fr) !important} .vp-phone{order:-1} }
+@media (max-width:620px){ .vp-demo{flex-direction:column} .vp-side{order:2;width:100% !important;max-width:340px} }
+.vs-w{display:flex;align-items:center;gap:3px;height:24px}
+.vs-w > i{display:block;flex:1;height:24px;background:currentColor;border-radius:2px;transform:scaleY(.14);opacity:.55;transition:transform 300ms ease,opacity 300ms ease}
+.vs-w.on > i{opacity:1;animation:vs-bar 620ms ease-in-out infinite}
+.vs-w.on > i:nth-child(3n){animation-delay:160ms}.vs-w.on > i:nth-child(3n+1){animation-delay:320ms}.vs-w.on > i:nth-child(4n){animation-delay:90ms}
+@keyframes vs-bar{0%,100%{transform:scaleY(.25)}50%{transform:scaleY(1)}}
+.vs-dn > i,.vs-up > i{position:absolute;left:1px;width:8px;height:8px;border-radius:50%;background:#E8763F}
+.vs-dn > i{animation:vs-dn 1.1s linear infinite}.vs-up > i{animation:vs-up 1.1s linear infinite}
+.vs-dn > i:nth-of-type(2),.vs-up > i:nth-of-type(2){animation-delay:.36s}.vs-dn > i:nth-of-type(3),.vs-up > i:nth-of-type(3){animation-delay:.72s}
+@keyframes vs-dn{0%{top:0;opacity:0}20%{opacity:1}80%{opacity:1}100%{top:26px;opacity:0}}
+@keyframes vs-up{0%{top:26px;opacity:0}20%{opacity:1}80%{opacity:1}100%{top:0;opacity:0}}
+.vk-a,.vk-b,.vk-c,.vk-d{opacity:0}
+.vk-a{animation:vk-a 7s ease infinite}.vk-b{animation:vk-b 7s ease infinite}.vk-c{animation:vk-c 7s ease infinite}.vk-d{animation:vk-d 7s ease infinite}
+@keyframes vk-a{0%,4%{opacity:0;transform:translateY(8px)}10%,88%{opacity:1;transform:none}96%,100%{opacity:0}}
+@keyframes vk-b{0%,16%{opacity:0;display:flex}20%,36%{opacity:1}40%,100%{opacity:0}}
+@keyframes vk-c{0%,38%{opacity:0;transform:translateY(8px)}44%,88%{opacity:1;transform:none}96%,100%{opacity:0}}
+@keyframes vk-d{0%,48%{opacity:0;transform:scale(.8)}54%,88%{opacity:1;transform:none}96%,100%{opacity:0}}
+.vk-b > i{display:block;width:6px;height:6px;border-radius:50%;background:#8C8072;animation:vs-bar 700ms ease-in-out infinite}.vk-b > i:nth-child(2){animation-delay:.15s}.vk-b > i:nth-child(3){animation-delay:.3s}
+.pc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:820px){ .pc-grid{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px} .pc-col{scroll-snap-align:start} }
+.pc-col{--k:1;min-width:0;min-height:400px;border:2px solid;border-radius:28px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;gap:18px;color:#2B2118;transition:transform 260ms ease,box-shadow 260ms ease,border-color 260ms ease}
+.pc-col:hover{--k:.35;transform:translateY(-6px);background:#FFF6E6 !important;border-color:#D85A30 !important;box-shadow:0 0 0 4px rgba(216,90,48,0.18),0 22px 44px rgba(216,90,48,0.28);color:#2B2118}
+.pc-art{flex:1;display:flex;align-items:center;justify-content:center;min-height:170px}
+.pc-wave{display:flex;align-items:center;gap:5px;height:120px;width:100%}
+.pc-wave > i{flex:1;height:100%;border-radius:99px;background:#D85A30;animation:vs-bar calc(900ms * var(--k)) ease-in-out infinite}
+.pc-wave > i:nth-child(2n){animation-delay:-.2s}.pc-wave > i:nth-child(3n){animation-delay:-.45s}.pc-wave > i:nth-child(5n){animation-delay:-.6s}
+.pc-bub{position:relative;width:100%;height:170px}
+.pc-bub > i{position:absolute;height:34px;border-radius:17px;opacity:0;animation:pc-pop calc(4.2s * var(--k)) ease infinite;animation-delay:calc(var(--o) * 1.4s * var(--k))}
+.pc-bub > i:nth-child(1){left:0;top:8px;width:62%;background:#FFFFFF;border:1px solid rgba(43,33,24,0.14)}
+.pc-bub > i:nth-child(2){right:0;top:62px;width:56%;background:#25D366}
+.pc-bub > i:nth-child(3){left:0;top:116px;width:70%;background:#FFFFFF;border:1px solid rgba(43,33,24,0.14)}
+@keyframes pc-pop{0%{opacity:0;transform:translateY(10px) scale(.9)}12%,70%{opacity:1;transform:none}85%,100%{opacity:0}}
+.pc-win{width:100%;height:170px;background:#FFFFFF;border:1px solid rgba(43,33,24,0.14);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.pc-bar{display:flex;gap:5px;padding:9px 12px;background:#F3E4CC}.pc-bar span{width:8px;height:8px;border-radius:50%;background:#D85A30;opacity:.7}
+.pc-lines{padding:14px;display:flex;flex-direction:column;gap:10px}
+.pc-lines > i{display:block;height:12px;border-radius:99px;background:#2B2118;opacity:.16;transform-origin:left;animation:pc-type calc(3.6s * var(--k)) steps(12) infinite;animation-delay:calc(var(--o) * .5s * var(--k))}
+.pc-lines > i:nth-child(2){width:80%}.pc-lines > i:nth-child(3){width:55%;background:#D85A30;opacity:.5}
+@keyframes pc-type{0%{transform:scaleX(0)}45%,85%{transform:scaleX(1)}100%{transform:scaleX(1);opacity:0}}
+.pc-dots{display:flex;gap:5px;padding:0 14px}.pc-dots b{width:7px;height:7px;border-radius:50%;background:#854F0B;animation:vs-bar calc(700ms * var(--k)) ease-in-out infinite}.pc-dots b:nth-child(2){animation-delay:.15s}.pc-dots b:nth-child(3){animation-delay:.3s}
+@media (prefers-reduced-motion: reduce){ .vk-a,.vk-b,.vk-c,.vk-d{opacity:1 !important;animation:none !important} .vk-b{display:none !important} .pc-bub > i{opacity:1} .pc-col:hover{transform:none} }
+</style>
+<style>
+body{margin:0;background:#FAEEDA;}
+a{color:#2B2118;text-decoration:none;}
+a:hover{color:#D85A30;}
+::selection{background:#D85A30;color:#FAEEDA;}
+[data-ft-card]:hover [data-ft-go]{transform:translateX(4px);}
+[data-paused="1"],[data-paused="1"] *{animation-play-state:paused !important;}
+@media (prefers-reduced-motion: reduce){*{animation-duration:1ms !important;animation-iteration-count:1 !important;transition-duration:1ms !important;}}
+</style>
+</helmet>
+<div style="font-family:Archivo,Helvetica,sans-serif;color:#2B2118;background:#FAEEDA;min-height:100vh">
+
+  <div style="position:sticky;top:0;z-index:40;background:rgba(250,238,218,0.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(43,33,24,0.12)">
+    <div style="max-width:1200px;margin:0 auto;padding:12px 32px;display:flex;align-items:center;gap:12px 28px;flex-wrap:wrap">
+      <a href="./VangAI Home.dc.html" aria-label="VangAI home" style="flex:none;display:flex;align-items:center;gap:11px;margin-right:auto">
+        <div style="width:34px;height:34px;flex:none"><dc-import name="Mark" uid="pdnav" radius="{{ 0 }}" bg="transparent" hint-size="34px,34px"></dc-import></div>
+        <div style="font-size:21px;font-weight:800;letter-spacing:-0.03em">VangAI</div>
+      </a>
+      <div style="display:flex;align-items:center;gap:10px 26px;flex-wrap:wrap;font-family:Archivo,sans-serif">
+        <div onMouseEnter="{{ navEnter }}" onMouseLeave="{{ navLeave }}" style="position:relative;padding:6px 0">
+          <a href="./VangAI Product.dc.html" style="display:flex;align-items:center;gap:6px;font-size:16px;font-weight:600;color:#D85A30;transition:color 180ms ease" style-hover="color:#D85A30">Product <span aria-hidden="true" style="font-size:11px">▾</span></a>
+          <div style="position:absolute;top:100%;left:50%;transform:translateX(-50%);display:{{ ddDisplay }};flex-direction:column;gap:2px;background:#FAEEDA;border:1px solid rgba(43,33,24,0.16);border-radius:16px;padding:10px;min-width:210px;box-shadow:0 14px 34px rgba(43,33,24,0.14);z-index:50">
+            <a href="./VangAI Product.dc.html#voice" style="padding:10px 14px;border-radius:10px;font-size:15px;font-weight:500;text-align:center" style-hover="background:#FFF6E6;color:#D85A30">VangVoice</a>
+            <a href="./VangAI Product.dc.html#whatsapp" style="padding:10px 14px;border-radius:10px;font-size:15px;font-weight:500;text-align:center" style-hover="background:#FFF6E6;color:#D85A30">VangMessage</a>
+            <a href="./VangAI Product.dc.html#chat" style="padding:10px 14px;border-radius:10px;font-size:15px;font-weight:500;text-align:center" style-hover="background:#FFF6E6;color:#D85A30">VangChat</a>
+          </div>
+        </div>
+        <a href="./VangAI Pricing.dc.html" style="font-size:16px;font-weight:600;color:#2B2118;transition:color 180ms ease" style-hover="color:#D85A30">Pricing</a>
+        <a href="./VangAI About.dc.html" style="font-size:16px;font-weight:600;color:#2B2118;transition:color 180ms ease" style-hover="color:#D85A30">About us</a>
+        <div role="group" aria-label="Language" style="display:flex;align-items:center;gap:2px;border:1px solid rgba(43,33,24,0.22);border-radius:99px;padding:3px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.08em">
+          <a href="#nl" data-set-lang="nl" style="padding:6px 10px;border-radius:99px;color:rgba(43,33,24,0.7)">NL</a>
+          <a href="#fr" data-set-lang="fr" style="padding:6px 10px;border-radius:99px;color:rgba(43,33,24,0.7)">FR</a>
+          <a href="#en" data-set-lang="en" style="padding:6px 10px;border-radius:99px;color:rgba(43,33,24,0.7)">EN</a>
+        </div>
+        <a href="./VangAI Contact.dc.html" style="flex:none;background:#D85A30;color:#FFFFFF;font-size:15px;font-weight:600;padding:11px 20px;border-radius:99px;white-space:nowrap;display:inline-flex;align-items:center;gap:8px;transition:background 180ms ease" style-hover="background:#2B2118;color:#FFFFFF">Book a call <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="top" style="max-width:1200px;margin:0 auto;padding:80px 40px 36px">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ Product</div>
+    <h1 style="font-family:Archivo,Helvetica,sans-serif;font-size:62px;line-height:0.99;font-weight:800;letter-spacing:-0.04em;margin:24px 0 0;max-width:20ch;text-wrap:balance">One assistant, three channels</h1>
+    <p style="font-size:20px;line-height:1.6;color:rgba(43,33,24,0.78);max-width:54ch;margin:22px 0 0;text-wrap:pretty">Pick the channels your customers actually use. Take one, or connect all three into one system with one memory.</p>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:8px 40px 48px">
+    <div class="pc-grid" data-anim="1">
+      <a href="#voice" class="pc-col pc-v" style="background:#FAEEDA;border-color:rgba(43,33,24,0.16)">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(43,33,24,0.55)">See product</span>
+        </div>
+        <div class="pc-art"><div class="pc-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div>
+          <div style="display:flex;align-items:center;gap:12px"><div style="width:48px;height:48px;flex:none;border-radius:14px;background:#FFFFFF;border:1px solid rgba(43,33,24,0.12);display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" fill="none" stroke="#D85A30" stroke-width="1.9" stroke-linecap="round"><path d="M6.5 3.5h3l1.5 4-2 1.5a10 10 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5z"/><path d="M17 2.4c1.7.6 3 1.9 3.6 3.6M15.4 5.4c1 .4 1.7 1.1 2.1 2.1"/></svg></div><div style="font-family:Archivo,Helvetica,sans-serif;font-size:30px;font-weight:800;letter-spacing:-0.035em;line-height:1">VangVoice</div></div>
+          <div style="font-size:16px;line-height:1.5;margin-top:8px;opacity:0.85;text-wrap:pretty">Your phone, answered every time.</div>
+        </div>
+      </a>
+      <a href="#whatsapp" class="pc-col pc-m" style="background:#FAEEDA;border-color:rgba(43,33,24,0.16)">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(43,33,24,0.55)">See product</span>
+        </div>
+        <div class="pc-art"><div class="pc-bub"><i style="--o:0"></i><i style="--o:1"></i><i style="--o:2"></i></div></div>
+        <div>
+          <div style="display:flex;align-items:center;gap:12px"><div style="width:48px;height:48px;flex:none;border-radius:14px;background:#FFFFFF;border:1px solid rgba(43,33,24,0.12);display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" fill="#25D366"><path d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 1.9a7.8 7.8 0 1 1-4 14.5l-.4-.2-2.8.7.8-2.7-.2-.4A7.8 7.8 0 0 1 12 4.1z"/><path d="M9.3 7.6c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.4-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.5.7 2.9.6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1 0-.1-.2-.2-.5-.3l-1.5-.7c-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.5-.6c.1-.2.2-.3.1-.5l-.6-1.5z"/></svg></div><div style="font-family:Archivo,Helvetica,sans-serif;font-size:30px;font-weight:800;letter-spacing:-0.035em;line-height:1">VangMessage</div></div>
+          <div style="font-size:16px;line-height:1.5;margin-top:8px;opacity:0.85;text-wrap:pretty">Your WhatsApp, answered in seconds.</div>
+        </div>
+      </a>
+      <a href="#chat" class="pc-col pc-c" style="background:#FAEEDA;border-color:rgba(43,33,24,0.16)">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(43,33,24,0.55)">See product</span>
+        </div>
+        <div class="pc-art"><div class="pc-win"><div class="pc-bar"><span></span><span></span><span></span></div><div class="pc-lines"><i style="--o:0"></i><i style="--o:1"></i><i style="--o:2"></i></div><div class="pc-dots"><b></b><b></b><b></b></div></div></div>
+        <div>
+          <div style="display:flex;align-items:center;gap:12px"><div style="width:48px;height:48px;flex:none;border-radius:14px;background:#FFFFFF;border:1px solid rgba(43,33,24,0.12);display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" fill="none" stroke="#854F0B" stroke-width="1.9" stroke-linecap="round"><rect x="2.5" y="4" width="19" height="15" rx="2.6"/><path d="M2.5 8.6h19M5.6 6.3h.01M8.1 6.3h.01"/><path d="M7 12.4h7M7 15.4h4.5"/></svg></div><div style="font-family:Archivo,Helvetica,sans-serif;font-size:30px;font-weight:800;letter-spacing:-0.035em;line-height:1">VangChat</div></div>
+          <div style="font-size:16px;line-height:1.5;margin-top:8px;opacity:0.85;text-wrap:pretty">Your website, answered while they browse.</div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div id="voice" style="scroll-margin-top:80px;">
+  <div class="vp-prod" style="max-width:1200px;margin:0 auto;padding:72px 40px 40px;align-items:center">
+    <div style="min-width:0">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ VangVoice</div>
+      <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:58px;font-weight:800;letter-spacing:-0.04em;line-height:1;margin:18px 0 0;text-wrap:balance">VangVoice</h2>
+      <p style="font-size:20px;line-height:1.55;color:rgba(43,33,24,0.8);max-width:40ch;margin:18px 0 0;text-wrap:pretty">Your phone, answered every time. Even when you are under a car, with a client or closed for the day.</p>
+      <div style="margin-top:22px"><div style="display:flex;flex-direction:column;gap:2px">
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:8px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Natural voice in Dutch, French and English</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:8px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Keep your current phone number</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:8px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Usually live in one to two weeks</span></div>
+        </div></div>
+    </div>
+    <div class="vp-phone" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:12px">
+      <div class="vp-demo" style="display:flex;align-items:center;justify-content:center;gap:18px">
+      <div class="vp-side" data-anim="1" style="flex:none;width:196px;background:#2B2118;color:#FAEEDA;border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:10px;box-shadow:0 16px 34px rgba(43,33,24,0.18)">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:#E8763F">No waiting</div>
+          <div onClick="{{ vToggle }}" role="button" tabindex="0" aria-label="{{ vAria }}" data-todo="[demo call audio]" style="width:34px;height:34px;border-radius:50%;background:{{ vBtnBg }};border:1px solid rgba(250,238,218,0.35);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background 180ms ease">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="{{ vBtnFg }}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9.2a4 4 0 0 1 0 5.6M18 7a7 7 0 0 1 0 10" style="display:{{ vOnD }}"/><path d="M16 9.5l5 5M21 9.5l-5 5" stroke="#E8443A" stroke-width="2.4" style="display:{{ vOffD }}"/></svg>
+          </div>
+        </div>
+        <div style="background:rgba(250,238,218,0.07);border:1px solid rgba(250,238,218,0.16);border-radius:14px;padding:10px 12px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:{{ vCFg }}">Caller</div>
+          <div class="{{ vCCls }}" style="margin-top:6px;color:#FAEEDA"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="{{ vDots }}" aria-hidden="true" style="position:relative;height:34px;align-self:center;width:10px;flex:none"><div style="position:absolute;left:4px;top:0;bottom:0;width:2px;background:rgba(250,238,218,0.18);border-radius:99px"></div><i></i><i></i><i></i></div>
+        <div style="background:rgba(216,90,48,0.14);border:1px solid rgba(216,90,48,0.4);border-radius:14px;padding:10px 12px">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:{{ vAFg }}">VangAI</div>
+          <div class="{{ vACls }}" style="margin-top:6px;color:#E8763F"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div style="font-size:13px;line-height:1.4;font-weight:700;color:#FAEEDA;text-wrap:balance">The answer comes straight back</div>
+      </div>
+      <div style="flex:none;display:flex;flex-direction:column;align-items:center;gap:12px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#854F0B;text-align:center">Live demo · press call and talk</div>
+        <dc-import name="VangCall" hint-size="340px,700px"></dc-import>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:40px 40px 24px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px">
+      <div style="min-width:0;background:{{ bxL0 }};border:1px solid rgba(43,33,24,0.12);border-radius:24px;padding:30px;transition:background 300ms ease">
+        <div style="font-family:Archivo,Helvetica,sans-serif;font-size:24px;font-weight:800;letter-spacing:-0.028em;line-height:1.15;margin-bottom:10px">What VangVoice does</div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Answers your phone when you cannot, day and night</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Talks naturally in Dutch, French and English</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Books appointments during the call, straight into your calendar</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Answers questions about prices, opening hours and services</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Emails you a summary after every call: who called, what they wanted and what they booked</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Passes urgent calls to you with the details</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Adds a call button to your website so visitors can talk to it straight away</span></div>
+      </div>
+      <div onMouseEnter="{{ bxIn0 }}" onMouseLeave="{{ bxOut0 }}" style="min-width:0;background:{{ bxR0 }};border:1px solid rgba(43,33,24,0.12);border-radius:24px;padding:30px;transition:background 300ms ease">
+        <div style="font-family:Archivo,Helvetica,sans-serif;font-size:24px;font-weight:800;letter-spacing:-0.028em;line-height:1.15;margin-bottom:10px">Why the phone still matters</div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#854F0B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M5 12h12M13 7l5 5-5 5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">For urgent things, people still pick up the phone</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#854F0B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M5 12h12M13 7l5 5-5 5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Many customers, especially older ones, would rather talk than type</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#854F0B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M5 12h12M13 7l5 5-5 5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">A missed call is usually a customer who calls the next business on the list</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#854F0B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M5 12h12M13 7l5 5-5 5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">A voice that answers straight away feels like good service, not a machine</span></div>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:8px 40px 88px">
+    <div style="display:flex;align-items:center;gap:14px 20px;flex-wrap:wrap;border-top:1px solid rgba(43,33,24,0.18);padding-top:24px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(43,33,24,0.62)">from</span>
+      <span style="font-family:Archivo,Helvetica,sans-serif;font-size:36px;font-weight:800;letter-spacing:-0.035em;color:#D85A30">€100 per month</span>
+      <span style="font-size:15.5px;color:rgba(43,33,24,0.68)">excl. VAT</span>
+      <span style="flex:1 1 20px"></span>
+      <a href="./VangAI Pricing.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:transparent;color:#2B2118;border:1px solid rgba(43,33,24,0.35)" style-hover="border-color:#2B2118;background:#2B2118;color:#FAEEDA">See pricing <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+    </div>
+  </div>
+
+  </div>
+  <div id="whatsapp" style="scroll-margin-top:80px;border-top:1px solid rgba(43,33,24,0.14)">
+  <div class="vp-prod" style="max-width:1200px;margin:0 auto;padding:72px 40px 40px;align-items:center">
+    <div style="min-width:0">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ VangMessage</div>
+      <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:58px;font-weight:800;letter-spacing:-0.04em;line-height:1;margin:18px 0 0;text-wrap:balance">VangMessage</h2>
+      <p style="font-size:20px;line-height:1.55;color:rgba(43,33,24,0.8);max-width:40ch;margin:18px 0 0;text-wrap:pretty">Your WhatsApp, answered within seconds. Evenings and weekends included.</p>
+      <div style="margin-top:22px"><div style="display:flex;flex-direction:column;gap:2px">
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:8px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Works on your WhatsApp Business number</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:8px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Replies in Dutch, French and English</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:8px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Usually live in one to two weeks</span></div>
+        </div></div>
+    </div>
+    <div class="vp-phone" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:12px">
+      <div class="vp-demo" style="display:flex;align-items:center;justify-content:center;gap:18px">
+      <div class="vp-side" data-anim="1" style="flex:none;width:196px;background:#2B2118;color:#FAEEDA;border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:10px;box-shadow:0 16px 34px rgba(43,33,24,0.18)">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:#E8763F">Replies in seconds</div>
+        <div style="background:#ECE5DD;border-radius:14px;padding:10px;display:flex;flex-direction:column;gap:7px;min-height:176px">
+          <div class="vk-a" style="align-self:flex-end;max-width:88%;background:#D9FDD3;color:#2B2118;border-radius:12px;padding:7px 10px;font-size:12.5px;line-height:1.35;">Can I come by on Friday?</div>
+          <div class="vk-b" style="align-self:flex-start;background:#FFFFFF;border-radius:12px;padding:8px 10px;display:flex;gap:4px"><i></i><i></i><i></i></div>
+          <div class="vk-c" style="align-self:flex-start;max-width:88%;background:#FFFFFF;color:#2B2118;border-radius:12px;padding:7px 10px;font-size:12.5px;line-height:1.35;">Yes, 11:00 is free. Shall I book it for you?</div>
+          <div class="vk-d" style="align-self:center;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;background:#D85A30;color:#FFFFFF;border-radius:99px;padding:4px 9px">Replied in 3 seconds</div>
+        </div>
+        <div style="font-size:13px;line-height:1.4;font-weight:700;color:#FAEEDA;text-wrap:balance">A WhatsApp in, an answer out</div>
+      </div>
+      <div style="flex:none;display:flex;flex-direction:column;align-items:center;gap:12px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#854F0B;text-align:center">Live demo · tap a question or type</div>
+        <dc-import name="VangWhatsApp" hint-size="340px,700px"></dc-import>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:40px 40px 24px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px">
+      <div style="min-width:0;background:{{ bxL1 }};border:1px solid rgba(43,33,24,0.12);border-radius:24px;padding:30px;transition:background 300ms ease">
+        <div style="font-family:Archivo,Helvetica,sans-serif;font-size:24px;font-weight:800;letter-spacing:-0.028em;line-height:1.15;margin-bottom:10px">What VangMessage does</div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Answers on your WhatsApp Business number within seconds</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Replies in Dutch, French and English</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Books appointments, with reminders as an add-on (free in the bundle)</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Answers questions about prices, availability and opening hours</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Hands the conversation to you when a person is needed</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Emails you a summary after every conversation: who got in touch, what they wanted and what they booked</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Adds a WhatsApp button to your website so visitors can start a chat in one tap</span></div>
+      </div>
+      <div onMouseEnter="{{ bxIn1 }}" onMouseLeave="{{ bxOut1 }}" style="min-width:0;background:{{ bxR1 }};border:1px solid rgba(43,33,24,0.12);border-radius:24px;padding:30px;transition:background 300ms ease">
+        <div style="font-family:Archivo,Helvetica,sans-serif;font-size:24px;font-weight:800;letter-spacing:-0.028em;line-height:1.15;margin-bottom:10px">Why WhatsApp matters</div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#854F0B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M5 12h12M13 7l5 5-5 5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">More and more people would rather send a message than call</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#854F0B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M5 12h12M13 7l5 5-5 5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">WhatsApp is the app your customers already open every day</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#854F0B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M5 12h12M13 7l5 5-5 5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Customers can message outside opening hours without feeling they are disturbing you</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#854F0B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M5 12h12M13 7l5 5-5 5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">A quick reply is often what decides who gets the job</span></div>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:8px 40px 88px">
+    <div style="display:flex;align-items:center;gap:14px 20px;flex-wrap:wrap;border-top:1px solid rgba(43,33,24,0.18);padding-top:24px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(43,33,24,0.62)">from</span>
+      <span style="font-family:Archivo,Helvetica,sans-serif;font-size:36px;font-weight:800;letter-spacing:-0.035em;color:#D85A30">€75 per month</span>
+      <span style="font-size:15.5px;color:rgba(43,33,24,0.68)">excl. VAT</span>
+      <span style="flex:1 1 20px"></span>
+      <a href="./VangAI Pricing.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:transparent;color:#2B2118;border:1px solid rgba(43,33,24,0.35)" style-hover="border-color:#2B2118;background:#2B2118;color:#FAEEDA">See pricing <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+    </div>
+  </div>
+
+  </div>
+  <div id="chat" style="scroll-margin-top:80px;border-top:1px solid rgba(43,33,24,0.14)">
+  <div class="vp-prod" style="max-width:1200px;margin:0 auto;padding:72px 40px 40px;align-items:center">
+    <div style="min-width:0">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ VangChat</div>
+      <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:58px;font-weight:800;letter-spacing:-0.04em;line-height:1;margin:18px 0 0;text-wrap:balance">VangChat</h2>
+      <p style="font-size:20px;line-height:1.55;color:rgba(43,33,24,0.8);max-width:40ch;margin:18px 0 0;text-wrap:pretty">Answers on your website, straight away. Like the chat on this page.</p>
+      <div style="margin-top:22px"><div style="display:flex;flex-direction:column;gap:2px">
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:8px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Fits your website’s look</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:8px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Speaks Dutch, French and English</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:8px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Usually live within a few working days</span></div>
+        </div></div>
+    </div>
+    <div class="vp-phone" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:12px">
+      <div class="vp-demo" style="display:flex;align-items:center;justify-content:center;gap:18px">
+      <div class="vp-side" data-anim="1" style="flex:none;width:196px;background:#2B2118;color:#FAEEDA;border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:10px;box-shadow:0 16px 34px rgba(43,33,24,0.18)">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:#E8763F">Answers while they browse</div>
+        <div style="background:#FAEEDA;border-radius:14px;overflow:hidden;min-height:176px;display:flex;flex-direction:column">
+          <div style="display:flex;gap:4px;padding:7px 9px;background:#F3E4CC"><span style="width:6px;height:6px;border-radius:50%;background:#D85A30"></span><span style="width:6px;height:6px;border-radius:50%;background:#E8A33D"></span><span style="width:6px;height:6px;border-radius:50%;background:#B8AE9E"></span></div>
+          <div style="padding:10px;display:flex;flex-direction:column;gap:7px">
+            <div class="vk-a" style="align-self:flex-end;max-width:88%;background:#2B2118;color:#FAEEDA;border-radius:12px;padding:7px 10px;font-size:12.5px;line-height:1.35;">Do you fit winter tyres?</div>
+            <div class="vk-c" style="align-self:flex-start;max-width:88%;background:#FFFFFF;color:#2B2118;border-radius:12px;padding:7px 10px;font-size:12.5px;line-height:1.35;border:1px solid rgba(43,33,24,0.12)">Yes, from €45 per tyre, fitted. Want a slot this week?</div>
+            <div class="vk-d" style="align-self:center;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;background:#D85A30;color:#FFFFFF;border-radius:99px;padding:4px 9px">Answered in 2 seconds</div>
+          </div>
+        </div>
+        <div style="font-size:13px;line-height:1.4;font-weight:700;color:#FAEEDA;text-wrap:balance">A visitor asks, the answer is already there</div>
+      </div>
+      <div style="flex:none;display:flex;flex-direction:column;align-items:center;gap:12px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:#854F0B;text-align:center">Live demo · tap a question or type</div>
+        <dc-import name="VangWebChat" hint-size="340px,700px"></dc-import>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:40px 40px 24px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px">
+      <div style="min-width:0;background:{{ bxL2 }};border:1px solid rgba(43,33,24,0.12);border-radius:24px;padding:30px;transition:background 300ms ease">
+        <div style="font-family:Archivo,Helvetica,sans-serif;font-size:24px;font-weight:800;letter-spacing:-0.028em;line-height:1.15;margin-bottom:10px">What VangChat does</div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Answers visitors on your website straight away, 24/7</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Speaks Dutch, French and English</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Takes bookings and collects contact details</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Answers the questions people usually email or call about</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Sends you the conversation when a person is needed</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Emails you a summary after every conversation: who got in touch, what they wanted and what they booked</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Fits your website’s look and does not slow it down</span></div>
+      </div>
+      <div onMouseEnter="{{ bxIn2 }}" onMouseLeave="{{ bxOut2 }}" style="min-width:0;background:{{ bxR2 }};border:1px solid rgba(43,33,24,0.12);border-radius:24px;padding:30px;transition:background 300ms ease">
+        <div style="font-family:Archivo,Helvetica,sans-serif;font-size:24px;font-weight:800;letter-spacing:-0.028em;line-height:1.15;margin-bottom:10px">Why website chat matters</div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#854F0B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M5 12h12M13 7l5 5-5 5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Visitors want an answer now, not a contact form they wait days on</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#854F0B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M5 12h12M13 7l5 5-5 5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Most people visit your site outside opening hours</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#854F0B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M5 12h12M13 7l5 5-5 5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Every visitor who leaves with a question is a customer you never hear from</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid rgba(43,33,24,0.1)"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#854F0B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M5 12h12M13 7l5 5-5 5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">A good answer at the right moment turns a visitor into a booking</span></div>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:8px 40px 88px">
+    <div style="display:flex;align-items:center;gap:14px 20px;flex-wrap:wrap;border-top:1px solid rgba(43,33,24,0.18);padding-top:24px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(43,33,24,0.62)">from</span>
+      <span style="font-family:Archivo,Helvetica,sans-serif;font-size:36px;font-weight:800;letter-spacing:-0.035em;color:#D85A30">€50 per month</span>
+      <span style="font-size:15.5px;color:rgba(43,33,24,0.68)">excl. VAT</span>
+      <span style="flex:1 1 20px"></span>
+      <a href="./VangAI Pricing.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:transparent;color:#2B2118;border:1px solid rgba(43,33,24,0.35)" style-hover="border-color:#2B2118;background:#2B2118;color:#FAEEDA">See pricing <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+    </div>
+  </div>
+
+  </div>
+
+  <div style="background:#FFF6E6;border-top:1px solid rgba(43,33,24,0.12)">
+  <div style="max-width:1200px;margin:0 auto;padding:88px 40px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px 64px;align-items:center">
+      <div style="min-width:0">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ Done for you</div>
+        <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:40px;font-weight:800;letter-spacing:-0.035em;line-height:1.05;margin:18px 0 0;max-width:18ch;text-wrap:balance">Built around your business, not a template</h2>
+        <p style="font-size:18px;line-height:1.7;color:rgba(43,33,24,0.8);max-width:56ch;margin:18px 0 0;text-wrap:pretty">We do not hand you a standard bot and wish you luck. We build your assistant around your services, your prices and the way you talk to customers. Need more than one channel? We connect phone, WhatsApp and website chat into one system with one memory. No website yet? We build that too. One partner for your whole front desk, with one goal: more customers and more revenue for your business.</p>
+      </div>
+      <div style="min-width:0;background:#FFF6E6;border:1px solid rgba(43,33,24,0.12);border-radius:24px;padding:30px 30px 34px;display:flex;flex-direction:column;gap:22px;align-items:flex-start">
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:8px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Tailored to your services, prices and tone</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:8px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Connected to the calendar you already use</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:8px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">Phone, WhatsApp, website chat, and a website if you need one</span></div>
+          <div style="display:flex;align-items:flex-start;gap:12px;padding:8px 0"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#D85A30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 12.5l5 5L20 6.5"/></svg><span style="font-size:16.5px;line-height:1.55;color:rgba(43,33,24,0.86);text-wrap:pretty">We stay with you: weekly updates, support and a monthly report</span></div>
+        </div>
+        <a href="./VangAI Contact.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:#D85A30;color:#FFFFFF;border:1px solid #D85A30" style-hover="background:#2B2118;border-color:#2B2118;color:#FFFFFF">Book a call <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <div style="background:#F3E4CC;border-top:1px solid rgba(43,33,24,0.12);border-bottom:1px solid rgba(43,33,24,0.12)">
+    <div style="max-width:1200px;margin:0 auto;padding:80px 40px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#D85A30">/ FAQ</div>
+      <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:40px;font-weight:800;letter-spacing:-0.035em;line-height:1.05;margin:18px 0 0;max-width:22ch;text-wrap:balance">Questions per channel</h2>
+      <div class="vp-faq" style="margin-top:30px">
+      <div style="min-width:0;display:flex;flex-direction:column;gap:8px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:#854F0B;padding-bottom:4px">VangVoice</div>
+        <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.1);border-radius:14px;overflow:hidden">
+          <div onClick="{{ faqT0 }}" role="button" tabindex="0" aria-expanded="{{ faqX0 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 18px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:16.5px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty">What does it sound like?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign0 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR0 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 18px 16px;font-size:15.5px;line-height:1.6;color:rgba(43,33,24,0.8);max-width:64ch;text-wrap:pretty">A natural, calm voice. Try it yourself in the demo at the top of this page.</div></div></div>
+        </div>
+        <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.1);border-radius:14px;overflow:hidden">
+          <div onClick="{{ faqT1 }}" role="button" tabindex="0" aria-expanded="{{ faqX1 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 18px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:16.5px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty">What if the caller wants a real person?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign1 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR1 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 18px 16px;font-size:15.5px;line-height:1.6;color:rgba(43,33,24,0.8);max-width:64ch;text-wrap:pretty">It takes their details and passes them to you right away, marked as urgent if needed.</div></div></div>
+        </div>
+        <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.1);border-radius:14px;overflow:hidden">
+          <div onClick="{{ faqT2 }}" role="button" tabindex="0" aria-expanded="{{ faqX2 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 18px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:16.5px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty">Does it pick up every call?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign2 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR2 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 18px 16px;font-size:15.5px;line-height:1.6;color:rgba(43,33,24,0.8);max-width:64ch;text-wrap:pretty">You choose: only when you do not answer, outside opening hours, or always.</div></div></div>
+        </div>
+        <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.1);border-radius:14px;overflow:hidden">
+          <div onClick="{{ faqT3 }}" role="button" tabindex="0" aria-expanded="{{ faqX3 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 18px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:16.5px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty">Can callers leave a message?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign3 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR3 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 18px 16px;font-size:15.5px;line-height:1.6;color:rgba(43,33,24,0.8);max-width:64ch;text-wrap:pretty">Yes, and you get it as a written summary instead of a voicemail you have to listen to.</div></div></div>
+        </div>
+      </div>
+      <div style="min-width:0;display:flex;flex-direction:column;gap:8px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:#854F0B;padding-bottom:4px">VangMessage</div>
+        <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.1);border-radius:14px;overflow:hidden">
+          <div onClick="{{ faqT4 }}" role="button" tabindex="0" aria-expanded="{{ faqX4 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 18px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:16.5px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty">Do I need WhatsApp Business?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign4 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR4 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 18px 16px;font-size:15.5px;line-height:1.6;color:rgba(43,33,24,0.8);max-width:64ch;text-wrap:pretty">Yes, and if you do not have it yet, we set it up for you.</div></div></div>
+        </div>
+        <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.1);border-radius:14px;overflow:hidden">
+          <div onClick="{{ faqT5 }}" role="button" tabindex="0" aria-expanded="{{ faqX5 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 18px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:16.5px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty">Can I still reply myself?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign5 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR5 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 18px 16px;font-size:15.5px;line-height:1.6;color:rgba(43,33,24,0.8);max-width:64ch;text-wrap:pretty">Always. You can step into any conversation and the assistant stops.</div></div></div>
+        </div>
+        <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.1);border-radius:14px;overflow:hidden">
+          <div onClick="{{ faqT6 }}" role="button" tabindex="0" aria-expanded="{{ faqX6 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 18px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:16.5px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty">Does it send reminders?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign6 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR6 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 18px 16px;font-size:15.5px;line-height:1.6;color:rgba(43,33,24,0.8);max-width:64ch;text-wrap:pretty">Yes, it can remind customers of their appointment the day before.</div></div></div>
+        </div>
+        <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.1);border-radius:14px;overflow:hidden">
+          <div onClick="{{ faqT7 }}" role="button" tabindex="0" aria-expanded="{{ faqX7 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 18px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:16.5px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty">What about photos and voice notes?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign7 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR7 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 18px 16px;font-size:15.5px;line-height:1.6;color:rgba(43,33,24,0.8);max-width:64ch;text-wrap:pretty">It passes them to you straight away, with a summary of the conversation so far.</div></div></div>
+        </div>
+      </div>
+      <div style="min-width:0;display:flex;flex-direction:column;gap:8px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:#854F0B;padding-bottom:4px">VangChat</div>
+        <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.1);border-radius:14px;overflow:hidden">
+          <div onClick="{{ faqT8 }}" role="button" tabindex="0" aria-expanded="{{ faqX8 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 18px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:16.5px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty">Does it slow down my website?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign8 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR8 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 18px 16px;font-size:15.5px;line-height:1.6;color:rgba(43,33,24,0.8);max-width:64ch;text-wrap:pretty">No. It loads after your page and is built to stay light.</div></div></div>
+        </div>
+        <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.1);border-radius:14px;overflow:hidden">
+          <div onClick="{{ faqT9 }}" role="button" tabindex="0" aria-expanded="{{ faqX9 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 18px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:16.5px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty">Does it work with my website?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign9 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR9 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 18px 16px;font-size:15.5px;line-height:1.6;color:rgba(43,33,24,0.8);max-width:64ch;text-wrap:pretty">It works with almost every website, including WordPress, Wix, Shopify and custom sites.</div></div></div>
+        </div>
+        <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.1);border-radius:14px;overflow:hidden">
+          <div onClick="{{ faqT10 }}" role="button" tabindex="0" aria-expanded="{{ faqX10 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 18px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:16.5px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty">What happens outside opening hours?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign10 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR10 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 18px 16px;font-size:15.5px;line-height:1.6;color:rgba(43,33,24,0.8);max-width:64ch;text-wrap:pretty">It keeps answering and booking, and you see everything the next morning.</div></div></div>
+        </div>
+        <div style="background:#FAEEDA;border:1px solid rgba(43,33,24,0.1);border-radius:14px;overflow:hidden">
+          <div onClick="{{ faqT11 }}" role="button" tabindex="0" aria-expanded="{{ faqX11 }}" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:15px 18px;cursor:pointer">
+            <span style="font-family:Archivo,Helvetica,sans-serif;font-size:16.5px;font-weight:700;letter-spacing:-0.02em;line-height:1.35;text-wrap:pretty">Can it collect contact details?</span>
+            <span aria-hidden="true" style="font-family:'IBM Plex Mono',monospace;font-size:20px;line-height:1.1;color:#D85A30;flex:none">{{ faqSign11 }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ faqR11 }};transition:grid-template-rows 380ms cubic-bezier(.22,.61,.36,1)"><div style="overflow:hidden;min-height:0"><div style="padding:0 18px 16px;font-size:15.5px;line-height:1.6;color:rgba(43,33,24,0.8);max-width:64ch;text-wrap:pretty">Yes, name, phone and email, sent straight to you.</div></div></div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1200px;margin:0 auto;padding:88px 40px 104px">
+    <div style="background:#D85A30;border-radius:28px;padding:64px 56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px 40px;align-items:center">
+      <div style="min-width:0;display:flex;flex-direction:column;align-items:flex-start">
+        <h2 style="font-family:Archivo,Helvetica,sans-serif;font-size:48px;font-weight:800;letter-spacing:-0.04em;line-height:1.02;margin:0;color:#FAEEDA;max-width:20ch;text-wrap:balance">Wondering which channel fits you?</h2>
+        <p style="font-size:18px;line-height:1.6;color:#FAEEDA;max-width:44ch;margin:18px 0 30px;text-wrap:pretty">A short call, no sales pitch. We will tell you honestly if it is not a fit.</p>
+        <a href="./VangAI Contact.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:#2B2118;color:#FAEEDA;border:1px solid #2B2118" style-hover="background:#FAEEDA;border-color:#FAEEDA;color:#2B2118">Book a call <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+      </div>
+      <div style="min-width:0;display:flex;justify-content:center">
+        <div style="width:180px;height:180px"><dc-import name="Mark" uid="pdcta" tone="cream" radius="{{ 0 }}" bg="transparent" hint-size="180px,180px"></dc-import></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1200px;margin:0 auto;padding:8px 40px 40px">
+    <footer style="background:#2B2118;color:#FAEEDA;border-radius:24px;overflow:hidden">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;background:rgba(250,238,218,0.12);border-bottom:1px solid rgba(250,238,218,0.12)">
+        <a href="./VangAI Product.dc.html#voice" data-ft-card="1" style="min-width:0;display:flex;flex-direction:column;gap:10px;padding:32px;background:#2B2118;color:#FAEEDA;transition:background 250ms ease" style-hover="background:#352A20;color:#FAEEDA">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="flex:none;width:40px;height:40px;border-radius:12px;background:rgba(216,90,48,0.18);color:#E8763F;display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></span>
+            <span style="font-size:24px;font-weight:800;letter-spacing:-0.03em;line-height:1.1;color:#FAEEDA">VangVoice</span>
+          </div>
+          <span style="font-size:15px;line-height:1.5;color:#CDBBA2;text-wrap:pretty">Your phone, answered every time.</span>
+          <span data-ft-go="1" style="display:inline-flex;align-items:center;gap:8px;margin-top:4px;font-size:14.5px;font-weight:700;color:#E8763F;transition:transform 250ms ease">See product <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></span>
+        </a>
+        <a href="./VangAI Product.dc.html#whatsapp" data-ft-card="1" style="min-width:0;display:flex;flex-direction:column;gap:10px;padding:32px;background:#2B2118;color:#FAEEDA;transition:background 250ms ease" style-hover="background:#352A20;color:#FAEEDA">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="flex:none;width:40px;height:40px;border-radius:12px;background:rgba(216,90,48,0.18);color:#E8763F;display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></span>
+            <span style="font-size:24px;font-weight:800;letter-spacing:-0.03em;line-height:1.1;color:#FAEEDA">VangMessage</span>
+          </div>
+          <span style="font-size:15px;line-height:1.5;color:#CDBBA2;text-wrap:pretty">WhatsApp replies within seconds.</span>
+          <span data-ft-go="1" style="display:inline-flex;align-items:center;gap:8px;margin-top:4px;font-size:14.5px;font-weight:700;color:#E8763F;transition:transform 250ms ease">See product <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></span>
+        </a>
+        <a href="./VangAI Product.dc.html#chat" data-ft-card="1" style="min-width:0;display:flex;flex-direction:column;gap:10px;padding:32px;background:#2B2118;color:#FAEEDA;transition:background 250ms ease" style-hover="background:#352A20;color:#FAEEDA">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="flex:none;width:40px;height:40px;border-radius:12px;background:rgba(216,90,48,0.18);color:#E8763F;display:inline-flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M4 4h16c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H8l-4 4V6c0-1.1.9-2 2-2zm3 6v2h2v-2H7zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2z"/></svg></span>
+            <span style="font-size:24px;font-weight:800;letter-spacing:-0.03em;line-height:1.1;color:#FAEEDA">VangChat</span>
+          </div>
+          <span style="font-size:15px;line-height:1.5;color:#CDBBA2;text-wrap:pretty">Answers on your website, 24/7.</span>
+          <span data-ft-go="1" style="display:inline-flex;align-items:center;gap:8px;margin-top:4px;font-size:14.5px;font-weight:700;color:#E8763F;transition:transform 250ms ease">See product <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></span>
+        </a>
+      </div>
+      <div style="position:relative;overflow:hidden">
+        <div aria-hidden="true" data-no-i18n="1" style="position:absolute;left:24px;bottom:0.02em;display:flex;align-items:baseline;font-family:Archivo,Helvetica,sans-serif;font-size:clamp(96px,17vw,210px);font-weight:800;letter-spacing:-0.05em;line-height:0.78;color:#33281F;white-space:nowrap;pointer-events:none;user-select:none">VangAI<span style="display:inline-block;flex:none;width:0.15em;height:0.15em;border-radius:50%;background:#D85A30;margin-left:0.05em;opacity:0.55"></span></div>
+        <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:20px 32px;flex-wrap:wrap;padding:30px 32px">
+          <a href="./VangAI Home.dc.html" aria-label="VangAI home" style="display:flex;align-items:center;gap:11px;color:#FAEEDA" style-hover="color:#FAEEDA">
+            <div style="width:34px;height:34px;flex:none"><dc-import name="Mark" uid="pdft" radius="{{ 0 }}" bg="transparent" hint-size="34px,34px"></dc-import></div>
+            <div style="font-size:21px;font-weight:800;letter-spacing:-0.03em">VangAI</div>
+          </a>
+          <div style="display:flex;align-items:center;gap:10px 28px;flex-wrap:wrap">
+            <a href="./VangAI Pricing.dc.html" style="font-size:16px;font-weight:500;color:rgba(250,238,218,0.88)" style-hover="color:#E8763F">Pricing</a>
+            <a href="./VangAI About.dc.html" style="font-size:16px;font-weight:500;color:rgba(250,238,218,0.88)" style-hover="color:#E8763F">About us</a>
+            <a href="./VangAI Contact.dc.html" style="font-size:16px;font-weight:500;color:rgba(250,238,218,0.88)" style-hover="color:#E8763F">Contact</a>
+            <a href="mailto:[email address]" data-todo="[email address]" style="font-size:16px;font-weight:600;color:#E8763F" style-hover="color:#FAEEDA">[email address]</a>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+            <div role="group" aria-label="Language" style="display:flex;align-items:center;gap:2px;border:1px solid rgba(250,238,218,0.28);border-radius:99px;padding:3px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.08em">
+              <a href="#nl" data-set-lang="nl" data-lang-dark="1" style="padding:6px 10px;border-radius:99px;color:rgba(250,238,218,0.7)">NL</a>
+              <a href="#fr" data-set-lang="fr" data-lang-dark="1" style="padding:6px 10px;border-radius:99px;color:rgba(250,238,218,0.7)">FR</a>
+              <a href="#en" data-set-lang="en" data-lang-dark="1" style="padding:6px 10px;border-radius:99px;color:rgba(250,238,218,0.7)">EN</a>
+            </div>
+            <a href="./VangAI Contact.dc.html" style="font-size:15px;font-weight:600;padding:14px 26px;border-radius:99px;display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;background:#D85A30;color:#FFFFFF;border:1px solid #D85A30" style-hover="background:#FAEEDA;border-color:#FAEEDA;color:#2B2118">Book a call <svg viewBox="0 0 24 24" width="1.05em" height="1.05em" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;display:block"><path d="M4 12h14"/><path d="M12.5 5.5 19.5 12l-7 6.5"/></svg></a>
+          </div>
+        </div>
+        <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;padding:16px 32px 20px;border-top:1px solid rgba(250,238,218,0.12);font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(250,238,218,0.62)">
+          <span>© 2026 VangAI, Hasselt, Belgium, [company number]</span>
+          <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
+            <a href="./VangAI Privacy.dc.html" style="color:rgba(250,238,218,0.62)" style-hover="color:#FAEEDA">Privacy</a>
+            <a href="./VangAI Cookies.dc.html" style="color:rgba(250,238,218,0.62)" style-hover="color:#FAEEDA">Cookies</a>
+            <a href="./VangAI Terms.dc.html" style="color:rgba(250,238,218,0.62)" style-hover="color:#FAEEDA">Terms</a>
+            <a href="./VangAI Data and Privacy.dc.html" style="color:rgba(250,238,218,0.62)" style-hover="color:#FAEEDA">Data &amp; privacy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = Object.assign({ nav: false, faq: {} }, { vMuted: true, vSpk: 'c', act: 0, bx: {} });
+  componentDidMount() {
+    this._cues = [];
+    this._vt = setInterval(() => {
+      let spk;
+      if (!this.state.vMuted && this._audio && this._cues.length) {
+        const t = this._audio.currentTime; const c = this._cues.find(q => t >= q[0] && t < q[1]); spk = c ? c[2] : 'c';
+      } else spk = Math.floor(Date.now() / 3000) % 2 ? 'a' : 'c';
+      if (spk !== this.state.vSpk) this.setState({ vSpk: spk });
+    }, 200);
+    this._onScroll = () => {
+      const ids = ['voice', 'whatsapp', 'chat'], h = window.innerHeight || 800;
+      let a = 0;
+      ids.forEach((id, i) => { const el = document.getElementById(id); if (el && el.getBoundingClientRect().top < h * 0.45) a = i; });
+      if (a !== this.state.act) this.setState({ act: a });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    const hs = ['#voice', '#whatsapp', '#chat'].indexOf(location.hash);
+    if (hs > 0) this.setState({ act: hs });
+  }
+  componentWillUnmount() { clearInterval(this._vt); window.removeEventListener('scroll', this._onScroll); if (this._audio) this._audio.pause(); }
+  vToggle() {
+    const m = !this.state.vMuted;
+    if (!m) {
+      if (!this._audio) { this._audio = new Audio('./voice-demo.wav'); this._audio.loop = true; }
+      const pr = this._audio.play(); if (pr && pr.catch) pr.catch(() => {});
+    } else if (this._audio) this._audio.pause();
+    this.setState({ vMuted: m });
+  }
+
+  renderVals() {
+    const v = {
+      ddDisplay: this.state.nav ? 'flex' : 'none',
+      navEnter: () => this.setState({ nav: true }),
+      navLeave: () => this.setState({ nav: false })
+    };
+    for (let i = 0; i < 40; i++) {
+      const open = !!this.state.faq[i];
+      v['faqR' + i] = open ? '1fr' : '0fr';
+      v['faqSign' + i] = open ? '–' : '+';
+      v['faqX' + i] = open ? 'true' : 'false';
+      v['faqT' + i] = () => this.setState(s => ({ faq: Object.assign({}, s.faq, { [i]: !s.faq[i] }) }));
+    }
+    const mu = this.state.vMuted, c = this.state.vSpk === 'c';
+    v.vToggle = () => this.vToggle();
+    v.vAria = mu ? 'Unmute demo call' : 'Mute demo call';
+    v.vBtnBg = mu ? 'rgba(250,238,218,0.08)' : '#D85A30';
+    v.vBtnFg = '#FAEEDA';
+    v.vOnD = mu ? 'none' : 'inline';
+    v.vOffD = mu ? 'inline' : 'none';
+    v.vCCls = c ? 'vs-w on' : 'vs-w';
+    v.vACls = c ? 'vs-w' : 'vs-w on';
+    v.vDots = c ? 'vs-dn' : 'vs-up';
+    v.vCFg = c ? '#FAEEDA' : 'rgba(250,238,218,0.55)';
+    v.vAFg = c ? 'rgba(250,238,218,0.55)' : '#E8763F';
+    for (let i = 0; i < 3; i++) {
+      const sw = !!this.state.bx[i];
+      v['bxL' + i] = sw ? '#F3E4CC' : '#FFF6E6';
+      v['bxR' + i] = sw ? '#FFF6E6' : '#F3E4CC';
+      v['bxIn' + i] = () => this.setState(s => ({ bx: Object.assign({}, s.bx, { [i]: true }) }));
+      v['bxOut' + i] = () => this.setState(s => ({ bx: Object.assign({}, s.bx, { [i]: false }) }));
+    }
+    return v;
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>body{margin:0;background:#F3EDE4;}a{color:#854F0B;}a:hover{color:#D85A30;}</style>
+</helmet>
+<div style="min-height:100vh;padding:44px 32px;box-sizing:border-box;font-family:Georgia,serif;display:flex;flex-direction:column;align-items:center;gap:30px">
+  <svg width="0" height="0" style="position:absolute" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <clipPath id="cl"><path d="M50 30 C40 70 45 130 75 175 L120 195 C100 175 88 155 90 140 L108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z"></path></clipPath>
+      <clipPath id="halfL"><rect x="0" y="0" width="120" height="240"></rect></clipPath>
+      <linearGradient id="gradIn" gradientUnits="userSpaceOnUse" x1="84" y1="0" x2="122" y2="0">
+        <stop offset="0" stop-color="#D85A30"></stop>
+        <stop offset="1" stop-color="#854F0B"></stop>
+      </linearGradient>
+      <linearGradient id="gradOut" gradientUnits="userSpaceOnUse" x1="84" y1="0" x2="122" y2="0">
+        <stop offset="0" stop-color="#854F0B"></stop>
+        <stop offset="1" stop-color="#D85A30"></stop>
+      </linearGradient>
+      <g id="linesL" fill="none" stroke="#2B2118" stroke-width="1.15" stroke-linecap="round" opacity="0.5">
+        <path d="M50.5 33 C45.5 58 46.5 92 56 118"></path>
+        <path d="M52.5 34 C49.5 60 54 94 63.5 121"></path>
+        <path d="M55 37 C54 65 62 97 71 124"></path>
+      </g>
+      <g id="handL">
+        <path d="M50 30 C40 70 45 130 75 175 L120 195 C100 175 88 155 90 140 L98 152 L105 158 C102 149 104 141 108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z" fill="#D85A30"></path>
+        <g clip-path="url(#cl)"><use href="#linesL"></use></g>
+      </g>
+      <g id="handR">
+        <path d="M50 30 C40 70 45 130 75 175 L120 195 C100 175 88 155 90 140 L98 152 L105 158 C102 149 104 141 108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z" fill="#854F0B"></path>
+        <g clip-path="url(#cl)"><use href="#linesL"></use></g>
+      </g>
+      <g id="touchL">
+        <path d="M50 30 C40 70 45 130 75 175 L120 195 C100 175 88 155 90 140 L102 153 L116 160 C110 150 106 142 108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z" fill="#D85A30"></path>
+        <g clip-path="url(#cl)"><use href="#linesL"></use></g>
+      </g>
+      <g id="touchR">
+        <path d="M50 30 C40 70 45 130 75 175 L120 195 C100 175 88 155 90 140 L102 153 L116 160 C110 150 106 142 108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z" fill="#854F0B"></path>
+        <g clip-path="url(#cl)"><use href="#linesL"></use></g>
+      </g>
+      <g id="sharpL">
+        <path d="M50 30 C40 70 45 130 75 175 L120 195 L90 140 L102 153 L116 160 C110 150 106 142 108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z" fill="#D85A30"></path>
+        <g clip-path="url(#cl)"><use href="#linesL"></use></g>
+      </g>
+      <g id="sharpR">
+        <path d="M50 30 C40 70 45 130 75 175 L120 195 L90 140 L102 153 L116 160 C110 150 106 142 108 135 C100 125 90 115 85 100 C75 75 60 50 50 30 Z" fill="#854F0B"></path>
+        <g clip-path="url(#cl)"><use href="#linesL"></use></g>
+      </g>
+      <path id="gapOrange" fill="#D85A30" d="M120 195 C100 175 88 155 90 140 L102 153 L116 160 C110 150 106 142 108 135 L120 135 Z"></path>
+      <path id="gapBrown" fill="#854F0B" d="M120 195 C100 175 88 155 90 140 L102 153 L116 160 C110 150 106 142 108 135 L120 135 Z"></path>
+      <path id="gapIn" fill="url(#gradIn)" d="M120 195 C100 175 88 155 90 140 L102 153 L116 160 C110 150 106 142 108 135 L120 135 Z"></path>
+      <path id="gapOut" fill="url(#gradOut)" d="M120 195 C100 175 88 155 90 140 L102 153 L116 160 C110 150 106 142 108 135 L120 135 Z"></path>
+      <path id="gapSharpIn" fill="url(#gradIn)" d="M120 195 L90 140 L102 153 L116 160 C110 150 106 142 108 135 L120 135 Z"></path>
+      <path id="gapSharpOut" fill="url(#gradOut)" d="M120 195 L90 140 L102 153 L116 160 C110 150 106 142 108 135 L120 135 Z"></path>
+    </defs>
+  </svg>
+
+  <div style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#854F0B">Reference</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;width:100%;max-width:1160px">
+    <div id="A4" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g transform="rotate(5.5 120 195)"><use href="#handL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(5.5 120 195)"><use href="#handR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">A4 — 5.5°</div>
+    </div>
+    <div id="B1" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g transform="rotate(5.5 120 195)"><use href="#touchL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(5.5 120 195)"><use href="#touchR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">B1 — thumbs meet</div>
+    </div>
+  </div>
+
+  <div style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#854F0B">B1 with the gap filled</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;width:100%;max-width:1160px">
+    <div id="F1" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g clip-path="url(#halfL)"><g transform="rotate(5.5 120 195)"><use href="#gapOrange"></use></g></g>
+        <g transform="translate(240,0) scale(-1,1)"><g clip-path="url(#halfL)"><g transform="rotate(5.5 120 195)"><use href="#gapBrown"></use></g></g></g>
+        <g transform="rotate(5.5 120 195)"><use href="#touchL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(5.5 120 195)"><use href="#touchR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">F1 — flat, matches each hand</div>
+    </div>
+    <div id="F2" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g clip-path="url(#halfL)"><g transform="rotate(5.5 120 195)"><use href="#gapBrown"></use></g></g>
+        <g transform="translate(240,0) scale(-1,1)"><g clip-path="url(#halfL)"><g transform="rotate(5.5 120 195)"><use href="#gapOrange"></use></g></g></g>
+        <g transform="rotate(5.5 120 195)"><use href="#touchL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(5.5 120 195)"><use href="#touchR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">F2 — flat, inverted</div>
+    </div>
+    <div id="F3" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g clip-path="url(#halfL)"><g transform="rotate(5.5 120 195)"><use href="#gapIn"></use></g></g>
+        <g transform="translate(240,0) scale(-1,1)"><g clip-path="url(#halfL)"><g transform="rotate(5.5 120 195)"><use href="#gapIn"></use></g></g></g>
+        <g transform="rotate(5.5 120 195)"><use href="#touchL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(5.5 120 195)"><use href="#touchR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">F3 — blended, brown at centre</div>
+    </div>
+    <div id="F4" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g clip-path="url(#halfL)"><g transform="rotate(5.5 120 195)"><use href="#gapOut"></use></g></g>
+        <g transform="translate(240,0) scale(-1,1)"><g clip-path="url(#halfL)"><g transform="rotate(5.5 120 195)"><use href="#gapOut"></use></g></g></g>
+        <g transform="rotate(5.5 120 195)"><use href="#touchL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(5.5 120 195)"><use href="#touchR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">F4 — blended, inverted</div>
+    </div>
+  </div>
+
+  <div style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#854F0B">Sharper inner edge — reads more as a V</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;width:100%;max-width:1160px">
+    <div id="S1" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g transform="rotate(5.5 120 195)"><use href="#sharpL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(5.5 120 195)"><use href="#sharpR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">S1 — sharp inner edge, cream gap</div>
+    </div>
+    <div id="S2" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g clip-path="url(#halfL)"><g transform="rotate(5.5 120 195)"><use href="#gapSharpIn"></use></g></g>
+        <g transform="translate(240,0) scale(-1,1)"><g clip-path="url(#halfL)"><g transform="rotate(5.5 120 195)"><use href="#gapSharpIn"></use></g></g></g>
+        <g transform="rotate(5.5 120 195)"><use href="#sharpL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(5.5 120 195)"><use href="#sharpR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">S2 — sharp, blended fill</div>
+    </div>
+    <div id="S3" style="min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px">
+      <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect width="240" height="240" rx="44" fill="#FAEEDA"></rect>
+        <g clip-path="url(#halfL)"><g transform="rotate(5.5 120 195)"><use href="#gapSharpOut"></use></g></g>
+        <g transform="translate(240,0) scale(-1,1)"><g clip-path="url(#halfL)"><g transform="rotate(5.5 120 195)"><use href="#gapSharpOut"></use></g></g></g>
+        <g transform="rotate(5.5 120 195)"><use href="#sharpL"></use></g>
+        <g transform="translate(240,0) scale(-1,1)"><g transform="rotate(5.5 120 195)"><use href="#sharpR"></use></g></g>
+      </svg>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#854F0B;text-align:center">S3 — sharp, blended inverted</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1160,&quot;height&quot;:1240}}"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "vangai-design-qa",
+  "private": true,
+  "type": "module",
+  "description": "Pixel, style, palette and interaction-state comparison between the Claude Design export and the built VangAI site.",
+  "scripts": {
+    "pixel": "node pixel-diff.mjs",
+    "style": "node style-diff.mjs",
+    "palette": "node palette-audit.mjs",
+    "states": "node states.mjs",
+    "selftest": "node pixel-diff.mjs --page home --vp desktop --self && node style-diff.mjs --page home --vp desktop --self && node states.mjs --page home --vp desktop --self"
+  },
+  "dependencies": {
+    "pixelmatch": "^7.2.0",
+    "playwright": "^1.63.0",
+    "pngjs": "^7.0.0"
+  }
+}
