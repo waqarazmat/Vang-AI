@@ -7,6 +7,7 @@ import { Faq } from '@/components/ui/Faq';
 import { PauseOffscreen } from '@/components/animations/PauseOffscreen';
 import { WhyBoxes } from './WhyBoxes';
 import { CheckIcon } from './listIcons';
+import { Reveal } from '@/components/animations/Reveal';
 
 // Values from the design (VangAI Product.dc.html).
 
@@ -114,13 +115,15 @@ export function ProductOverview() {
   return (
     <>
       <div id="top" className="mx-auto max-w-[1200px] px-[40px] pt-[80px] pb-[36px]">
-        <Eyebrow>{t('eyebrow')}</Eyebrow>
-        <h1 className="mx-0 mt-[24px] mb-0 max-w-[20ch] text-[62px] leading-[0.99] font-[800] tracking-[-0.04em] text-balance">
-          {t('title')}
-        </h1>
-        <p className="mx-0 mt-[22px] mb-0 max-w-[54ch] text-[20px] leading-[1.6] text-pretty text-ink/78">
-          {t('lead')}
-        </p>
+        <Reveal>
+          <Eyebrow>{t('eyebrow')}</Eyebrow>
+          <h1 className="mx-0 mt-[24px] mb-0 max-w-[20ch] text-[62px] leading-[0.99] font-[800] tracking-[-0.04em] text-balance">
+            {t('title')}
+          </h1>
+          <p className="mx-0 mt-[22px] mb-0 max-w-[54ch] text-[20px] leading-[1.6] text-pretty text-ink/78">
+            {t('lead')}
+          </p>
+        </Reveal>
       </div>
       <div className="mx-auto max-w-[1200px] px-[40px] pt-[8px] pb-[48px]">
         <PauseOffscreen className="pc-grid">
@@ -173,7 +176,7 @@ export function ProductSection({
   return (
     <div id={channel} className={`scroll-mt-[80px] ${bordered ? 'border-t border-ink/14' : ''}`}>
       <div className="vp-prod mx-auto max-w-[1200px] items-center px-[40px] pt-[72px] pb-[40px]">
-        <div className="min-w-0">
+        <Reveal className="min-w-0">
           <Eyebrow>{t('eyebrow')}</Eyebrow>
           <h2 className="mx-0 mt-[18px] mb-0 text-[min(58px,11.5vw)] leading-[1] font-[800] tracking-[-0.04em] text-balance">
             {NAMES[channel]}
@@ -184,7 +187,7 @@ export function ProductSection({
           <div className="mt-[22px]">
             <CheckList items={t.raw('bullets') as string[]} />
           </div>
-        </div>
+        </Reveal>
         <div className="vp-phone flex min-w-0 flex-col items-center gap-[12px]">
           <div className="vp-demo flex items-center justify-center gap-[18px]">
             {side}
@@ -197,14 +200,14 @@ export function ProductSection({
           </div>
         </div>
       </div>
-      <div className="mx-auto max-w-[1200px] px-[40px] pt-[40px] pb-[24px]">
+      <Reveal className="mx-auto max-w-[1200px] px-[40px] pt-[40px] pb-[24px]">
         <WhyBoxes
           doesTitle={t('doesTitle')}
           does={t.raw('does') as string[]}
           whyTitle={t('whyTitle')}
           why={t.raw('why') as string[]}
         />
-      </div>
+      </Reveal>
       <div className="mx-auto max-w-[1200px] px-[40px] pt-[8px] pb-[88px]">
         <div className="flex flex-wrap items-center gap-x-[20px] gap-y-[14px] border-t border-ink/18 pt-[24px]">
           <span className="font-mono text-[11px] tracking-[0.1em] text-ink/62 uppercase">{p('from')}</span>
@@ -286,7 +289,7 @@ export function DoneForYou() {
     <section className="border-t border-ink/12 bg-paper">
       <div className="mx-auto max-w-[1200px] px-[40px] py-[88px]">
         <div className="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] items-center gap-x-[64px] gap-y-[36px]">
-          <div className="min-w-0">
+          <Reveal className="min-w-0">
             <Eyebrow>{t('eyebrow')}</Eyebrow>
             <h2 className="mx-0 mt-[18px] mb-0 max-w-[18ch] text-[40px] leading-[1.05] font-[800] tracking-[-0.035em] text-balance">
               {t('title')}
@@ -294,11 +297,14 @@ export function DoneForYou() {
             <p className="mx-0 mt-[18px] mb-0 max-w-[56ch] text-[18px] leading-[1.7] text-pretty text-ink/80">
               {t('text')}
             </p>
-          </div>
-          <div className="flex min-w-0 flex-col items-start gap-[22px] rounded-[24px] border border-ink/12 bg-paper px-[30px] pt-[30px] pb-[34px]">
+          </Reveal>
+          <Reveal
+            delay={0.12}
+            className="card-lift flex min-w-0 flex-col items-start gap-[22px] rounded-[24px] border border-ink/12 bg-paper px-[30px] pt-[30px] pb-[34px]"
+          >
             <CheckList items={t.raw('items') as string[]} />
             <ButtonLink href="/contact">{t('cta')}</ButtonLink>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>
@@ -312,18 +318,20 @@ export function ProductFaq() {
   return (
     <section className="border-y border-ink/12 bg-sand">
       <div className="mx-auto max-w-[1200px] px-[40px] py-[80px]">
-        <Eyebrow>{t('eyebrow')}</Eyebrow>
-        <h2 className="mx-0 mt-[18px] mb-0 max-w-[22ch] text-[40px] leading-[1.05] font-[800] tracking-[-0.035em] text-balance">
-          {t('title')}
-        </h2>
-        <div className="vp-faq mt-[30px]">
+        <Reveal>
+          <Eyebrow>{t('eyebrow')}</Eyebrow>
+          <h2 className="mx-0 mt-[18px] mb-0 max-w-[22ch] text-[40px] leading-[1.05] font-[800] tracking-[-0.035em] text-balance">
+            {t('title')}
+          </h2>
+        </Reveal>
+        <Reveal className="vp-faq mt-[30px]" delay={0.1}>
           {groups.map((g) => (
             <div key={g} className="flex min-w-0 flex-col gap-[8px]">
               <div className="pb-[4px] font-mono text-[10.5px] tracking-[0.14em] text-amber uppercase">{NAMES[g]}</div>
               <Faq entries={t.raw(g) as { q: string; a: string }[]} variant="compact" gap={8} />
             </div>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

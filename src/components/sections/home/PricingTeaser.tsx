@@ -3,6 +3,7 @@ import { ButtonLink } from '@/components/ui/ButtonLink';
 import { Eyebrow } from '@/components/ui/Eyebrow';
 import { Mark } from '@/components/ui/Mark';
 import { CountUp } from '@/components/animations/CountUp';
+import { Reveal } from '@/components/animations/Reveal';
 
 const ROWS = [
   ['bookings', '34'],
@@ -17,7 +18,7 @@ export function PricingTeaser() {
   return (
     <div className="mx-auto max-w-[1200px] px-[40px] pb-[96px]">
       <div className="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] items-center gap-x-[56px] gap-y-[40px]">
-        <div className="min-w-0">
+        <Reveal className="min-w-0">
           <Eyebrow>{t('eyebrow')}</Eyebrow>
           <h2 className="mx-0 mt-[22px] mb-0 text-[64px] leading-[1] font-[800] tracking-[-0.042em]">{t('title')}</h2>
           <p className="mx-0 mt-[20px] mb-0 max-w-[46ch] text-[19px] leading-[1.65] text-pretty text-ink/80">
@@ -27,8 +28,8 @@ export function PricingTeaser() {
           <div className="mt-[26px]">
             <ButtonLink href="/pricing">{t('cta')}</ButtonLink>
           </div>
-        </div>
-        <div className="flex min-w-0 justify-center">
+        </Reveal>
+        <Reveal className="flex min-w-0 justify-center" delay={0.12}>
           <div className="w-full max-w-[400px] rounded-[22px] border border-ink/16 bg-white p-[30px] shadow-[0_18px_40px_rgba(43,33,24,0.08)]">
             <div className="flex items-center gap-[10px] border-b border-ink/12 pb-[18px]">
               <Mark size={28} />
@@ -54,7 +55,7 @@ export function PricingTeaser() {
             </div>
             <div className="mt-[14px] font-mono text-[10.5px] tracking-[0.1em] text-ink/62">{t('example')}</div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </div>
   );

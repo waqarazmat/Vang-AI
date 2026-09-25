@@ -1,32 +1,61 @@
 'use client';
 
-import { m, useReducedMotion } from 'motion/react';
-import { distance, duration, ease } from '@/lib/animation/motion';
+import { useEffect, useRef } from 'react';
 
-/**
- * Added motion: content fades up 16px once when it enters the viewport.
- * Under reduced motion it renders plainly, so the resting design state is what shows.
+/*
+ * Added motion (scroll reveals). Content fades up 16px once when it enters the viewport.
+ * Each component renders exactly one div with the className it is given, so it can replace an
+ * existing div without changing the layout. The hidden start state lives in CSS (globals.css,
+ * `.reveal`) and applies only with prefers-reduced-motion: no-preference and JavaScript on, so
+ * server and client markup are identical and the resting state is the design.
  */
-export function Reveal({
-  children,
-  className,
-  delay = 0,
-}: {
-  children: React.ReactNode;
-  className?: string;
-  delay?: number;
-}) {
-  const reduce = useReducedMotion();
-  if (reduce) return <div className={className}>{children}</div>;
+
+type Props = { children: React.ReactNode; className?: string; delay?: number };
+
+function useInView<T extends HTMLElement>() {
+  const ref = useRef<T>(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        el.classList.add('is-in');
+        io.disconnect();
+      },
+      { rootMargin: '0px 0px -10% 0px' },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+  return ref;
+}
+
+const cx = (base: string, className?: string) => (className ? `${base} ${className}` : base);
+
+export function Reveal({ children, className, delay = 0 }: Props) {
+  const ref = useInView<HTMLDivElement>();
   return (
-    <m.div
-      className={className}
-      initial={{ opacity: 0, y: distance.reveal }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: duration.reveal, ease: ease.out, delay }}
+    <div
+      ref={ref}
+      className={cx('reveal', className)}
+      style={delay ? ({ '--reveal-delay': `${delay}s` } as React.CSSProperties) : undefined}
     >
       {children}
-    </m.div>
+    </div>
   );
+}
+
+/** A grid or list whose RevealItem children appear one after another. */
+export function RevealGroup({ children, className }: Omit<Props, 'delay'>) {
+  const ref = useInView<HTMLDivElement>();
+  return (
+    <div ref={ref} className={cx('reveal-group', className)}>
+      {children}
+    </div>
+  );
+}
+
+export function RevealItem({ children, className }: Omit<Props, 'delay'>) {
+  return <div className={cx('reveal-item', className)}>{children}</div>;
 }

@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Eyebrow } from '@/components/ui/Eyebrow';
+import { Reveal } from '@/components/animations/Reveal';
 
 const ITEMS = ['setup', 'tone', 'languages', 'calendar', 'summary', 'report', 'updates', 'person', 'privacy'] as const;
 
@@ -50,7 +51,7 @@ export function Included() {
     <section className="border-y border-ink/12 bg-sand">
       <div className="mx-auto max-w-[1200px] px-[40px] py-[80px]">
         <div className="flex flex-wrap items-end justify-between gap-x-[30px] gap-y-[18px]">
-          <div className="min-w-0">
+          <Reveal className="min-w-0">
             <Eyebrow>{t('eyebrow')}</Eyebrow>
             <h2 className="mx-0 mt-[18px] mb-0 max-w-[26ch] text-[40px] leading-[1.05] font-[800] tracking-[-0.035em] text-balance">
               {t('title')}
@@ -58,7 +59,7 @@ export function Included() {
             <p className="mx-0 mt-[12px] mb-0 max-w-[46ch] text-[17px] leading-[1.6] text-pretty text-ink/78">
               {t('lead')}
             </p>
-          </div>
+          </Reveal>
           <div className="flex flex-wrap items-center gap-[14px]">
             <div className="font-mono text-[11px] tracking-[0.14em] text-coral-deep uppercase" aria-live="polite">
               {t('found', { found, total: ITEMS.length })}

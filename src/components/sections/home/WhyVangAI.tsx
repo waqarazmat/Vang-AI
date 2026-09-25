@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Eyebrow } from '@/components/ui/Eyebrow';
+import { Reveal, RevealGroup, RevealItem } from '@/components/animations/Reveal';
 
 const ICONS = {
   belgium: (
@@ -34,15 +35,17 @@ export function WhyVangAI() {
   return (
     <section className="border-y border-ink/12 bg-paper">
       <div className="mx-auto max-w-[1200px] px-[40px] py-[72px]">
-        <Eyebrow>{t('eyebrow')}</Eyebrow>
-        <h2 className="mx-0 mt-[18px] mb-0 max-w-[24ch] text-[36px] leading-[1.05] font-[800] tracking-[-0.035em] text-balance">
-          {t('title')}
-        </h2>
-        <div className="mt-[30px] grid grid-cols-[repeat(auto-fit,minmax(min(230px,100%),1fr))] gap-[14px]">
+        <Reveal>
+          <Eyebrow>{t('eyebrow')}</Eyebrow>
+          <h2 className="mx-0 mt-[18px] mb-0 max-w-[24ch] text-[36px] leading-[1.05] font-[800] tracking-[-0.035em] text-balance">
+            {t('title')}
+          </h2>
+        </Reveal>
+        <RevealGroup className="mt-[30px] grid grid-cols-[repeat(auto-fit,minmax(min(230px,100%),1fr))] gap-[14px]">
           {(Object.keys(ICONS) as (keyof typeof ICONS)[]).map((key) => (
-            <div
+            <RevealItem
               key={key}
-              className="flex min-w-0 flex-col gap-[14px] rounded-[20px] border border-ink/12 bg-cream p-[24px]"
+              className="card-lift flex min-w-0 flex-col gap-[14px] rounded-[20px] border border-ink/12 bg-cream p-[24px]"
             >
               <div className="flex h-[46px] w-[46px] flex-none items-center justify-center rounded-[14px] bg-coral">
                 <svg
@@ -63,9 +66,9 @@ export function WhyVangAI() {
                 <div className="text-[19px] leading-[1.2] font-[800] tracking-[-0.022em]">{t(`${key}.title`)}</div>
                 <div className="mt-[6px] text-[15.5px] leading-[1.55] text-pretty text-ink/80">{t(`${key}.text`)}</div>
               </div>
-            </div>
+            </RevealItem>
           ))}
-        </div>
+        </RevealGroup>
       </div>
     </section>
   );

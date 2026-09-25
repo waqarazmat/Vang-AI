@@ -21,7 +21,7 @@ export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const link = (active: boolean) =>
-    `text-[16px] font-[600] transition-colors duration-[180ms] ease-[ease] hover:text-coral ${active ? 'text-coral' : 'text-ink'}`;
+    `nav-underline text-[16px] font-[600] transition-colors duration-[180ms] ease-[ease] hover:text-coral ${active ? 'text-coral' : 'text-ink'}`;
 
   return (
     <header className="sticky top-0 z-40 border-b border-ink/12 bg-cream/94 backdrop-blur-[10px]">

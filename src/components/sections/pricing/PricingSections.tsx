@@ -5,6 +5,7 @@ import { Eyebrow } from '@/components/ui/Eyebrow';
 import { ArrowRight } from '@/components/ui/icons';
 import { Faq, type FaqEntry } from '@/components/ui/Faq';
 import { CheckIcon } from '@/components/sections/product/listIcons';
+import { Reveal, RevealGroup, RevealItem } from '@/components/animations/Reveal';
 
 // Values from the design (VangAI Pricing.dc.html).
 
@@ -45,16 +46,16 @@ export function PricingIntro() {
       id="top"
       className="mx-auto grid max-w-[1200px] grid-cols-[repeat(auto-fit,minmax(min(320px,100%),1fr))] items-end gap-x-[64px] gap-y-[28px] px-[40px] pt-[80px] pb-[48px]"
     >
-      <div className="min-w-0">
+      <Reveal className="min-w-0">
         <Eyebrow>{t('eyebrow')}</Eyebrow>
         <h1 className="mx-0 mt-[24px] mb-0 max-w-[14ch] text-[66px] leading-[0.98] font-[800] tracking-[-0.042em] text-balance">
           {t('title')}
         </h1>
-      </div>
-      <div className="min-w-0">
+      </Reveal>
+      <Reveal className="min-w-0" delay={0.1}>
         <p className="m-0 max-w-[56ch] text-[18px] leading-[1.7] text-pretty text-ink/82">{t('lead')}</p>
         <div className="mt-[16px] font-mono text-[11px] tracking-[0.12em] text-amber uppercase">{t('terms')}</div>
-      </div>
+      </Reveal>
     </div>
   );
 }
@@ -72,8 +73,8 @@ function Plan({ plan }: { plan: (typeof PLANS)[number] }) {
   const bundle = plan.key === 'bundle';
   const items = t.raw(`plans.${plan.key}.items`) as string[];
   return (
-    <div
-      className={`relative flex min-w-0 flex-col gap-[16px] rounded-[24px] ${
+    <RevealItem
+      className={`card-lift relative flex min-w-0 flex-col gap-[16px] rounded-[24px] ${
         bundle
           ? 'border-[3px] border-coral bg-ink px-[26px] py-[28px] text-cream shadow-[0_24px_50px_rgba(216,90,48,0.28),0_6px_16px_rgba(43,33,24,0.12)]'
           : 'border border-ink/18 bg-cream px-[28px] py-[30px] text-ink'
@@ -133,7 +134,7 @@ function Plan({ plan }: { plan: (typeof PLANS)[number] }) {
           {t('requestQuote')} <ArrowRight />
         </Link>
       </div>
-    </div>
+    </RevealItem>
   );
 }
 
@@ -167,11 +168,11 @@ export function Plans() {
           ))}
         </div>
       </div>
-      <div className="grid grid-cols-[repeat(4,minmax(0,1fr))] items-stretch gap-[20px] max-1100:grid-cols-[repeat(2,minmax(0,1fr))] max-1100:gap-y-[32px] max-640:grid-cols-[minmax(0,1fr)]">
+      <RevealGroup className="grid grid-cols-[repeat(4,minmax(0,1fr))] items-stretch gap-[20px] max-1100:grid-cols-[repeat(2,minmax(0,1fr))] max-1100:gap-y-[32px] max-640:grid-cols-[minmax(0,1fr)]">
         {PLANS.map((plan) => (
           <Plan key={plan.key} plan={plan} />
         ))}
-      </div>
+      </RevealGroup>
       <div className="mt-[20px] flex flex-wrap items-center gap-x-[20px] gap-y-[12px] rounded-[18px] border border-dashed border-coral/55 bg-paper px-[24px] py-[18px]">
         <span className="flex-none rounded-[99px] bg-coral px-[12px] py-[6px] font-mono text-[10.5px] tracking-[0.14em] text-white uppercase">
           {t('addon.badge')}
@@ -190,12 +191,12 @@ export function SupportBand() {
   return (
     <section className="bg-ink text-cream">
       <div className="mx-auto grid max-w-[1200px] grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] items-start gap-x-[64px] gap-y-[24px] px-[40px] py-[72px]">
-        <div className="min-w-0">
+        <Reveal className="min-w-0">
           <Eyebrow onDark>{t('eyebrow')}</Eyebrow>
           <h2 className="mx-0 mt-[18px] mb-0 max-w-[16ch] text-[38px] leading-[1.05] font-[800] tracking-[-0.035em] text-balance text-cream">
             {t('title')}
           </h2>
-        </div>
+        </Reveal>
         <p className="m-0 min-w-0 text-[18px] leading-[1.7] text-pretty text-cream/86">{t('text')}</p>
       </div>
     </section>
@@ -211,16 +212,20 @@ export function SetupOptions() {
   const p = useTranslations('pricing');
   return (
     <div className="mx-auto max-w-[1200px] px-[40px] pt-[80px] pb-[72px]">
-      <Eyebrow>{t('eyebrow')}</Eyebrow>
-      <h2 className="mx-0 mt-[18px] mb-0 max-w-[22ch] text-[40px] leading-[1.05] font-[800] tracking-[-0.035em] text-balance">
-        {t('title')}
-      </h2>
-      <p className="mx-0 mt-[18px] mb-0 max-w-[60ch] text-[18px] leading-[1.7] text-pretty text-ink/80">{t('lead')}</p>
-      <div className="mt-[30px] grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] items-stretch gap-[20px]">
+      <Reveal>
+        <Eyebrow>{t('eyebrow')}</Eyebrow>
+        <h2 className="mx-0 mt-[18px] mb-0 max-w-[22ch] text-[40px] leading-[1.05] font-[800] tracking-[-0.035em] text-balance">
+          {t('title')}
+        </h2>
+        <p className="mx-0 mt-[18px] mb-0 max-w-[60ch] text-[18px] leading-[1.7] text-pretty text-ink/80">
+          {t('lead')}
+        </p>
+      </Reveal>
+      <RevealGroup className="mt-[30px] grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] items-stretch gap-[20px]">
         {options.map(({ key, recommended }) => (
-          <div
+          <RevealItem
             key={key}
-            className={`flex min-w-0 flex-col gap-[14px] rounded-[24px] p-[30px] ${
+            className={`card-lift flex min-w-0 flex-col gap-[14px] rounded-[24px] p-[30px] ${
               recommended ? 'border-[2px] border-coral bg-paper' : 'border border-ink/18 bg-cream'
             }`}
           >
@@ -253,9 +258,9 @@ export function SetupOptions() {
                 </Link>
               )}
             </div>
-          </div>
+          </RevealItem>
         ))}
-      </div>
+      </RevealGroup>
     </div>
   );
 }
@@ -265,13 +270,15 @@ export function PricingFaq() {
   return (
     <section className="border-y border-ink/12 bg-sand">
       <div className="mx-auto max-w-[1200px] px-[40px] py-[88px]">
-        <Eyebrow>{t('eyebrow')}</Eyebrow>
-        <h2 className="mx-0 mt-[18px] mb-0 max-w-[22ch] text-[40px] leading-[1.05] font-[800] tracking-[-0.035em] text-balance">
-          {t('title')}
-        </h2>
-        <div className="mt-[30px] max-w-[880px]">
+        <Reveal>
+          <Eyebrow>{t('eyebrow')}</Eyebrow>
+          <h2 className="mx-0 mt-[18px] mb-0 max-w-[22ch] text-[40px] leading-[1.05] font-[800] tracking-[-0.035em] text-balance">
+            {t('title')}
+          </h2>
+        </Reveal>
+        <Reveal className="mt-[30px] max-w-[880px]" delay={0.1}>
           <Faq entries={t.raw('items') as FaqEntry[]} variant="light" />
-        </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -38,7 +38,7 @@ export default async function ProductPage({ params }: PageProps<'/[locale]/produ
       <ProductSection channel="chat" side={<ChatSideCard />} demo={<WebChatDemo />} bordered />
       <DoneForYou />
       <ProductFaq />
-      <CtaBand title={t('title')} text={t('text')} cta={t('button')} />
+      <CtaBand title={t('title')} text={t('text')} cta={t('button')} tone="coral" />
     </main>
   );
 }

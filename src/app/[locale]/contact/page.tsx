@@ -44,7 +44,7 @@ export default async function ContactPage({ params }: PageProps<'/[locale]/conta
         </div>
       </div>
       <ContactPanels buildDate={buildDate.toISOString()} />
-      <CtaBand title={t('cta.title')} text={t('cta.text')} cta={t('cta.button')} />
+      <CtaBand title={t('cta.title')} text={t('cta.text')} cta={t('cta.button')} tone="coral" />
     </main>
   );
 }

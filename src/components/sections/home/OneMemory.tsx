@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Mark } from '@/components/ui/Mark';
 import { PauseOffscreen } from '@/components/animations/PauseOffscreen';
+import { Reveal } from '@/components/animations/Reveal';
 
 // Burst icons from the design (stroke icons in coral, WhatsApp filled green).
 const Phone = () => (
@@ -99,11 +100,15 @@ export function OneMemory() {
   const t = useTranslations('home.memory');
   return (
     <PauseOffscreen className="mx-auto max-w-[1200px] px-[40px] py-[88px]">
-      <h2 className="m-0 max-w-[22ch] text-[40px] leading-[1.1] font-[800] tracking-[-0.032em] text-balance">
-        {t('title')}
-      </h2>
-      <p className="mx-0 mt-[16px] mb-0 max-w-[60ch] text-[18px] leading-[1.7] text-pretty text-ink/78">{t('lead')}</p>
-      <div className="mt-[14px] font-mono text-[11px] tracking-[0.12em] text-amber uppercase">{t('hint')}</div>
+      <Reveal>
+        <h2 className="m-0 max-w-[22ch] text-[40px] leading-[1.1] font-[800] tracking-[-0.032em] text-balance">
+          {t('title')}
+        </h2>
+        <p className="mx-0 mt-[16px] mb-0 max-w-[60ch] text-[18px] leading-[1.7] text-pretty text-ink/78">
+          {t('lead')}
+        </p>
+        <div className="mt-[14px] font-mono text-[11px] tracking-[0.12em] text-amber uppercase">{t('hint')}</div>
+      </Reveal>
       <div className="vg-memgrid mt-[44px] grid grid-cols-[minmax(100px,1fr)_minmax(56px,84px)_minmax(100px,1fr)_minmax(56px,84px)_minmax(100px,1fr)] items-center gap-[16px]">
         <div className="flex min-w-0 flex-col gap-[10px]">
           <Card title={t('phone')} sub={t('phoneSub')} icons={[Phone]} />

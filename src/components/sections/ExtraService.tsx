@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { ButtonLink } from '@/components/ui/ButtonLink';
 import { Eyebrow } from '@/components/ui/Eyebrow';
+import { Reveal } from '@/components/animations/Reveal';
 
 // "No website yet? We build those too." dark card (design: Home and Pricing).
 // Approved fix: stacks with 24px padding at 480px and below (no sideways scroll).
@@ -8,7 +9,7 @@ export function ExtraService() {
   const t = useTranslations('extraService');
   return (
     <div className="mx-auto max-w-[1200px] px-[40px] pb-[88px]">
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] items-center gap-x-[40px] gap-y-[28px] rounded-[24px] bg-ink p-[40px] text-cream max-480:grid-cols-[minmax(0,1fr)] max-480:p-[24px]">
+      <Reveal className="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] items-center gap-x-[40px] gap-y-[28px] rounded-[24px] bg-ink p-[40px] text-cream max-480:grid-cols-[minmax(0,1fr)] max-480:p-[24px]">
         <div className="min-w-0">
           <Eyebrow onDark>{t('eyebrow')}</Eyebrow>
           <div className="mt-[14px] text-[30px] leading-[1.1] font-[800] tracking-[-0.03em] text-cream">
@@ -50,7 +51,7 @@ export function ExtraService() {
             <div className="text-[14px] leading-[1.5] text-cream/75">{t('note')}</div>
           </div>
         </div>
-      </div>
+      </Reveal>
     </div>
   );
 }

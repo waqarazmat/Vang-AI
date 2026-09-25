@@ -32,7 +32,7 @@ export default async function PricingPage({ params }: PageProps<'/[locale]/prici
       <SetupOptions />
       <ExtraService />
       <PricingFaq />
-      <CtaBand title={t('title')} text={t('text')} cta={t('button')} />
+      <CtaBand title={t('title')} text={t('text')} cta={t('button')} tone="coral" />
     </main>
   );
 }

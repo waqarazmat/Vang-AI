@@ -1,5 +1,6 @@
 import { ButtonLink } from '@/components/ui/ButtonLink';
-import { Mark } from '@/components/ui/Mark';
+import { CatchMark } from '@/components/animations/CatchMark';
+import { Reveal } from '@/components/animations/Reveal';
 
 /**
  * Closing call to action with the large cream mark (design: every page, before the footer).
@@ -23,7 +24,7 @@ export function CtaBand({
           tone === 'coral' ? 'bg-coral' : 'bg-ink'
         }`}
       >
-        <div className="flex min-w-0 flex-col items-start">
+        <Reveal className="flex min-w-0 flex-col items-start">
           <h2 className="m-0 max-w-[20ch] text-[48px] leading-[1.02] font-[800] tracking-[-0.04em] text-balance text-cream">
             {title}
           </h2>
@@ -33,9 +34,9 @@ export function CtaBand({
           <ButtonLink href="/contact" variant={tone === 'coral' ? 'dark' : 'primaryOnDark'}>
             {cta}
           </ButtonLink>
-        </div>
+        </Reveal>
         <div className="flex min-w-0 justify-center">
-          <Mark size={180} tone="cream" />
+          <CatchMark size={180} dotClass={tone === 'coral' ? 'bg-cream' : 'bg-coral'} />
         </div>
       </div>
     </div>

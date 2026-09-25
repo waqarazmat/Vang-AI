@@ -42,6 +42,9 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
   return (
     <html lang={htmlLang[locale]} className={`${archivo.variable} ${plexMono.variable}`}>
       <body>
+        <noscript>
+          <style>{'.reveal,.reveal-item{opacity:1!important;transform:none!important}'}</style>
+        </noscript>
         <NextIntlClientProvider>
           <MotionProvider>
             <div className="min-h-screen">
