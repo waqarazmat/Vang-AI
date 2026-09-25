@@ -4,5 +4,25 @@
       "title": "VangAI | Ne manquez plus jamais un client",
       "description": "Un seul assistant pour votre téléphone, WhatsApp et le chat de votre site. Il répond en néerlandais, français et anglais, prend les rendez-vous et nous l’installons pour vous. Basés à Hasselt."
     }
+  },
+  "nav": {
+    "home": "Accueil VangAI",
+    "product": "Produit",
+    "pricing": "Tarifs",
+    "about": "À propos",
+    "bookCall": "Réserver un appel",
+    "language": "Langue"
+  },
+  "footer": {
+    "voiceTagline": "Votre téléphone, toujours décroché.",
+    "messageTagline": "Des réponses WhatsApp en quelques secondes.",
+    "chatTagline": "Des réponses sur votre site, 24 h/24, 7 j/7.",
+    "seeProduct": "Voir le produit",
+    "contact": "Contact",
+    "privacy": "Confidentialité",
+    "cookies": "Cookies",
+    "terms": "Conditions",
+    "dataPrivacy": "Données et vie privée",
+    "copyright": "© 2026 VangAI, Hasselt, Belgique, {companyNumber}"
   }
 }

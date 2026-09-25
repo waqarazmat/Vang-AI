@@ -4,5 +4,25 @@
       "title": "VangAI | Never miss a customer again",
       "description": "One assistant that answers your phone, WhatsApp and website chat, in Dutch, French and English. Set up and run for you, from €50 a month."
     }
+  },
+  "nav": {
+    "home": "VangAI home",
+    "product": "Product",
+    "pricing": "Pricing",
+    "about": "About us",
+    "bookCall": "Book a call",
+    "language": "Language"
+  },
+  "footer": {
+    "voiceTagline": "Your phone, answered every time.",
+    "messageTagline": "WhatsApp replies within seconds.",
+    "chatTagline": "Answers on your website, 24/7.",
+    "seeProduct": "See product",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "cookies": "Cookies",
+    "terms": "Terms",
+    "dataPrivacy": "Data & privacy",
+    "copyright": "© 2026 VangAI, Hasselt, Belgium, {companyNumber}"
   }
 }

@@ -43,6 +43,14 @@
 @custom-variant max-480 (@media (max-width: 480px));
 
 @layer base {
+  /* Borders only where a width is set (the design never relies on default borders).
+     Without this, border-style: solid would switch on 3px "medium" borders on every side. */
+  *,
+  ::before,
+  ::after {
+    border-width: 0;
+    border-style: solid;
+  }
   body {
     margin: 0;
     background: var(--color-cream);

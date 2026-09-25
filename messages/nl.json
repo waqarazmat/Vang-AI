@@ -4,5 +4,25 @@
       "title": "VangAI | Mis nooit meer een klant",
       "description": "Eén assistent die je telefoon, WhatsApp en websitechat beantwoordt, in het Nederlands, Frans en Engels. Wij zetten het op en houden het draaiende, vanaf €50 per maand."
     }
+  },
+  "nav": {
+    "home": "VangAI home",
+    "product": "Product",
+    "pricing": "Prijzen",
+    "about": "Over ons",
+    "bookCall": "Plan een gesprek",
+    "language": "Taal"
+  },
+  "footer": {
+    "voiceTagline": "Je telefoon, altijd beantwoord.",
+    "messageTagline": "WhatsApp-antwoorden binnen enkele seconden.",
+    "chatTagline": "Antwoorden op je website, 24/7.",
+    "seeProduct": "Bekijk product",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "cookies": "Cookies",
+    "terms": "Voorwaarden",
+    "dataPrivacy": "Data & privacy",
+    "copyright": "© 2026 VangAI, Hasselt, België, {companyNumber}"
   }
 }

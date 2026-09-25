@@ -165,7 +165,9 @@ export async function openPage(browser, url, { viewport, lang, isDesign, pageKey
   await page.clock.setFixedTime(new Date('2026-09-24T10:00:00+02:00'));
   const errors = [];
   page.on('pageerror', (e) => errors.push(String(e)));
-  await page.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
+  await page.goto(url, { waitUntil: 'load', timeout: 60000 });
+  // Background prefetches can keep a request open; idle is best effort, settle() decides.
+  await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {});
   await page.evaluate(() => document.fonts.ready);
   // The design's i18n re-applies for ~5s after boot; wait it out, then wait until
   // the page stops changing (text, size, layout) for a full second.
