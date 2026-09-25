@@ -46,7 +46,7 @@ export function VoiceSideCard() {
           onClick={toggle}
           aria-label={muted ? t('unmute') : t('mute')}
           aria-pressed={!muted}
-          className={`flex h-[34px] w-[34px] cursor-pointer items-center justify-center rounded-[50%] border border-cream/35 transition-[background] duration-[180ms] ease-[ease] ${
+          className={`box-content flex h-[34px] w-[34px] cursor-pointer items-center justify-center rounded-[50%] border border-cream/35 p-0 transition-[background] duration-[180ms] ease-[ease] ${
             muted ? 'bg-cream/8' : 'bg-coral'
           }`}
         >
