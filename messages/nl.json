@@ -111,6 +111,45 @@
       "booked": "Geboekt",
       "endLabel": "Elke oproep beantwoord",
       "endTitle": "Mis nooit meer een klant."
+    },
+    "how": {
+      "eyebrow": "/ Zo werkt het",
+      "title": "Wij zetten het op. Wij houden het draaiende. Jij krijgt je tijd terug.",
+      "lead": "Je schrijft geen script, stelt niets in en beheert niets. VangChat staat meestal binnen een paar werkdagen live. VangMessage en VangVoice duren meestal één tot twee weken, omdat WhatsApp en telefoonnummers goedgekeurd en doorgeschakeld moeten worden."
+    },
+    "memory": {
+      "title": "Eén geheugen, niets twee keer uitleggen.",
+      "lead": "Een klant die gisteren belde en vandaag een WhatsApp stuurt, hoeft niet opnieuw uit te leggen wie hij is. VangAI herkent het gesprek, op elk kanaal.",
+      "hint": "Beweeg over een vak en zie het werken",
+      "phone": "Telefoon",
+      "phoneSub": "Klant belt",
+      "whatsappSub": "Klant stuurt bericht",
+      "chat": "Webchat",
+      "chatSub": "Bezoeker vraagt",
+      "hubSub": "ÉÉN GEHEUGEN",
+      "calendar": "Je agenda",
+      "calendarSub": "Afspraak geboekt",
+      "inbox": "Je inbox",
+      "inboxSub": "Samenvatting ontvangen"
+    }
+  },
+  "steps": {
+    "hint": "Beweeg voor de volgende stap",
+    "call": {
+      "title": "Een kort gesprek over je zaak",
+      "text": "We leren je diensten, prijzen, openingsuren en de manier waarop je met klanten praat kennen."
+    },
+    "build": {
+      "title": "We bouwen het rond jouw zaak",
+      "text": "Daarop bouwen we je assistent, en we koppelen hem aan je agenda en kanalen."
+    },
+    "test": {
+      "title": "We testen het samen met jou",
+      "text": "Je belt ernaar, stuurt berichten en probeert het uit te dagen. We sturen bij tot het klinkt als jouw zaak."
+    },
+    "live": {
+      "title": "Het gaat live en wij houden het draaiende",
+      "text": "We verwerken elke week je aanpassingen, sturen je elke maand een rapport en zijn er wanneer je ons nodig hebt."
     }
   }
 }

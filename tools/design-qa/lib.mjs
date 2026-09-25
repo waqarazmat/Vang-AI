@@ -176,6 +176,18 @@ export async function openPage(browser, url, { viewport, lang, isDesign, pageKey
     // The design runtime sometimes drops the garage engine's first state update on load
     // (the counter then shows the wrong label). Its engine re-renders on 'vang-lang'.
     await page.evaluate(() => window.dispatchEvent(new Event('vang-lang')));
+    // The design's i18n script re-applies stored text for 5s after boot and can revert the
+    // garage counter label after the engine changed it, leaving "0" + coral styling next to
+    // the pre-VangAI label. Restore the label that belongs to the counter's current state.
+    await page.evaluate(() => {
+      const label = [...document.querySelectorAll('span')].find(
+        (el) => /Missed customers/i.test(el.textContent || '') && el.parentElement?.children.length === 2,
+      );
+      if (!label) return;
+      const fixed = getComputedStyle(label.parentElement).backgroundColor.includes('216, 90, 48');
+      const en = fixed ? 'Missed customers with VangAI' : 'Missed customers';
+      label.textContent = window.VangT ? window.VangT(en) : en;
+    });
   }
   await settle(page);
   await page.addStyleTag({ content: FREEZE_CSS });

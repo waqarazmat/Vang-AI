@@ -245,3 +245,113 @@
     animation: none !important;
   }
 }
+
+/* "One memory" hover bursts, hub pulse and flowing arrows (design: VangAI Home.dc.html).
+   In the components layer so a card's own utilities win, like the design's inline styles. */
+@keyframes vg-out {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.55);
+  }
+  22% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(1);
+  }
+}
+@keyframes vg-in {
+  0% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(1);
+  }
+  28% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.45);
+  }
+}
+@keyframes vg-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+@keyframes vg-flow {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 40px 0;
+  }
+}
+@layer components {
+  .vg-flow {
+    animation: vg-flow 2.6s linear infinite;
+  }
+  .vg-card {
+    transition:
+      transform 260ms ease,
+      border-color 200ms ease;
+  }
+  .vg-card .vg-fx {
+    opacity: 0;
+    transition: opacity 220ms ease;
+  }
+  .vg-card:not(.vg-hub):hover {
+    transform: scale(1.07);
+    z-index: 3;
+  }
+  .vg-card:not(.vg-hub):hover .vg-fx {
+    opacity: 1;
+  }
+  .vg-card:not(.vg-hub) .vg-fx span {
+    animation-duration: 1100ms !important;
+  }
+  .vg-hub .vg-fx {
+    opacity: 0.55;
+  }
+  .vg-hub .vg-fx span {
+    animation-duration: 3600ms !important;
+  }
+  .vg-hub:hover .vg-fx {
+    opacity: 1;
+  }
+  .vg-hub:hover .vg-fx span {
+    animation-duration: 620ms !important;
+  }
+  .vg-hub:hover {
+    animation: vg-pulse 900ms ease-in-out infinite;
+  }
+  .vg-hub:hover ~ .vg-arr .vg-flow,
+  .vg-memgrid:has(.vg-hub:hover) .vg-flow {
+    animation-duration: 500ms;
+  }
+  @media (max-width: 760px) {
+    .vg-memgrid {
+      grid-template-columns: minmax(0, 1fr) !important;
+    }
+    .vg-arr {
+      transform: rotate(90deg);
+      height: 44px !important;
+      width: 84px;
+      justify-self: center;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .vg-card .vg-fx span,
+    .vg-flow,
+    .vg-hub:hover {
+      animation: none !important;
+    }
+    .vg-card .vg-fx {
+      opacity: 0 !important;
+    }
+  }
+}

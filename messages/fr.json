@@ -111,6 +111,45 @@
       "booked": "Réservé",
       "endLabel": "Chaque appel décroché",
       "endTitle": "Ne manquez plus aucun client."
+    },
+    "how": {
+      "eyebrow": "/ Comment ça marche",
+      "title": "Nous l’installons. Nous le gérons. Vous récupérez votre temps.",
+      "lead": "Vous n’écrivez aucun script, ne configurez rien et ne gérez rien au quotidien. VangChat est généralement en ligne en quelques jours ouvrables. VangMessage et VangVoice prennent en général une à deux semaines, car WhatsApp et les numéros de téléphone doivent être validés et transférés."
+    },
+    "memory": {
+      "title": "Une seule mémoire, rien à répéter.",
+      "lead": "Un client qui a appelé hier et écrit sur WhatsApp aujourd’hui n’a pas à se présenter à nouveau. VangAI reconnaît la conversation, sur chaque canal.",
+      "hint": "Survolez un bloc pour le voir fonctionner",
+      "phone": "Téléphone",
+      "phoneSub": "Un client appelle",
+      "whatsappSub": "Un client écrit",
+      "chat": "Chat web",
+      "chatSub": "Un visiteur demande",
+      "hubSub": "UNE MÉMOIRE",
+      "calendar": "Votre agenda",
+      "calendarSub": "Rendez-vous réservé",
+      "inbox": "Votre boîte mail",
+      "inboxSub": "Résumé reçu"
+    }
+  },
+  "steps": {
+    "hint": "Survolez pour l’étape suivante",
+    "call": {
+      "title": "Un court appel sur votre entreprise",
+      "text": "Nous apprenons à connaître vos services, vos prix, vos heures d’ouverture et votre façon de parler à vos clients."
+    },
+    "build": {
+      "title": "Nous le construisons autour de votre entreprise",
+      "text": "Nous construisons votre assistant sur cette base et le connectons à votre agenda et à vos canaux."
+    },
+    "test": {
+      "title": "Nous le testons avec vous",
+      "text": "Vous l’appelez, lui écrivez et essayez de le piéger. Nous ajustons jusqu’à ce qu’il sonne comme votre entreprise."
+    },
+    "live": {
+      "title": "Il passe en ligne et nous le faisons tourner",
+      "text": "Nous faisons vos mises à jour chaque semaine, vous envoyons un rapport chaque mois et sommes là quand vous avez besoin de nous."
     }
   }
 }

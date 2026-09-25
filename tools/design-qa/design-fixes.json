@@ -4,10 +4,10 @@
     {
       "id": "home-body-font",
       "pages": ["home"],
-      "css": "body{font-family:Archivo,Helvetica,sans-serif}",
-      "reason": "A stray closing </div> in 'VangAI Home.dc.html' (after the 'The good news?' block) closes the Archivo font wrapper early, so 69 body texts below it fall back to Times New Roman. All other pages and the brand guide use Archivo for body text.",
-      "build": "Body text uses Archivo everywhere.",
-      "approved": "2026-09-25 by the user"
+      "css": "body{font-family:Archivo,Helvetica,sans-serif;color:#2B2118}",
+      "reason": "A stray closing </div> in 'VangAI Home.dc.html' (after the 'The good news?' block) closes the page wrapper early. That wrapper set the font (Archivo) and the text colour (#2B2118), so below it 69 texts fall back to Times New Roman and headings without their own colour fall back to pure black. All other pages and the brand guide use Archivo and #2B2118.",
+      "build": "Body text uses Archivo and the brand dark #2B2118 everywhere.",
+      "approved": "2026-09-25 by the user (font); colour is the same bug, applied 2026-09-25"
     },
     {
       "id": "mobile-heading-scale",

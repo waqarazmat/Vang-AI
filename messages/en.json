@@ -111,6 +111,45 @@
       "booked": "Booked",
       "endLabel": "Every call answered",
       "endTitle": "Never miss another customer."
+    },
+    "how": {
+      "eyebrow": "/ How it works",
+      "title": "We set it up. We run it. You get your time back.",
+      "lead": "You do not write a script, configure anything or manage it day to day. VangChat is usually live within a few working days. VangMessage and VangVoice usually take one to two weeks, because WhatsApp and phone numbers need approval and forwarding."
+    },
+    "memory": {
+      "title": "One memory, no repeating yourself.",
+      "lead": "A customer who called yesterday and messages on WhatsApp today does not have to explain who they are again. VangAI recognises the conversation, across every channel.",
+      "hint": "Hover a box to see it work",
+      "phone": "Phone",
+      "phoneSub": "Customer calls",
+      "whatsappSub": "Customer messages",
+      "chat": "Web chat",
+      "chatSub": "Visitor asks",
+      "hubSub": "ONE MEMORY",
+      "calendar": "Your calendar",
+      "calendarSub": "Appointment booked",
+      "inbox": "Your inbox",
+      "inboxSub": "Summary received"
+    }
+  },
+  "steps": {
+    "hint": "Hover for the next step",
+    "call": {
+      "title": "A short call about your business",
+      "text": "We get to know your services, prices, opening hours and the way you talk to customers."
+    },
+    "build": {
+      "title": "We build it around your business",
+      "text": "We build your assistant on that, and connect it to your calendar and channels."
+    },
+    "test": {
+      "title": "We test it with you",
+      "text": "You call it, message it and try to break it. We adjust until it sounds like your business."
+    },
+    "live": {
+      "title": "It goes live and we keep it running",
+      "text": "We make your updates every week, send you a report every month and are there when you need us."
     }
   }
 }

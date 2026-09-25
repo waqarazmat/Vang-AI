@@ -12,12 +12,22 @@ const browser = await launch();
 const rows = [];
 for (const key of keys) {
   for (const vp of ['desktop', 'mobile']) {
-    const { ctx, page } = await openPage(browser, designUrl(server, pages[key]), { viewport: VIEWPORTS[vp], lang: 'en', isDesign: true, pageKey: key });
+    const { ctx, page } = await openPage(browser, designUrl(server, pages[key]), {
+      viewport: VIEWPORTS[vp],
+      lang: 'en',
+      isDesign: true,
+      pageKey: key,
+    });
     const found = await page.evaluate(() =>
       [...document.querySelectorAll('body *')]
         .filter((el) => el.style.getPropertyPriority('color') === 'important')
         .map((el) => ({
-          text: [...el.childNodes].filter((n) => n.nodeType === 3).map((n) => n.data).join('').trim().slice(0, 60),
+          text: [...el.childNodes]
+            .filter((n) => n.nodeType === 3)
+            .map((n) => n.data)
+            .join('')
+            .trim()
+            .slice(0, 60),
           to: el.style.getPropertyValue('color'),
           size: getComputedStyle(el).fontSize,
         })),
