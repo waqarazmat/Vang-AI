@@ -3,6 +3,46 @@
     "home": {
       "title": "VangAI | Never miss a customer again",
       "description": "One assistant that answers your phone, WhatsApp and website chat, in Dutch, French and English. Set up and run for you, from €50 a month."
+    },
+    "product": {
+      "title": "VangVoice, VangMessage and VangChat | VangAI",
+      "description": "One assistant for your phone, WhatsApp and website chat. Answers in Dutch, French and English, books appointments and is set up and run for you."
+    },
+    "pricing": {
+      "title": "Pricing | VangAI",
+      "description": "Simple monthly pricing from €50 a month, excl. VAT. VangChat, VangMessage, VangVoice or the bundle, set up and run for you."
+    },
+    "about": {
+      "title": "About us | VangAI",
+      "description": "We build the front desk small businesses never had time for. Based in Hasselt, working with businesses across Belgium."
+    },
+    "privacy": {
+      "title": "Privacy policy | VangAI",
+      "description": "How VangAI handles personal data of website visitors and people who contact us."
+    },
+    "cookies": {
+      "title": "Cookie policy | VangAI",
+      "description": "VangAI does not use tracking or advertising cookies. Here is what the site does store and why."
+    },
+    "terms": {
+      "title": "Terms of service | VangAI",
+      "description": "The terms between VangAI and the businesses we work for."
+    },
+    "dataPrivacy": {
+      "title": "Data & privacy | VangAI",
+      "description": "What VangAI stores, why, where and for how long. Your customer data belongs to your business."
+    },
+    "contact": {
+      "title": "Contact | VangAI",
+      "description": "Book a short call with VangAI or send us a message. We reply within one working day."
+    },
+    "notFound": {
+      "title": "Page not found | VangAI",
+      "description": "This page does not exist, or it has moved."
+    },
+    "og": {
+      "channels": "PHONE · WHATSAPP · WEBSITE CHAT",
+      "alt": "VangAI | Never miss a customer again"
     }
   },
   "nav": {
@@ -295,5 +335,572 @@
     "from": "From",
     "cta": "Request a quote",
     "note": "Bigger builds quoted on the call."
+  },
+  "product": {
+    "eyebrow": "/ Product",
+    "title": "One assistant, three channels",
+    "lead": "Pick the channels your customers actually use. Take one, or connect all three into one system with one memory.",
+    "seeProduct": "See product",
+    "cards": {
+      "voice": "Your phone, answered every time.",
+      "whatsapp": "Your WhatsApp, answered in seconds.",
+      "chat": "Your website, answered while they browse."
+    },
+    "from": "from",
+    "vat": "excl. VAT",
+    "seePricing": "See pricing",
+    "voice": {
+      "eyebrow": "/ VangVoice",
+      "lead": "Your phone, answered every time. Even when you are under a car, with a client or closed for the day.",
+      "bullets": [
+        "Natural voice in Dutch, French and English",
+        "Keep your current phone number",
+        "Usually live in one to two weeks"
+      ],
+      "demoLabel": "Live demo · press call and talk",
+      "price": "€100 per month",
+      "side": {
+        "label": "No waiting",
+        "caller": "Caller",
+        "note": "The answer comes straight back",
+        "unmute": "Unmute demo call",
+        "mute": "Mute demo call"
+      },
+      "doesTitle": "What VangVoice does",
+      "does": [
+        "Answers your phone when you cannot, day and night",
+        "Talks naturally in Dutch, French and English",
+        "Books appointments during the call, straight into your calendar",
+        "Answers questions about prices, opening hours and services",
+        "Emails you a summary after every call: who called, what they wanted and what they booked",
+        "Passes urgent calls to you with the details",
+        "Adds a call button to your website so visitors can talk to it straight away"
+      ],
+      "whyTitle": "Why the phone still matters",
+      "why": [
+        "For urgent things, people still pick up the phone",
+        "Many customers, especially older ones, would rather talk than type",
+        "A missed call is usually a customer who calls the next business on the list",
+        "A voice that answers straight away feels like good service, not a machine"
+      ]
+    },
+    "whatsapp": {
+      "eyebrow": "/ VangMessage",
+      "lead": "Your WhatsApp, answered within seconds. Evenings and weekends included.",
+      "bullets": [
+        "Works on your WhatsApp Business number",
+        "Replies in Dutch, French and English",
+        "Usually live in one to two weeks"
+      ],
+      "demoLabel": "Live demo · tap a question or type",
+      "price": "€75 per month",
+      "side": {
+        "label": "Replies in seconds",
+        "question": "Can I come by on Friday?",
+        "answer": "Yes, 11:00 is free. Shall I book it for you?",
+        "badge": "Replied in 3 seconds",
+        "note": "A WhatsApp in, an answer out"
+      },
+      "doesTitle": "What VangMessage does",
+      "does": [
+        "Answers on your WhatsApp Business number within seconds",
+        "Replies in Dutch, French and English",
+        "Books appointments, with reminders as an add-on (free in the bundle)",
+        "Answers questions about prices, availability and opening hours",
+        "Hands the conversation to you when a person is needed",
+        "Emails you a summary after every conversation: who got in touch, what they wanted and what they booked",
+        "Adds a WhatsApp button to your website so visitors can start a chat in one tap"
+      ],
+      "whyTitle": "Why WhatsApp matters",
+      "why": [
+        "More and more people would rather send a message than call",
+        "WhatsApp is the app your customers already open every day",
+        "Customers can message outside opening hours without feeling they are disturbing you",
+        "A quick reply is often what decides who gets the job"
+      ]
+    },
+    "chat": {
+      "eyebrow": "/ VangChat",
+      "lead": "Answers on your website, straight away. Like the chat on this page.",
+      "bullets": [
+        "Fits your website’s look",
+        "Speaks Dutch, French and English",
+        "Usually live within a few working days"
+      ],
+      "demoLabel": "Live demo · tap a question or type",
+      "price": "€50 per month",
+      "side": {
+        "label": "Answers while they browse",
+        "question": "Do you fit winter tyres?",
+        "answer": "Yes, from €45 per tyre, fitted. Want a slot this week?",
+        "badge": "Answered in 2 seconds",
+        "note": "A visitor asks, the answer is already there"
+      },
+      "doesTitle": "What VangChat does",
+      "does": [
+        "Answers visitors on your website straight away, 24/7",
+        "Speaks Dutch, French and English",
+        "Takes bookings and collects contact details",
+        "Answers the questions people usually email or call about",
+        "Sends you the conversation when a person is needed",
+        "Emails you a summary after every conversation: who got in touch, what they wanted and what they booked",
+        "Fits your website’s look and does not slow it down"
+      ],
+      "whyTitle": "Why website chat matters",
+      "why": [
+        "Visitors want an answer now, not a contact form they wait days on",
+        "Most people visit your site outside opening hours",
+        "Every visitor who leaves with a question is a customer you never hear from",
+        "A good answer at the right moment turns a visitor into a booking"
+      ]
+    },
+    "done": {
+      "eyebrow": "/ Done for you",
+      "title": "Built around your business, not a template",
+      "text": "We do not hand you a standard bot and wish you luck. We build your assistant around your services, your prices and the way you talk to customers. Need more than one channel? We connect phone, WhatsApp and website chat into one system with one memory. No website yet? We build that too. One partner for your whole front desk, with one goal: more customers and more revenue for your business.",
+      "items": [
+        "Tailored to your services, prices and tone",
+        "Connected to the calendar you already use",
+        "Phone, WhatsApp, website chat, and a website if you need one",
+        "We stay with you: weekly updates, support and a monthly report"
+      ],
+      "cta": "Book a call"
+    },
+    "faq": {
+      "eyebrow": "/ FAQ",
+      "title": "Questions per channel",
+      "voice": [
+        {
+          "q": "What does it sound like?",
+          "a": "A natural, calm voice. Try it yourself in the demo at the top of this page."
+        },
+        {
+          "q": "What if the caller wants a real person?",
+          "a": "It takes their details and passes them to you right away, marked as urgent if needed."
+        },
+        {
+          "q": "Does it pick up every call?",
+          "a": "You choose: only when you do not answer, outside opening hours, or always."
+        },
+        {
+          "q": "Can callers leave a message?",
+          "a": "Yes, and you get it as a written summary instead of a voicemail you have to listen to."
+        }
+      ],
+      "whatsapp": [
+        {
+          "q": "Do I need WhatsApp Business?",
+          "a": "Yes, and if you do not have it yet, we set it up for you."
+        },
+        {
+          "q": "Can I still reply myself?",
+          "a": "Always. You can step into any conversation and the assistant stops."
+        },
+        {
+          "q": "Does it send reminders?",
+          "a": "Yes, it can remind customers of their appointment the day before."
+        },
+        {
+          "q": "What about photos and voice notes?",
+          "a": "It passes them to you straight away, with a summary of the conversation so far."
+        }
+      ],
+      "chat": [
+        {
+          "q": "Does it slow down my website?",
+          "a": "No. It loads after your page and is built to stay light."
+        },
+        {
+          "q": "Does it work with my website?",
+          "a": "It works with almost every website, including WordPress, Wix, Shopify and custom sites."
+        },
+        {
+          "q": "What happens outside opening hours?",
+          "a": "It keeps answering and booking, and you see everything the next morning."
+        },
+        {
+          "q": "Can it collect contact details?",
+          "a": "Yes, name, phone and email, sent straight to you."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Wondering which channel fits you?",
+      "text": "A short call, no sales pitch. We will tell you honestly if it is not a fit.",
+      "button": "Book a call"
+    }
+  },
+  "pricing": {
+    "eyebrow": "/ Pricing",
+    "title": "Simple monthly pricing",
+    "lead": "Every business is different. A garage with ten calls a day needs something different from a clinic with a hundred. That is why we show a starting price. On a short call we look at how your customers reach you, and you get a fixed monthly price. No surprises after that, and no cost per call or per message.",
+    "terms": "All prices excl. VAT. Minimum term 3 months.",
+    "includesTitle": "Every plan includes",
+    "includes": [
+      "Bookings straight into your calendar",
+      "Email summary after every conversation",
+      "Monthly report",
+      "Weekly updates",
+      "Set up by us, support whenever you need it"
+    ],
+    "from": "from",
+    "perMonth": "per month",
+    "requestQuote": "Request a quote",
+    "recommended": "Recommended",
+    "plans": {
+      "chat": {
+        "price": "€50",
+        "items": [
+          "AI assistant on your website, answers 24/7",
+          "Dutch, French and English",
+          "Hands over to you when a person is needed"
+        ]
+      },
+      "whatsapp": {
+        "price": "€75",
+        "items": [
+          "AI assistant on your WhatsApp Business number",
+          "Replies within seconds, in three languages",
+          "WhatsApp button for your website"
+        ]
+      },
+      "voice": {
+        "price": "€100",
+        "items": [
+          "Answers your phone, you keep your number",
+          "Natural voice in Dutch, French and English",
+          "Call button for your website"
+        ]
+      },
+      "bundle": {
+        "name": "The bundle",
+        "price": "€200",
+        "items": [
+          "Everything in VangVoice, VangMessage and VangChat",
+          "One memory across all channels",
+          "Appointment reminders included (worth €25 per month)",
+          "2 updates per week instead of 1",
+          "One report for all channels",
+          "Priority support"
+        ],
+        "save": "Save €50 a month compared to buying everything separately."
+      }
+    },
+    "addon": {
+      "badge": "Add-on",
+      "title": "Appointment reminders.",
+      "text": "Automatic reminders before every appointment, so fewer customers forget. +€25 per month on any single plan. Included free in the bundle."
+    },
+    "support": {
+      "eyebrow": "/ Always by your side",
+      "title": "We do not disappear after launch",
+      "text": "Your assistant is never finished. We keep it up to date with your weekly changes, fix anything that needs fixing and send you a report every month so you see exactly what it brings in. Questions or problems? You reach a real person who knows your setup."
+    },
+    "setup": {
+      "eyebrow": "/ Setup",
+      "title": "Two ways to get started",
+      "lead": "The setup is a one-off cost, quoted on the call once we know what your business needs.",
+      "onQuote": "On quote",
+      "option1": {
+        "label": "Option 01",
+        "title": "We build it for you",
+        "text": "We set up everything from start to finish: we learn your business, write the conversations, connect your channels and calendar, test it with you and launch it. You do not lift a finger."
+      },
+      "option2": {
+        "label": "Option 02",
+        "title": "You build it yourself",
+        "text": "You get the system, our step-by-step guides and a setup call. You do the setup at your own pace, and we are there when you have questions."
+      }
+    },
+    "faq": {
+      "eyebrow": "/ FAQ",
+      "title": "Pricing questions",
+      "items": [
+        {
+          "q": "Why do you show a \"from\" price?",
+          "a": "Because the right setup depends on your business: how many channels, how many calls and messages, which calendar you use. After a short call you get one fixed monthly price."
+        },
+        {
+          "q": "Are there hidden costs?",
+          "a": "No. You pay the setup (on quote) and the fixed monthly price. No cost per call, per message or per booking."
+        },
+        {
+          "q": "Can I cancel anytime?",
+          "a": "We work with a minimum term of 3 months. Your customers need a little time to get used to a new way of reaching you, and after three months the numbers show clearly what the assistant brings in. After that you can cancel monthly."
+        },
+        {
+          "q": "Can I start with one channel and add more later?",
+          "a": "Yes. Many businesses start with one channel and add the others once they see the results. Switching to the bundle is always possible."
+        },
+        {
+          "q": "What is included in the setup?",
+          "a": "Everything needed to go live: learning your business, writing the conversations, connecting your channels and calendar, testing with you and launching."
+        },
+        {
+          "q": "What does \"an update\" mean?",
+          "a": "Any change to what your assistant knows or says: new prices, holiday hours, a new service, a different answer to a question. Send it to us and we make the change."
+        },
+        {
+          "q": "Can I try it first?",
+          "a": "Yes. On a short call we show you a demo built around your own business, free and without obligation."
+        },
+        {
+          "q": "Do you send appointment reminders?",
+          "a": "Yes. Your customers get a reminder before their appointment, so fewer people forget. It is an add-on for €25 a month, and included for free in the bundle."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Wondering what it would cost for you?",
+      "text": "A short call, no sales pitch. You get a fixed monthly price, and we will tell you honestly if it is not a fit.",
+      "button": "Book a call"
+    }
+  },
+  "about": {
+    "eyebrow": "/ About us",
+    "title": "We build the front desk small businesses never had time for.",
+    "lead": "Small businesses lose customers every day, not because they do bad work, but because nobody was free to answer. We fix that, without asking the owner to become a tech company.",
+    "mission": {
+      "eyebrow": "/ Our mission",
+      "text": "We build and personally set up one assistant that answers calls, WhatsApp messages and website chats for Belgian businesses, in the languages their customers actually speak, so the owner never has to configure or manage it."
+    },
+    "vision": {
+      "eyebrow": "/ Our vision",
+      "text": "A Belgium where no small business, whatever its size or technical skill, loses a customer because nobody was available to answer."
+    },
+    "values": {
+      "eyebrow": "/ What we believe",
+      "title": "Five things we will not compromise on",
+      "items": [
+        {
+          "title": "Done for you, always.",
+          "text": "We do the work, not you."
+        },
+        {
+          "title": "Human first.",
+          "text": "Every answer should sound like it came from someone who cares."
+        },
+        {
+          "title": "Local and in three languages.",
+          "text": "Dutch, French and English, based in Belgium, not a foreign self-service tool."
+        },
+        {
+          "title": "Honest over impressive.",
+          "text": "We never promise more than the assistant can do."
+        },
+        {
+          "title": "Your data is yours.",
+          "text": "GDPR from the start, not added afterwards."
+        }
+      ]
+    },
+    "how": {
+      "eyebrow": "/ How we work",
+      "title": "Four steps, and we do the work"
+    },
+    "contact": {
+      "eyebrow": "/ Contact",
+      "title": "Let’s talk",
+      "text": "Curious what VangAI could do for your business? Book a short call, or send us an email. We reply within one working day.",
+      "bookCall": "Book a call",
+      "based": "Based in Hasselt, working with businesses across Belgium."
+    },
+    "cta": {
+      "title": "Wondering if this fits your business?",
+      "text": "A short call, no sales pitch. We will tell you honestly if it is not a fit.",
+      "button": "Book a call"
+    }
+  },
+  "legal": {
+    "privacy": {
+      "eyebrow": "/ Privacy",
+      "title": "Privacy policy",
+      "lead": "How VangAI handles personal data about the people who visit this website and contact us.",
+      "sections": [
+        {
+          "title": "Who we are",
+          "text": "VangAI, Hasselt, Belgium, company number [company number]. We are the controller for the personal data described on this page. For data about your customers, handled by your assistant, see Data & privacy."
+        },
+        {
+          "title": "What we collect",
+          "text": "When you book a call or email us, we receive your name, business name, email address, phone number and whatever you choose to tell us about your business. This website does not use tracking or advertising cookies."
+        },
+        {
+          "title": "Why we use it",
+          "text": "To answer your question, prepare and hold the call you booked, send you a quote and, if you become a client, deliver our service. We do not sell your data and do not use it for anything else."
+        },
+        {
+          "title": "Legal basis",
+          "text": "Taking steps at your request before entering into a contract, performing our contract with you, and our legitimate interest in answering business enquiries."
+        },
+        {
+          "title": "Who we share it with",
+          "text": "Only the service providers we need to run our business, such as our booking tool and email provider. They process data on our instructions. [List of providers to confirm.]"
+        },
+        {
+          "title": "How long we keep it",
+          "text": "Enquiries that do not lead to a contract are deleted after 12 months. Client records are kept as long as the contract runs and afterwards for as long as Belgian law requires. [Periods to confirm.]"
+        },
+        {
+          "title": "Your rights",
+          "before": "You can ask to see, correct or delete your data, object to its use or ask for a copy. Email",
+          "after": ". You can also complain to the Belgian Data Protection Authority (Gegevensbeschermingsautoriteit)."
+        }
+      ]
+    },
+    "draft": "Draft, to be reviewed",
+    "cookies": {
+      "eyebrow": "/ Cookies",
+      "title": "Cookie policy",
+      "lead": "Which cookies this website uses and why.",
+      "sections": [
+        {
+          "title": "What cookies are",
+          "text": "Cookies are small files a website stores in your browser. Some are needed for the site to work, others track what you do. We only use what the site needs."
+        },
+        {
+          "title": "What we use",
+          "text": "This website does not set analytics, advertising or tracking cookies. It remembers your language choice (Dutch, French or English) in your own browser, and nothing about that leaves your device."
+        },
+        {
+          "title": "Booking a call",
+          "text": "When you click Book a call, you go to our booking tool. That tool may set its own cookies to make booking work. [Booking tool and its cookies to confirm.]"
+        },
+        {
+          "title": "Why there is no cookie banner",
+          "text": "Because we do not use non-essential cookies, there is nothing to ask permission for. If that changes, we will ask you first and update this page."
+        }
+      ]
+    },
+    "terms": {
+      "eyebrow": "/ Terms",
+      "title": "Terms of service",
+      "lead": "The agreement between VangAI and the businesses we work for.",
+      "sections": [
+        {
+          "title": "The service",
+          "text": "VangAI sets up and runs an assistant that answers phone calls, WhatsApp messages and website chats for your business. What is included is described in your quote and on the Pricing page."
+        },
+        {
+          "title": "Prices and payment",
+          "text": "All prices are excluding VAT. You pay a one-off setup fee (on quote) and a fixed monthly price, invoiced monthly. There are no costs per call, message or booking."
+        },
+        {
+          "title": "Term and cancellation",
+          "text": "The minimum term is 3 months. After that, the contract continues monthly and you can cancel with one month notice. [Notice period to confirm.]"
+        },
+        {
+          "title": "Your part",
+          "text": "You give us correct information about your business, prices and opening hours, and let us know when something changes. You stay responsible for the agreements you make with your customers."
+        },
+        {
+          "title": "Our part",
+          "text": "We keep your assistant running, make your updates, and tell you honestly when something does not work. If the assistant cannot answer a question, it passes it on to you instead of guessing."
+        },
+        {
+          "title": "Liability",
+          "text": "Our liability is limited to the amount you paid us in the three months before the event. [Clause to be reviewed by a lawyer.]"
+        },
+        {
+          "title": "Law and disputes",
+          "text": "Belgian law applies. Disputes go to the courts of Hasselt, after we have tried to solve it together first."
+        }
+      ]
+    },
+    "dataPrivacy": {
+      "eyebrow": "/ Data & privacy",
+      "title": "What happens to your customer conversations",
+      "lead": "In plain language: what your assistant stores, why, where, for how long, and who owns it. Short answer: you do.",
+      "sections": [
+        {
+          "title": "What we store",
+          "text": "The conversations your assistant has with your customers: call recordings or transcripts, WhatsApp and chat messages, and the details customers share, such as their name, phone number and what they need. Plus the bookings it makes in your calendar."
+        },
+        {
+          "title": "Why we store it",
+          "text": "So your assistant can do its job: book appointments, send you a summary, remember a customer across channels, and pass on questions it cannot answer. We also use it to write your monthly report. Nothing else."
+        },
+        {
+          "title": "Where it is stored",
+          "text": "On servers inside the European Union. [Hosting provider and location to confirm.]"
+        },
+        {
+          "title": "How long we keep it",
+          "text": "Conversations are kept for [period to confirm], then deleted automatically. Bookings stay in your own calendar for as long as you want them there."
+        },
+        {
+          "title": "Who owns it",
+          "text": "You do. Your customer data belongs to your business, not to us. It is never sold and never used to train other systems. When you stop working with us, you choose: we send you an export, or we delete everything."
+        },
+        {
+          "title": "Telling customers it is an assistant",
+          "text": "Your assistant says it is an AI in its first sentence. The law requires it, and we think it is simply honest."
+        },
+        {
+          "title": "Processing agreement",
+          "before": "We sign a data processing agreement with every client, as GDPR requires. Ask for a copy at",
+          "after": "."
+        },
+        {
+          "title": "Third parties involved",
+          "text": "We use a small number of carefully chosen providers for telephony, WhatsApp and language processing, all under GDPR agreements. [List to confirm.]"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Questions about this page?",
+      "text": "Ask us anything. We would rather explain it in plain words than hide behind legal text.",
+      "button": "Book a call"
+    }
+  },
+  "contact": {
+    "eyebrow": "/ Contact",
+    "title": "Let’s talk.",
+    "lead": "Pick a time that suits you, or send us a message.",
+    "emailDirect": "Or email us directly",
+    "booking": {
+      "label": "Book a call · 20 minutes",
+      "title": "Pick a day and time",
+      "prev": "Previous month",
+      "next": "Next month",
+      "dow": "MO,TU,WE,TH,FR,SA,SU",
+      "freeTimes": "Free times on {date}",
+      "pickDay": "Pick a day first",
+      "noTime": "No time picked yet",
+      "noted": "Noted. You will get a confirmation email with the video link.",
+      "confirm": "Book a call",
+      "note": "Only free times are shown. You get a confirmation email with a video link, an add-to-calendar option and a reminder before the call.",
+      "tz": "Times in Belgian time · Free and without obligation",
+      "iframeTitle": "Book a call"
+    },
+    "form": {
+      "label": "Send a message",
+      "title": "Prefer to write? We reply within one working day.",
+      "name": "Name",
+      "business": "Business name",
+      "email": "Email",
+      "phone": "Phone",
+      "optional": "(optional)",
+      "message": "Message",
+      "placeholder": "Tell us a little about your business",
+      "send": "Send message",
+      "sending": "Sending…",
+      "sent": "Thanks. We will get back to you within one working day.",
+      "error": "Something went wrong. Please try again, or email us directly.",
+      "privacyBefore": "We only use your details to answer your message. See",
+      "privacyLink": "Privacy"
+    },
+    "cta": {
+      "title": "Never miss another customer.",
+      "text": "A short call, no sales pitch. We will tell you honestly if it is not a fit.",
+      "button": "Book a call"
+    }
+  },
+  "notFound": {
+    "eyebrow": "/ 404",
+    "title": "We could not find that page.",
+    "lead": "The link may be out of date, or the page has moved. Everything else is right where it was.",
+    "home": "Back to home",
+    "bookCall": "Book a call"
   }
 }

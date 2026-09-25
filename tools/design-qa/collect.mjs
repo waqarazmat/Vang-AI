@@ -177,9 +177,11 @@ export function collectContrast() {
       .trim();
     // WCAG exemptions: decorative (aria-hidden), single symbols (icon rules, 3:1), disabled controls.
     if (own.length < 2 || el.closest('[aria-hidden="true"]')) continue;
+    // Disabled controls, including text inside them (the design wraps dynamic text in spans).
+    const control = el.closest('[role=button],button');
     if (
-      el.matches('[role=button][tabindex="-1"],[disabled],[aria-disabled="true"]') ||
-      (el.matches('[role=button]') && GCS(el).cursor === 'default')
+      el.closest('[disabled],[aria-disabled="true"]') ||
+      (control && (control.matches('[tabindex="-1"]') || GCS(control).cursor === 'default'))
     )
       continue;
     const cs = GCS(el);

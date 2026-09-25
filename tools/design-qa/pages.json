@@ -49,7 +49,7 @@
         "name": "faq-show-more",
         "steps": [
           {
-            "click": "Show more questions"
+            "click": "re:^Show more questions"
           }
         ]
       },

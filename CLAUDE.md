@@ -52,7 +52,7 @@ Design QA tooling lives in `tools/design-qa/` (see its README). `design-fixes.js
 
 All are in `tools/design-qa/design-fixes.json` with exact values; the build must implement them and match everything else exactly.
 
-- **Home body font and colour**: body text is Archivo and #2B2118 everywhere (a stray `</div>` in the export made Home's lower text Times New Roman and its headings pure black).
+- **Home page wrapper**: body text is Archivo and #2B2118 everywhere and the header stays pinned on every page (a stray `</div>` in the export made Home's lower text Times New Roman, its headings pure black, and its header scroll away).
 - **No sideways scroll on phones (360px and up)**: long headings scale (`min(Npx, K vw)`), auto-fit grids use `minmax(min(Npx, 100%), 1fr)`, the "No website yet?" card stacks at 480px or less, and the Product demo side cards fit. Tablet and desktop are verified pixel-identical to the design.
 - **Small-text contrast (WCAG AA 4.5:1)**: coral-text `#A83D1B` on light backgrounds, `#E8763F` on dark, step numbers `#EC8150`, translucent text opacity raised in 0.05 steps until it passes.
 - **Kept as designed**: buttons and all text on coral `#D85A30` (white/cream) stay exactly as in the design, by the user's decision (listed under `accepted` in design-fixes.json).

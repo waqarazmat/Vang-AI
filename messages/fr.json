@@ -3,6 +3,46 @@
     "home": {
       "title": "VangAI | Ne manquez plus jamais un client",
       "description": "Un seul assistant pour votre téléphone, WhatsApp et le chat de votre site. Il répond en néerlandais, français et anglais, prend les rendez-vous et nous l’installons pour vous. Basés à Hasselt."
+    },
+    "product": {
+      "title": "VangVoice, VangMessage et VangChat | VangAI",
+      "description": "Un seul assistant pour votre téléphone, WhatsApp et le chat de votre site. Il répond en néerlandais, français et anglais, prend les rendez-vous, et nous l’installons et le gérons pour vous."
+    },
+    "pricing": {
+      "title": "Tarifs | VangAI",
+      "description": "Des tarifs mensuels simples, à partir de 50 € par mois hors TVA. Aucun frais par appel ou par message. Mise en place et suivi par nos soins."
+    },
+    "about": {
+      "title": "À propos | VangAI",
+      "description": "Nous construisons l’accueil que les petites entreprises n’ont jamais eu le temps d’organiser. Basés à Hasselt, actifs dans toute la Belgique."
+    },
+    "privacy": {
+      "title": "Politique de confidentialité | VangAI",
+      "description": "Comment VangAI traite les données personnelles des personnes qui visitent ce site et nous contactent."
+    },
+    "cookies": {
+      "title": "Politique en matière de cookies | VangAI",
+      "description": "Les cookies utilisés par ce site, et pourquoi."
+    },
+    "terms": {
+      "title": "Conditions générales | VangAI",
+      "description": "Les accords entre VangAI et les entreprises pour lesquelles nous travaillons."
+    },
+    "dataPrivacy": {
+      "title": "Données et vie privée | VangAI",
+      "description": "Ce que votre assistant conserve, pourquoi, où, combien de temps, et à qui cela appartient."
+    },
+    "contact": {
+      "title": "Contact | VangAI",
+      "description": "Réservez un appel de 20 minutes ou envoyez-nous un message. Nous répondons dans un délai d’un jour ouvrable."
+    },
+    "notFound": {
+      "title": "Page introuvable | VangAI",
+      "description": "Cette page n’existe pas, ou elle a été déplacée."
+    },
+    "og": {
+      "channels": "TÉLÉPHONE · WHATSAPP · CHAT DU SITE",
+      "alt": "VangAI | Ne manquez plus jamais un client"
     }
   },
   "nav": {
@@ -295,5 +335,572 @@
     "from": "À partir de",
     "cta": "Demander un devis",
     "note": "Projets plus importants sur devis, lors de l’appel."
+  },
+  "product": {
+    "eyebrow": "/ Produit",
+    "title": "Un assistant, trois canaux",
+    "lead": "Choisissez les canaux que vos clients utilisent vraiment. Prenez-en un, ou reliez les trois en un seul système avec une seule mémoire.",
+    "seeProduct": "Voir le produit",
+    "cards": {
+      "voice": "Votre téléphone, toujours décroché.",
+      "whatsapp": "Votre WhatsApp, une réponse en quelques secondes.",
+      "chat": "Votre site, une réponse pendant qu’ils naviguent."
+    },
+    "from": "à partir de",
+    "vat": "hors TVA",
+    "seePricing": "Voir les tarifs",
+    "voice": {
+      "eyebrow": "/ VangVoice",
+      "lead": "Votre téléphone, toujours décroché. Même quand vous êtes sous une voiture, avec un client ou déjà fermé.",
+      "bullets": [
+        "Voix naturelle en néerlandais, français et anglais",
+        "Vous gardez votre numéro actuel",
+        "En ligne en général en une à deux semaines"
+      ],
+      "demoLabel": "Démo en direct · appelez et parlez",
+      "price": "100 € par mois",
+      "side": {
+        "label": "Sans attente",
+        "caller": "Appelant",
+        "note": "La réponse arrive tout de suite",
+        "unmute": "Activer le son de la démo",
+        "mute": "Couper le son de la démo"
+      },
+      "doesTitle": "Ce que fait VangVoice",
+      "does": [
+        "Répond au téléphone quand vous ne pouvez pas, jour et nuit",
+        "Parle naturellement néerlandais, français et anglais",
+        "Prend les rendez-vous pendant l’appel, directement dans votre agenda",
+        "Répond aux questions sur vos prix, vos heures d’ouverture et vos services",
+        "Vous envoie un résumé après chaque appel : qui a appelé, ce qu’il voulait et ce qu’il a réservé",
+        "Vous transmet les appels urgents avec les détails",
+        "Ajoute un bouton d’appel sur votre site pour que les visiteurs puissent lui parler tout de suite"
+      ],
+      "whyTitle": "Pourquoi le téléphone compte toujours",
+      "why": [
+        "Pour l’urgent, les gens prennent encore leur téléphone",
+        "Beaucoup de clients, surtout les plus âgés, préfèrent parler plutôt qu’écrire",
+        "Un appel manqué, c’est souvent un client qui appelle l’entreprise suivante sur la liste",
+        "Une voix qui répond tout de suite, c’est un bon service, pas une machine"
+      ]
+    },
+    "whatsapp": {
+      "eyebrow": "/ VangMessage",
+      "lead": "Votre WhatsApp, une réponse en quelques secondes. Soirs et week-ends compris.",
+      "bullets": [
+        "Fonctionne sur votre numéro WhatsApp Business",
+        "Répond en néerlandais, français et anglais",
+        "En ligne en général en une à deux semaines"
+      ],
+      "demoLabel": "Démo en direct · touchez une question ou écrivez",
+      "price": "75 € par mois",
+      "side": {
+        "label": "Répond en quelques secondes",
+        "question": "Je peux passer vendredi ?",
+        "answer": "Oui, 11 h est libre. Je vous le réserve ?",
+        "badge": "Réponse en 3 secondes",
+        "note": "Un WhatsApp arrive, une réponse repart"
+      },
+      "doesTitle": "Ce que fait VangMessage",
+      "does": [
+        "Répond en quelques secondes sur votre numéro WhatsApp Business",
+        "Répond en néerlandais, français et anglais",
+        "Prend les rendez-vous, avec des rappels en option (offerts dans le pack)",
+        "Répond aux questions sur vos prix, vos disponibilités et vos heures d’ouverture",
+        "Vous passe la conversation quand une personne est nécessaire",
+        "Vous envoie un résumé après chaque conversation : qui vous a contacté, ce qu’il voulait et ce qu’il a réservé",
+        "Ajoute un bouton WhatsApp sur votre site pour démarrer une conversation en un geste"
+      ],
+      "whyTitle": "Pourquoi WhatsApp compte",
+      "why": [
+        "De plus en plus de gens préfèrent envoyer un message plutôt qu’appeler",
+        "WhatsApp est l’appli que vos clients ouvrent déjà tous les jours",
+        "Vos clients peuvent écrire en dehors des heures d’ouverture sans avoir l’impression de déranger",
+        "Une réponse rapide décide souvent qui décroche le travail"
+      ]
+    },
+    "chat": {
+      "eyebrow": "/ VangChat",
+      "lead": "Répond tout de suite sur votre site. Comme le chat de cette page.",
+      "bullets": [
+        "S’accorde au style de votre site",
+        "Parle néerlandais, français et anglais",
+        "En ligne en général en quelques jours ouvrables"
+      ],
+      "demoLabel": "Démo en direct · touchez une question ou écrivez",
+      "price": "50 € par mois",
+      "side": {
+        "label": "Répond pendant qu’ils naviguent",
+        "question": "Vous montez des pneus hiver ?",
+        "answer": "Oui, à partir de 45 € le pneu, montage compris. Un créneau cette semaine ?",
+        "badge": "Réponse en 2 secondes",
+        "note": "Un visiteur pose sa question, la réponse est déjà là"
+      },
+      "doesTitle": "Ce que fait VangChat",
+      "does": [
+        "Répond tout de suite aux visiteurs de votre site, 24 h/24",
+        "Parle néerlandais, français et anglais",
+        "Prend les réservations et recueille les coordonnées",
+        "Répond aux questions pour lesquelles on vous écrit ou vous appelle d’habitude",
+        "Vous transmet la conversation quand une personne est nécessaire",
+        "Vous envoie un résumé après chaque conversation : qui vous a contacté, ce qu’il voulait et ce qu’il a réservé",
+        "S’accorde au style de votre site sans le ralentir"
+      ],
+      "whyTitle": "Pourquoi le chat sur votre site compte",
+      "why": [
+        "Les visiteurs veulent une réponse maintenant, pas un formulaire qui les fait attendre des jours",
+        "La plupart des gens visitent votre site en dehors des heures d’ouverture",
+        "Chaque visiteur qui part avec une question est un client dont vous n’entendrez jamais parler",
+        "Une bonne réponse au bon moment transforme un visiteur en réservation"
+      ]
+    },
+    "done": {
+      "eyebrow": "/ On s’occupe de tout",
+      "title": "Construit autour de votre entreprise, pas sur un modèle",
+      "text": "Nous ne vous donnons pas un robot standard en vous souhaitant bonne chance. Nous construisons votre assistant autour de vos services, de vos prix et de votre façon de parler aux clients. Besoin de plusieurs canaux ? Nous relions téléphone, WhatsApp et chat du site en un seul système avec une seule mémoire. Pas encore de site ? Nous le créons aussi. Un seul partenaire pour tout votre accueil, avec un objectif : plus de clients et plus de chiffre d’affaires pour votre entreprise.",
+      "items": [
+        "Adapté à vos services, vos prix et votre ton",
+        "Connecté à l’agenda que vous utilisez déjà",
+        "Téléphone, WhatsApp, chat du site, et un site si vous en avez besoin",
+        "Nous restons à vos côtés : mises à jour hebdomadaires, support et rapport mensuel"
+      ],
+      "cta": "Réserver un appel"
+    },
+    "faq": {
+      "eyebrow": "/ Questions fréquentes",
+      "title": "Questions par canal",
+      "voice": [
+        {
+          "q": "À quoi ressemble sa voix ?",
+          "a": "Une voix naturelle et calme. Essayez vous-même avec la démo en haut de cette page."
+        },
+        {
+          "q": "Et si l’appelant veut parler à une vraie personne ?",
+          "a": "Il note ses coordonnées et vous les transmet tout de suite, marquées urgentes si nécessaire."
+        },
+        {
+          "q": "Répond-il à chaque appel ?",
+          "a": "C’est vous qui choisissez : seulement quand vous ne répondez pas, en dehors des heures d’ouverture, ou toujours."
+        },
+        {
+          "q": "Les appelants peuvent-ils laisser un message ?",
+          "a": "Oui, et vous le recevez sous forme de résumé écrit plutôt qu’un message vocal à écouter."
+        }
+      ],
+      "whatsapp": [
+        {
+          "q": "Ai-je besoin de WhatsApp Business ?",
+          "a": "Oui, et si vous ne l’avez pas encore, nous le configurons pour vous."
+        },
+        {
+          "q": "Puis-je encore répondre moi-même ?",
+          "a": "Toujours. Vous pouvez reprendre n’importe quelle conversation et l’assistant s’arrête."
+        },
+        {
+          "q": "Envoie-t-il des rappels ?",
+          "a": "Oui, il peut rappeler leur rendez-vous aux clients la veille."
+        },
+        {
+          "q": "Et les photos et messages vocaux ?",
+          "a": "Il vous les transmet tout de suite, avec un résumé de la conversation jusque-là."
+        }
+      ],
+      "chat": [
+        {
+          "q": "Est-ce que cela ralentit mon site ?",
+          "a": "Non. Il se charge après votre page et reste léger."
+        },
+        {
+          "q": "Fonctionne-t-il avec mon site ?",
+          "a": "Il fonctionne avec presque tous les sites, y compris WordPress, Wix, Shopify et les sites sur mesure."
+        },
+        {
+          "q": "Que se passe-t-il en dehors des heures d’ouverture ?",
+          "a": "Il continue à répondre et à réserver, et vous voyez tout le lendemain matin."
+        },
+        {
+          "q": "Peut-il recueillir des coordonnées ?",
+          "a": "Oui, nom, téléphone et e-mail, envoyés directement chez vous."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Vous vous demandez quel canal vous convient ?",
+      "text": "Un court appel, sans baratin commercial. Nous vous dirons honnêtement si ce n’est pas pour vous.",
+      "button": "Réserver un appel"
+    }
+  },
+  "pricing": {
+    "eyebrow": "/ Tarifs",
+    "title": "Des tarifs mensuels simples",
+    "lead": "Chaque entreprise est différente. Un garage avec dix appels par jour n’a pas les mêmes besoins qu’un cabinet qui en reçoit cent. C’est pourquoi nous affichons un prix de départ. Lors d’un court appel, nous regardons comment vos clients vous contactent, et vous recevez un prix mensuel fixe. Pas de surprise ensuite, et aucun frais par appel ou par message.",
+    "terms": "Tous les prix hors TVA. Durée minimale de 3 mois.",
+    "includesTitle": "Chaque formule comprend",
+    "includes": [
+      "Réservations directement dans votre agenda",
+      "Résumé par e-mail après chaque conversation",
+      "Rapport mensuel",
+      "Mises à jour hebdomadaires",
+      "Installé par nous, support dès que vous en avez besoin"
+    ],
+    "from": "à partir de",
+    "perMonth": "par mois",
+    "requestQuote": "Demander un devis",
+    "recommended": "Recommandé",
+    "plans": {
+      "chat": {
+        "price": "€50",
+        "items": [
+          "Assistant IA sur votre site, répond 24 h/24",
+          "Néerlandais, français et anglais",
+          "Vous passe la main quand une personne est nécessaire"
+        ]
+      },
+      "whatsapp": {
+        "price": "€75",
+        "items": [
+          "Assistant IA sur votre numéro WhatsApp Business",
+          "Répond en quelques secondes, en trois langues",
+          "Bouton WhatsApp pour votre site"
+        ]
+      },
+      "voice": {
+        "price": "€100",
+        "items": [
+          "Répond à votre téléphone, vous gardez votre numéro",
+          "Voix naturelle en néerlandais, français et anglais",
+          "Bouton d’appel pour votre site"
+        ]
+      },
+      "bundle": {
+        "name": "Le pack",
+        "price": "€200",
+        "items": [
+          "Tout VangVoice, VangMessage et VangChat",
+          "Une seule mémoire pour tous les canaux",
+          "Rappels de rendez-vous inclus (valeur 25 € par mois)",
+          "2 mises à jour par semaine au lieu d’une",
+          "Un seul rapport pour tous les canaux",
+          "Support prioritaire"
+        ],
+        "save": "Économisez 50 € par mois par rapport à l’achat séparé."
+      }
+    },
+    "addon": {
+      "badge": "Option",
+      "title": "Rappels de rendez-vous.",
+      "text": "Des rappels automatiques avant chaque rendez-vous, pour que moins de clients oublient. +25 € par mois sur chaque formule individuelle. Offert dans le pack."
+    },
+    "support": {
+      "eyebrow": "/ Toujours à vos côtés",
+      "title": "Nous ne disparaissons pas après le lancement",
+      "text": "Votre assistant n’est jamais terminé. Nous le tenons à jour avec vos changements hebdomadaires, réglons ce qui doit l’être et vous envoyons un rapport chaque mois pour que vous voyiez exactement ce qu’il rapporte. Une question ou un souci ? Vous tombez sur une vraie personne qui connaît votre configuration."
+    },
+    "setup": {
+      "eyebrow": "/ Mise en place",
+      "title": "Deux façons de démarrer",
+      "lead": "La mise en place est un coût unique, sur devis lors de l’appel, une fois que nous savons ce dont votre entreprise a besoin.",
+      "onQuote": "Sur devis",
+      "option1": {
+        "label": "Option 01",
+        "title": "Nous le construisons pour vous",
+        "text": "Nous installons tout, du début à la fin : nous apprenons à connaître votre entreprise, écrivons les conversations, connectons vos canaux et votre agenda, testons avec vous et lançons. Vous n’avez rien à faire."
+      },
+      "option2": {
+        "label": "Option 02",
+        "title": "Vous le construisez vous-même",
+        "text": "Vous recevez le système, nos guides pas à pas et un appel de démarrage. Vous faites la mise en place à votre rythme, et nous sommes là pour vos questions."
+      }
+    },
+    "faq": {
+      "eyebrow": "/ Questions fréquentes",
+      "title": "Questions sur les tarifs",
+      "items": [
+        {
+          "q": "Pourquoi afficher un prix « à partir de » ?",
+          "a": "Parce que la bonne configuration dépend de votre entreprise : combien de canaux, combien d’appels et de messages, quel agenda vous utilisez. Après un court appel, vous recevez un prix mensuel fixe."
+        },
+        {
+          "q": "Y a-t-il des frais cachés ?",
+          "a": "Non. Vous payez la mise en place (sur devis) et le prix mensuel fixe. Aucun frais par appel, par message ou par réservation."
+        },
+        {
+          "q": "Puis-je résilier à tout moment ?",
+          "a": "Nous travaillons avec une durée minimale de 3 mois. Vos clients ont besoin d’un peu de temps pour s’habituer à une nouvelle façon de vous joindre, et après trois mois, les chiffres montrent clairement ce que l’assistant rapporte. Ensuite, vous pouvez résilier chaque mois."
+        },
+        {
+          "q": "Puis-je commencer avec un canal et en ajouter plus tard ?",
+          "a": "Oui. Beaucoup d’entreprises commencent avec un canal et ajoutent les autres quand elles voient les résultats. Passer au pack est toujours possible."
+        },
+        {
+          "q": "Que comprend la mise en place ?",
+          "a": "Tout ce qu’il faut pour être en ligne : connaître votre entreprise, écrire les conversations, connecter vos canaux et votre agenda, tester avec vous et lancer."
+        },
+        {
+          "q": "Qu’entendez-vous par « une mise à jour » ?",
+          "a": "Tout changement dans ce que votre assistant sait ou dit : nouveaux prix, horaires de congés, un nouveau service, une autre réponse à une question. Envoyez-le-nous et nous faisons le changement."
+        },
+        {
+          "q": "Puis-je d’abord l’essayer ?",
+          "a": "Oui. Lors d’un court appel, nous vous montrons une démo construite autour de votre entreprise, gratuitement et sans engagement."
+        },
+        {
+          "q": "Envoyez-vous des rappels de rendez-vous ?",
+          "a": "Oui. Vos clients reçoivent un rappel avant leur rendez-vous, pour que moins de personnes oublient. C’est une option à 25 € par mois, offerte dans le pack."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Vous vous demandez combien cela vous coûterait ?",
+      "text": "Un court appel, sans baratin commercial. Vous recevez un prix mensuel fixe, et nous vous dirons honnêtement si ce n’est pas pour vous.",
+      "button": "Réserver un appel"
+    }
+  },
+  "about": {
+    "eyebrow": "/ À propos",
+    "title": "Nous construisons l’accueil que les petites entreprises n’ont jamais eu le temps d’organiser.",
+    "lead": "Les petites entreprises perdent des clients chaque jour, non pas parce qu’elles travaillent mal, mais parce que personne n’était libre pour répondre. Nous réglons cela, sans demander au patron de devenir une entreprise tech.",
+    "mission": {
+      "eyebrow": "/ Notre mission",
+      "text": "Nous construisons et installons personnellement un assistant qui répond aux appels, aux messages WhatsApp et aux chats du site pour les entreprises belges, dans les langues que parlent vraiment leurs clients, pour que le patron n’ait jamais rien à configurer ni à gérer."
+    },
+    "vision": {
+      "eyebrow": "/ Notre vision",
+      "text": "Une Belgique où aucune petite entreprise, quelle que soit sa taille ou son aisance technique, ne perd un client parce que personne n’était disponible pour répondre."
+    },
+    "values": {
+      "eyebrow": "/ Ce en quoi nous croyons",
+      "title": "Cinq points sur lesquels nous ne transigeons pas",
+      "items": [
+        {
+          "title": "Toujours fait pour vous.",
+          "text": "C’est nous qui travaillons, pas vous."
+        },
+        {
+          "title": "L’humain d’abord.",
+          "text": "Chaque réponse doit sonner comme venant de quelqu’un qui s’en soucie."
+        },
+        {
+          "title": "Local et en trois langues.",
+          "text": "Néerlandais, français et anglais, depuis la Belgique, pas un outil étranger en libre-service."
+        },
+        {
+          "title": "Honnête plutôt qu’impressionnant.",
+          "text": "Nous ne promettons jamais plus que ce que l’assistant sait faire."
+        },
+        {
+          "title": "Vos données sont à vous.",
+          "text": "Le RGPD dès le départ, pas ajouté après coup."
+        }
+      ]
+    },
+    "how": {
+      "eyebrow": "/ Notre façon de travailler",
+      "title": "Quatre étapes, et c’est nous qui travaillons"
+    },
+    "contact": {
+      "eyebrow": "/ Contact",
+      "title": "Parlons-en",
+      "text": "Curieux de voir ce que VangAI peut faire pour votre entreprise ? Réservez un court appel ou envoyez-nous un e-mail. Nous répondons dans un délai d’un jour ouvrable.",
+      "bookCall": "Réserver un appel",
+      "based": "Basés à Hasselt, au service d’entreprises dans toute la Belgique."
+    },
+    "cta": {
+      "title": "Vous vous demandez si cela convient à votre entreprise ?",
+      "text": "Un court appel, sans baratin commercial. Nous vous dirons honnêtement si ce n’est pas pour vous.",
+      "button": "Réserver un appel"
+    }
+  },
+  "legal": {
+    "privacy": {
+      "eyebrow": "/ Confidentialité",
+      "title": "Politique de confidentialité",
+      "lead": "Comment VangAI traite les données personnelles des personnes qui visitent ce site et nous contactent.",
+      "sections": [
+        {
+          "title": "Qui nous sommes",
+          "text": "VangAI, Hasselt, Belgique, numéro d’entreprise {companyNumber}. Nous sommes responsables du traitement des données personnelles décrites sur cette page. Pour les données de vos clients, traitées par votre assistant, voir Données et vie privée."
+        },
+        {
+          "title": "Ce que nous collectons",
+          "text": "Quand vous réservez un appel ou nous écrivez, nous recevons votre nom, le nom de votre entreprise, votre adresse e-mail, votre numéro de téléphone et ce que vous choisissez de nous dire sur votre entreprise. Ce site n’utilise pas de cookies de suivi ni publicitaires."
+        },
+        {
+          "title": "Pourquoi nous les utilisons",
+          "text": "Pour répondre à votre question, préparer et mener l’appel réservé, vous envoyer un devis et, si vous devenez client, fournir notre service. Nous ne vendons pas vos données et ne les utilisons à aucune autre fin."
+        },
+        {
+          "title": "Base légale",
+          "text": "Les mesures prises à votre demande avant la conclusion d’un contrat, l’exécution de notre contrat avec vous, et notre intérêt légitime à répondre aux demandes professionnelles."
+        },
+        {
+          "title": "Avec qui nous les partageons",
+          "text": "Uniquement avec les prestataires nécessaires au fonctionnement de notre entreprise, comme notre outil de réservation et notre fournisseur e-mail. Ils traitent les données selon nos instructions. [Liste des prestataires à confirmer.]"
+        },
+        {
+          "title": "Combien de temps nous les conservons",
+          "text": "Les demandes qui n’aboutissent pas à un contrat sont supprimées après 12 mois. Les données clients sont conservées pendant toute la durée du contrat, puis aussi longtemps que la loi belge l’exige. [Délais à confirmer.]"
+        },
+        {
+          "title": "Vos droits",
+          "before": "Vous pouvez demander à consulter, corriger ou supprimer vos données, vous opposer à leur utilisation ou en demander une copie. Écrivez à",
+          "after": ". Vous pouvez aussi introduire une plainte auprès de l’Autorité de protection des données."
+        }
+      ]
+    },
+    "draft": "Projet, à relire",
+    "cookies": {
+      "eyebrow": "/ Cookies",
+      "title": "Politique en matière de cookies",
+      "lead": "Les cookies utilisés par ce site, et pourquoi.",
+      "sections": [
+        {
+          "title": "Ce que sont les cookies",
+          "text": "Les cookies sont de petits fichiers qu’un site enregistre dans votre navigateur. Certains sont nécessaires au fonctionnement du site, d’autres suivent ce que vous faites. Nous n’utilisons que ce dont le site a besoin."
+        },
+        {
+          "title": "Ce que nous utilisons",
+          "text": "Ce site ne place aucun cookie analytique, publicitaire ou de suivi. Il retient votre choix de langue (néerlandais, français ou anglais) dans votre propre navigateur, et rien de cela ne quitte votre appareil."
+        },
+        {
+          "title": "Réserver un appel",
+          "text": "Quand vous cliquez sur Réserver un appel, vous arrivez sur notre outil de réservation. Cet outil peut placer ses propres cookies pour que la réservation fonctionne. [Outil de réservation et cookies à confirmer.]"
+        },
+        {
+          "title": "Pourquoi il n’y a pas de bannière cookies",
+          "text": "Comme nous n’utilisons pas de cookies non essentiels, il n’y a rien à vous demander. Si cela change, nous vous demanderons d’abord votre accord et mettrons cette page à jour."
+        }
+      ]
+    },
+    "terms": {
+      "eyebrow": "/ Conditions",
+      "title": "Conditions générales",
+      "lead": "Les accords entre VangAI et les entreprises pour lesquelles nous travaillons.",
+      "sections": [
+        {
+          "title": "Le service",
+          "text": "VangAI installe et fait tourner un assistant qui répond aux appels, aux messages WhatsApp et aux chats du site pour votre entreprise. Ce qui est inclus est décrit dans votre devis et sur la page Tarifs."
+        },
+        {
+          "title": "Prix et paiement",
+          "text": "Tous les prix sont hors TVA. Vous payez des frais de mise en place uniques (sur devis) et un prix mensuel fixe, facturé chaque mois. Il n’y a aucun frais par appel, message ou réservation."
+        },
+        {
+          "title": "Durée et résiliation",
+          "text": "La durée minimale est de 3 mois. Ensuite, le contrat se poursuit de mois en mois et vous pouvez résilier avec un préavis d’un mois. [Préavis à confirmer.]"
+        },
+        {
+          "title": "Votre part",
+          "text": "Vous nous donnez des informations correctes sur votre entreprise, vos prix et vos heures d’ouverture, et nous prévenez quand quelque chose change. Vous restez responsable des accords que vous passez avec vos clients."
+        },
+        {
+          "title": "Notre part",
+          "text": "Nous faisons tourner votre assistant, faisons vos mises à jour et vous disons honnêtement quand quelque chose ne fonctionne pas. Si l’assistant ne peut pas répondre à une question, il vous la transmet au lieu de deviner."
+        },
+        {
+          "title": "Responsabilité",
+          "text": "Notre responsabilité est limitée au montant que vous nous avez payé au cours des trois mois précédant l’incident. [Clause à faire relire par un juriste.]"
+        },
+        {
+          "title": "Droit applicable et litiges",
+          "text": "Le droit belge s’applique. Les litiges relèvent des tribunaux de Hasselt, après avoir d’abord cherché ensemble une solution."
+        }
+      ]
+    },
+    "dataPrivacy": {
+      "eyebrow": "/ Données et vie privée",
+      "title": "Ce que deviennent les conversations avec vos clients",
+      "lead": "En termes simples : ce que votre assistant conserve, pourquoi, où, combien de temps, et à qui cela appartient. Réponse courte : à vous.",
+      "sections": [
+        {
+          "title": "Ce que nous conservons",
+          "text": "Les conversations de votre assistant avec vos clients : enregistrements ou transcriptions d’appels, messages WhatsApp et chat, et les informations que les clients partagent, comme leur nom, leur numéro et ce dont ils ont besoin. Plus les réservations qu’il place dans votre agenda."
+        },
+        {
+          "title": "Pourquoi nous les conservons",
+          "text": "Pour que votre assistant puisse faire son travail : prendre des rendez-vous, vous envoyer un résumé, reconnaître un client d’un canal à l’autre et transmettre les questions auxquelles il ne peut pas répondre. Nous les utilisons aussi pour votre rapport mensuel. Rien d’autre."
+        },
+        {
+          "title": "Où elles sont conservées",
+          "text": "Sur des serveurs situés dans l’Union européenne. [Hébergeur et localisation à confirmer.]"
+        },
+        {
+          "title": "Combien de temps nous les conservons",
+          "text": "Les conversations sont conservées pendant [délai à confirmer], puis supprimées automatiquement. Les réservations restent dans votre agenda aussi longtemps que vous le souhaitez."
+        },
+        {
+          "title": "À qui elles appartiennent",
+          "text": "À vous. Les données de vos clients appartiennent à votre entreprise, pas à nous. Elles ne sont jamais vendues ni utilisées pour entraîner d’autres systèmes. Si vous arrêtez de travailler avec nous, c’est vous qui choisissez : nous vous envoyons un export, ou nous supprimons tout."
+        },
+        {
+          "title": "Dire aux clients que c’est un assistant",
+          "text": "Votre assistant dit qu’il est une IA dès sa première phrase. La loi l’exige, et nous trouvons cela tout simplement honnête."
+        },
+        {
+          "title": "Contrat de sous-traitance",
+          "before": "Nous signons un contrat de sous-traitance avec chaque client, comme l’exige le RGPD. Demandez-en une copie à",
+          "after": "."
+        },
+        {
+          "title": "Tiers concernés",
+          "text": "Nous faisons appel à un petit nombre de prestataires soigneusement choisis pour la téléphonie, WhatsApp et le traitement du langage, tous sous contrat RGPD. [Liste à confirmer.]"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Des questions sur cette page ?",
+      "text": "N’hésitez pas. Nous préférons l’expliquer simplement plutôt que de nous cacher derrière un texte juridique.",
+      "button": "Réserver un appel"
+    }
+  },
+  "contact": {
+    "eyebrow": "/ Contact",
+    "title": "Parlons-en.",
+    "lead": "Choisissez le moment qui vous convient, ou envoyez-nous un message.",
+    "emailDirect": "Ou écrivez-nous directement",
+    "booking": {
+      "label": "Réserver un appel · 20 minutes",
+      "title": "Choisissez un jour et une heure",
+      "prev": "Mois précédent",
+      "next": "Mois suivant",
+      "dow": "LU,MA,ME,JE,VE,SA,DI",
+      "freeTimes": "Moments libres le {date}",
+      "pickDay": "Choisissez d’abord un jour",
+      "noTime": "Aucun moment choisi",
+      "noted": "C’est noté. Vous recevrez un e-mail de confirmation avec le lien vidéo.",
+      "confirm": "Réserver un appel",
+      "note": "Seuls les moments libres sont affichés. Vous recevez un e-mail de confirmation avec un lien vidéo, un bouton pour l’ajouter à votre agenda et un rappel avant l’appel.",
+      "tz": "Heure belge · Gratuit et sans engagement",
+      "iframeTitle": "Réserver un appel"
+    },
+    "form": {
+      "label": "Envoyer un message",
+      "title": "Vous préférez écrire ? Nous répondons dans un délai d’un jour ouvrable.",
+      "name": "Nom",
+      "business": "Nom de votre entreprise",
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "optional": "(facultatif)",
+      "message": "Message",
+      "placeholder": "Parlez-nous un peu de votre entreprise",
+      "send": "Envoyer le message",
+      "sending": "Envoi…",
+      "sent": "Merci. Nous revenons vers vous dans un délai d’un jour ouvrable.",
+      "error": "Une erreur s’est produite. Réessayez, ou écrivez-nous directement.",
+      "privacyBefore": "Nous utilisons vos données uniquement pour répondre à votre message. Voir",
+      "privacyLink": "Confidentialité"
+    },
+    "cta": {
+      "title": "Ne manquez plus aucun client.",
+      "text": "Un court appel, sans baratin commercial. Nous vous dirons honnêtement si ce n’est pas pour vous.",
+      "button": "Réserver un appel"
+    }
+  },
+  "notFound": {
+    "eyebrow": "/ 404",
+    "title": "Nous n’avons pas trouvé cette page.",
+    "lead": "Le lien est peut-être ancien, ou la page a été déplacée. Tout le reste est toujours à sa place.",
+    "home": "Retour à l’accueil",
+    "bookCall": "Réserver un appel"
   }
 }

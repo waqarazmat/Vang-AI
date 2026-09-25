@@ -15,5 +15,61 @@
   "{found} of {total} found": {
     "nl": "{found} van {total} gevonden",
     "fr": "{found} sur {total} trouvés"
+  },
+  "Free times on {date}": {
+    "nl": "Vrije momenten op {date}",
+    "fr": "Moments libres le {date}"
+  },
+  "Pick a day first": {
+    "nl": "Kies eerst een dag",
+    "fr": "Choisissez d’abord un jour"
+  },
+  "Noted. You will get a confirmation email with the video link.": {
+    "nl": "Genoteerd. Je krijgt een bevestiging per e-mail met de videolink.",
+    "fr": "C’est noté. Vous recevrez un e-mail de confirmation avec le lien vidéo."
+  },
+  "No time picked yet": {
+    "nl": "Nog geen moment gekozen",
+    "fr": "Aucun moment choisi"
+  },
+  "MO,TU,WE,TH,FR,SA,SU": {
+    "nl": "MA,DI,WO,DO,VR,ZA,ZO",
+    "fr": "LU,MA,ME,JE,VE,SA,DI"
+  },
+  "Something went wrong. Please try again, or email us directly.": {
+    "nl": "Er ging iets mis. Probeer het opnieuw, of mail ons rechtstreeks.",
+    "fr": "Une erreur s’est produite. Réessayez, ou écrivez-nous directement."
+  },
+  "Sending…": {
+    "nl": "Versturen…",
+    "fr": "Envoi…"
+  },
+  "Page not found | VangAI": {
+    "nl": "Pagina niet gevonden | VangAI",
+    "fr": "Page introuvable | VangAI"
+  },
+  "This page does not exist, or it has moved.": {
+    "nl": "Deze pagina bestaat niet, of ze is verhuisd.",
+    "fr": "Cette page n’existe pas, ou elle a été déplacée."
+  },
+  "/ 404": {
+    "nl": "/ 404",
+    "fr": "/ 404"
+  },
+  "We could not find that page.": {
+    "nl": "We vonden die pagina niet.",
+    "fr": "Nous n’avons pas trouvé cette page."
+  },
+  "The link may be out of date, or the page has moved. Everything else is right where it was.": {
+    "nl": "De link is misschien verouderd, of de pagina is verhuisd. Al de rest staat nog gewoon op zijn plek.",
+    "fr": "Le lien est peut-être ancien, ou la page a été déplacée. Tout le reste est toujours à sa place."
+  },
+  "Back to home": {
+    "nl": "Terug naar home",
+    "fr": "Retour à l’accueil"
+  },
+  "PHONE · WHATSAPP · WEBSITE CHAT": {
+    "nl": "TELEFOON · WHATSAPP · WEBSITECHAT",
+    "fr": "TÉLÉPHONE · WHATSAPP · CHAT DU SITE"
   }
 }

@@ -2,7 +2,7 @@ import type { ComponentProps } from 'react';
 import { Link } from '@/i18n/navigation';
 import { ArrowRight } from './icons';
 
-type Variant = 'primary' | 'primaryOnDark';
+type Variant = 'primary' | 'primaryOnDark' | 'dark';
 type Size = 'nav' | 'md' | 'lg';
 
 // Values from the design's inline styles.
@@ -21,6 +21,8 @@ const sizes: Record<Size, string> = {
 const variants: Record<Variant, string> = {
   primary: 'border-coral bg-coral text-white hover:border-ink hover:bg-ink hover:text-white',
   primaryOnDark: 'border-coral bg-coral text-white hover:border-cream hover:bg-cream hover:text-ink',
+  // On coral backgrounds (coral CTA bands).
+  dark: 'border-ink bg-ink text-cream hover:border-cream hover:bg-cream hover:text-ink',
 };
 
 type Props = Omit<ComponentProps<typeof Link>, 'className'> & {

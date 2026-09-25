@@ -30,7 +30,7 @@ export function CtaBand({
           <p className="mx-0 mt-[18px] mb-[30px] max-w-[44ch] text-[18px] leading-[1.6] text-pretty text-cream">
             {text}
           </p>
-          <ButtonLink href="/contact" variant="primaryOnDark">
+          <ButtonLink href="/contact" variant={tone === 'coral' ? 'dark' : 'primaryOnDark'}>
             {cta}
           </ButtonLink>
         </div>

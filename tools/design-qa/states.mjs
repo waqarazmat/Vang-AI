@@ -18,6 +18,9 @@ import {
   outPath,
   comparePngs,
   settle,
+  imageBoxes,
+  maskMatchedImages,
+  reapplyDesignFixes,
 } from './lib.mjs';
 import { PNG } from 'pngjs';
 
@@ -49,6 +52,12 @@ async function runSteps(page, steps) {
   await settle(page, { quietMs: 600, maxMs: 6000 });
 }
 
+// Image boxes relative to the viewport (these captures are viewport screenshots).
+async function viewportImages(page) {
+  const [sx, sy] = await page.evaluate(() => [scrollX, scrollY]);
+  return (await imageBoxes(page)).map((b) => ({ ...b, x: b.x - sx, y: b.y - sy }));
+}
+
 async function capture(page, file) {
   const buf = await page.screenshot({ path: file, animations: 'disabled' });
   return PNG.sync.read(buf);
@@ -77,6 +86,7 @@ try {
             });
             try {
               await runSteps(o.page, st.steps);
+              if (isDesign) await reapplyDesignFixes(o.page, key);
             } catch (e) {
               await o.ctx.close();
               throw e;
@@ -91,6 +101,7 @@ try {
             break;
           }
           const dPng = await capture(d.page, outPath(...dir, `${st.name}.design.png`));
+          const dImgs = await viewportImages(d.page);
           await d.ctx.close();
           const bUrl = args.self ? designUrl(server, pg) : buildUrl(args.build, pg, lang);
           try {
@@ -105,9 +116,12 @@ try {
             break;
           }
           const bPng = await capture(b.page, outPath(...dir, `${st.name}.build.png`));
+          const bImgs = await viewportImages(b.page);
           await b.ctx.close();
+          // Images verified by file and exact box, then excluded (see maskMatchedImages).
+          const images = maskMatchedImages(dPng, bPng, dImgs, bImgs);
           const cmp = comparePngs(dPng, bPng, outPath(...dir, `${st.name}.diff.png`));
-          const pass = cmp.bands.length === 0;
+          const pass = cmp.bands.length === 0 && images.unmatched.length === 0;
           if (pass || attempt > Number(args.retries ?? 2)) {
             results.push({
               page: key,
@@ -117,6 +131,7 @@ try {
               attempts: attempt,
               diffPct: cmp.diffPct,
               bands: cmp.bands,
+              imagesNotMatched: images.unmatched.map((u) => `${u.src} ${Math.round(u.w)}x${Math.round(u.h)}`),
               files: outPath(...dir),
             });
             break;

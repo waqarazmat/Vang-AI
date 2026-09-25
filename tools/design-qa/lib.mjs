@@ -144,6 +144,12 @@ function installColorNormalizer() {
           );
 }
 
+// Re-runs the design fixes (all idempotent) after interactions, so content that appears later
+// (new chat messages, opened panels) gets the same approved corrections as the initial page.
+export async function reapplyDesignFixes(page, pageKey) {
+  for (const f of designFixes(pageKey)) if (f.js) await page.evaluate(f.js);
+}
+
 // Opens a page in a deterministic state: fixed viewport, DPR 1, reduced motion,
 // fonts loaded, language set, animations frozen.
 export async function openPage(browser, url, { viewport, lang, isDesign, pageKey, injectCss }) {

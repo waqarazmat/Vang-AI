@@ -3,6 +3,46 @@
     "home": {
       "title": "VangAI | Mis nooit meer een klant",
       "description": "Eén assistent die je telefoon, WhatsApp en websitechat beantwoordt, in het Nederlands, Frans en Engels. Wij zetten het op en houden het draaiende, vanaf €50 per maand."
+    },
+    "product": {
+      "title": "VangVoice, VangMessage en VangChat | VangAI",
+      "description": "Eén assistent voor je telefoon, WhatsApp en websitechat. Antwoordt in het Nederlands, Frans en Engels, boekt afspraken en wij zetten alles voor je op."
+    },
+    "pricing": {
+      "title": "Prijzen | VangAI",
+      "description": "Eenvoudige maandprijzen vanaf €50 per maand, excl. btw. VangChat, VangMessage, VangVoice of de bundel, door ons opgezet en beheerd."
+    },
+    "about": {
+      "title": "Over ons | VangAI",
+      "description": "Wij bouwen het onthaal waar kleine zaken nooit tijd voor hadden. Gevestigd in Hasselt, actief in heel België."
+    },
+    "privacy": {
+      "title": "Privacybeleid | VangAI",
+      "description": "Hoe VangAI omgaat met persoonsgegevens van websitebezoekers en mensen die contact opnemen."
+    },
+    "cookies": {
+      "title": "Cookiebeleid | VangAI",
+      "description": "VangAI gebruikt geen tracking- of advertentiecookies. Dit is wat de site wel bewaart en waarom."
+    },
+    "terms": {
+      "title": "Algemene voorwaarden | VangAI",
+      "description": "De voorwaarden tussen VangAI en de zaken waarvoor we werken."
+    },
+    "dataPrivacy": {
+      "title": "Data & privacy | VangAI",
+      "description": "Wat VangAI bewaart, waarom, waar en hoe lang. Je klantgegevens zijn van jouw zaak."
+    },
+    "contact": {
+      "title": "Contact | VangAI",
+      "description": "Plan een kort gesprek met VangAI of stuur ons een bericht. We antwoorden binnen één werkdag."
+    },
+    "notFound": {
+      "title": "Pagina niet gevonden | VangAI",
+      "description": "Deze pagina bestaat niet, of ze is verhuisd."
+    },
+    "og": {
+      "channels": "TELEFOON · WHATSAPP · WEBSITECHAT",
+      "alt": "VangAI | Mis nooit meer een klant"
     }
   },
   "nav": {
@@ -295,5 +335,572 @@
     "from": "Vanaf",
     "cta": "Vraag een offerte",
     "note": "Grotere projecten op offerte tijdens het gesprek."
+  },
+  "product": {
+    "eyebrow": "/ Product",
+    "title": "Eén assistent, drie kanalen",
+    "lead": "Kies de kanalen die je klanten echt gebruiken. Neem er één, of koppel ze alle drie tot één systeem met één geheugen.",
+    "seeProduct": "Bekijk product",
+    "cards": {
+      "voice": "Je telefoon, altijd beantwoord.",
+      "whatsapp": "Je WhatsApp, binnen seconden beantwoord.",
+      "chat": "Je website, beantwoord terwijl ze rondkijken."
+    },
+    "from": "vanaf",
+    "vat": "excl. btw",
+    "seePricing": "Bekijk de prijzen",
+    "voice": {
+      "eyebrow": "/ VangVoice",
+      "lead": "Je telefoon, altijd beantwoord. Ook als je onder een auto ligt, bij een klant bent of al gesloten bent.",
+      "bullets": [
+        "Natuurlijke stem in het Nederlands, Frans en Engels",
+        "Je houdt je huidige telefoonnummer",
+        "Meestal live binnen één tot twee weken"
+      ],
+      "demoLabel": "Live demo · druk op bellen en praat",
+      "price": "€100 per maand",
+      "side": {
+        "label": "Geen wachttijd",
+        "caller": "Beller",
+        "note": "Het antwoord komt meteen",
+        "unmute": "Demogesprek met geluid",
+        "mute": "Demogesprek dempen"
+      },
+      "doesTitle": "Wat VangVoice doet",
+      "does": [
+        "Neemt je telefoon op als jij het niet kan, dag en nacht",
+        "Praat natuurlijk in het Nederlands, Frans en Engels",
+        "Boekt afspraken tijdens het gesprek, meteen in je agenda",
+        "Beantwoordt vragen over prijzen, openingsuren en diensten",
+        "Mailt je na elke oproep een samenvatting: wie belde, wat die wilde en wat er geboekt is",
+        "Geeft dringende oproepen aan jou door, met de details",
+        "Zet een belknop op je website, zodat bezoekers meteen kunnen praten"
+      ],
+      "whyTitle": "Waarom de telefoon nog altijd telt",
+      "why": [
+        "Voor dringende zaken grijpen mensen nog altijd naar de telefoon",
+        "Veel klanten, zeker oudere, praten liever dan dat ze typen",
+        "Een gemiste oproep is meestal een klant die de volgende zaak op de lijst belt",
+        "Een stem die meteen antwoordt, voelt als goede service, niet als een machine"
+      ]
+    },
+    "whatsapp": {
+      "eyebrow": "/ VangMessage",
+      "lead": "Je WhatsApp, binnen enkele seconden beantwoord. Ook 's avonds en in het weekend.",
+      "bullets": [
+        "Werkt op je WhatsApp Business-nummer",
+        "Antwoordt in het Nederlands, Frans en Engels",
+        "Meestal live binnen één tot twee weken"
+      ],
+      "demoLabel": "Live demo · tik op een vraag of typ",
+      "price": "€75 per maand",
+      "side": {
+        "label": "Antwoordt binnen seconden",
+        "question": "Kan ik vrijdag langskomen?",
+        "answer": "Ja, om 11:00 is er plaats. Zal ik het voor je vastleggen?",
+        "badge": "Beantwoord in 3 seconden",
+        "note": "Een WhatsApp binnen, een antwoord terug"
+      },
+      "doesTitle": "Wat VangMessage doet",
+      "does": [
+        "Antwoordt binnen enkele seconden op je WhatsApp Business-nummer",
+        "Antwoordt in het Nederlands, Frans en Engels",
+        "Boekt afspraken, met herinneringen als extra optie (gratis in de bundel)",
+        "Beantwoordt vragen over prijzen, beschikbaarheid en openingsuren",
+        "Geeft het gesprek aan jou door als er een mens nodig is",
+        "Mailt je na elk gesprek een samenvatting: wie contact opnam, wat die wilde en wat er geboekt is",
+        "Zet een WhatsApp-knop op je website, zodat bezoekers met één tik een chat starten"
+      ],
+      "whyTitle": "Waarom WhatsApp telt",
+      "why": [
+        "Steeds meer mensen sturen liever een bericht dan dat ze bellen",
+        "WhatsApp is de app die je klanten elke dag al openen",
+        "Klanten kunnen buiten de openingsuren een bericht sturen zonder het gevoel dat ze storen",
+        "Een snel antwoord beslist vaak wie de klus krijgt"
+      ]
+    },
+    "chat": {
+      "eyebrow": "/ VangChat",
+      "lead": "Antwoordt meteen op je website. Zoals de chat op deze pagina.",
+      "bullets": [
+        "Past bij de stijl van je website",
+        "Spreekt Nederlands, Frans en Engels",
+        "Meestal live binnen een paar werkdagen"
+      ],
+      "demoLabel": "Live demo · tik op een vraag of typ",
+      "price": "€50 per maand",
+      "side": {
+        "label": "Antwoordt terwijl ze rondkijken",
+        "question": "Monteren jullie winterbanden?",
+        "answer": "Ja, vanaf €45 per band, gemonteerd. Wil je deze week een moment?",
+        "badge": "Beantwoord in 2 seconden",
+        "note": "Een bezoeker vraagt, het antwoord staat er al"
+      },
+      "doesTitle": "Wat VangChat doet",
+      "does": [
+        "Antwoordt bezoekers op je website meteen, 24/7",
+        "Spreekt Nederlands, Frans en Engels",
+        "Neemt boekingen aan en verzamelt contactgegevens",
+        "Beantwoordt de vragen waarvoor mensen anders mailen of bellen",
+        "Stuurt je het gesprek door als er een mens nodig is",
+        "Mailt je na elk gesprek een samenvatting: wie contact opnam, wat die wilde en wat er geboekt is",
+        "Past bij de stijl van je website en maakt ze niet trager"
+      ],
+      "whyTitle": "Waarom websitechat telt",
+      "why": [
+        "Bezoekers willen nu een antwoord, geen contactformulier waar ze dagen op wachten",
+        "De meeste mensen bezoeken je site buiten de openingsuren",
+        "Elke bezoeker die met een vraag vertrekt, is een klant van wie je nooit iets hoort",
+        "Een goed antwoord op het juiste moment maakt van een bezoeker een boeking"
+      ]
+    },
+    "done": {
+      "eyebrow": "/ Wij doen het voor je",
+      "title": "Gebouwd rond jouw zaak, geen standaardsjabloon",
+      "text": "We geven je geen standaardbot met de boodschap 'succes ermee'. We bouwen je assistent rond je diensten, je prijzen en de manier waarop je met klanten praat. Meer dan één kanaal nodig? We koppelen telefoon, WhatsApp en websitechat tot één systeem met één geheugen. Nog geen website? Die bouwen we ook. Eén partner voor je hele onthaal, met één doel: meer klanten en meer omzet voor je zaak.",
+      "items": [
+        "Afgestemd op je diensten, prijzen en toon",
+        "Gekoppeld aan de agenda die je al gebruikt",
+        "Telefoon, WhatsApp, websitechat, en een website als je er een nodig hebt",
+        "We blijven naast je staan: wekelijkse aanpassingen, ondersteuning en een maandrapport"
+      ],
+      "cta": "Plan een gesprek"
+    },
+    "faq": {
+      "eyebrow": "/ Veelgestelde vragen",
+      "title": "Vragen per kanaal",
+      "voice": [
+        {
+          "q": "Hoe klinkt het?",
+          "a": "Een natuurlijke, rustige stem. Probeer het zelf in de demo bovenaan deze pagina."
+        },
+        {
+          "q": "Wat als de beller een echte persoon wil?",
+          "a": "Het noteert de gegevens en geeft ze meteen aan jou door, als dringend gemarkeerd indien nodig."
+        },
+        {
+          "q": "Neemt het elke oproep op?",
+          "a": "Jij kiest: alleen als je zelf niet opneemt, buiten de openingsuren, of altijd."
+        },
+        {
+          "q": "Kunnen bellers een bericht achterlaten?",
+          "a": "Ja, en je krijgt het als geschreven samenvatting in plaats van een voicemail die je moet beluisteren."
+        }
+      ],
+      "whatsapp": [
+        {
+          "q": "Heb ik WhatsApp Business nodig?",
+          "a": "Ja, en als je het nog niet hebt, zetten wij het voor je op."
+        },
+        {
+          "q": "Kan ik nog zelf antwoorden?",
+          "a": "Altijd. Je kan in elk gesprek inspringen en de assistent stopt."
+        },
+        {
+          "q": "Stuurt het herinneringen?",
+          "a": "Ja, het kan klanten de dag ervoor aan hun afspraak herinneren."
+        },
+        {
+          "q": "En foto's en spraakberichten?",
+          "a": "Die geeft het meteen aan jou door, met een samenvatting van het gesprek tot dan."
+        }
+      ],
+      "chat": [
+        {
+          "q": "Maakt het mijn website trager?",
+          "a": "Nee. Het laadt na je pagina en is gebouwd om licht te blijven."
+        },
+        {
+          "q": "Werkt het met mijn website?",
+          "a": "Het werkt met bijna elke website, ook WordPress, Wix, Shopify en maatwerksites."
+        },
+        {
+          "q": "Wat gebeurt er buiten de openingsuren?",
+          "a": "Het blijft antwoorden en boeken, en je ziet alles de volgende ochtend."
+        },
+        {
+          "q": "Kan het contactgegevens verzamelen?",
+          "a": "Ja, naam, telefoon en e-mail, meteen naar jou gestuurd."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Benieuwd welk kanaal bij je past?",
+      "text": "Een kort gesprek, geen verkooppraatje. We zeggen je eerlijk als het niet past.",
+      "button": "Plan een gesprek"
+    }
+  },
+  "pricing": {
+    "eyebrow": "/ Prijzen",
+    "title": "Eenvoudige maandprijzen",
+    "lead": "Elke zaak is anders. Een garage met tien oproepen per dag heeft iets anders nodig dan een praktijk met honderd. Daarom tonen we een startprijs. In een kort gesprek bekijken we hoe je klanten je bereiken, en krijg je een vaste maandprijs. Daarna geen verrassingen, en geen kosten per oproep of per bericht.",
+    "terms": "Alle prijzen excl. btw. Minimale looptijd 3 maanden.",
+    "includesTitle": "Elk pakket bevat",
+    "includes": [
+      "Boekingen meteen in je agenda",
+      "E-mailsamenvatting na elk gesprek",
+      "Maandrapport",
+      "Wekelijkse aanpassingen",
+      "Door ons opgezet, ondersteuning wanneer je die nodig hebt"
+    ],
+    "from": "vanaf",
+    "perMonth": "per maand",
+    "requestQuote": "Vraag een offerte",
+    "recommended": "Aanbevolen",
+    "plans": {
+      "chat": {
+        "price": "€50",
+        "items": [
+          "AI-assistent op je website, antwoordt 24/7",
+          "Nederlands, Frans en Engels",
+          "Geeft door aan jou als er een mens nodig is"
+        ]
+      },
+      "whatsapp": {
+        "price": "€75",
+        "items": [
+          "AI-assistent op je WhatsApp Business-nummer",
+          "Antwoordt binnen enkele seconden, in drie talen",
+          "WhatsApp-knop voor je website"
+        ]
+      },
+      "voice": {
+        "price": "€100",
+        "items": [
+          "Neemt je telefoon op, je houdt je nummer",
+          "Natuurlijke stem in het Nederlands, Frans en Engels",
+          "Belknop voor je website"
+        ]
+      },
+      "bundle": {
+        "name": "De bundel",
+        "price": "€200",
+        "items": [
+          "Alles van VangVoice, VangMessage en VangChat",
+          "Eén geheugen over alle kanalen",
+          "Afspraakherinneringen inbegrepen (waarde €25 per maand)",
+          "2 aanpassingen per week in plaats van 1",
+          "Eén rapport voor alle kanalen",
+          "Voorrang bij ondersteuning"
+        ],
+        "save": "Bespaar €50 per maand tegenover alles apart afnemen."
+      }
+    },
+    "addon": {
+      "badge": "Extra optie",
+      "title": "Afspraakherinneringen.",
+      "text": "Automatische herinneringen voor elke afspraak, zodat minder klanten het vergeten. +€25 per maand bij elk los pakket. Gratis inbegrepen in de bundel."
+    },
+    "support": {
+      "eyebrow": "/ Altijd naast je",
+      "title": "We verdwijnen niet na de lancering",
+      "text": "Je assistent is nooit af. We houden hem up-to-date met je wekelijkse wijzigingen, lossen op wat opgelost moet worden en sturen je elke maand een rapport, zodat je precies ziet wat hij opbrengt. Vragen of problemen? Je krijgt een echte persoon die je opstelling kent."
+    },
+    "setup": {
+      "eyebrow": "/ Opstart",
+      "title": "Twee manieren om te starten",
+      "lead": "De opstart is een eenmalige kost, op offerte zodra we weten wat je zaak nodig heeft.",
+      "onQuote": "Op offerte",
+      "option1": {
+        "label": "Optie 01",
+        "title": "Wij bouwen het voor je",
+        "text": "We zetten alles op, van begin tot eind: we leren je zaak kennen, schrijven de gesprekken, koppelen je kanalen en agenda, testen het met jou en lanceren het. Jij hoeft geen vinger uit te steken."
+      },
+      "option2": {
+        "label": "Optie 02",
+        "title": "Je bouwt het zelf",
+        "text": "Je krijgt het systeem, onze stap-voor-staphandleidingen en een opstartgesprek. Je zet het op in je eigen tempo, en wij zijn er als je vragen hebt."
+      }
+    },
+    "faq": {
+      "eyebrow": "/ Veelgestelde vragen",
+      "title": "Vragen over prijzen",
+      "items": [
+        {
+          "q": "Waarom tonen jullie een \"vanaf\"-prijs?",
+          "a": "Omdat de juiste opstelling afhangt van je zaak: hoeveel kanalen, hoeveel oproepen en berichten, welke agenda je gebruikt. Na een kort gesprek krijg je één vaste maandprijs."
+        },
+        {
+          "q": "Zijn er verborgen kosten?",
+          "a": "Nee. Je betaalt de opstart (op offerte) en de vaste maandprijs. Geen kosten per oproep, per bericht of per boeking."
+        },
+        {
+          "q": "Kan ik op elk moment opzeggen?",
+          "a": "We werken met een minimale looptijd van 3 maanden. Je klanten hebben wat tijd nodig om te wennen aan een nieuwe manier om je te bereiken, en na drie maanden tonen de cijfers duidelijk wat de assistent opbrengt. Daarna kan je maandelijks opzeggen."
+        },
+        {
+          "q": "Kan ik met één kanaal starten en later uitbreiden?",
+          "a": "Ja. Veel zaken starten met één kanaal en voegen de andere toe zodra ze de resultaten zien. Overstappen naar de bundel kan altijd."
+        },
+        {
+          "q": "Wat zit er in de opstart?",
+          "a": "Alles wat nodig is om live te gaan: je zaak leren kennen, de gesprekken schrijven, je kanalen en agenda koppelen, testen met jou en lanceren."
+        },
+        {
+          "q": "Wat is \"een aanpassing\"?",
+          "a": "Elke wijziging in wat je assistent weet of zegt: nieuwe prijzen, vakantie-uren, een nieuwe dienst, een ander antwoord op een vraag. Stuur het door en wij passen het aan."
+        },
+        {
+          "q": "Kan ik het eerst uitproberen?",
+          "a": "Ja. In een kort gesprek tonen we je een demo gebouwd rond je eigen zaak, gratis en vrijblijvend."
+        },
+        {
+          "q": "Sturen jullie afspraakherinneringen?",
+          "a": "Ja. Je klanten krijgen een herinnering voor hun afspraak, zodat minder mensen het vergeten. Het is een extra optie voor €25 per maand, en gratis inbegrepen in de bundel."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Benieuwd wat het voor jou zou kosten?",
+      "text": "Een kort gesprek, geen verkooppraatje. Je krijgt een vaste maandprijs, en we zeggen je eerlijk als het niet past.",
+      "button": "Plan een gesprek"
+    }
+  },
+  "about": {
+    "eyebrow": "/ Over ons",
+    "title": "Wij bouwen het onthaal waar kleine zaken nooit tijd voor hadden.",
+    "lead": "Kleine zaken verliezen elke dag klanten, niet omdat ze slecht werk leveren, maar omdat niemand vrij was om op te nemen. Dat lossen wij op, zonder dat de zaakvoerder een techbedrijf moet worden.",
+    "mission": {
+      "eyebrow": "/ Onze missie",
+      "text": "We bouwen en installeren persoonlijk één assistent die oproepen, WhatsApp-berichten en websitechats beantwoordt voor Belgische zaken, in de talen die hun klanten echt spreken, zodat de zaakvoerder nooit iets moet instellen of beheren."
+    },
+    "vision": {
+      "eyebrow": "/ Onze visie",
+      "text": "Een België waar geen enkele kleine zaak, hoe groot of technisch ze ook is, een klant verliest omdat niemand beschikbaar was om op te nemen."
+    },
+    "values": {
+      "eyebrow": "/ Waar we in geloven",
+      "title": "Vijf dingen waar we niet op toegeven",
+      "items": [
+        {
+          "title": "Altijd voor je gedaan.",
+          "text": "Wij doen het werk, niet jij."
+        },
+        {
+          "title": "Eerst de mens.",
+          "text": "Elk antwoord moet klinken alsof het komt van iemand die erom geeft."
+        },
+        {
+          "title": "Lokaal en in drie talen.",
+          "text": "Nederlands, Frans en Engels, vanuit België, geen buitenlandse doe-het-zelftool."
+        },
+        {
+          "title": "Liever eerlijk dan indrukwekkend.",
+          "text": "We beloven nooit meer dan de assistent kan."
+        },
+        {
+          "title": "Je gegevens zijn van jou.",
+          "text": "GDPR vanaf het begin, niet achteraf toegevoegd."
+        }
+      ]
+    },
+    "how": {
+      "eyebrow": "/ Hoe we werken",
+      "title": "Vier stappen, en wij doen het werk"
+    },
+    "contact": {
+      "eyebrow": "/ Contact",
+      "title": "Laten we praten",
+      "text": "Benieuwd wat VangAI voor je zaak kan doen? Plan een kort gesprek, of stuur ons een e-mail. We antwoorden binnen één werkdag.",
+      "bookCall": "Plan een gesprek",
+      "based": "Gevestigd in Hasselt, aan het werk voor zaken in heel België."
+    },
+    "cta": {
+      "title": "Benieuwd of dit bij je zaak past?",
+      "text": "Een kort gesprek, geen verkooppraatje. We zeggen je eerlijk als het niet past.",
+      "button": "Plan een gesprek"
+    }
+  },
+  "legal": {
+    "privacy": {
+      "eyebrow": "/ Privacy",
+      "title": "Privacybeleid",
+      "lead": "Hoe VangAI omgaat met persoonsgegevens van mensen die deze website bezoeken en contact met ons opnemen.",
+      "sections": [
+        {
+          "title": "Wie we zijn",
+          "text": "VangAI, Hasselt, België, ondernemingsnummer {companyNumber}. Wij zijn verwerkingsverantwoordelijke voor de persoonsgegevens op deze pagina. Voor gegevens over jouw klanten, verwerkt door je assistent, zie Data & privacy."
+        },
+        {
+          "title": "Wat we verzamelen",
+          "text": "Als je een gesprek plant of ons mailt, ontvangen we je naam, de naam van je zaak, je e-mailadres, telefoonnummer en wat je ons zelf over je zaak vertelt. Deze website gebruikt geen tracking- of advertentiecookies."
+        },
+        {
+          "title": "Waarom we het gebruiken",
+          "text": "Om je vraag te beantwoorden, het geplande gesprek voor te bereiden en te voeren, je een offerte te sturen en, als je klant wordt, onze dienst te leveren. We verkopen je gegevens niet en gebruiken ze nergens anders voor."
+        },
+        {
+          "title": "Rechtsgrond",
+          "text": "Stappen op jouw verzoek voor het sluiten van een overeenkomst, de uitvoering van onze overeenkomst met jou, en ons gerechtvaardigd belang om zakelijke vragen te beantwoorden."
+        },
+        {
+          "title": "Met wie we het delen",
+          "text": "Alleen met de dienstverleners die we nodig hebben om ons bedrijf te runnen, zoals onze boekingstool en e-mailprovider. Zij verwerken gegevens volgens onze instructies. [Lijst van providers te bevestigen.]"
+        },
+        {
+          "title": "Hoe lang we het bewaren",
+          "text": "Aanvragen die niet tot een overeenkomst leiden, worden na 12 maanden verwijderd. Klantgegevens bewaren we zolang de overeenkomst loopt en daarna zolang de Belgische wet het vraagt. [Termijnen te bevestigen.]"
+        },
+        {
+          "title": "Je rechten",
+          "before": "Je kan vragen om je gegevens in te zien, te verbeteren of te wissen, bezwaar maken tegen het gebruik of een kopie vragen. Mail naar",
+          "after": ". Je kan ook klacht indienen bij de Gegevensbeschermingsautoriteit."
+        }
+      ]
+    },
+    "draft": "Ontwerp, nog na te kijken",
+    "cookies": {
+      "eyebrow": "/ Cookies",
+      "title": "Cookiebeleid",
+      "lead": "Welke cookies deze website gebruikt en waarom.",
+      "sections": [
+        {
+          "title": "Wat cookies zijn",
+          "text": "Cookies zijn kleine bestanden die een website in je browser bewaart. Sommige zijn nodig om de site te laten werken, andere volgen wat je doet. Wij gebruiken alleen wat de site nodig heeft."
+        },
+        {
+          "title": "Wat we gebruiken",
+          "text": "Deze website plaatst geen analytische, advertentie- of trackingcookies. Ze onthoudt je taalkeuze (Nederlands, Frans of Engels) in je eigen browser, en daarvan verlaat niets je toestel."
+        },
+        {
+          "title": "Een gesprek plannen",
+          "text": "Als je op Plan een gesprek klikt, ga je naar onze boekingstool. Die kan eigen cookies plaatsen om het boeken te laten werken. [Boekingstool en cookies te bevestigen.]"
+        },
+        {
+          "title": "Waarom er geen cookiebanner is",
+          "text": "Omdat we geen niet-essentiële cookies gebruiken, is er niets om toestemming voor te vragen. Verandert dat, dan vragen we het je eerst en passen we deze pagina aan."
+        }
+      ]
+    },
+    "terms": {
+      "eyebrow": "/ Voorwaarden",
+      "title": "Algemene voorwaarden",
+      "lead": "De afspraken tussen VangAI en de zaken waarvoor we werken.",
+      "sections": [
+        {
+          "title": "De dienst",
+          "text": "VangAI zet een assistent op en houdt die draaiende, die oproepen, WhatsApp-berichten en websitechats voor je zaak beantwoordt. Wat inbegrepen is, staat in je offerte en op de pagina Prijzen."
+        },
+        {
+          "title": "Prijzen en betaling",
+          "text": "Alle prijzen zijn exclusief btw. Je betaalt een eenmalige opstartkost (op offerte) en een vaste maandprijs, maandelijks gefactureerd. Er zijn geen kosten per oproep, bericht of boeking."
+        },
+        {
+          "title": "Looptijd en opzegging",
+          "text": "De minimale looptijd is 3 maanden. Daarna loopt de overeenkomst maandelijks door en kan je opzeggen met een maand opzegtermijn. [Opzegtermijn te bevestigen.]"
+        },
+        {
+          "title": "Jouw deel",
+          "text": "Je geeft ons correcte informatie over je zaak, prijzen en openingsuren, en laat het weten als er iets verandert. Je blijft verantwoordelijk voor de afspraken die je met je klanten maakt."
+        },
+        {
+          "title": "Ons deel",
+          "text": "Wij houden je assistent draaiende, verwerken je aanpassingen en zeggen je eerlijk als iets niet werkt. Kan de assistent een vraag niet beantwoorden, dan geeft hij die aan jou door in plaats van te gokken."
+        },
+        {
+          "title": "Aansprakelijkheid",
+          "text": "Onze aansprakelijkheid is beperkt tot het bedrag dat je ons betaalde in de drie maanden voor het voorval. [Clausule na te kijken door een jurist.]"
+        },
+        {
+          "title": "Recht en geschillen",
+          "text": "Het Belgisch recht is van toepassing. Geschillen gaan naar de rechtbanken van Hasselt, nadat we eerst samen een oplossing hebben gezocht."
+        }
+      ]
+    },
+    "dataPrivacy": {
+      "eyebrow": "/ Data & privacy",
+      "title": "Wat er gebeurt met de gesprekken met je klanten",
+      "lead": "In gewone taal: wat je assistent bewaart, waarom, waar, hoe lang, en van wie het is. Kort antwoord: van jou.",
+      "sections": [
+        {
+          "title": "Wat we bewaren",
+          "text": "De gesprekken die je assistent met je klanten voert: opnames of uitgeschreven oproepen, WhatsApp- en chatberichten, en de gegevens die klanten delen, zoals hun naam, telefoonnummer en wat ze nodig hebben. Plus de boekingen die hij in je agenda zet."
+        },
+        {
+          "title": "Waarom we het bewaren",
+          "text": "Zodat je assistent zijn werk kan doen: afspraken boeken, je een samenvatting sturen, een klant over alle kanalen heen herkennen en vragen doorgeven die hij niet kan beantwoorden. We gebruiken het ook voor je maandrapport. Voor niets anders."
+        },
+        {
+          "title": "Waar het bewaard wordt",
+          "text": "Op servers binnen de Europese Unie. [Hostingprovider en locatie te bevestigen.]"
+        },
+        {
+          "title": "Hoe lang we het bewaren",
+          "text": "Gesprekken worden [termijn te bevestigen] bewaard en daarna automatisch verwijderd. Boekingen blijven in je eigen agenda zolang je dat wil."
+        },
+        {
+          "title": "Van wie het is",
+          "text": "Van jou. Je klantgegevens zijn van je zaak, niet van ons. Ze worden nooit verkocht en nooit gebruikt om andere systemen te trainen. Stop je met ons, dan kies jij: we sturen je een export, of we wissen alles."
+        },
+        {
+          "title": "Klanten laten weten dat het een assistent is",
+          "text": "Je assistent zegt in de eerste zin dat hij een AI is. De wet vraagt het, en wij vinden het gewoon eerlijk."
+        },
+        {
+          "title": "Verwerkersovereenkomst",
+          "before": "We tekenen met elke klant een verwerkersovereenkomst, zoals de GDPR vraagt. Vraag een kopie via",
+          "after": "."
+        },
+        {
+          "title": "Betrokken derden",
+          "text": "We werken met een klein aantal zorgvuldig gekozen providers voor telefonie, WhatsApp en taalverwerking, allemaal onder GDPR-afspraken. [Lijst te bevestigen.]"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Vragen over deze pagina?",
+      "text": "Vraag het ons gerust. We leggen het liever in gewone woorden uit dan ons te verschuilen achter juridische tekst.",
+      "button": "Plan een gesprek"
+    }
+  },
+  "contact": {
+    "eyebrow": "/ Contact",
+    "title": "Laten we praten.",
+    "lead": "Kies een moment dat je past, of stuur ons een bericht.",
+    "emailDirect": "Of mail ons rechtstreeks",
+    "booking": {
+      "label": "Plan een gesprek · 20 minuten",
+      "title": "Kies een dag en uur",
+      "prev": "Vorige maand",
+      "next": "Volgende maand",
+      "dow": "MA,DI,WO,DO,VR,ZA,ZO",
+      "freeTimes": "Vrije momenten op {date}",
+      "pickDay": "Kies eerst een dag",
+      "noTime": "Nog geen moment gekozen",
+      "noted": "Genoteerd. Je krijgt een bevestiging per e-mail met de videolink.",
+      "confirm": "Plan een gesprek",
+      "note": "Je ziet enkel vrije momenten. Je krijgt een bevestiging per e-mail met een videolink, een knop om het in je agenda te zetten en een herinnering voor het gesprek.",
+      "tz": "Belgische tijd · Gratis en vrijblijvend",
+      "iframeTitle": "Plan een gesprek"
+    },
+    "form": {
+      "label": "Stuur een bericht",
+      "title": "Liever schrijven? We antwoorden binnen één werkdag.",
+      "name": "Naam",
+      "business": "Naam van je zaak",
+      "email": "E-mail",
+      "phone": "Telefoon",
+      "optional": "(optioneel)",
+      "message": "Bericht",
+      "placeholder": "Vertel ons iets over je zaak",
+      "send": "Verstuur bericht",
+      "sending": "Versturen…",
+      "sent": "Bedankt. We antwoorden je binnen één werkdag.",
+      "error": "Er ging iets mis. Probeer het opnieuw, of mail ons rechtstreeks.",
+      "privacyBefore": "We gebruiken je gegevens enkel om je bericht te beantwoorden. Zie",
+      "privacyLink": "Privacy"
+    },
+    "cta": {
+      "title": "Mis nooit meer een klant.",
+      "text": "Een kort gesprek, geen verkooppraatje. We zeggen je eerlijk als het niet past.",
+      "button": "Plan een gesprek"
+    }
+  },
+  "notFound": {
+    "eyebrow": "/ 404",
+    "title": "We vonden die pagina niet.",
+    "lead": "De link is misschien verouderd, of de pagina is verhuisd. Al de rest staat nog gewoon op zijn plek.",
+    "home": "Terug naar home",
+    "bookCall": "Plan een gesprek"
   }
 }
