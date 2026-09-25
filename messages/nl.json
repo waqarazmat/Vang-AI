@@ -85,6 +85,32 @@
       "trust": "GDPR-conform · Gevestigd in Hasselt · Door ons opgezet en beheerd",
       "demoLabel": "Live demo · druk op play, tik, typ",
       "demoTabsLabel": "Demokanaal"
+    },
+    "problem": {
+      "eyebrow": "/ Het probleem",
+      "title": "Je verliest klanten die je nooit te zien krijgt.",
+      "lead": "Een gemiste oproep tijdens een klus. Een WhatsApp die vier uur ongelezen blijft. Een bezoeker die afhaakt omdat niemand de chat beantwoordde. Niets daarvan komt binnen als klacht. Het komt binnen als een klant die ergens anders heeft geboekt.",
+      "goodNews": "Het goede nieuws? Elk van die gemiste klanten was",
+      "goodNewsHighlight": "te vermijden",
+      "goodNewsLead": "In een kort gesprek tonen we je hoe dat er voor jouw zaak uitziet."
+    },
+    "garage": {
+      "sceneLabel": "Joe de mecanicien werkt aan een auto terwijl er oproepen binnenkomen in zijn garage",
+      "missed": "Gemiste klanten",
+      "missedWithVangAI": "Gemiste klanten met VangAI",
+      "panelTitle": "Vandaag aan het onthaal",
+      "live": "Live",
+      "rowA": "Remgeluid, moet eens bekeken worden",
+      "rowB": "Winterbanden, wil een prijs",
+      "rowC": "Onderhoud nodig, vraagt een moment",
+      "rowD": "Koppeling, wil een tweede mening",
+      "rowE": "Rammelende uitlaat, kan het vandaag nog",
+      "phoneCall": "Telefoon",
+      "mobile": "Gsm",
+      "missedBadge": "Gemist",
+      "booked": "Geboekt",
+      "endLabel": "Elke oproep beantwoord",
+      "endTitle": "Mis nooit meer een klant."
     }
   }
 }

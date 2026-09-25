@@ -85,6 +85,32 @@
       "trust": "Conforme au RGPD · Basés à Hasselt · Installé et géré pour vous",
       "demoLabel": "Démo en direct · lancez, touchez, écrivez",
       "demoTabsLabel": "Canal de démo"
+    },
+    "problem": {
+      "eyebrow": "/ Le problème",
+      "title": "Vous perdez des clients que vous ne voyez même pas.",
+      "lead": "Un appel manqué en plein travail. Un WhatsApp qui reste non lu pendant quatre heures. Un visiteur qui s’en va parce que personne n’a répondu au chat. Rien de tout cela n’arrive sous forme de plainte. Cela arrive sous forme d’un client qui a réservé ailleurs.",
+      "goodNews": "La bonne nouvelle ? Chacun de ces clients manqués était",
+      "goodNewsHighlight": "évitable",
+      "goodNewsLead": "Lors d’un court appel, nous vous montrons ce que cela donne pour votre entreprise."
+    },
+    "garage": {
+      "sceneLabel": "Joe le mécanicien travaille sur une voiture pendant que les appels arrivent au garage",
+      "missed": "Clients manqués",
+      "missedWithVangAI": "Clients manqués avec VangAI",
+      "panelTitle": "Aujourd’hui à l’accueil",
+      "live": "En direct",
+      "rowA": "Bruit de freins, à vérifier",
+      "rowB": "Pneus hiver, demande un prix",
+      "rowC": "Entretien à faire, demande un créneau",
+      "rowD": "Embrayage, veut un deuxième avis",
+      "rowE": "Échappement qui cliquette, possible aujourd’hui ?",
+      "phoneCall": "Appel",
+      "mobile": "GSM",
+      "missedBadge": "Manqué",
+      "booked": "Réservé",
+      "endLabel": "Chaque appel décroché",
+      "endTitle": "Ne manquez plus aucun client."
     }
   }
 }

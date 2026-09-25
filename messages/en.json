@@ -85,6 +85,32 @@
       "trust": "GDPR compliant · Based in Hasselt · Set up and managed for you",
       "demoLabel": "Live demo · press play, tap, type",
       "demoTabsLabel": "Demo channel"
+    },
+    "problem": {
+      "eyebrow": "/ The problem",
+      "title": "You are losing customers you never even see.",
+      "lead": "A missed call during a job. A WhatsApp that sits unread for four hours. A visitor who leaves because nobody answered the chat. None of it arrives as a complaint. It arrives as a customer who booked somewhere else.",
+      "goodNews": "The good news? Every one of those missed customers was",
+      "goodNewsHighlight": "avoidable",
+      "goodNewsLead": "On a short call we show you what that looks like for your business."
+    },
+    "garage": {
+      "sceneLabel": "Joe the mechanic works on a car while calls come in to his garage",
+      "missed": "Missed customers",
+      "missedWithVangAI": "Missed customers with VangAI",
+      "panelTitle": "Today at the front desk",
+      "live": "Live",
+      "rowA": "Brake noise, needs a look",
+      "rowB": "Winter tyres, wants a price",
+      "rowC": "Service due, asking for a slot",
+      "rowD": "Clutch, wants a second opinion",
+      "rowE": "Rattling exhaust, can it be today",
+      "phoneCall": "Phone call",
+      "mobile": "Mobile",
+      "missedBadge": "Missed",
+      "booked": "Booked",
+      "endLabel": "Every call answered",
+      "endTitle": "Never miss another customer."
     }
   }
 }

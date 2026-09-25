@@ -200,3 +200,48 @@
     animation: none !important;
   }
 }
+
+/* Garage scene pulses and pops (design: VangLost C.dc.html). */
+@keyframes vlc-pulse {
+  0% {
+    transform: scale(0.4);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+@keyframes vlc-pop {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.45);
+  }
+  16% {
+    opacity: 1;
+    transform: translateY(-16px) scale(1);
+  }
+  64% {
+    opacity: 1;
+    transform: translateY(-32px) scale(1);
+  }
+  88%,
+  100% {
+    opacity: 0;
+    transform: translateY(-40px) scale(0.9);
+  }
+}
+.vlc-pop1 {
+  animation: vlc-pop 3s ease-out 0s infinite;
+}
+.vlc-pop2 {
+  animation: vlc-pop 3s ease-out 1s infinite;
+}
+.vlc-pop3 {
+  animation: vlc-pop 3s ease-out 2s infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .vlc-scene * {
+    animation: none !important;
+  }
+}

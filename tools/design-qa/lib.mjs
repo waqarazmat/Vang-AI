@@ -172,6 +172,11 @@ export async function openPage(browser, url, { viewport, lang, isDesign, pageKey
   // The design's i18n re-applies for ~5s after boot; wait it out, then wait until
   // the page stops changing (text, size, layout) for a full second.
   await page.waitForTimeout(isDesign ? 5600 : 800);
+  if (isDesign) {
+    // The design runtime sometimes drops the garage engine's first state update on load
+    // (the counter then shows the wrong label). Its engine re-renders on 'vang-lang'.
+    await page.evaluate(() => window.dispatchEvent(new Event('vang-lang')));
+  }
   await settle(page);
   await page.addStyleTag({ content: FREEZE_CSS });
   if (isDesign && pageKey) {
