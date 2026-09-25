@@ -719,7 +719,7 @@
       "sections": [
         {
           "title": "Who we are",
-          "text": "VangAI, Hasselt, Belgium, company number [company number]. We are the controller for the personal data described on this page. For data about your customers, handled by your assistant, see Data & privacy."
+          "text": "VangAI, Hasselt, Belgium, company number {companyNumber}. We are the controller for the personal data described on this page. For data about your customers, handled by your assistant, see Data & privacy."
         },
         {
           "title": "What we collect",

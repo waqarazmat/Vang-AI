@@ -20,8 +20,9 @@ export const site = {
   countryCode: 'BE',
 
   email: 'sales@vangai.be',
-  demoPhoneNumber: '+32 465 73 52 99',
-  companyNumber: '[company number]',
+  demoPhoneNumber: '[demo number]',
+  // Belgian enterprise number (KBO/BCE).
+  companyNumber: '0465.735.299',
 
   booking: {
     // 'calcom' or 'calendly'. Leave `url` empty to show the design's calendar placeholder.

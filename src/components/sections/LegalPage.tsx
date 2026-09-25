@@ -49,7 +49,7 @@ export function LegalPage({ page }: { page: LegalKey }) {
                     {s.after}
                   </>
                 ) : (
-                  s.text
+                  s.text?.replaceAll('{companyNumber}', site.companyNumber)
                 )}
               </p>
             </div>
