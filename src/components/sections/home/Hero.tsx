@@ -36,7 +36,7 @@ export function Hero() {
             {t('bookCall')}
           </ButtonLink>
           <a
-            href={`tel:${site.demoPhoneNumber}`}
+            href={`tel:${site.demoPhoneNumber.replace(/\s/g, '')}`}
             className="border-b border-amber/40 pb-[2px] text-[16px] font-[700] text-amber transition-colors duration-[180ms] ease-[ease] hover:text-coral"
           >
             {t('callDemo', { number: site.demoPhoneNumber })}

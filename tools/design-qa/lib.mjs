@@ -152,6 +152,23 @@ export async function reapplyDesignFixes(page, pageKey) {
 
 // Opens a page in a deterministic state: fixed viewport, DPR 1, reduced motion,
 // fonts loaded, language set, animations frozen.
+const SITE_CONFIG = fs.readFileSync(path.join(ROOT, 'src/config/site.ts'), 'utf8');
+const configValue = (key) => SITE_CONFIG.match(new RegExp(`\\b${key}: '([^']*)'`))?.[1];
+export const PLACEHOLDER_VALUES = Object.fromEntries(
+  [
+    ['[email address]', configValue('email')],
+    ['[demo number]', configValue('demoPhoneNumber')],
+    ['[company number]', configValue('companyNumber')],
+  ].filter(([ph, v]) => v && v !== ph),
+);
+
+function fillPlaceholders(values) {
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  for (let n = walker.nextNode(); n; n = walker.nextNode()) {
+    for (const [ph, v] of Object.entries(values)) if (n.data.includes(ph)) n.data = n.data.split(ph).join(v);
+  }
+}
+
 export async function openPage(browser, url, { viewport, lang, isDesign, pageKey, injectCss }) {
   const ctx = await browser.newContext({
     viewport,
@@ -197,6 +214,9 @@ export async function openPage(browser, url, { viewport, lang, isDesign, pageKey
   }
   await settle(page);
   await page.addStyleTag({ content: FREEZE_CSS });
+  // Real values that replace the design's [placeholders] (from src/config/site.ts): the
+  // design shows them as literal text, the build shows the configured value.
+  if (isDesign) await page.evaluate(fillPlaceholders, PLACEHOLDER_VALUES);
   if (isDesign && pageKey) {
     for (const f of designFixes(pageKey)) {
       // `js` only tags elements (the design has no class names); `css` does the styling.

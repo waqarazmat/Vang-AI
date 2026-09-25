@@ -19,8 +19,8 @@ export const site = {
   country: 'Belgium',
   countryCode: 'BE',
 
-  email: '[email address]',
-  demoPhoneNumber: '[demo number]',
+  email: 'sales@vangai.be',
+  demoPhoneNumber: '+32 465 73 52 99',
   companyNumber: '[company number]',
 
   booking: {
@@ -32,8 +32,9 @@ export const site = {
 
   contactForm: {
     // Where contact form messages are delivered. The API key comes from RESEND_API_KEY.
-    to: '[email address]',
-    from: 'VangAI website <website@vang.ai>',
+    to: 'sales@vangai.be',
+    // The sending domain (vangai.be) must be verified in Resend.
+    from: 'VangAI website <website@vangai.be>',
   },
 
   // Final demo call audio (Product page, VangVoice card).
