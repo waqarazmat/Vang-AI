@@ -57,7 +57,7 @@ export function Values() {
               key={item.title}
               className="flex min-w-0 flex-col gap-[10px] rounded-[20px] border border-ink/12 bg-cream p-[24px]"
             >
-              <div className="font-mono text-[11px] text-coral-text">0{i + 1}</div>
+              <div className="font-mono text-[11px] text-coral">0{i + 1}</div>
               <div className="text-[19px] leading-[1.2] font-[800] tracking-[-0.022em] text-balance">{item.title}</div>
               <div className="text-[15.5px] leading-[1.55] text-pretty text-ink/80">{item.text}</div>
             </div>

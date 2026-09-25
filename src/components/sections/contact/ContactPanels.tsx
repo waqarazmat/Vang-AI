@@ -293,7 +293,7 @@ function MessageForm({
         <label className="flex min-w-0 flex-col gap-[7px]">
           <span className={labelText}>
             {`${t('phone')} `}
-            <span className="text-ink/65">{t('optional')}</span>
+            <span className="text-ink/50">{t('optional')}</span>
           </span>
           <input className={field} name="phone" type="tel" autoComplete="tel" maxLength={40} />
         </label>

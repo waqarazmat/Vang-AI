@@ -92,7 +92,7 @@ export function WhatsAppDemo() {
             <div className="overflow-hidden text-[15.5px] font-[600] tracking-[-0.01em] text-ellipsis whitespace-nowrap">
               {t('businessName')}
             </div>
-            <div className="mt-[1px] text-[11.5px] text-white/95">{t('whatsapp.online')}</div>
+            <div className="mt-[1px] text-[11.5px] text-white/80">{t('whatsapp.online')}</div>
           </div>
           <svg
             viewBox="0 0 24 24"
@@ -140,7 +140,7 @@ export function WhatsAppDemo() {
               </div>
               <div className="mt-[2px] flex items-center justify-end gap-[3px]">
                 <span
-                  className={`text-[10px] ${msg.mine ? 'text-[rgba(17,27,33,0.65)]' : 'text-[rgba(17,27,33,0.6)]'}`}
+                  className={'text-[10px] text-[rgba(17,27,33,0.45)]'}
                 >
                   {msg.time}
                 </span>

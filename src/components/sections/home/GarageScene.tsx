@@ -102,7 +102,7 @@ export function GarageScene() {
         <div className="flex max-w-[440px] min-w-0 flex-[1_1_280px] flex-col gap-[10px] overflow-hidden rounded-[24px] bg-ink p-[22px]">
           <div className="flex items-baseline justify-between gap-[12px]">
             <div className="font-mono text-[10.5px] tracking-[0.16em] text-cream/65 uppercase">{t('panelTitle')}</div>
-            <div className="font-mono text-[10.5px] tracking-[0.16em] text-coral-light uppercase">{t('live')}</div>
+            <div className="font-mono text-[10.5px] tracking-[0.16em] text-coral uppercase">{t('live')}</div>
           </div>
           {ROWS.map((row) => (
             <div

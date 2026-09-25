@@ -33,7 +33,7 @@ export function PricingTeaser() {
             <div className="flex items-center gap-[10px] border-b border-ink/12 pb-[18px]">
               <Mark size={28} />
               <div className="text-[15px] font-[700]">VangAI</div>
-              <div className="ml-auto font-mono text-[10px] font-[500] tracking-[0.1em] text-coral-text uppercase">
+              <div className="ml-auto font-mono text-[10px] font-[500] tracking-[0.1em] text-coral uppercase">
                 {t('summary')}
               </div>
             </div>

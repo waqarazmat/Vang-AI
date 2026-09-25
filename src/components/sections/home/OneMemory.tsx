@@ -80,7 +80,7 @@ function Card({ title, sub, icons }: { title: string; sub: string; icons: (() =>
         })}
       </div>
       <div className="relative text-[15.5px] font-[700]">{title}</div>
-      <div className="relative mt-[4px] font-mono text-[9.5px] tracking-[0.08em] text-ink/65 uppercase">{sub}</div>
+      <div className="relative mt-[4px] font-mono text-[9.5px] tracking-[0.08em] text-ink/50 uppercase">{sub}</div>
     </div>
   );
 }

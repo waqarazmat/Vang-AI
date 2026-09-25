@@ -47,7 +47,7 @@ export function WebChatDemo() {
             <rect x="5" y="10.5" width="14" height="9.5" rx="2" />
             <path d="M8 10.5V7.6a4 4 0 0 1 8 0v2.9" />
           </svg>
-          <span className="overflow-hidden text-[11.5px] text-ellipsis whitespace-nowrap text-ink/65">
+          <span className="overflow-hidden text-[11.5px] text-ellipsis whitespace-nowrap text-ink/60">
             {t('siteHost')}
           </span>
         </div>
@@ -68,7 +68,7 @@ export function WebChatDemo() {
 
       <div className="relative min-h-0 flex-1 overflow-hidden bg-cream">
         <div className="px-[20px] pt-[22px] opacity-50" aria-hidden="true">
-          <div className="font-mono text-[8.5px] tracking-[0.16em] text-coral-text">{t('webchat.pageTag')}</div>
+          <div className="font-mono text-[8.5px] tracking-[0.16em] text-coral">{t('webchat.pageTag')}</div>
           <div className="mt-[9px] text-[26px] leading-[1.02] font-[800] tracking-[-0.035em] text-ink">
             {t('webchat.pageTitle')}
           </div>

@@ -58,7 +58,7 @@ export function StepCards() {
           >
             <div className="flex min-w-0 flex-1 flex-col gap-[12px] rounded-[22px] border border-cream/16 bg-cream/7 p-[26px]">
               <div className="flex items-center justify-between gap-[10px]">
-                <div className="font-mono text-[12px] tracking-[0.1em] text-coral-step">0{i + 1}</div>
+                <div className="font-mono text-[12px] tracking-[0.1em] text-coral-light">0{i + 1}</div>
                 {visible && shown === i + 1 && i < 3 && (
                   <div className="font-mono text-[9.5px] tracking-[0.12em] text-cream/60 uppercase">{t('hint')}</div>
                 )}

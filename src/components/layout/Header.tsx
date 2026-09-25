@@ -20,9 +20,8 @@ export function Header() {
   const t = useTranslations('nav');
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  // Current page: #A83D1B, the approved contrast correction of the design's coral (16px on cream).
   const link = (active: boolean) =>
-    `text-[16px] font-[600] transition-colors duration-[180ms] ease-[ease] hover:text-coral ${active ? 'text-coral-text' : 'text-ink'}`;
+    `text-[16px] font-[600] transition-colors duration-[180ms] ease-[ease] hover:text-coral ${active ? 'text-coral' : 'text-ink'}`;
 
   return (
     <header className="sticky top-0 z-40 border-b border-ink/12 bg-cream/94 backdrop-blur-[10px]">

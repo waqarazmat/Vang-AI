@@ -15,7 +15,7 @@ export function Hero() {
       className="mx-auto grid max-w-[1200px] grid-cols-[repeat(auto-fit,minmax(min(320px,100%),1fr))] items-center gap-x-[56px] gap-y-[48px] px-[40px] pt-[72px] pb-[96px]"
     >
       <div className="min-w-0">
-        <div className="hero-rise font-mono text-[11px] tracking-[0.18em] text-coral-text uppercase" style={delay(0)}>
+        <div className="hero-rise font-mono text-[11px] tracking-[0.18em] text-coral uppercase" style={delay(0)}>
           {t('eyebrow')}
         </div>
         {/* One piece: splitting words into boxes breaks kerning at the word gaps. */}

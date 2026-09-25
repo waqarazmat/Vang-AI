@@ -137,7 +137,7 @@ export function VoiceDemo() {
             </svg>
             {t('call')}
           </button>
-          <div className="mt-[16px] text-center font-mono text-[9.5px] leading-[1.7] tracking-[0.1em] text-cream/50 uppercase">
+          <div className="mt-[16px] text-center font-mono text-[9.5px] leading-[1.7] tracking-[0.1em] text-cream/40 uppercase">
             {t('privacy')}
           </div>
         </div>

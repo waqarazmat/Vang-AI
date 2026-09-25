@@ -60,7 +60,7 @@ export function Included() {
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-[14px]">
-            <div className="font-mono text-[11px] tracking-[0.14em] text-coral-text uppercase" aria-live="polite">
+            <div className="font-mono text-[11px] tracking-[0.14em] text-coral-deep uppercase" aria-live="polite">
               {t('found', { found, total: ITEMS.length })}
             </div>
             <div className="flex items-center gap-[8px]">

@@ -25,8 +25,8 @@ export default async function OpenGraphImage({ params }: { params: Promise<{ loc
 
   return new ImageResponse(
     <div style={{ width: '100%', height: '100%', display: 'flex', position: 'relative', background: '#2B2118' }}>
-      <div style={{ display: 'flex', flexDirection: 'column', padding: '88px 0 0 90px', width: 760 }}>
-        <div style={{ fontFamily: 'Archivo', fontWeight: 800, fontSize: 40, color: '#FAEEDA', letterSpacing: '-1px' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', padding: '86px 0 0 90px', width: 800 }}>
+        <div style={{ fontFamily: 'Archivo', fontWeight: 800, fontSize: 48, color: '#FAEEDA', letterSpacing: '0px' }}>
           VangAI
         </div>
         <div
@@ -36,8 +36,8 @@ export default async function OpenGraphImage({ params }: { params: Promise<{ loc
             fontSize: 82,
             lineHeight: 1.08,
             color: '#FAEEDA',
-            marginTop: 92,
-            letterSpacing: '-2px',
+            marginTop: 84,
+            letterSpacing: '0px',
           }}
         >
           {t('title')}
@@ -48,7 +48,7 @@ export default async function OpenGraphImage({ params }: { params: Promise<{ loc
             fontSize: 21,
             color: '#E8763F',
             marginTop: 58,
-            letterSpacing: '1px',
+            letterSpacing: '0.5px',
           }}
         >
           {og('channels')}

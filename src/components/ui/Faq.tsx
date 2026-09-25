@@ -21,14 +21,14 @@ const V = {
     head: 'px-[22px] py-[15px]',
     q: 'text-[20px]',
     a: 'px-[22px] pb-[16px] text-[18px] leading-[1.7] text-ink/80',
-    link: 'text-coral-text hover:text-coral',
+    link: 'text-coral hover:text-ink',
   },
   compact: {
     item: 'rounded-[14px] border-ink/10 bg-cream',
     head: 'px-[18px] py-[15px]',
     q: 'text-[16.5px]',
     a: 'px-[18px] pb-[16px] text-[15.5px] leading-[1.6] text-ink/80',
-    link: 'text-coral-text hover:text-coral',
+    link: 'text-coral hover:text-ink',
   },
 } as const;
 

@@ -34,7 +34,7 @@ export default async function ContactPage({ params }: PageProps<'/[locale]/conta
           </p>
         </div>
         <div className="flex flex-col items-start gap-[6px]">
-          <span className="font-mono text-[10.5px] tracking-[0.14em] text-ink/67 uppercase">{t('emailDirect')}</span>
+          <span className="font-mono text-[10.5px] tracking-[0.14em] text-ink/62 uppercase">{t('emailDirect')}</span>
           <a
             href={`mailto:${site.email}`}
             className="border-b-[2px] border-coral/35 pb-[2px] text-[24px] font-[800] tracking-[-0.025em] text-coral hover:text-ink"

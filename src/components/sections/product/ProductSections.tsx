@@ -131,7 +131,7 @@ export function ProductOverview() {
               className={`pc-col ${cls} border-ink/16 bg-cream`}
             >
               <div className="flex items-center justify-between gap-[10px]">
-                <span className="font-mono text-[10px] tracking-[0.14em] text-ink/65 uppercase">{t('seeProduct')}</span>
+                <span className="font-mono text-[10px] tracking-[0.14em] text-ink/55 uppercase">{t('seeProduct')}</span>
               </div>
               <div className="pc-art">
                 <CardArt kind={key} />
@@ -207,7 +207,7 @@ export function ProductSection({
       </div>
       <div className="mx-auto max-w-[1200px] px-[40px] pt-[8px] pb-[88px]">
         <div className="flex flex-wrap items-center gap-x-[20px] gap-y-[14px] border-t border-ink/18 pt-[24px]">
-          <span className="font-mono text-[11px] tracking-[0.1em] text-ink/67 uppercase">{p('from')}</span>
+          <span className="font-mono text-[11px] tracking-[0.1em] text-ink/62 uppercase">{p('from')}</span>
           <span className="text-[36px] font-[800] tracking-[-0.035em] text-coral">{t('price')}</span>
           <span className="text-[15.5px] text-ink/68">{p('vat')}</span>
           <span className="flex-[1_1_20px]" />
