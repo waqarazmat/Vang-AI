@@ -24,5 +24,67 @@
     "terms": "Terms",
     "dataPrivacy": "Data & privacy",
     "copyright": "© 2026 VangAI, Hasselt, Belgium, {companyNumber}"
+  },
+  "demos": {
+    "businessName": "Garage Vanhees",
+    "siteHost": "garagevanhees.be",
+    "bookCall": "Book a call",
+    "send": "Send",
+    "fallback": "In this demo I only answer the three suggested questions. The live assistant is trained on your business and answers whatever your customers ask.",
+    "qa": {
+      "service": {
+        "question": "What does a basic service cost?",
+        "answer": "A basic service is €89, oil and filter included. If we find anything else we call you first, so nothing lands on the invoice as a surprise."
+      },
+      "visit": {
+        "question": "How fast can someone come by?",
+        "answer": "We normally have a slot within two working days. If you have broken down, tell me where you are and I will try to get you in today."
+      },
+      "book": {
+        "question": "Can I book for this week?",
+        "answer": "Yes. Thursday at 15:00 or Friday at 11:00 are free. Which one shall I put your name on?"
+      }
+    },
+    "whatsapp": {
+      "online": "online",
+      "notice": "Messages are answered by an AI assistant",
+      "openingQuestion": "Hi, are you open tomorrow?",
+      "openingAnswer": "Yes, we are open tomorrow 8:00 to 18:00. Anything I can help you with?",
+      "done": "That is the demo. The real assistant answers your customers like this on WhatsApp, day and night.",
+      "placeholder": "Message"
+    },
+    "webchat": {
+      "greeting": "Hi, I am the assistant for Garage Vanhees. Ask me anything, or tap a question below.",
+      "status": "Answers in seconds",
+      "pageTag": "/ HASSELT",
+      "pageTitle": "Your car, back on the road.",
+      "done": "That is the demo. On your site it answers your customers, not ours.",
+      "placeholder": "Ask anything"
+    },
+    "voice": {
+      "name": "VangAI assistant",
+      "ready": "Ready to take your call",
+      "intro": "Press call and talk to it out loud, the way a customer would.",
+      "call": "Call the assistant",
+      "privacy": "Mic used in your browser only · nothing stored",
+      "you": "You",
+      "mute": "Mute",
+      "unmute": "Unmute",
+      "end": "End call",
+      "noteMic": "Demo mode. Your mic is live and the wave is real, the assistant’s voice switches on once we connect it.",
+      "noteScript": "Demo mode. No mic access, so this is a scripted call showing how a conversation flows."
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "/ The front desk for small businesses",
+      "title": "Never miss a customer again.",
+      "lead": "The best customer service across every channel. Phone, WhatsApp and your website, answered by one assistant that is set up and managed for you, in Dutch, French and English.",
+      "bookCall": "Book a call",
+      "callDemo": "Or call our AI at {number} and hear it yourself",
+      "trust": "GDPR compliant · Based in Hasselt · Set up and managed for you",
+      "demoLabel": "Live demo · press play, tap, type",
+      "demoTabsLabel": "Demo channel"
+    }
   }
 }

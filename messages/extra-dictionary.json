@@ -1,0 +1,15 @@
+{
+  "_note": "Translations for strings the design has no NL/FR for (the design left them in English, or they are new accessibility labels). Written in the brand voice: informal 'je' in Dutch, 'vous' in French like the design. Please review.",
+  "In this demo I only answer the three suggested questions. The live assistant is trained on your business and answers whatever your customers ask.": {
+    "nl": "In deze demo beantwoord ik alleen de drie voorgestelde vragen. De echte assistent is getraind op jouw zaak en beantwoordt alles wat je klanten vragen.",
+    "fr": "Dans cette démo, je réponds seulement aux trois questions proposées. Le vrai assistant est formé sur votre entreprise et répond à tout ce que vos clients demandent."
+  },
+  "Send": {
+    "nl": "Versturen",
+    "fr": "Envoyer"
+  },
+  "Demo channel": {
+    "nl": "Demokanaal",
+    "fr": "Canal de démo"
+  }
+}

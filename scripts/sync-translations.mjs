@@ -1,5 +1,6 @@
 // Fills messages/nl.json and messages/fr.json from messages/en.json using the design's own
 // translations (messages/design-dictionary.json), so NL and FR match the design word for word.
+// Strings the design never translated come from messages/extra-dictionary.json.
 //
 // - Values that are not in the dictionary (new copy such as the 404 page) are kept from the
 //   existing nl/fr files if present; otherwise they are reported and the sync fails.
@@ -16,7 +17,11 @@ const root = path.resolve(import.meta.dirname, '..');
 const dir = path.join(root, 'messages');
 const check = process.argv.includes('--check');
 const read = (f) => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
-const dict = read('design-dictionary.json');
+// The design's own translations win; extra-dictionary.json covers strings the design left
+// untranslated and new accessibility labels (reviewed by the team).
+const extra = read('extra-dictionary.json');
+delete extra._note;
+const dict = { ...extra, ...read('design-dictionary.json') };
 const en = read('en.json');
 const norm = (s) => s.replace(/\s+/g, ' ').trim();
 

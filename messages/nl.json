@@ -24,5 +24,67 @@
     "terms": "Voorwaarden",
     "dataPrivacy": "Data & privacy",
     "copyright": "© 2026 VangAI, Hasselt, België, {companyNumber}"
+  },
+  "demos": {
+    "businessName": "Garage Vanhees",
+    "siteHost": "garagevanhees.be",
+    "bookCall": "Plan een gesprek",
+    "send": "Versturen",
+    "fallback": "In deze demo beantwoord ik alleen de drie voorgestelde vragen. De echte assistent is getraind op jouw zaak en beantwoordt alles wat je klanten vragen.",
+    "qa": {
+      "service": {
+        "question": "Wat kost een basisonderhoud?",
+        "answer": "Een basisonderhoud kost €89, olie en filter inbegrepen. Vinden we nog iets, dan bellen we je eerst, zodat er niets onverwachts op de factuur staat."
+      },
+      "visit": {
+        "question": "Hoe snel kan er iemand langskomen?",
+        "answer": "Normaal hebben we binnen twee werkdagen een moment vrij. Sta je stil met pech, zeg me waar je bent en ik probeer je vandaag nog in te plannen."
+      },
+      "book": {
+        "question": "Kan ik deze week nog boeken?",
+        "answer": "Ja. Donderdag om 15:00 of vrijdag om 11:00 zijn nog vrij. Op welk moment mag ik je naam zetten?"
+      }
+    },
+    "whatsapp": {
+      "online": "online",
+      "notice": "Berichten worden beantwoord door een AI-assistent",
+      "openingQuestion": "Hallo, zijn jullie morgen open?",
+      "openingAnswer": "Ja, morgen zijn we open van 8:00 tot 18:00. Kan ik je ergens mee helpen?",
+      "done": "Dat was de demo. De echte assistent antwoordt je klanten zo op WhatsApp, dag en nacht.",
+      "placeholder": "Bericht"
+    },
+    "webchat": {
+      "greeting": "Hallo, ik ben de assistent van Garage Vanhees. Vraag me gerust iets, of tik hieronder op een vraag.",
+      "status": "Antwoordt binnen enkele seconden",
+      "pageTag": "/ HASSELT",
+      "pageTitle": "Je auto, terug op de baan.",
+      "done": "Dat was de demo. Op jouw site antwoordt hij jouw klanten, niet de onze.",
+      "placeholder": "Vraag maar raak"
+    },
+    "voice": {
+      "name": "VangAI-assistent",
+      "ready": "Klaar om je oproep aan te nemen",
+      "intro": "Druk op bellen en praat hardop, zoals een klant zou doen.",
+      "call": "Bel de assistent",
+      "privacy": "Microfoon enkel in je browser · niets bewaard",
+      "you": "Jij",
+      "mute": "Dempen",
+      "unmute": "Dempen uit",
+      "end": "Ophangen",
+      "noteMic": "Demomodus. Je microfoon staat aan en de golf is echt, de stem van de assistent gaat aan zodra we hem koppelen.",
+      "noteScript": "Demomodus. Geen toegang tot je microfoon, dus dit is een voorbeeldgesprek dat toont hoe een gesprek verloopt."
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "/ Het onthaal voor kleine zaken",
+      "title": "Mis nooit meer een klant.",
+      "lead": "De beste klantenservice op elk kanaal. Telefoon, WhatsApp en je website, beantwoord door één assistent die wij voor je opzetten en beheren, in het Nederlands, Frans en Engels.",
+      "bookCall": "Plan een gesprek",
+      "callDemo": "Of bel onze AI op {number} en hoor het zelf",
+      "trust": "GDPR-conform · Gevestigd in Hasselt · Door ons opgezet en beheerd",
+      "demoLabel": "Live demo · druk op play, tik, typ",
+      "demoTabsLabel": "Demokanaal"
+    }
   }
 }

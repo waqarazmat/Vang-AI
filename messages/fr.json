@@ -24,5 +24,67 @@
     "terms": "Conditions",
     "dataPrivacy": "Données et vie privée",
     "copyright": "© 2026 VangAI, Hasselt, Belgique, {companyNumber}"
+  },
+  "demos": {
+    "businessName": "Garage Vanhees",
+    "siteHost": "garagevanhees.be",
+    "bookCall": "Réserver un appel",
+    "send": "Envoyer",
+    "fallback": "Dans cette démo, je réponds seulement aux trois questions proposées. Le vrai assistant est formé sur votre entreprise et répond à tout ce que vos clients demandent.",
+    "qa": {
+      "service": {
+        "question": "Combien coûte un entretien de base ?",
+        "answer": "Un entretien de base coûte 89 €, huile et filtre compris. Si nous trouvons autre chose, nous vous appelons d’abord, pour qu’il n’y ait aucune surprise sur la facture."
+      },
+      "visit": {
+        "question": "Quelqu’un peut passer rapidement ?",
+        "answer": "Nous avons normalement un créneau dans les deux jours ouvrables. Si vous êtes en panne, dites-moi où vous êtes et j’essaie de vous caser aujourd’hui."
+      },
+      "book": {
+        "question": "Je peux réserver pour cette semaine ?",
+        "answer": "Oui. Jeudi à 15 h ou vendredi à 11 h sont libres. Je vous inscris sur lequel ?"
+      }
+    },
+    "whatsapp": {
+      "online": "en ligne",
+      "notice": "Les messages reçoivent une réponse d’un assistant IA",
+      "openingQuestion": "Bonjour, vous êtes ouverts demain ?",
+      "openingAnswer": "Oui, nous sommes ouverts demain de 8 h à 18 h. Je peux vous aider pour quelque chose ?",
+      "done": "Voilà la démo. Le vrai assistant répond ainsi à vos clients sur WhatsApp, jour et nuit.",
+      "placeholder": "Message"
+    },
+    "webchat": {
+      "greeting": "Bonjour, je suis l’assistant du Garage Vanhees. Posez-moi votre question, ou touchez une question ci-dessous.",
+      "status": "Répond en quelques secondes",
+      "pageTag": "/ HASSELT",
+      "pageTitle": "Votre voiture, de retour sur la route.",
+      "done": "Voilà la démo. Sur votre site, il répond à vos clients, pas aux nôtres.",
+      "placeholder": "Posez votre question"
+    },
+    "voice": {
+      "name": "Assistant VangAI",
+      "ready": "Prêt à prendre votre appel",
+      "intro": "Appuyez sur appeler et parlez à voix haute, comme le ferait un client.",
+      "call": "Appeler l’assistant",
+      "privacy": "Micro utilisé uniquement dans votre navigateur · rien n’est enregistré",
+      "you": "Vous",
+      "mute": "Couper le micro",
+      "unmute": "Réactiver le micro",
+      "end": "Raccrocher",
+      "noteMic": "Mode démo. Votre micro est actif et l’onde est réelle, la voix de l’assistant s’activera une fois connectée.",
+      "noteScript": "Mode démo. Pas d’accès au micro, voici donc un appel scénarisé qui montre le déroulement d’une conversation."
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "/ L’accueil des petites entreprises",
+      "title": "Ne manquez plus jamais un client.",
+      "lead": "Le meilleur service client sur chaque canal. Téléphone, WhatsApp et votre site, pris en charge par un seul assistant que nous installons et gérons pour vous, en néerlandais, français et anglais.",
+      "bookCall": "Réserver un appel",
+      "callDemo": "Ou appelez notre IA au {number} et écoutez par vous-même",
+      "trust": "Conforme au RGPD · Basés à Hasselt · Installé et géré pour vous",
+      "demoLabel": "Démo en direct · lancez, touchez, écrivez",
+      "demoTabsLabel": "Canal de démo"
+    }
   }
 }
