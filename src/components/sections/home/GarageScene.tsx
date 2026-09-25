@@ -134,9 +134,7 @@ export function GarageScene() {
 
       <div className="flex min-h-[104px] items-center justify-center px-[12px]">
         <div data-vl="end" className="rounded-[22px] bg-ink px-[34px] py-[24px] text-center text-cream opacity-0">
-          <div className="mb-[10px] font-mono text-[11px] tracking-[0.16em] text-coral-light uppercase">
-            {t('endLabel')}
-          </div>
+          <div className="mb-[10px] font-mono text-[11px] tracking-[0.16em] text-coral uppercase">{t('endLabel')}</div>
           <div className="text-[30px] leading-[1.05] font-[800] tracking-[-0.035em] text-balance">{t('endTitle')}</div>
         </div>
       </div>

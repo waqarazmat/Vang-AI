@@ -21,10 +21,6 @@
   --color-sand: #f3e4cc;
   --color-paper: #fff6e6;
 
-  /* Approved contrast corrections (tools/design-qa/design-fixes.json: small-text-contrast) */
-  --color-coral-text: #a83d1b;
-  --color-coral-step: #ec8150;
-
   --font-sans: var(--font-archivo), Helvetica, sans-serif;
   --font-mono: var(--font-plex-mono), monospace;
 

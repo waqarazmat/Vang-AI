@@ -139,11 +139,7 @@ export function WhatsAppDemo() {
                 {msg.text}
               </div>
               <div className="mt-[2px] flex items-center justify-end gap-[3px]">
-                <span
-                  className={'text-[10px] text-[rgba(17,27,33,0.45)]'}
-                >
-                  {msg.time}
-                </span>
+                <span className={'text-[10px] text-[rgba(17,27,33,0.45)]'}>{msg.time}</span>
                 {msg.mine && (
                   <svg
                     viewBox="0 0 18 12"
