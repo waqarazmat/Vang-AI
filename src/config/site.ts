@@ -1,9 +1,20 @@
 // Every business value the site shows lives here. Values in [brackets] are
 // placeholders that still need the real data before launch.
 
+function siteUrl() {
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL;
+  if (explicit) return explicit.replace(/\/$/, '');
+  const host =
+    process.env.VERCEL_ENV === 'production' ? process.env.VERCEL_PROJECT_PRODUCTION_URL : process.env.VERCEL_URL;
+  return host ? `https://${host}` : 'https://vang.ai';
+}
+
 export const site = {
   name: 'VangAI',
-  url: 'https://vang.ai',
+  // Absolute base for share images, canonical links, sitemap and structured data. On Vercel it
+  // follows the project's production domain (vang-ai.vercel.app today, vang.ai once that domain
+  // is attached); NEXT_PUBLIC_SITE_URL overrides it.
+  url: siteUrl(),
   city: 'Hasselt',
   country: 'Belgium',
   countryCode: 'BE',
