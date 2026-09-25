@@ -21,8 +21,9 @@ export const site = {
 
   email: 'sales@vangai.be',
   demoPhoneNumber: '+32 465 73 52 99',
-  // Belgian enterprise number (KBO/BCE).
-  companyNumber: '[company number]',
+  // Belgian enterprise number (KBO/BCE), e.g. '0123.456.789'. Empty: the footer and the Privacy
+  // page leave it out.
+  companyNumber: '',
 
   booking: {
     // 'calcom' or 'calendly'. Leave `url` empty to show the design's calendar placeholder.
@@ -43,3 +44,12 @@ export const site = {
 } as const;
 
 export const isPlaceholder = (value: string) => /^\[.*\]$/.test(value);
+
+/**
+ * Fills {companyNumber} in a message. Without a number, the whole clause goes: ", {companyNumber}"
+ * and ", company number {companyNumber}" (and its Dutch and French forms) are removed.
+ */
+export const withCompanyNumber = (text: string) =>
+  site.companyNumber
+    ? text.replaceAll('{companyNumber}', site.companyNumber)
+    : text.replace(/,[^,.]*\{companyNumber\}/g, '');

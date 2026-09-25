@@ -159,13 +159,18 @@ export const PLACEHOLDER_VALUES = Object.fromEntries(
     ['[email address]', configValue('email')],
     ['[demo number]', configValue('demoPhoneNumber')],
     ['[company number]', configValue('companyNumber')],
-  ].filter(([ph, v]) => v && v !== ph),
+  ].filter(([ph, v]) => v !== undefined && v !== ph),
 );
 
 function fillPlaceholders(values) {
   const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
   for (let n = walker.nextNode(); n; n = walker.nextNode()) {
-    for (const [ph, v] of Object.entries(values)) if (n.data.includes(ph)) n.data = n.data.split(ph).join(v);
+    for (const [ph, v] of Object.entries(values)) {
+      if (!n.data.includes(ph)) continue;
+      // An empty value drops the clause, like the site does (", company number [company number]").
+      const esc = ph.replace(/[[\]]/g, '\\$&');
+      n.data = v ? n.data.split(ph).join(v) : n.data.replace(new RegExp(`,[^,.]*${esc}`, 'g'), '');
+    }
   }
 }
 

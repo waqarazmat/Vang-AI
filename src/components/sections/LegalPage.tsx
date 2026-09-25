@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Eyebrow } from '@/components/ui/Eyebrow';
 import { CtaBand } from '@/components/sections/CtaBand';
-import { site } from '@/config/site';
+import { site, withCompanyNumber } from '@/config/site';
 
 export type LegalKey = 'privacy' | 'cookies' | 'terms' | 'dataPrivacy';
 type Section = { title: string; text?: string; before?: string; after?: string };
@@ -49,7 +49,7 @@ export function LegalPage({ page }: { page: LegalKey }) {
                     {s.after}
                   </>
                 ) : (
-                  s.text?.replaceAll('{companyNumber}', site.companyNumber)
+                  s.text && withCompanyNumber(s.text)
                 )}
               </p>
             </div>

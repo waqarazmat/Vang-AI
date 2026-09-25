@@ -3,7 +3,7 @@ import { Link } from '@/i18n/navigation';
 import { Mark } from '@/components/ui/Mark';
 import { ButtonLink } from '@/components/ui/ButtonLink';
 import { ArrowRight, ChatIcon, PhoneIcon, WhatsAppIcon } from '@/components/ui/icons';
-import { site } from '@/config/site';
+import { site, withCompanyNumber } from '@/config/site';
 import { LanguageSwitch } from './LanguageSwitch';
 
 const cards = [
@@ -83,7 +83,7 @@ export function Footer() {
           </div>
 
           <div className="relative flex flex-wrap items-center justify-between gap-x-[20px] gap-y-[12px] border-t border-cream/12 px-[32px] pt-[16px] pb-[20px] font-mono text-[10.5px] tracking-[0.1em] text-cream/62 uppercase">
-            <span>{t('copyright', { companyNumber: site.companyNumber })}</span>
+            <span>{withCompanyNumber(t.raw('copyright') as string)}</span>
             <div className="flex flex-wrap items-center gap-[18px]">
               <Link href="/privacy" className={muted}>
                 {t('privacy')}

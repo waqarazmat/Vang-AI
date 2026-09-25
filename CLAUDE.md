@@ -47,6 +47,7 @@ Design QA tooling lives in `tools/design-qa/` (see its README). `design-fixes.js
 - Brand name on the site is **VangAI** everywhere (not Vangst, not GenAITech).
 - Booking link, email, demo number, company number and similar values stay placeholders for now, all in the one config file.
 - `Website Design/voice-demo.wav` is the final demo call audio (Product page, VangVoice side card).
+- Contact details: email `sales@vangai.be` (site and contact form), phone `+32 465 73 52 99` (the Home "call our AI" link). No company registration number yet: `companyNumber` is empty and the footer and Privacy page leave that clause out; filling it in the config restores it in all three languages.
 
 ## Approved corrections to the design (2026-09-25)
 
