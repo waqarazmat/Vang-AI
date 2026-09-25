@@ -131,6 +131,142 @@
       "calendarSub": "Appointment booked",
       "inbox": "Your inbox",
       "inboxSub": "Summary received"
+    },
+    "included": {
+      "eyebrow": "/ What is included",
+      "title": "What is included, because we care about the details too",
+      "lead": "Move the magnifier over the cards to see what you get.",
+      "found": "{found} of {total} found",
+      "revealAll": "Reveal all",
+      "hide": "Hide",
+      "items": {
+        "setup": {
+          "title": "Set up by us",
+          "text": "We build, test and launch it. You never touch a setting."
+        },
+        "tone": {
+          "title": "Sounds like you",
+          "text": "Your tone, your prices, your way of talking to customers."
+        },
+        "languages": {
+          "title": "Three languages",
+          "text": "Dutch, French and English, it answers in the language the customer uses."
+        },
+        "calendar": {
+          "title": "Your calendar, connected",
+          "text": "Bookings land straight in the calendar you already use."
+        },
+        "summary": {
+          "title": "Email summary after every conversation",
+          "text": "Who called, what they wanted and what they booked, straight to your inbox."
+        },
+        "report": {
+          "title": "A report every month",
+          "text": "Bookings made, questions handled and time saved, in plain numbers."
+        },
+        "updates": {
+          "title": "Weekly updates",
+          "text": "New prices, holidays, a new service: tell us and we change it."
+        },
+        "person": {
+          "title": "A person when it matters",
+          "text": "Anything it cannot handle goes straight to you, with the details."
+        },
+        "privacy": {
+          "title": "Privacy built in",
+          "text": "GDPR-compliant from the start, and your customer data stays yours."
+        }
+      }
+    },
+    "pricing": {
+      "eyebrow": "/ Pricing",
+      "title": "From €50 a month.",
+      "lead": "Everything set up, managed and included. We work out the right fit on a short call.",
+      "vat": "Prices excl. VAT.",
+      "cta": "See pricing",
+      "summary": "Monthly summary",
+      "month": "August",
+      "bookings": "Bookings made",
+      "handled": "Calls and messages handled",
+      "saved": "Estimated time saved",
+      "savedValue": "9 hrs",
+      "value": "Value of bookings taken",
+      "example": "EXAMPLE FIGURES"
+    },
+    "why": {
+      "eyebrow": "/ Why VangAI",
+      "title": "Why businesses choose VangAI",
+      "belgium": {
+        "title": "Based in Belgium.",
+        "text": "A local team you can reach, not a platform abroad."
+      },
+      "languages": {
+        "title": "Three languages.",
+        "text": "Dutch, French and English, from day one."
+      },
+      "fast": {
+        "title": "Live in days, not months.",
+        "text": "We do the setup, you keep working."
+      },
+      "terms": {
+        "title": "Fair terms.",
+        "text": "A 3-month minimum, then cancel monthly."
+      }
+    },
+    "faq": {
+      "eyebrow": "/ FAQ",
+      "title": "Questions we get a lot",
+      "more": "Show more questions",
+      "less": "Show fewer questions",
+      "items": {
+        "q1": {
+          "q": "Is this a chatbot with a script?",
+          "a": "No. It holds a real conversation, understands follow-up questions and answers the way your business would. No \"press 1 for opening hours\"."
+        },
+        "q2": {
+          "q": "Does it tell people it is an AI?",
+          "a": "Yes, in the first sentence. The law requires it, and we think it is simply honest. Then it gets on with helping."
+        },
+        "q3": {
+          "q": "What if it does not know the answer?",
+          "a": "It says so and passes the question to you with the customer’s name and number, so you can call back. It never makes things up."
+        },
+        "q4": {
+          "q": "How long before it is live?",
+          "a": "VangChat is usually live within a few working days. VangMessage and VangVoice take one to two weeks, because WhatsApp and phone forwarding need to be approved and set up."
+        },
+        "q5": {
+          "q": "Does it work in French and English too?",
+          "a": "Yes. Dutch, French and English are standard, and it switches to the language the customer speaks."
+        },
+        "q6": {
+          "q": "Do I keep my current phone number?",
+          "a": "Yes. Calls you do not pick up are forwarded to your assistant. Nothing changes for your customers."
+        },
+        "q7": {
+          "q": "Do I need to be good with technology?",
+          "a": "No. We set everything up and keep it running. If you can send us a WhatsApp, you can work with us."
+        },
+        "q8": {
+          "q": "Can I change what it says later?",
+          "a": "Yes. Send us your changes, like new prices, holiday hours or a new service, and we update it for you every week."
+        },
+        "q9": {
+          "q": "What happens to the conversations?",
+          "a": "Everything is handled under GDPR. Your customer data belongs to you and is never used to train other systems. Full explanation on",
+          "link": "Data & privacy"
+        },
+        "q10": {
+          "q": "What does it cost?",
+          "a": "From €50 a month for one channel, excl. VAT. The exact price depends on your business, and we give you a fixed price on a short call.",
+          "link": "See pricing"
+        }
+      }
+    },
+    "cta": {
+      "title": "Never miss another customer.",
+      "text": "A short call, no sales pitch. We will tell you honestly if it is not a fit.",
+      "button": "Book a call"
     }
   },
   "steps": {
@@ -151,5 +287,13 @@
       "title": "It goes live and we keep it running",
       "text": "We make your updates every week, send you a report every month and are there when you need us."
     }
+  },
+  "extraService": {
+    "eyebrow": "/ Extra service",
+    "title": "No website yet? We build those too.",
+    "text": "Most owners know they need a proper website. They just do not have the time. We build one around your business, in your style, with your assistant already on it.",
+    "from": "From",
+    "cta": "Request a quote",
+    "note": "Bigger builds quoted on the call."
   }
 }

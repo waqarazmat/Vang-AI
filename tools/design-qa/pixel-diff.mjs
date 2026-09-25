@@ -27,6 +27,8 @@ import {
   designFixes,
   cropTop,
   findTextY,
+  imageBoxes,
+  maskMatchedImages,
 } from './lib.mjs';
 import { PNG } from 'pngjs';
 
@@ -71,6 +73,7 @@ try {
             )
           : await shot(d.page, outPath(...dir, 'design.png'));
         marks = await landmarks(d.page);
+        const dImgs = component ? [] : await imageBoxes(d.page);
         const cutY = args.until ? await findTextY(d.page, args.until) : null;
         await d.ctx.close();
         if (args.until && cutY === null) {
@@ -107,7 +110,9 @@ try {
           break;
         }
         pageErrors = b.errors;
+        const bImgs = component ? [] : await imageBoxes(b.page);
         await b.ctx.close();
+        const images = maskMatchedImages(dPng, bPng, dImgs, bImgs);
 
         if (cutY !== null) {
           // Progressive mode: only the part of the page that is already built is compared.
@@ -115,10 +120,17 @@ try {
           bPng = cropTop(bPng, cutY);
         }
         cmp = comparePngs(dPng, bPng, outPath(...dir, 'diff.png'));
+        cmp.images = {
+          verified: images.matched,
+          notMatched: images.unmatched.map(
+            (u) => `${u.src} ${Math.round(u.w)}x${Math.round(u.h)} @${Math.round(u.x)},${Math.round(u.y)}`,
+          ),
+        };
         cmp.mode = component ? 'component' : cutY !== null ? `until y=${cutY}` : 'full page';
         // Pixel-perfect: no clustered differences, same size. --threshold allows a % of stray pixels.
         cmp.pass =
           cmp.bands.length === 0 &&
+          cmp.images.notMatched.length === 0 &&
           cmp.diffPct <= args.threshold + 0.0005 &&
           cmp.heightA === cmp.heightB &&
           cmp.widthA === cmp.widthB;
@@ -166,6 +178,10 @@ for (const r of results) {
   console.log(
     `${r.pass ? 'PASS' : 'FAIL'} ${r.page} ${r.vp} ${r.lang} [${r.mode}]  diff ${r.diffPct}%${note}  height design ${r.heightA}px vs build ${r.heightB}px  width ${r.widthA} vs ${r.widthB}`,
   );
+  if (r.images)
+    console.log(
+      `   images: ${r.images.verified} verified (same file, same box)${r.images.notMatched.length ? `, NOT matched: ${r.images.notMatched.join('; ')}` : ''}`,
+    );
   for (const bd of r.bands.slice(0, 12))
     console.log(`   diff band y ${bd.y0}-${bd.y1} x ${bd.x0}-${bd.x1}  in "${bd.section}"`);
   if (r.bands.length > 12) console.log(`   ... ${r.bands.length - 12} more bands`);

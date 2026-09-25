@@ -131,6 +131,142 @@
       "calendarSub": "Afspraak geboekt",
       "inbox": "Je inbox",
       "inboxSub": "Samenvatting ontvangen"
+    },
+    "included": {
+      "eyebrow": "/ Wat erbij zit",
+      "title": "Wat erbij zit, want ook de details doen ertoe",
+      "lead": "Beweeg het vergrootglas over de kaarten en zie wat je krijgt.",
+      "found": "{found} van {total} gevonden",
+      "revealAll": "Toon alles",
+      "hide": "Verberg",
+      "items": {
+        "setup": {
+          "title": "Door ons opgezet",
+          "text": "Wij bouwen, testen en lanceren het. Jij raakt geen enkele instelling aan."
+        },
+        "tone": {
+          "title": "Klinkt als jij",
+          "text": "Jouw toon, jouw prijzen, jouw manier van praten met klanten."
+        },
+        "languages": {
+          "title": "Drie talen",
+          "text": "Nederlands, Frans en Engels, het antwoordt in de taal van de klant."
+        },
+        "calendar": {
+          "title": "Je agenda, gekoppeld",
+          "text": "Boekingen komen meteen in de agenda die je al gebruikt."
+        },
+        "summary": {
+          "title": "E-mailsamenvatting na elk gesprek",
+          "text": "Wie belde, wat die wilde en wat er geboekt is, meteen in je inbox."
+        },
+        "report": {
+          "title": "Elke maand een rapport",
+          "text": "Boekingen, beantwoorde vragen en gewonnen tijd, in duidelijke cijfers."
+        },
+        "updates": {
+          "title": "Wekelijkse aanpassingen",
+          "text": "Nieuwe prijzen, vakantie, een nieuwe dienst: laat het weten en wij passen het aan."
+        },
+        "person": {
+          "title": "Een mens wanneer het ertoe doet",
+          "text": "Wat het niet kan afhandelen, komt meteen bij jou terecht, met alle details."
+        },
+        "privacy": {
+          "title": "Privacy ingebouwd",
+          "text": "GDPR-conform vanaf het begin, en je klantgegevens blijven van jou."
+        }
+      }
+    },
+    "pricing": {
+      "eyebrow": "/ Prijzen",
+      "title": "Vanaf €50 per maand.",
+      "lead": "Alles opgezet, beheerd en inbegrepen. In een kort gesprek zoeken we wat bij je past.",
+      "vat": "Prijzen excl. btw.",
+      "cta": "Bekijk de prijzen",
+      "summary": "Maandoverzicht",
+      "month": "Augustus",
+      "bookings": "Boekingen gemaakt",
+      "handled": "Oproepen en berichten afgehandeld",
+      "saved": "Geschatte tijdwinst",
+      "savedValue": "9 u",
+      "value": "Waarde van de boekingen",
+      "example": "VOORBEELDCIJFERS"
+    },
+    "why": {
+      "eyebrow": "/ Waarom VangAI",
+      "title": "Waarom zaken voor VangAI kiezen",
+      "belgium": {
+        "title": "Gevestigd in België.",
+        "text": "Een lokaal team dat je kan bereiken, geen platform in het buitenland."
+      },
+      "languages": {
+        "title": "Drie talen.",
+        "text": "Nederlands, Frans en Engels, vanaf dag één."
+      },
+      "fast": {
+        "title": "Live in dagen, niet in maanden.",
+        "text": "Wij doen de opstart, jij werkt gewoon door."
+      },
+      "terms": {
+        "title": "Eerlijke voorwaarden.",
+        "text": "Minimaal 3 maanden, daarna maandelijks opzegbaar."
+      }
+    },
+    "faq": {
+      "eyebrow": "/ Veelgestelde vragen",
+      "title": "Vragen die we vaak krijgen",
+      "more": "Toon meer vragen",
+      "less": "Toon minder vragen",
+      "items": {
+        "q1": {
+          "q": "Is dit een chatbot met een script?",
+          "a": "Nee. Het voert een echt gesprek, begrijpt vervolgvragen en antwoordt zoals jouw zaak dat zou doen. Geen \"druk 1 voor de openingsuren\"."
+        },
+        "q2": {
+          "q": "Zegt het dat het een AI is?",
+          "a": "Ja, in de eerste zin. De wet vraagt het, en wij vinden het gewoon eerlijk. Daarna gaat het meteen verder met helpen."
+        },
+        "q3": {
+          "q": "Wat als het het antwoord niet weet?",
+          "a": "Dan zegt het dat en geeft het de vraag aan jou door, met de naam en het nummer van de klant, zodat je kan terugbellen. Het verzint nooit iets."
+        },
+        "q4": {
+          "q": "Hoe snel staat het live?",
+          "a": "VangChat staat meestal binnen een paar werkdagen live. VangMessage en VangVoice duren één tot twee weken, omdat WhatsApp en het doorschakelen van je telefoon goedgekeurd en ingesteld moeten worden."
+        },
+        "q5": {
+          "q": "Werkt het ook in het Frans en Engels?",
+          "a": "Ja. Nederlands, Frans en Engels zijn standaard, en het schakelt over naar de taal van de klant."
+        },
+        "q6": {
+          "q": "Hou ik mijn huidige telefoonnummer?",
+          "a": "Ja. Oproepen die je niet opneemt, worden doorgeschakeld naar je assistent. Voor je klanten verandert er niets."
+        },
+        "q7": {
+          "q": "Moet ik goed zijn met technologie?",
+          "a": "Nee. Wij zetten alles op en houden het draaiende. Kan je ons een WhatsApp sturen, dan kan je met ons samenwerken."
+        },
+        "q8": {
+          "q": "Kan ik later aanpassen wat het zegt?",
+          "a": "Ja. Stuur ons je wijzigingen, zoals nieuwe prijzen, vakantie-uren of een nieuwe dienst, en wij passen het elke week voor je aan."
+        },
+        "q9": {
+          "q": "Wat gebeurt er met de gesprekken?",
+          "a": "Alles gebeurt volgens de GDPR. Je klantgegevens zijn van jou en worden nooit gebruikt om andere systemen te trainen. Volledige uitleg op",
+          "link": "Data & privacy"
+        },
+        "q10": {
+          "q": "Wat kost het?",
+          "a": "Vanaf €50 per maand voor één kanaal, excl. btw. De exacte prijs hangt af van je zaak, en in een kort gesprek krijg je een vaste prijs.",
+          "link": "Bekijk de prijzen"
+        }
+      }
+    },
+    "cta": {
+      "title": "Mis nooit meer een klant.",
+      "text": "Een kort gesprek, geen verkooppraatje. We zeggen je eerlijk als het niet past.",
+      "button": "Plan een gesprek"
     }
   },
   "steps": {
@@ -151,5 +287,13 @@
       "title": "Het gaat live en wij houden het draaiende",
       "text": "We verwerken elke week je aanpassingen, sturen je elke maand een rapport en zijn er wanneer je ons nodig hebt."
     }
+  },
+  "extraService": {
+    "eyebrow": "/ Extra dienst",
+    "title": "Nog geen website? Die bouwen we ook.",
+    "text": "De meeste zaakvoerders weten dat ze een degelijke website nodig hebben. Ze hebben er gewoon de tijd niet voor. Wij bouwen er een rond jouw zaak, in jouw stijl, met je assistent er meteen op.",
+    "from": "Vanaf",
+    "cta": "Vraag een offerte",
+    "note": "Grotere projecten op offerte tijdens het gesprek."
   }
 }

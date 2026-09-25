@@ -11,5 +11,9 @@
   "Demo channel": {
     "nl": "Demokanaal",
     "fr": "Canal de démo"
+  },
+  "{found} of {total} found": {
+    "nl": "{found} van {total} gevonden",
+    "fr": "{found} sur {total} trouvés"
   }
 }

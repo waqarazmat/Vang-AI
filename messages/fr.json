@@ -131,6 +131,142 @@
       "calendarSub": "Rendez-vous réservé",
       "inbox": "Votre boîte mail",
       "inboxSub": "Résumé reçu"
+    },
+    "included": {
+      "eyebrow": "/ Ce qui est inclus",
+      "title": "Ce qui est inclus, parce que les détails comptent aussi",
+      "lead": "Passez la loupe sur les cartes pour voir ce que vous obtenez.",
+      "found": "{found} sur {total} trouvés",
+      "revealAll": "Tout afficher",
+      "hide": "Masquer",
+      "items": {
+        "setup": {
+          "title": "Installé par nous",
+          "text": "Nous le construisons, le testons et le lançons. Vous ne touchez à aucun réglage."
+        },
+        "tone": {
+          "title": "Il parle comme vous",
+          "text": "Votre ton, vos prix, votre façon de parler aux clients."
+        },
+        "languages": {
+          "title": "Trois langues",
+          "text": "Néerlandais, français et anglais : il répond dans la langue du client."
+        },
+        "calendar": {
+          "title": "Votre agenda, connecté",
+          "text": "Les réservations arrivent directement dans l’agenda que vous utilisez déjà."
+        },
+        "summary": {
+          "title": "Résumé par e-mail après chaque conversation",
+          "text": "Qui a appelé, ce qu’il voulait et ce qu’il a réservé, directement dans votre boîte mail."
+        },
+        "report": {
+          "title": "Un rapport chaque mois",
+          "text": "Réservations, questions traitées et temps gagné, en chiffres clairs."
+        },
+        "updates": {
+          "title": "Mises à jour hebdomadaires",
+          "text": "Nouveaux prix, congés, un nouveau service : dites-le-nous et nous l’adaptons."
+        },
+        "person": {
+          "title": "Une vraie personne quand il le faut",
+          "text": "Ce qu’il ne peut pas traiter vous arrive directement, avec les détails."
+        },
+        "privacy": {
+          "title": "Vie privée intégrée",
+          "text": "Conforme au RGPD dès le départ, et les données de vos clients restent les vôtres."
+        }
+      }
+    },
+    "pricing": {
+      "eyebrow": "/ Tarifs",
+      "title": "À partir de 50 € par mois.",
+      "lead": "Tout est installé, géré et inclus. Nous trouvons la bonne formule lors d’un court appel.",
+      "vat": "Prix hors TVA.",
+      "cta": "Voir les tarifs",
+      "summary": "Bilan mensuel",
+      "month": "Août",
+      "bookings": "Réservations",
+      "handled": "Appels et messages traités",
+      "saved": "Temps gagné estimé",
+      "savedValue": "9 h",
+      "value": "Valeur des réservations",
+      "example": "CHIFFRES D’EXEMPLE"
+    },
+    "why": {
+      "eyebrow": "/ Pourquoi VangAI",
+      "title": "Pourquoi les entreprises choisissent VangAI",
+      "belgium": {
+        "title": "Basés en Belgique.",
+        "text": "Une équipe locale joignable, pas une plateforme à l’étranger."
+      },
+      "languages": {
+        "title": "Trois langues.",
+        "text": "Néerlandais, français et anglais, dès le premier jour."
+      },
+      "fast": {
+        "title": "En ligne en quelques jours, pas en quelques mois.",
+        "text": "Nous nous occupons de la mise en place, vous continuez à travailler."
+      },
+      "terms": {
+        "title": "Des conditions honnêtes.",
+        "text": "3 mois minimum, ensuite résiliable chaque mois."
+      }
+    },
+    "faq": {
+      "eyebrow": "/ Questions fréquentes",
+      "title": "Les questions qu’on nous pose souvent",
+      "more": "Afficher plus de questions",
+      "less": "Afficher moins de questions",
+      "items": {
+        "q1": {
+          "q": "Est-ce un chatbot avec un script ?",
+          "a": "Non. Il mène une vraie conversation, comprend les questions de suivi et répond comme votre entreprise le ferait. Pas de « tapez 1 pour nos heures d’ouverture »."
+        },
+        "q2": {
+          "q": "Dit-il qu’il est une IA ?",
+          "a": "Oui, dès la première phrase. La loi l’exige, et nous trouvons cela tout simplement honnête. Ensuite, il se met à aider."
+        },
+        "q3": {
+          "q": "Et s’il ne connaît pas la réponse ?",
+          "a": "Il le dit et vous transmet la question avec le nom et le numéro du client, pour que vous puissiez rappeler. Il n’invente jamais rien."
+        },
+        "q4": {
+          "q": "Combien de temps avant la mise en ligne ?",
+          "a": "VangChat est généralement en ligne en quelques jours ouvrables. VangMessage et VangVoice prennent une à deux semaines, car WhatsApp et le transfert d’appels doivent être validés et configurés."
+        },
+        "q5": {
+          "q": "Fonctionne-t-il aussi en français et en anglais ?",
+          "a": "Oui. Le néerlandais, le français et l’anglais sont inclus, et il passe à la langue du client."
+        },
+        "q6": {
+          "q": "Est-ce que je garde mon numéro actuel ?",
+          "a": "Oui. Les appels auxquels vous ne répondez pas sont transférés vers votre assistant. Rien ne change pour vos clients."
+        },
+        "q7": {
+          "q": "Dois-je être doué en informatique ?",
+          "a": "Non. Nous installons tout et le faisons tourner. Si vous savez envoyer un WhatsApp, vous pouvez travailler avec nous."
+        },
+        "q8": {
+          "q": "Puis-je modifier plus tard ce qu’il dit ?",
+          "a": "Oui. Envoyez-nous vos changements, comme de nouveaux prix, vos horaires de congés ou un nouveau service, et nous les intégrons chaque semaine."
+        },
+        "q9": {
+          "q": "Que deviennent les conversations ?",
+          "a": "Tout est traité selon le RGPD. Les données de vos clients vous appartiennent et ne servent jamais à entraîner d’autres systèmes. Explication complète sur",
+          "link": "Données et vie privée"
+        },
+        "q10": {
+          "q": "Combien ça coûte ?",
+          "a": "À partir de 50 € par mois pour un canal, hors TVA. Le prix exact dépend de votre entreprise, et vous recevez un prix fixe lors d’un court appel.",
+          "link": "Voir les tarifs"
+        }
+      }
+    },
+    "cta": {
+      "title": "Ne manquez plus aucun client.",
+      "text": "Un court appel, sans baratin commercial. Nous vous dirons honnêtement si ce n’est pas pour vous.",
+      "button": "Réserver un appel"
     }
   },
   "steps": {
@@ -151,5 +287,13 @@
       "title": "Il passe en ligne et nous le faisons tourner",
       "text": "Nous faisons vos mises à jour chaque semaine, vous envoyons un rapport chaque mois et sommes là quand vous avez besoin de nous."
     }
+  },
+  "extraService": {
+    "eyebrow": "/ Service en plus",
+    "title": "Pas encore de site ? Nous en créons aussi.",
+    "text": "La plupart des indépendants savent qu’il leur faut un vrai site. Ils n’ont simplement pas le temps. Nous le créons autour de votre entreprise, à votre image, avec votre assistant déjà intégré.",
+    "from": "À partir de",
+    "cta": "Demander un devis",
+    "note": "Projets plus importants sur devis, lors de l’appel."
   }
 }

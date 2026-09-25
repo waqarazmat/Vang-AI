@@ -343,6 +343,61 @@ export async function findTextY(page, text) {
   }, text);
 }
 
+// Visible raster images (<img>, SVG <image>) with their file name and document box.
+export async function imageBoxes(page) {
+  return page.evaluate(() =>
+    [...document.querySelectorAll('img, image')]
+      .map((el) => {
+        const r = el.getBoundingClientRect();
+        const src = (el.getAttribute('src') || el.getAttribute('href') || '').split('/').pop();
+        return { src, x: r.left + scrollX, y: r.top + scrollY, w: r.width, h: r.height };
+      })
+      .filter((b) => b.w > 0 && b.h > 0),
+  );
+}
+
+// Chrome's image scaler smooths the edges of a downscaled image slightly differently
+// depending on the rest of the page (verified: even a blank page differs from both sides).
+// So images are verified by what and where: same file, same box (within 0.02px). Verified
+// boxes are blanked on both screenshots; anything missing, moved or resized still fails.
+export function maskMatchedImages(dPng, bPng, dBoxes, bBoxes) {
+  const used = new Set();
+  let matched = 0;
+  const unmatched = [];
+  for (const d of dBoxes) {
+    const i = bBoxes.findIndex(
+      (b, j) =>
+        !used.has(j) &&
+        b.src === d.src &&
+        Math.abs(b.x - d.x) <= 0.02 &&
+        Math.abs(b.y - d.y) <= 0.02 &&
+        Math.abs(b.w - d.w) <= 0.02 &&
+        Math.abs(b.h - d.h) <= 0.02,
+    );
+    if (i < 0) {
+      unmatched.push(d);
+      continue;
+    }
+    used.add(i);
+    matched++;
+    for (const png of [dPng, bPng]) {
+      const x0 = Math.max(0, Math.floor(d.x) - 1),
+        y0 = Math.max(0, Math.floor(d.y) - 1);
+      const x1 = Math.min(png.width, Math.ceil(d.x + d.w) + 1),
+        y1 = Math.min(png.height, Math.ceil(d.y + d.h) + 1);
+      for (let y = y0; y < y1; y++)
+        for (let x = x0; x < x1; x++) {
+          const k = (y * png.width + x) * 4;
+          png.data[k] = 255;
+          png.data[k + 1] = 0;
+          png.data[k + 2] = 255;
+          png.data[k + 3] = 255;
+        }
+    }
+  }
+  return { matched, unmatched };
+}
+
 export function nameBand(marks, y) {
   let best = 'top of page';
   for (const m of marks) if (m.y <= y + 40) best = m.label;
