@@ -71,5 +71,13 @@
   "PHONE · WHATSAPP · WEBSITE CHAT": {
     "nl": "TELEFOON · WHATSAPP · WEBSITECHAT",
     "fr": "TÉLÉPHONE · WHATSAPP · CHAT DU SITE"
+  },
+  "This is the real VangAI assistant. Talk to it like a customer would.": {
+    "nl": "Dit is de echte VangAI-assistent. Praat ermee zoals een klant dat zou doen.",
+    "fr": "Voici le vrai assistant VangAI. Parlez-lui comme le ferait un client."
+  },
+  "Live call with our AI · uses your microphone": {
+    "nl": "Live gesprek met onze AI · gebruikt je microfoon",
+    "fr": "Appel en direct avec notre IA · utilise votre micro"
   }
 }

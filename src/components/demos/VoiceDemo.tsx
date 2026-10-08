@@ -1,37 +1,57 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Mark } from '@/components/ui/Mark';
+import { preloadVoiceAgent, startVoiceCall, voiceAgentEnabled, type VoiceCall } from '@/lib/assistant/voice';
 import { PhoneFrame, StatusIcons } from './PhoneFrame';
 
 const BARS = Array.from({ length: 21 }, (_, i) => i);
 
 type Mode = 'idle' | 'live';
-type Kind = 'mic' | 'script';
+type Kind = 'agent' | 'mic' | 'script';
 
 /**
- * VangVoice demo (design: VangCall.dc.html). Pressing call asks for the microphone; with
- * access, the "You" waveform follows the visitor's voice (Web Audio analyser). Without it,
- * a scripted call alternates speakers every 3 seconds. The assistant's voice is connected
- * later through the assistant adapter (src/lib/assistant).
+ * VangVoice demo (design: VangCall.dc.html). With the live agent configured
+ * (src/lib/assistant/voice.ts), pressing call starts a real call: the "You" waveform follows
+ * the visitor's voice and the VangAI waveform the assistant's. Otherwise, or when the call
+ * cannot start, it asks for the microphone and only the "You" waveform is live; without mic
+ * access a scripted call alternates speakers every 3 seconds.
  */
 export function VoiceDemo() {
   const t = useTranslations('demos.voice');
+  const locale = useLocale();
   const [mode, setMode] = useState<Mode>('idle');
   const [kind, setKind] = useState<Kind>('script');
   const [seconds, setSeconds] = useState(0);
   const [muted, setMuted] = useState(false);
+  const [aiTalking, setAiTalking] = useState(false);
 
   const you = useRef<HTMLDivElement>(null);
+  const ai = useRef<HTMLDivElement>(null);
+  const call = useRef<VoiceCall | null>(null);
+  const talking = useRef(false);
   const stream = useRef<MediaStream | null>(null);
   const audio = useRef<AudioContext | null>(null);
   const raf = useRef(0);
   const tick = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const flatten = () => {
-    if (!you.current) return;
-    for (const bar of Array.from(you.current.children)) (bar as HTMLElement).style.transform = 'scaleY(0.1)';
+  const flatten = (row = you.current) => {
+    if (!row) return;
+    for (const bar of Array.from(row.children)) (bar as HTMLElement).style.transform = 'scaleY(0.1)';
+  };
+
+  // Draws one waveform row from an analyser; returns the row's average level (0 to 1).
+  const draw = (analyser: AnalyserNode, row: HTMLDivElement | null, data: Uint8Array<ArrayBuffer>) => {
+    analyser.getByteFrequencyData(data);
+    const bars = row?.children;
+    let sum = 0;
+    for (let i = 0; i < (bars?.length ?? 0); i++) {
+      const v = data[Math.floor((i / bars!.length) * (data.length * 0.7))] / 255;
+      sum += v;
+      (bars![i] as HTMLElement).style.transform = `scaleY(${Math.max(0.1, Math.min(1, v * 2.1)).toFixed(3)})`;
+    }
+    return bars?.length ? sum / bars.length : 0;
   };
 
   const teardown = useCallback(() => {
@@ -42,7 +62,17 @@ export function VoiceDemo() {
     stream.current = null;
     void audio.current?.close().catch(() => {});
     audio.current = null;
+    const live = call.current;
+    call.current = null;
+    void live?.end().catch(() => {});
+    talking.current = false;
+    setAiTalking(false);
     flatten();
+    flatten(ai.current);
+  }, []);
+
+  useEffect(() => {
+    void preloadVoiceAgent();
   }, []);
 
   useEffect(() => teardown, [teardown]);
@@ -55,55 +85,86 @@ export function VoiceDemo() {
     tick.current = setInterval(() => setSeconds((s) => s + 1), 1000);
   };
 
+  // The visitor's waveform: a Web Audio analyser on the microphone.
+  const listen = (media: MediaStream) => {
+    stream.current = media;
+    const ctx = new AudioContext();
+    audio.current = ctx;
+    const analyser = ctx.createAnalyser();
+    analyser.fftSize = 128;
+    analyser.smoothingTimeConstant = 0.7;
+    ctx.createMediaStreamSource(media).connect(analyser);
+    return analyser;
+  };
+
+  const loop = (mine: AnalyserNode | null) => {
+    const mineData = new Uint8Array(mine?.frequencyBinCount ?? 0);
+    let theirsData = new Uint8Array(0);
+    const frame = () => {
+      raf.current = requestAnimationFrame(frame);
+      if (mine) draw(mine, you.current, mineData);
+      const theirs = call.current?.analyser();
+      if (!theirs) return;
+      if (theirsData.length !== theirs.frequencyBinCount) theirsData = new Uint8Array(theirs.frequencyBinCount);
+      const speaking = draw(theirs, ai.current, theirsData) > 0.04;
+      if (speaking !== talking.current) {
+        talking.current = speaking;
+        setAiTalking(speaking);
+      }
+    };
+    frame();
+  };
+
+  const startAgent = async () => {
+    go('agent');
+    const live = await startVoiceCall(locale, { onEnd: () => end(), onError: () => {} });
+    call.current = live;
+    await live.ready;
+    // The call already has microphone access, so this second stream opens without a prompt.
+    const media = await navigator.mediaDevices.getUserMedia({ audio: true }).catch(() => null);
+    loop(media ? listen(media) : null);
+  };
+
   const start = async () => {
     if (mode !== 'idle') return;
+    if (voiceAgentEnabled) {
+      try {
+        return await startAgent();
+      } catch {
+        teardown(); // the live call could not start: fall back to the demo below
+      }
+    }
     if (!navigator.mediaDevices?.getUserMedia) return go('script');
     try {
-      const media = await navigator.mediaDevices.getUserMedia({ audio: true });
-      stream.current = media;
-      const ctx = new AudioContext();
-      audio.current = ctx;
-      const analyser = ctx.createAnalyser();
-      analyser.fftSize = 128;
-      analyser.smoothingTimeConstant = 0.7;
-      ctx.createMediaStreamSource(media).connect(analyser);
-      const data = new Uint8Array(analyser.frequencyBinCount);
-      const loop = () => {
-        raf.current = requestAnimationFrame(loop);
-        const bars = you.current?.children;
-        if (!bars) return;
-        analyser.getByteFrequencyData(data);
-        for (let i = 0; i < bars.length; i++) {
-          const v = data[Math.floor((i / bars.length) * (data.length * 0.7))] / 255;
-          (bars[i] as HTMLElement).style.transform = `scaleY(${Math.max(0.1, Math.min(1, v * 2.1)).toFixed(3)})`;
-        }
-      };
-      loop();
+      loop(listen(await navigator.mediaDevices.getUserMedia({ audio: true })));
       go('mic');
     } catch {
       go('script');
     }
   };
 
-  const end = () => {
+  function end() {
     teardown();
     setMode('idle');
     setSeconds(0);
     setMuted(false);
-  };
+  }
 
   const toggleMute = () => {
     const next = !muted;
     stream.current?.getAudioTracks().forEach((track) => (track.enabled = !next));
+    if (next) call.current?.mute();
+    else call.current?.unmute();
     if (next) flatten();
     setMuted(next);
   };
 
   const live = mode === 'live';
-  const mic = kind === 'mic';
+  const agent = kind === 'agent';
+  const mic = kind === 'mic' || agent;
   const speaker = live && !mic ? Math.floor(seconds / 3) % 2 : -1;
   const youOn = (!mic && speaker === 0) || (mic && !muted && seconds > 0);
-  const aiOn = !mic && speaker === 1;
+  const aiOn = agent ? aiTalking : !mic && speaker === 1;
   const youActive = mic ? !muted : youOn;
   const time = `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`;
 
@@ -130,6 +191,7 @@ export function VoiceDemo() {
           <button
             type="button"
             onClick={() => void start()}
+            onPointerEnter={() => void preloadVoiceAgent()}
             className="mt-[26px] inline-flex cursor-pointer items-center gap-[10px] rounded-[99px] bg-coral px-[30px] py-[15px] text-[15.5px] font-[700] text-cream transition-[background,transform] duration-[180ms] ease-[ease] hover:-translate-y-[2px] hover:bg-cream hover:text-ink"
           >
             <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true">
@@ -138,7 +200,7 @@ export function VoiceDemo() {
             {t('call')}
           </button>
           <div className="mt-[16px] text-center font-mono text-[9.5px] leading-[1.7] tracking-[0.1em] text-cream/40 uppercase">
-            {t('privacy')}
+            {voiceAgentEnabled ? t('privacyLive') : t('privacy')}
           </div>
         </div>
       )}
@@ -188,7 +250,8 @@ export function VoiceDemo() {
                 </div>
               </div>
               <div
-                className={`voice-wave mt-[10px] flex h-[42px] items-center justify-between gap-[3px] ${aiOn ? 'on' : ''}`}
+                ref={ai}
+                className={`voice-wave mt-[10px] flex h-[42px] items-center justify-between gap-[3px] ${aiOn && !agent ? 'on' : ''}`}
               >
                 {BARS.map((i) => (
                   <div
@@ -202,7 +265,7 @@ export function VoiceDemo() {
           </div>
 
           <div className="mt-[14px] text-center text-[11.5px] leading-[1.6] text-pretty text-cream/60">
-            {mic ? t('noteMic') : t('noteScript')}
+            {agent ? t('noteLive') : mic ? t('noteMic') : t('noteScript')}
           </div>
 
           <div className="mt-auto flex items-center justify-center gap-[26px]">

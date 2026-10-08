@@ -112,7 +112,9 @@
       "unmute": "Réactiver le micro",
       "end": "Raccrocher",
       "noteMic": "Mode démo. Votre micro est actif et l’onde est réelle, la voix de l’assistant s’activera une fois connectée.",
-      "noteScript": "Mode démo. Pas d’accès au micro, voici donc un appel scénarisé qui montre le déroulement d’une conversation."
+      "noteScript": "Mode démo. Pas d’accès au micro, voici donc un appel scénarisé qui montre le déroulement d’une conversation.",
+      "noteLive": "Voici le vrai assistant VangAI. Parlez-lui comme le ferait un client.",
+      "privacyLive": "Appel en direct avec notre IA · utilise votre micro"
     }
   },
   "home": {

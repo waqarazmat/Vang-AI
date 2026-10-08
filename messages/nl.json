@@ -112,7 +112,9 @@
       "unmute": "Dempen uit",
       "end": "Ophangen",
       "noteMic": "Demomodus. Je microfoon staat aan en de golf is echt, de stem van de assistent gaat aan zodra we hem koppelen.",
-      "noteScript": "Demomodus. Geen toegang tot je microfoon, dus dit is een voorbeeldgesprek dat toont hoe een gesprek verloopt."
+      "noteScript": "Demomodus. Geen toegang tot je microfoon, dus dit is een voorbeeldgesprek dat toont hoe een gesprek verloopt.",
+      "noteLive": "Dit is de echte VangAI-assistent. Praat ermee zoals een klant dat zou doen.",
+      "privacyLive": "Live gesprek met onze AI · gebruikt je microfoon"
     }
   },
   "home": {

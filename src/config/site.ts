@@ -41,6 +41,13 @@ export const site = {
 
   // Final demo call audio (Product page, VangVoice card).
   demoCallAudio: '/audio/voice-demo.wav',
+
+  // Live voice agent behind "Call the assistant" (Retell web call, src/lib/assistant/voice.ts).
+  // The public key comes from NEXT_PUBLIC_RETELL_PUBLIC_KEY; without it the demo stays scripted.
+  voiceAgent: {
+    agentId: 'agent_4f4de5e4e836b86e1c38ad9b14',
+    publicKey: process.env.NEXT_PUBLIC_RETELL_PUBLIC_KEY ?? '',
+  },
 } as const;
 
 export const isPlaceholder = (value: string) => /^\[.*\]$/.test(value);
