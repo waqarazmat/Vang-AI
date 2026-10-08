@@ -51,9 +51,9 @@ export const site = {
   chatWidget: {
     src: 'https://genaitech.be/widget/cw.js',
     orgId: 'bcaa0e6d-6842-46a7-aff2-dab8d3c01c66',
-    primaryColor: '#372D24',
-    secondaryColor: '#F3E4CC',
-    radius: '14',
+    primaryColor: '#F3E4CC',
+    secondaryColor: '#372D24',
+    radius: '15',
     // The widget's backend (passed as data-api-base). Empty: cw.js uses its built-in default.
     apiBase: 'https://api.vangai.be',
   },
