@@ -60,6 +60,9 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
           <Script
             src={site.chatWidget.src}
             data-org-id={site.chatWidget.orgId}
+            data-primary-color={site.chatWidget.primaryColor}
+            data-secondary-color={site.chatWidget.secondaryColor}
+            data-radius={site.chatWidget.radius}
             data-api-base={site.chatWidget.apiBase || undefined}
             strategy="lazyOnload"
           />
