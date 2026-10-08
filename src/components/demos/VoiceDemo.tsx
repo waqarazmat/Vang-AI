@@ -71,10 +71,6 @@ export function VoiceDemo() {
     flatten(ai.current);
   }, []);
 
-  useEffect(() => {
-    void preloadVoiceAgent();
-  }, []);
-
   useEffect(() => teardown, [teardown]);
 
   const go = (k: Kind) => {
@@ -191,7 +187,10 @@ export function VoiceDemo() {
           <button
             type="button"
             onClick={() => void start()}
+            // The SDK loads on intent (hover, focus, touch), not with the page.
             onPointerEnter={() => void preloadVoiceAgent()}
+            onFocus={() => void preloadVoiceAgent()}
+            onTouchStart={() => void preloadVoiceAgent()}
             className="mt-[26px] inline-flex cursor-pointer items-center gap-[10px] rounded-[99px] bg-coral px-[30px] py-[15px] text-[15.5px] font-[700] text-cream transition-[background,transform] duration-[180ms] ease-[ease] hover:-translate-y-[2px] hover:bg-cream hover:text-ink"
           >
             <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true">
