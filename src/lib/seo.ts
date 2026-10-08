@@ -4,7 +4,7 @@ import { getPathname } from '@/i18n/navigation';
 import { htmlLang, locales, routing, type AppPathname, type Locale } from '@/i18n/routing';
 import { site } from '@/config/site';
 
-/** Absolute URL of a page in one language, e.g. ('/pricing', 'nl') -> https://vang.ai/nl/prijzen */
+/** Absolute URL of a page in one language, e.g. ('/pricing', 'nl') -> https://vangai.be/nl/prijzen */
 export function pageUrl(href: AppPathname, locale: Locale) {
   return site.url + getPathname({ href, locale });
 }

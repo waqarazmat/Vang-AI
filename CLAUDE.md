@@ -2,7 +2,7 @@
 
 # VangAI website
 
-Production marketing site for **VangAI** (vang.ai), built by GenAITech (Hasselt, Belgium). It is an AI front desk for Belgian SMEs: phone (VangVoice), WhatsApp (VangMessage), and website chat (VangChat), in Dutch, French, and English, set up and managed for the client.
+Production marketing site for **VangAI** (vangai.be, DNS on Cloudflare, hosted on Vercel), built by GenAITech (Hasselt, Belgium). It is an AI front desk for Belgian SMEs: phone (VangVoice), WhatsApp (VangMessage), and website chat (VangChat), in Dutch, French, and English, set up and managed for the client.
 
 ## Source of truth
 

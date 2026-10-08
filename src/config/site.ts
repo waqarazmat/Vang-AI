@@ -6,13 +6,13 @@ function siteUrl() {
   if (explicit) return explicit.replace(/\/$/, '');
   const host =
     process.env.VERCEL_ENV === 'production' ? process.env.VERCEL_PROJECT_PRODUCTION_URL : process.env.VERCEL_URL;
-  return host ? `https://${host}` : 'https://vang.ai';
+  return host ? `https://${host}` : 'https://vangai.be';
 }
 
 export const site = {
   name: 'VangAI',
   // Absolute base for share images, canonical links, sitemap and structured data. On Vercel it
-  // follows the project's production domain (vang-ai.vercel.app today, vang.ai once that domain
+  // follows the project's production domain (vang-ai.vercel.app today, vangai.be once that domain
   // is attached); NEXT_PUBLIC_SITE_URL overrides it.
   url: siteUrl(),
   city: 'Hasselt',
