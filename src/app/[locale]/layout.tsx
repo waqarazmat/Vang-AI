@@ -57,7 +57,12 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
         </NextIntlClientProvider>
         {site.chatWidget.src && (
           // Loads when the browser is idle, so it never delays the page itself.
-          <Script src={site.chatWidget.src} data-org-id={site.chatWidget.orgId} strategy="lazyOnload" />
+          <Script
+            src={site.chatWidget.src}
+            data-org-id={site.chatWidget.orgId}
+            data-api-base={site.chatWidget.apiBase || undefined}
+            strategy="lazyOnload"
+          />
         )}
       </body>
     </html>

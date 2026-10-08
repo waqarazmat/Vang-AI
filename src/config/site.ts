@@ -51,6 +51,8 @@ export const site = {
   chatWidget: {
     src: 'https://genaitech.be/widget/cw.js',
     orgId: 'bcaa0e6d-6842-46a7-aff2-dab8d3c01c66',
+    // The widget's backend (passed as data-api-base). Empty: cw.js uses its built-in default.
+    apiBase: '',
   },
 
   voiceAgent: {
