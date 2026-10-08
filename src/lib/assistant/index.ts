@@ -8,9 +8,9 @@ export type { ScriptedQA } from './scripted';
  * ============================================================================
  *  CONNECT REAL AI HERE
  * ============================================================================
- * Every demo on the site (VangVoice, VangMessage, VangChat) gets its replies from
- * getAssistant(). Today it returns the scripted front-end adapter with the design's
- * questions and answers.
+ * The chat demos (VangMessage, VangChat) get their replies from getAssistant(). Today it
+ * returns the scripted front-end adapter with the design's questions and answers.
+ * The VangVoice call connects to the live Retell voice agent instead: see ./voice.ts.
  *
  * To connect the real assistant:
  *   1. Implement the POST handler in src/app/api/assistant/route.ts (it returns 501 now).

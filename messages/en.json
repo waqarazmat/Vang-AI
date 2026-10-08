@@ -112,7 +112,9 @@
       "unmute": "Unmute",
       "end": "End call",
       "noteMic": "Demo mode. Your mic is live and the wave is real, the assistant’s voice switches on once we connect it.",
-      "noteScript": "Demo mode. No mic access, so this is a scripted call showing how a conversation flows."
+      "noteScript": "Demo mode. No mic access, so this is a scripted call showing how a conversation flows.",
+      "noteLive": "This is the real VangAI assistant. Talk to it like a customer would.",
+      "privacyLive": "Live call with our AI · uses your microphone"
     }
   },
   "home": {
