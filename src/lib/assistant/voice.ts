@@ -46,6 +46,8 @@ export async function startVoiceCall(locale: string, hooks: Hooks): Promise<Voic
     agent_id: site.voiceAgent.agentId,
     retell_llm_dynamic_variables: { language: locale },
     metadata: { source: 'website', page: typeof location === 'undefined' ? '' : location.pathname },
+    // Exposes the assistant's audio analyser, which the VangAI waveform reads.
+    audio: { emitRawAudioSamples: true },
     hooks: { onEnd: hooks.onEnd, onError: hooks.onError },
   });
   return {

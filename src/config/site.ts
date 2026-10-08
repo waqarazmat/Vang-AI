@@ -43,10 +43,12 @@ export const site = {
   demoCallAudio: '/audio/voice-demo.wav',
 
   // Live voice agent behind "Call the assistant" (Retell web call, src/lib/assistant/voice.ts).
-  // The public key comes from NEXT_PUBLIC_RETELL_PUBLIC_KEY; without it the demo stays scripted.
+  // The public key is meant for the browser: Retell only accepts it from the domains allowed on
+  // it in the Retell dashboard. NEXT_PUBLIC_RETELL_PUBLIC_KEY overrides it; empty keeps the
+  // scripted demo.
   voiceAgent: {
     agentId: 'agent_4f4de5e4e836b86e1c38ad9b14',
-    publicKey: process.env.NEXT_PUBLIC_RETELL_PUBLIC_KEY ?? '',
+    publicKey: process.env.NEXT_PUBLIC_RETELL_PUBLIC_KEY ?? 'public_key_b35448c85ed653e77f71f',
   },
 } as const;
 
