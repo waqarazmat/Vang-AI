@@ -188,6 +188,8 @@ export async function openPage(browser, url, { viewport, lang, isDesign, pageKey
     } catch {}
   }, lang);
   await ctx.addInitScript(installColorNormalizer);
+  // Third-party widgets added after the design (the GenAITech chat widget) are not part of it.
+  await ctx.route(/genaitech\.be\/widget\//, (route) => route.abort());
   const page = await ctx.newPage();
   // Fixed wall clock (timers still run) so chat timestamps and the contact calendar match.
   await page.clock.setFixedTime(new Date('2026-09-24T10:00:00+02:00'));

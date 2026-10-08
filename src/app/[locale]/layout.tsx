@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import localFont from 'next/font/local';
+import Script from 'next/script';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { htmlLang, routing } from '@/i18n/routing';
@@ -54,6 +55,10 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
             </div>
           </MotionProvider>
         </NextIntlClientProvider>
+        {site.chatWidget.src && (
+          // Loads when the browser is idle, so it never delays the page itself.
+          <Script src={site.chatWidget.src} data-org-id={site.chatWidget.orgId} strategy="lazyOnload" />
+        )}
       </body>
     </html>
   );

@@ -46,6 +46,13 @@ export const site = {
   // The public key is meant for the browser: Retell only accepts it from the domains allowed on
   // it in the Retell dashboard. NEXT_PUBLIC_RETELL_PUBLIC_KEY overrides it; empty keeps the
   // scripted demo.
+  // GenAITech chat widget, loaded on every page (src/app/[locale]/layout.tsx). Empty `src`
+  // leaves it out.
+  chatWidget: {
+    src: 'https://genaitech.be/widget/cw.js',
+    orgId: 'bcaa0e6d-6842-46a7-aff2-dab8d3c01c66',
+  },
+
   voiceAgent: {
     agentId: 'agent_4f4de5e4e836b86e1c38ad9b14',
     publicKey: process.env.NEXT_PUBLIC_RETELL_PUBLIC_KEY ?? 'public_key_b35448c85ed653e77f71f',
