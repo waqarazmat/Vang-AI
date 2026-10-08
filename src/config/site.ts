@@ -55,7 +55,7 @@ export const site = {
     secondaryColor: '#F3E4CC',
     radius: '14',
     // The widget's backend (passed as data-api-base). Empty: cw.js uses its built-in default.
-    apiBase: '',
+    apiBase: 'https://api.vangai.be',
   },
 
   voiceAgent: {
