@@ -145,7 +145,7 @@ Security headers and CSP (only the needed origins; microphone allowed for self o
 
 ### Phase 11: GitHub, Vercel, and launch
 
-Push to GitHub, connect Vercel, run the full QA suite against the preview URL, and hand you the preview link to check. After your approval: the vang.ai domain, production deploy, Google Search Console and Bing, and a sitemap submission.
+Push to GitHub, connect Vercel, run the full QA suite against the preview URL, and hand you the preview link to check. After your approval: the vangai.be domain, production deploy, Google Search Console and Bing, and a sitemap submission.
 
 - **Gate:** the full suite passes on the live URL.
 
