@@ -20,7 +20,7 @@ export const site = {
   countryCode: 'BE',
 
   email: 'sales@vangai.be',
-  demoPhoneNumber: '+32 465 73 52 99',
+  demoPhoneNumber: '+32 460 22 99 88',
   // Belgian enterprise number (KBO/BCE), e.g. '0123.456.789'. Empty: the footer and the Privacy
   // page leave it out.
   companyNumber: '',
