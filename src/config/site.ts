@@ -46,16 +46,11 @@ export const site = {
   // The public key is meant for the browser: Retell only accepts it from the domains allowed on
   // it in the Retell dashboard. NEXT_PUBLIC_RETELL_PUBLIC_KEY overrides it; empty keeps the
   // scripted demo.
-  // GenAITech chat widget, loaded on every page (src/app/[locale]/layout.tsx). Empty `src`
-  // leaves it out.
+  // The VangAI chat on every page (src/components/chat/SiteChat.tsx) and its backend
+  // (src/lib/chat/client.ts). Empty `apiBase` leaves the chat out.
   chatWidget: {
-    src: 'https://genaitech.be/widget/cw.js',
-    orgId: 'bcaa0e6d-6842-46a7-aff2-dab8d3c01c66',
-    primaryColor: '#F3E4CC',
-    secondaryColor: '#372D24',
-    radius: '15',
-    // The widget's backend (passed as data-api-base). Empty: cw.js uses its built-in default.
     apiBase: 'https://api.vangai.be',
+    orgId: 'bcaa0e6d-6842-46a7-aff2-dab8d3c01c66',
   },
 
   voiceAgent: {

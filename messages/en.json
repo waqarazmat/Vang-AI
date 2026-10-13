@@ -904,5 +904,22 @@
     "lead": "The link may be out of date, or the page has moved. Everything else is right where it was.",
     "home": "Back to home",
     "bookCall": "Book a call"
+  },
+  "chat": {
+    "open": "Chat with VangAI",
+    "close": "Close chat",
+    "title": "VangAI",
+    "status": "Answers in seconds",
+    "reset": "Start a new conversation",
+    "greeting": "Hi, I am VangAI's AI assistant. I can answer questions about our phone, WhatsApp and website chat assistants, pricing, and how setup works, or help you book a short call. What would you like to know?",
+    "suggestions": ["What does VangAI cost?", "How fast can it be live?", "Can I book a short call?"],
+    "placeholder": "Ask anything",
+    "send": "Send",
+    "typing": "The assistant is typing",
+    "team": "Team",
+    "takeover": "You are now chatting with someone from our team.",
+    "error": "The assistant could not be reached. Try again in a moment, or email us at {email}.",
+    "storage": "We store this chat to follow up on your question.",
+    "privacy": "Privacy"
   }
 }

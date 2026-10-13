@@ -904,5 +904,22 @@
     "lead": "De link is misschien verouderd, of de pagina is verhuisd. Al de rest staat nog gewoon op zijn plek.",
     "home": "Terug naar home",
     "bookCall": "Plan een gesprek"
+  },
+  "chat": {
+    "open": "Chat met VangAI",
+    "close": "Chat sluiten",
+    "title": "VangAI",
+    "status": "Antwoordt binnen enkele seconden",
+    "reset": "Nieuw gesprek starten",
+    "greeting": "Hoi, ik ben de AI-assistent van VangAI. Ik beantwoord je vragen over onze assistenten voor telefoon, WhatsApp en websitechat, over de prijzen en hoe de opstart werkt, of ik help je een kort gesprek in te plannen. Wat wil je weten?",
+    "suggestions": ["Wat kost VangAI?", "Hoe snel staat het live?", "Kan ik een kort gesprek inplannen?"],
+    "placeholder": "Vraag maar raak",
+    "send": "Versturen",
+    "typing": "De assistent typt",
+    "team": "Team",
+    "takeover": "Je chat nu met iemand van ons team.",
+    "error": "De assistent is even niet bereikbaar. Probeer het zo opnieuw, of mail ons op {email}.",
+    "storage": "We bewaren dit gesprek om je vraag op te volgen.",
+    "privacy": "Privacy"
   }
 }

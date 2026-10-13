@@ -904,5 +904,26 @@
     "lead": "Le lien est peut-être ancien, ou la page a été déplacée. Tout le reste est toujours à sa place.",
     "home": "Retour à l’accueil",
     "bookCall": "Réserver un appel"
+  },
+  "chat": {
+    "open": "Discuter avec VangAI",
+    "close": "Fermer le chat",
+    "title": "VangAI",
+    "status": "Répond en quelques secondes",
+    "reset": "Commencer une nouvelle conversation",
+    "greeting": "Bonjour, je suis l’assistant IA de VangAI. Je réponds à vos questions sur nos assistants pour le téléphone, WhatsApp et le chat de site web, sur les prix et la mise en place, ou je vous aide à réserver un court appel. Que souhaitez-vous savoir ?",
+    "suggestions": [
+      "Combien coûte VangAI ?",
+      "En combien de temps est-ce en ligne ?",
+      "Puis-je réserver un court appel ?"
+    ],
+    "placeholder": "Posez votre question",
+    "send": "Envoyer",
+    "typing": "L’assistant écrit",
+    "team": "Équipe",
+    "takeover": "Vous discutez maintenant avec un membre de notre équipe.",
+    "error": "L’assistant est momentanément injoignable. Réessayez dans un instant, ou écrivez-nous à {email}.",
+    "storage": "Nous conservons cette conversation pour donner suite à votre question.",
+    "privacy": "Confidentialité"
   }
 }

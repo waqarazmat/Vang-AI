@@ -79,5 +79,53 @@
   "Live call with our AI · uses your microphone": {
     "nl": "Live gesprek met onze AI · gebruikt je microfoon",
     "fr": "Appel en direct avec notre IA · utilise votre micro"
+  },
+  "Chat with VangAI": {
+    "nl": "Chat met VangAI",
+    "fr": "Discuter avec VangAI"
+  },
+  "Close chat": {
+    "nl": "Chat sluiten",
+    "fr": "Fermer le chat"
+  },
+  "Start a new conversation": {
+    "nl": "Nieuw gesprek starten",
+    "fr": "Commencer une nouvelle conversation"
+  },
+  "Hi, I am VangAI's AI assistant. I can answer questions about our phone, WhatsApp and website chat assistants, pricing, and how setup works, or help you book a short call. What would you like to know?": {
+    "nl": "Hoi, ik ben de AI-assistent van VangAI. Ik beantwoord je vragen over onze assistenten voor telefoon, WhatsApp en websitechat, over de prijzen en hoe de opstart werkt, of ik help je een kort gesprek in te plannen. Wat wil je weten?",
+    "fr": "Bonjour, je suis l’assistant IA de VangAI. Je réponds à vos questions sur nos assistants pour le téléphone, WhatsApp et le chat de site web, sur les prix et la mise en place, ou je vous aide à réserver un court appel. Que souhaitez-vous savoir ?"
+  },
+  "What does VangAI cost?": {
+    "nl": "Wat kost VangAI?",
+    "fr": "Combien coûte VangAI ?"
+  },
+  "How fast can it be live?": {
+    "nl": "Hoe snel staat het live?",
+    "fr": "En combien de temps est-ce en ligne ?"
+  },
+  "Can I book a short call?": {
+    "nl": "Kan ik een kort gesprek inplannen?",
+    "fr": "Puis-je réserver un court appel ?"
+  },
+  "The assistant is typing": {
+    "nl": "De assistent typt",
+    "fr": "L’assistant écrit"
+  },
+  "Team": {
+    "nl": "Team",
+    "fr": "Équipe"
+  },
+  "You are now chatting with someone from our team.": {
+    "nl": "Je chat nu met iemand van ons team.",
+    "fr": "Vous discutez maintenant avec un membre de notre équipe."
+  },
+  "We store this chat to follow up on your question.": {
+    "nl": "We bewaren dit gesprek om je vraag op te volgen.",
+    "fr": "Nous conservons cette conversation pour donner suite à votre question."
+  },
+  "The assistant could not be reached. Try again in a moment, or email us at [email address].": {
+    "nl": "De assistent is even niet bereikbaar. Probeer het zo opnieuw, of mail ons op [email address].",
+    "fr": "L’assistant est momentanément injoignable. Réessayez dans un instant, ou écrivez-nous à [email address]."
   }
 }

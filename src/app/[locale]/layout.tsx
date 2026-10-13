@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import localFont from 'next/font/local';
-import Script from 'next/script';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { htmlLang, routing } from '@/i18n/routing';
@@ -9,6 +8,7 @@ import { site } from '@/config/site';
 import { MotionProvider } from '@/components/animations/MotionProvider';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { SiteChat } from '@/components/chat/SiteChat';
 import '../globals.css';
 
 // The exact font files the design gets from Google Fonts (scripts/fetch-design-fonts.mjs).
@@ -53,20 +53,9 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
               {children}
               <Footer />
             </div>
+            <SiteChat />
           </MotionProvider>
         </NextIntlClientProvider>
-        {site.chatWidget.src && (
-          // Loads when the browser is idle, so it never delays the page itself.
-          <Script
-            src={site.chatWidget.src}
-            data-org-id={site.chatWidget.orgId}
-            data-primary-color={site.chatWidget.primaryColor}
-            data-secondary-color={site.chatWidget.secondaryColor}
-            data-radius={site.chatWidget.radius}
-            data-api-base={site.chatWidget.apiBase || undefined}
-            strategy="lazyOnload"
-          />
-        )}
       </body>
     </html>
   );

@@ -188,8 +188,6 @@ export async function openPage(browser, url, { viewport, lang, isDesign, pageKey
     } catch {}
   }, lang);
   await ctx.addInitScript(installColorNormalizer);
-  // Third-party widgets added after the design (the GenAITech chat widget) are not part of it.
-  await ctx.route(/genaitech\.be\/widget\//, (route) => route.abort());
   const page = await ctx.newPage();
   // Fixed wall clock (timers still run) so chat timestamps and the contact calendar match.
   await page.clock.setFixedTime(new Date('2026-09-24T10:00:00+02:00'));
@@ -221,6 +219,8 @@ export async function openPage(browser, url, { viewport, lang, isDesign, pageKey
   }
   await settle(page);
   await page.addStyleTag({ content: FREEZE_CSS });
+  // The site chat (launcher bottom right) was added after the design; it is not part of it.
+  if (!isDesign) await page.addStyleTag({ content: '[data-site-chat]{display:none!important}' });
   // Real values that replace the design's [placeholders] (from src/config/site.ts): the
   // design shows them as literal text, the build shows the configured value.
   if (isDesign) await page.evaluate(fillPlaceholders, PLACEHOLDER_VALUES);
