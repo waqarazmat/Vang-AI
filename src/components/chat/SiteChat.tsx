@@ -199,17 +199,17 @@ export function SiteChat() {
             exit={{ opacity: 0, y: 12, scale: 0.97 }}
             transition={{ duration: 0.24, ease: ease.out }}
             style={{ transformOrigin: 'bottom right' }}
-            className="absolute right-0 bottom-[76px] flex h-[min(620px,calc(100dvh-120px))] w-[380px] flex-col overflow-hidden rounded-[22px] border border-ink/14 bg-white shadow-[0_24px_60px_rgba(43,33,24,0.24)] max-480:fixed max-480:top-[12px] max-480:right-[12px] max-480:bottom-[84px] max-480:left-[12px] max-480:h-auto max-480:w-auto"
+            className="absolute right-0 bottom-[66px] flex h-[min(500px,calc(100dvh-110px))] w-[330px] flex-col overflow-hidden rounded-[18px] border border-ink/14 bg-white shadow-[0_18px_44px_rgba(43,33,24,0.22)] max-480:fixed max-480:top-[12px] max-480:right-[12px] max-480:bottom-[74px] max-480:left-[12px] max-480:h-auto max-480:w-auto"
           >
-            <div className="flex items-center gap-[12px] bg-ink px-[18px] py-[15px]">
-              <div className="flex h-[40px] w-[40px] flex-none items-center justify-center rounded-[50%] bg-cream">
-                <Mark size={25} />
+            <div className="flex items-center gap-[10px] bg-ink px-[14px] py-[11px]">
+              <div className="flex h-[32px] w-[32px] flex-none items-center justify-center rounded-[50%] bg-cream">
+                <Mark size={20} />
               </div>
               <div className="min-w-0 flex-1">
-                <div className="text-[16px] font-[700] tracking-[-0.015em] text-cream">{t('title')}</div>
-                <div className="mt-[3px] flex items-center gap-[6px]">
-                  <span className="block h-[7px] w-[7px] rounded-[50%] bg-[#4ED07A]" />
-                  <span className="text-[12px] text-cream/75">{t('status')}</span>
+                <div className="text-[14px] font-[700] tracking-[-0.015em] text-cream">{t('title')}</div>
+                <div className="mt-[2px] flex items-center gap-[5px]">
+                  <span className="block h-[6px] w-[6px] rounded-[50%] bg-[#4ED07A]" />
+                  <span className="text-[11px] text-cream/75">{t('status')}</span>
                 </div>
               </div>
               {(asked || msgs.length > 0) && (
@@ -218,7 +218,7 @@ export function SiteChat() {
                   onClick={reset}
                   aria-label={t('reset')}
                   title={t('reset')}
-                  className="flex h-[34px] w-[34px] flex-none cursor-pointer items-center justify-center rounded-[50%] text-cream/70 transition-[background,color] duration-[160ms] ease-[ease] hover:bg-cream/10 hover:text-cream"
+                  className="flex h-[30px] w-[30px] flex-none cursor-pointer items-center justify-center rounded-[50%] text-cream/70 transition-[background,color] duration-[160ms] ease-[ease] hover:bg-cream/10 hover:text-cream"
                 >
                   <svg
                     viewBox="0 0 24 24"
@@ -243,7 +243,7 @@ export function SiteChat() {
                   launcher.current?.focus();
                 }}
                 aria-label={t('close')}
-                className="flex h-[34px] w-[34px] flex-none cursor-pointer items-center justify-center rounded-[50%] text-cream/70 transition-[background,color] duration-[160ms] ease-[ease] hover:bg-cream/10 hover:text-cream"
+                className="flex h-[30px] w-[30px] flex-none cursor-pointer items-center justify-center rounded-[50%] text-cream/70 transition-[background,color] duration-[160ms] ease-[ease] hover:bg-cream/10 hover:text-cream"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -263,14 +263,14 @@ export function SiteChat() {
             <div
               ref={list}
               aria-live="polite"
-              className="flex min-h-0 flex-1 flex-col gap-[10px] overflow-y-auto bg-[#FFFDF8] px-[16px] py-[18px]"
+              className="flex min-h-0 flex-1 flex-col gap-[8px] overflow-y-auto bg-[#FFFDF8] px-[12px] py-[14px]"
             >
               {greeting && <Bubble role="ai" text={greeting} />}
               {msgs.map((msg) =>
                 msg.role === 'notice' ? (
                   <div
                     key={msg.id}
-                    className="self-center rounded-[99px] bg-ink/6 px-[12px] py-[6px] text-center text-[12px] text-ink/70"
+                    className="self-center rounded-[99px] bg-ink/6 px-[10px] py-[5px] text-center text-[11px] text-ink/70"
                   >
                     {t('takeover')}
                   </div>
@@ -280,7 +280,7 @@ export function SiteChat() {
               )}
               {(typing || config === undefined) && (
                 <div className="flex justify-start" role="status" aria-label={t('typing')}>
-                  <div className="typing-wc flex items-center gap-[4px] rounded-[16px_16px_16px_5px] bg-coral px-[15px] py-[13px]">
+                  <div className="typing-wc flex items-center gap-[4px] rounded-[14px_14px_14px_4px] bg-coral px-[13px] py-[11px]">
                     <span className="block h-[6px] w-[6px] rounded-[50%] bg-white" />
                     <span className="block h-[6px] w-[6px] rounded-[50%] bg-white" />
                     <span className="block h-[6px] w-[6px] rounded-[50%] bg-white" />
@@ -290,13 +290,13 @@ export function SiteChat() {
             </div>
 
             {!asked && config !== undefined && (
-              <div className="flex flex-col gap-[7px] bg-[#FFFDF8] px-[14px] pb-[12px]">
+              <div className="flex flex-col gap-[5px] bg-[#FFFDF8] px-[11px] pb-[9px]">
                 {suggestions.map((q) => (
                   <button
                     key={q}
                     type="button"
                     onClick={() => void send(q)}
-                    className="cursor-pointer rounded-[99px] border border-[rgba(216,90,48,0.55)] bg-white px-[16px] py-[10px] text-center text-[14px] font-[600] text-coral-deep transition-[background,color] duration-[160ms] ease-[ease] hover:bg-coral hover:text-white"
+                    className="cursor-pointer rounded-[99px] border border-[rgba(216,90,48,0.55)] bg-white px-[13px] py-[8px] text-center text-[12.5px] font-[600] text-coral-deep transition-[background,color] duration-[160ms] ease-[ease] hover:bg-coral hover:text-white"
                   >
                     {q}
                   </button>
@@ -309,7 +309,7 @@ export function SiteChat() {
                 e.preventDefault();
                 void send(draft);
               }}
-              className="flex items-center gap-[10px] border-t border-ink/12 bg-white px-[14px] py-[11px]"
+              className="flex items-center gap-[8px] border-t border-ink/12 bg-white px-[11px] py-[8px]"
             >
               <input
                 ref={input}
@@ -318,20 +318,20 @@ export function SiteChat() {
                 placeholder={t('placeholder')}
                 aria-label={t('placeholder')}
                 maxLength={2000}
-                className="min-w-0 flex-1 border-0 bg-transparent px-[4px] py-[6px] font-sans text-[15px] text-ink outline-none placeholder:text-ink/45"
+                className="min-w-0 flex-1 border-0 bg-transparent px-[3px] py-[5px] font-sans text-[13.5px] text-ink outline-none placeholder:text-ink/45"
               />
               <button
                 type="submit"
                 disabled={busy || !draft.trim()}
                 aria-label={t('send')}
-                className="flex h-[40px] w-[40px] flex-none cursor-pointer items-center justify-center rounded-[50%] bg-coral transition-[background,opacity] duration-[160ms] ease-[ease] hover:bg-ink disabled:cursor-default disabled:opacity-50 disabled:hover:bg-coral"
+                className="flex h-[34px] w-[34px] flex-none cursor-pointer items-center justify-center rounded-[50%] bg-coral transition-[background,opacity] duration-[160ms] ease-[ease] hover:bg-ink disabled:cursor-default disabled:opacity-50 disabled:hover:bg-coral"
               >
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="#FAEEDA" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="#FAEEDA" aria-hidden="true">
                   <path d="M3.2 20.5 21.5 12 3.2 3.5l.1 6.6L15 12 3.3 13.9z" />
                 </svg>
               </button>
             </form>
-            <div className="bg-white px-[16px] pb-[10px] text-[11px] leading-[1.4] text-ink/55">
+            <div className="bg-white px-[13px] pb-[8px] text-[10px] leading-[1.4] text-ink/55">
               {`${t('storage')} `}
               <Link href="/privacy" className="text-ink/70 underline underline-offset-2 hover:text-coral">
                 {t('privacy')}
@@ -350,13 +350,13 @@ export function SiteChat() {
         aria-label={open ? t('close') : t('open')}
         aria-expanded={open}
         aria-controls={open ? panelId : undefined}
-        className="flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[50%] bg-coral text-cream shadow-[0_12px_30px_rgba(216,90,48,0.38)] transition-[background,transform] duration-[180ms] ease-[ease] hover:-translate-y-[2px] hover:bg-ink active:translate-y-0"
+        className="flex h-[52px] w-[52px] cursor-pointer items-center justify-center rounded-[50%] bg-coral text-cream shadow-[0_10px_24px_rgba(216,90,48,0.36)] transition-[background,transform] duration-[180ms] ease-[ease] hover:-translate-y-[2px] hover:bg-ink active:translate-y-0"
       >
         {open ? (
           <svg
             viewBox="0 0 24 24"
-            width="24"
-            height="24"
+            width="21"
+            height="21"
             fill="none"
             stroke="currentColor"
             strokeWidth="2.4"
@@ -368,8 +368,8 @@ export function SiteChat() {
         ) : (
           <svg
             viewBox="0 0 24 24"
-            width="26"
-            height="26"
+            width="23"
+            height="23"
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
@@ -389,17 +389,17 @@ function Bubble({ role, text, team }: { role: Exclude<Msg['role'], 'notice'>; te
   const mine = role === 'visitor';
   const tone =
     role === 'visitor'
-      ? 'rounded-[16px_16px_5px_16px] bg-[#E8E4DC] text-ink'
+      ? 'rounded-[14px_14px_4px_14px] bg-[#E8E4DC] text-ink'
       : role === 'error'
-        ? 'rounded-[16px_16px_16px_5px] border border-coral/40 bg-cream text-ink'
+        ? 'rounded-[14px_14px_14px_4px] border border-coral/40 bg-cream text-ink'
         : role === 'staff'
-          ? 'rounded-[16px_16px_16px_5px] bg-ink text-cream'
-          : 'rounded-[16px_16px_16px_5px] bg-coral text-white';
+          ? 'rounded-[14px_14px_14px_4px] bg-ink text-cream'
+          : 'rounded-[14px_14px_14px_4px] bg-coral text-white';
   return (
     <div className={`flex ${mine ? 'justify-end' : 'justify-start'}`}>
       <ChatBubble
         mine={mine}
-        className={`max-w-[86%] px-[14px] py-[11px] text-[14.5px] leading-[1.5] text-pretty break-words ${tone}`}
+        className={`max-w-[86%] px-[12px] py-[9px] text-[13px] leading-[1.45] text-pretty break-words ${tone}`}
       >
         {role === 'staff' && team && (
           <div className="mb-[4px] font-mono text-[9.5px] tracking-[0.12em] text-cream/60 uppercase">{team}</div>
